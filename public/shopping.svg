@@ -1,0 +1,8 @@
+<svg xmlns='http://www.w3.org/2000/svg' width='1200' height='600'>
+<defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0%' stop-color='#85A38D'/><stop offset='100%' stop-color='#4F805C'/></linearGradient></defs>
+<rect width='100%' height='100%' fill='#F2F7F4'/>
+<circle cx='140' cy='160' r='110' fill='url(#g)'/>
+<rect x='320' y='120' rx='24' ry='24' width='700' height='360' fill='white' stroke='#85A38D' stroke-width='6'/>
+<text x='350' y='260' font-family='system-ui, Segoe UI' font-size='48' fill='#0D1F14' font-weight='700'>Shopping</text>
+<text x='350' y='310' font-family='system-ui, Segoe UI' font-size='22' fill='#4F805C'>Pay online</text>
+</svg>
