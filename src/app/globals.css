@@ -54,3 +54,49 @@ h2.h { @apply text-2xl md:text-4xl font-bold; }
 @media (prefers-reduced-motion: reduce) {
   .float-hero, .shadow-breathe { animation: none !important; }
 }
+
+/* hero sheen sweep */
+.hero-sheen {
+  position: relative;
+  overflow: hidden;          /* clip sheen inside rounded corners */
+  border-radius: 1rem;       /* ~ rounded-2xl */
+}
+
+.hero-sheen::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+          75deg,
+          transparent 40%,
+          rgba(255,255,255,.12) 50%,
+          transparent 60%
+  );
+  transform: translateX(-120%);
+  pointer-events: none;
+  animation: fondeka-sheen 6.5s ease-in-out infinite;
+}
+
+@keyframes fondeka-sheen {
+  0%, 60%   { transform: translateX(-120%); }
+  80%       { transform: translateX(10%); }
+  100%      { transform: translateX(-120%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-sheen::after { animation: none !important; }
+}
+.elevate-hero {
+  filter: drop-shadow(0 16px 32px rgba(0,0,0,.12));
+  transition: filter .3s ease, transform .3s ease;
+}
+.elevate-hero:hover {
+  filter: drop-shadow(0 26px 54px rgba(0,0,0,.16));
+  transform: translateY(-2px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .elevate-hero { transition: none; }
+}
+.card-tight { padding: 0.2rem; }          /* ~ p-3 */
+.card-bleed { padding: 0; }
+html { scroll-behavior: smooth; }

@@ -1,6 +1,7 @@
 'use client';
 import Logo from './Logo';
-import { useI18n } from '../lib/i18n';
+import { useI18n } from '@/lib/i18n';
+import DownloadAppButton from "@/components/DownloadAppButton";
 export default function Footer(){
   const year = new Date().getFullYear();
   const { t, lang } = useI18n();
@@ -29,13 +30,13 @@ export default function Footer(){
         <div>
           <h4 className="font-semibold mb-3">Contact</h4>
           <p className="text-sm text-gray-600">support@fondeka.com<br/>+243 991 079 097</p>
-          <a href={`#download?lang=${lang}`} className="btn btn-primary mt-4">{t('cta.download')}</a>
+          <DownloadAppButton className="mt-6" />
         </div>
       </div>
       <div className="border-t">
         <div className="container-pad py-6 text-xs text-gray-500 flex justify-between items-center">
           <span>© {year} Fondeka. All rights reserved.</span>
-          <span>Built in DR Congo & Luxembourg</span>
+          <span>Built in DR Congo & Africa</span>
         </div>
       </div>
     </footer>
