@@ -1,5 +1,5 @@
 'use client';
-import { useI18n } from '../../lib/i18n';
+import { useI18n } from '@/lib/i18n';
 import { useSearchParams } from 'next/navigation';
 
 export default function Page(){
