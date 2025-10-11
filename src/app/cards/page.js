@@ -16,9 +16,8 @@ export default function Page(){
             <h1 className="h">{t('product.cards.title')}</h1>
             <p className="mt-3 text-gray-700">{t('product.cards.body')}</p>
             <ul className="mt-6 space-y-2 text-sm">
-              <li className="card">Mobile Money, cards & crypto supported</li>
-              <li className="card">Clear dashboard & controls</li>
-              <li className="card">Business API available</li>
+              <li className="card">Purchase Visa & Mastercard from our app</li>
+              <li className="card">Or integrate our API</li>
             </ul>
             <a href={`/business?lang=${lang}`} className="btn btn-primary mt-6 w-fit">Use the API</a>
           </div>
