@@ -100,6 +100,8 @@
   "common.invalidEmail": "Invalid email address",
   "common.cancel": "Cancel",
   "common.submit": "Submit",
-  "business.notify.success": "You will be notified when the API will be ready"
+  "business.notify.success": "You will be notified when the API will be ready",
+  "products.title": "Our products",
+  "products.subtitle": "Everyhing you need for your financial needs"
 
 }

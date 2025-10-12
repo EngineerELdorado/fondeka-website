@@ -11,15 +11,15 @@ import { useI18n } from '@/lib/i18n';
 export default function Home() {
     const { t, lang } = useI18n();
 
-    // helper to shorten href object creation
+    // helper to shorten href object creation (pass icon to target page)
     const withIcon = (pathname, icon) => ({ pathname, query: { lang, icon } });
 
     return (
-        <main>
+        <main className="overflow-x-hidden">
             {/* HERO */}
             <section className="gradient-hero">
-                <div className="container-pad py-16 md:py-28 grid md:grid-cols-2 gap-10 items-center">
-                    <div>
+                <div className="container-pad py-12 md:py-28 grid md:grid-cols-2 gap-6 md:gap-10 items-center">
+                    <div className="min-w-0">
                         <div className="kicker">{t('hero.kicker')}</div>
                         <h1 className="display">{t('hero.title')}</h1>
                         <p className="mt-4 text-gray-700 max-w-lg">{t('hero.body')}</p>
@@ -59,94 +59,101 @@ export default function Home() {
 
             {/* PRODUCTS */}
             <section id="products" className="section">
-                <div className="container-pad grid md:grid-cols-3 gap-6">
-                    {/* 1) Loans */}
-                    <FeatureCard
-                        title={t('product.loans.title')}
-                        text={t('product.loans.body')}
-                        icon="https://plus.unsplash.com/premium_photo-1672660509832-0c749dbd82eb?auto=format&fit=crop&q=80&w=1915"
-                        href={withIcon('/loans', 'https://plus.unsplash.com/premium_photo-1672660509832-0c749dbd82eb?auto=format&fit=crop&q=80&w=1915')}
-                        cta="Explore"
-                    />
+                <div className="container-pad">
+                    <h2 className="h text-center">{t('products.title') || 'Our products'}</h2>
+                    <p className="mt-2 text-gray-600 text-center">
+                        {t('products.subtitle') || 'Everything you need to pay and get paid.'}
+                    </p>
 
-                    {/* 2) Cards */}
-                    <FeatureCard
-                        title={t('product.cards.title')}
-                        text={t('product.cards.body')}
-                        icon="https://plus.unsplash.com/premium_photo-1728735030984-fef628ee1929?auto=format&fit=crop&q=80&w=1895"
-                        href={withIcon('/cards', 'https://plus.unsplash.com/premium_photo-1728735030984-fef628ee1929?auto=format&fit=crop&q=80&w=1895')}
-                        cta="Explore"
-                    />
+                    <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 lg:gap-6">
+                        {/* 1) Loans */}
+                        <FeatureCard
+                            title={t('product.loans.title')}
+                            text={t('product.loans.body')}
+                            icon="https://plus.unsplash.com/premium_photo-1672660509832-0c749dbd82eb?auto=format&fit=crop&q=80&w=1915"
+                            href={withIcon('/loans', 'https://plus.unsplash.com/premium_photo-1672660509832-0c749dbd82eb?auto=format&fit=crop&q=80&w=1915')}
+                            cta="Explore"
+                        />
 
-                    {/* 3) Bill payments */}
-                    <FeatureCard
-                        title={t('product.bills.title')}
-                        text={t('product.bills.body')}
-                        icon="https://images.unsplash.com/photo-1692158962133-6c97ee651ab9?auto=format&fit=crop&q=80&w=1160"
-                        href={withIcon('/bills', 'https://images.unsplash.com/photo-1692158962133-6c97ee651ab9?auto=format&fit=crop&q=80&w=1160')}
-                        cta="Explore"
-                    />
+                        {/* 2) Cards */}
+                        <FeatureCard
+                            title={t('product.cards.title')}
+                            text={t('product.cards.body')}
+                            icon="https://plus.unsplash.com/premium_photo-1728735030984-fef628ee1929?auto=format&fit=crop&q=80&w=1895"
+                            href={withIcon('/cards', 'https://plus.unsplash.com/premium_photo-1728735030984-fef628ee1929?auto=format&fit=crop&q=80&w=1895')}
+                            cta="Explore"
+                        />
 
-                    {/* 4) eSIM */}
-                    <FeatureCard
-                        title={t('product.esim.title')}
-                        text={t('product.esim.body')}
-                        icon="https://images.unsplash.com/photo-1718631919973-ca9f02f46534?auto=format&fit=crop&q=80&w=1740"
-                        href={withIcon('/esim', 'https://images.unsplash.com/photo-1718631919973-ca9f02f46534?auto=format&fit=crop&q=80&w=1740')}
-                        cta="Explore"
-                    />
+                        {/* 3) Bill payments */}
+                        <FeatureCard
+                            title={t('product.bills.title')}
+                            text={t('product.bills.body')}
+                            icon="https://images.unsplash.com/photo-1692158962133-6c97ee651ab9?auto=format&fit=crop&q=80&w=1160"
+                            href={withIcon('/bills', 'https://images.unsplash.com/photo-1692158962133-6c97ee651ab9?auto=format&fit=crop&q=80&w=1160')}
+                            cta="Explore"
+                        />
 
-                    {/* 5) Crypto */}
-                    <FeatureCard
-                        title={t('product.crypto.title')}
-                        text={t('product.crypto.body')}
-                        icon="https://plus.unsplash.com/premium_photo-1676998623020-2640a850bdc0?auto=format&fit=crop&q=80&w=870"
-                        href={withIcon('/crypto', 'https://plus.unsplash.com/premium_photo-1676998623020-2640a850bdc0?auto=format&fit=crop&q=80&w=870')}
-                        cta="Explore"
-                    />
+                        {/* 4) eSIM */}
+                        <FeatureCard
+                            title={t('product.esim.title')}
+                            text={t('product.esim.body')}
+                            icon="https://images.unsplash.com/photo-1718631919973-ca9f02f46534?auto=format&fit=crop&q=80&w=1740"
+                            href={withIcon('/esim', 'https://images.unsplash.com/photo-1718631919973-ca9f02f46534?auto=format&fit=crop&q=80&w=1740')}
+                            cta="Explore"
+                        />
 
-                    {/* 6) Payments (QR/Link, Invoice, Crowdfunding) */}
-                    <FeatureCard
-                        title={t('product.payments.title')}
-                        text={t('product.payments.body')}
-                        icon="https://plus.unsplash.com/premium_photo-1682339496371-d71e65e3e42d?auto=format&fit=crop&q=80&w=1548"
-                        href={withIcon('/payments', 'https://plus.unsplash.com/premium_photo-1682339496371-d71e65e3e42d?auto=format&fit=crop&q=80&w=1548')}
-                        cta="Explore"
-                    />
+                        {/* 5) Crypto */}
+                        <FeatureCard
+                            title={t('product.crypto.title')}
+                            text={t('product.crypto.body')}
+                            icon="https://plus.unsplash.com/premium_photo-1676998623020-2640a850bdc0?auto=format&fit=crop&q=80&w=870"
+                            href={withIcon('/crypto', 'https://plus.unsplash.com/premium_photo-1676998623020-2640a850bdc0?auto=format&fit=crop&q=80&w=870')}
+                            cta="Explore"
+                        />
 
-                    {/* 7) Giftcards */}
-                    <FeatureCard
-                        title={t('product.giftcards.title')}
-                        text={t('product.giftcards.body')}
-                        icon="https://plus.unsplash.com/premium_photo-1728398068094-d3d30740000f?auto=format&fit=crop&q=80&w=1895"
-                        href={withIcon('/giftcards', 'https://plus.unsplash.com/premium_photo-1728398068094-d3d30740000f?auto=format&fit=crop&q=80&w=1895')}
-                        cta="Explore"
-                    />
+                        {/* 6) Payments (QR/Link, Invoice, Crowdfunding) */}
+                        <FeatureCard
+                            title={t('product.payments.title')}
+                            text={t('product.payments.body')}
+                            icon="https://plus.unsplash.com/premium_photo-1682339496371-d71e65e3e42d?auto=format&fit=crop&q=80&w=1548"
+                            href={withIcon('/payments', 'https://plus.unsplash.com/premium_photo-1682339496371-d71e65e3e42d?auto=format&fit=crop&q=80&w=1548')}
+                            cta="Explore"
+                        />
 
-                    {/* 8) Airtimes */}
-                    <FeatureCard
-                        title={t('product.airtimes.title')}
-                        text={t('product.airtimes.body')}
-                        icon="https://plus.unsplash.com/premium_vector-1711987903052-36a37d18bb6b?auto=format&fit=crop&q=80&w=1160"
-                        href={withIcon('/airtimes', 'https://plus.unsplash.com/premium_vector-1711987903052-36a37d18bb6b?auto=format&fit=crop&q=80&w=1160')}
-                        cta="Explore"
-                    />
+                        {/* 7) Giftcards */}
+                        <FeatureCard
+                            title={t('product.giftcards.title')}
+                            text={t('product.giftcards.body')}
+                            icon="https://plus.unsplash.com/premium_photo-1728398068094-d3d30740000f?auto=format&fit=crop&q=80&w=1895"
+                            href={withIcon('/giftcards', 'https://plus.unsplash.com/premium_photo-1728398068094-d3d30740000f?auto=format&fit=crop&q=80&w=1895')}
+                            cta="Explore"
+                        />
 
-                    {/* 9) Shopping */}
-                    <FeatureCard
-                        title={t('product.shopping.title')}
-                        text={t('product.shopping.body')}
-                        icon="https://plus.unsplash.com/premium_vector-1746177997582-cd5296a66658?auto=format&fit=crop&q=80&w=1800"
-                        href={withIcon('/shopping', 'https://plus.unsplash.com/premium_vector-1746177997582-cd5296a66658?auto=format&fit=crop&q=80&w=1800')}
-                        cta="Explore"
-                    />
+                        {/* 8) Airtimes */}
+                        <FeatureCard
+                            title={t('product.airtimes.title')}
+                            text={t('product.airtimes.body')}
+                            icon="https://plus.unsplash.com/premium_vector-1711987903052-36a37d18bb6b?auto=format&fit=crop&q=80&w=1160"
+                            href={withIcon('/airtimes', 'https://plus.unsplash.com/premium_vector-1711987903052-36a37d18bb6b?auto=format&fit=crop&q=80&w=1160')}
+                            cta="Explore"
+                        />
+
+                        {/* 9) Shopping */}
+                        <FeatureCard
+                            title={t('product.shopping.title')}
+                            text={t('product.shopping.body')}
+                            icon="https://plus.unsplash.com/premium_vector-1746177997582-cd5296a66658?auto=format&fit=crop&q=80&w=1800"
+                            href={withIcon('/shopping', 'https://plus.unsplash.com/premium_vector-1746177997582-cd5296a66658?auto=format&fit=crop&q=80&w=1800')}
+                            cta="Explore"
+                        />
+                    </div>
                 </div>
             </section>
 
             {/* BUSINESS / TRUST */}
             <section className="section bg-fondeka-light">
-                <div className="container-pad grid md:grid-cols-2 gap-10 items-center">
-                    <div>
+                <div className="container-pad grid md:grid-cols-2 gap-6 md:gap-10 items-center">
+                    <div className="min-w-0">
                         <h2 className="h">{t('section.peopleGoingPlaces')}</h2>
                         <p className="mt-3 text-gray-700">
                             Mobile Money, cards and crypto at the core of our products.
@@ -158,7 +165,7 @@ export default function Home() {
                             <li className="card">3-D Secure</li>
                         </ul>
                     </div>
-                    <div className="card" style={{marginTop: '10%'}}>
+                    <div className="card mt-6 md:mt-0">
                         <h3 className="text-xl font-semibold">{t('section.businessTitle')}</h3>
                         <p className="text-gray-600 mt-2">{t('section.businessBody')}</p>
                         <Link href={`/business?lang=${lang}`} className="btn btn-primary mt-6 w-fit">
@@ -176,7 +183,7 @@ export default function Home() {
                 <div className="container-pad text-center">
                     <h2 className="h">{t('section.coverageTitle')}</h2>
                     <p className="mt-2 text-gray-600">{t('section.coverageBody')}</p>
-                    <div className="mt-8 grid grid-cols-2 md:grid-cols-6 gap-3 text-sm">
+                    <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 text-sm">
                         {['DRC', 'Rwanda', 'Burundi', 'Uganda', 'Kenya', 'Tanzania'].map((x) => (
                             <div key={x} className="card py-4">{x}</div>
                         ))}

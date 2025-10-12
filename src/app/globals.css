@@ -100,3 +100,4 @@ h2.h { @apply text-2xl md:text-4xl font-bold; }
 .card-tight { padding: 0.2rem; }          /* ~ p-3 */
 .card-bleed { padding: 0; }
 html { scroll-behavior: smooth; }
+html, body { overflow-x: hidden; }
