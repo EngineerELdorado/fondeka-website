@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import Link from 'next/link';
 import FeatureCard from '../components/FeatureCard';
 import CTA from '../components/CTA';
@@ -7,6 +6,8 @@ import DownloadAppButton from '../components/DownloadAppButton';
 import Metrics from '../components/Metrics';
 import HeroSlider from '@/components/HeroSlider';
 import { useI18n } from '@/lib/i18n';
+import HeroCorners from '@/components/HeroCorners';
+import HeroOrbitIcons from "@/components/HeroOrbitIcons";
 
 export default function Home() {
     const { t, lang } = useI18n();
@@ -18,46 +19,88 @@ export default function Home() {
         <main className="overflow-x-hidden">
             {/* HERO */}
             <section className="gradient-hero">
-                <div className="container-pad py-12 md:py-28 grid md:grid-cols-2 gap-6 md:gap-10 items-center">
-                    <div className="min-w-0">
-                        <div className="kicker">{t('hero.kicker')}</div>
-                        <h1 className="display">{t('hero.title')}</h1>
-                        <p className="mt-4 text-gray-700 max-w-lg">{t('hero.body')}</p>
+                <div className="container-pad relative overflow-visible py-12 md:py-28">
+                    {/* Decorative corner images behind the grid */}
+                    <HeroCorners />
+                    {/* Orbiting icons around the left corner image */}
+                    <HeroOrbitIcons
+                        side="left"
+                        radius={80}    // distance from center
+                        duration={32}  // seconds per full spin
+                        icons={[
+                            { src: '/icons/img1.svg' },
+                            { src: '/icons/img2.svg' },
+                            { src: '/icons/img3.svg' },
+                            { src: '/icons/img5.svg' },
+                            { src: '/icons/img4.svg' },
+                            // { src: '/icons/img7.svg' },
+                            // { src: '/icons/img8.svg' },
+                            { src: '/icons/img9.svg' },
+                            { src: '/icons/img10.svg' },
+                        ]}
+                    />
 
-                        <DownloadAppButton className="mt-6" />
-                        <div className="mt-3">
-                            <a
-                                href="#products"
-                                className="text-sm underline"
-                                onClick={(e) => {
-                                    e.preventDefault();
-                                    const el = document.getElementById('products');
-                                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                }}
-                            >
-                                {t('hero.secondary')}
-                            </a>
+                    {/* Orbiting icons around the right corner image */}
+                    <HeroOrbitIcons
+                        side="right"
+                        radius={80}
+                        duration={32}
+                        icons={[
+                            // { src: '/icons/img10.svg' },
+                            // { src: '/icons/img11.svg' },
+                            // { src: '/icons/img12.svg' },
+                            { src: '/icons/img13.svg' },
+                            { src: '/icons/img14.svg' },
+                            { src: '/icons/img15.svg' },
+                            { src: '/icons/img16.svg' },
+                            { src: '/icons/img17.svg' },
+                            { src: '/icons/img18.svg' },
+                            { src: '/icons/img19.svg' },
+                        ]}
+                    />
+
+
+                    <div className="relative z-10 grid md:grid-cols-2 gap-6 md:gap-10 items-center">
+                        <div className="min-w-0">
+                            <div className="kicker">{t('hero.kicker')}</div>
+                            <h1 className="display">{t('hero.title')}</h1>
+                            <p className="mt-4 text-gray-700 max-w-lg">{t('hero.body')}</p>
+
+                            <DownloadAppButton className="mt-6" />
+                            <div className="mt-3">
+                                <a
+                                    href="#products"
+                                    className="text-sm underline"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        const el = document.getElementById('products');
+                                        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                    }}
+                                >
+                                    {t('hero.secondary')}
+                                </a>
+                            </div>
+                            <p className="mt-3 text-xs text-gray-500">
+                                Born in DRC, built in Africa, by africans, for the world
+                            </p>
                         </div>
-                        <p className="mt-3 text-xs text-gray-500">
-                            Born in DRC, built in Africa, by africans, for the world
-                        </p>
-                    </div>
 
-                    <div className="card card-tight">
-                        <div className="relative">
-                            {/* soft rotating halo, sits behind the media, contained by this relative box */}
-                            <div className="halo -z-10" aria-hidden="true" />
+                        <div className="card card-tight">
+                            <div className="relative">
+                                {/* soft rotating halo, sits behind the media, contained by this relative box */}
+                                <div className="halo -z-10" aria-hidden="true" />
 
-                            <div className="depth-frame">
-                                <HeroSlider
-                                    alt={t('hero.title')}
-                                    images={[
-                                        'https://images.unsplash.com/photo-1656768151253-bef870f1b7bd?auto=format&fit=crop&q=80&w=1740',
-                                        'https://images.unsplash.com/photo-1681597108168-353c13e8e7a5?auto=format&fit=crop&q=80&w=1262',
-                                        'https://images.unsplash.com/photo-1676444322792-9f259e84a1c3?auto=format&fit=crop&q=80&w=1360'
-                                    ]}
-                                    intervalMs={5500}
-                                />
+                                <div className="depth-frame">
+                                    <HeroSlider
+                                        alt={t('hero.title')}
+                                        images={[
+                                            'https://images.unsplash.com/photo-1656768151253-bef870f1b7bd?auto=format&fit=crop&q=80&w=1740',
+                                            'https://images.unsplash.com/photo-1681597108168-353c13e8e7a5?auto=format&fit=crop&q=80&w=1262',
+                                            'https://images.unsplash.com/photo-1676444322792-9f259e84a1c3?auto=format&fit=crop&q=80&w=1360'
+                                        ]}
+                                        intervalMs={5500}
+                                    />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -81,7 +124,6 @@ export default function Home() {
                             href={withIcon('/loans', 'https://plus.unsplash.com/premium_photo-1672660509832-0c749dbd82eb?auto=format&fit=crop&q=80&w=1915')}
                             cta="Explore"
                         />
-
                         {/* 2) Cards */}
                         <FeatureCard
                             title={t('product.cards.title')}
@@ -90,7 +132,6 @@ export default function Home() {
                             href={withIcon('/cards', 'https://plus.unsplash.com/premium_photo-1675276939507-97d222bb488d?auto=format&fit=crop&q=80&w=1915')}
                             cta="Explore"
                         />
-
                         {/* 3) Bill payments */}
                         <FeatureCard
                             title={t('product.bills.title')}
@@ -99,7 +140,6 @@ export default function Home() {
                             href={withIcon('/bills', 'https://images.unsplash.com/photo-1692158962133-6c97ee651ab9?auto=format&fit=crop&q=80&w=1160')}
                             cta="Explore"
                         />
-
                         {/* 4) eSIM */}
                         <FeatureCard
                             title={t('product.esim.title')}
@@ -108,7 +148,6 @@ export default function Home() {
                             href={withIcon('/esim', 'https://images.unsplash.com/photo-1718631919973-ca9f02f46534?auto=format&fit=crop&q=80&w=1740')}
                             cta="Explore"
                         />
-
                         {/* 5) Crypto */}
                         <FeatureCard
                             title={t('product.crypto.title')}
@@ -117,8 +156,7 @@ export default function Home() {
                             href={withIcon('/crypto', 'https://plus.unsplash.com/premium_photo-1676998623020-2640a850bdc0?auto=format&fit=crop&q=80&w=870')}
                             cta="Explore"
                         />
-
-                        {/* 6) Payments (QR/Link, Invoice, Crowdfunding) */}
+                        {/* 6) Payments */}
                         <FeatureCard
                             title={t('product.payments.title')}
                             text={t('product.payments.body')}
@@ -126,7 +164,6 @@ export default function Home() {
                             href={withIcon('/payments', 'https://plus.unsplash.com/premium_photo-1740533182105-0d9446d2e10d?auto=format&fit=crop&q=80&w=1867')}
                             cta="Explore"
                         />
-
                         {/* 7) Giftcards */}
                         <FeatureCard
                             title={t('product.giftcards.title')}
@@ -135,7 +172,6 @@ export default function Home() {
                             href={withIcon('/giftcards', 'https://plus.unsplash.com/premium_photo-1728398068094-d3d30740000f?auto=format&fit=crop&q=80&w=1895')}
                             cta="Explore"
                         />
-
                         {/* 8) Airtimes */}
                         <FeatureCard
                             title={t('product.airtimes.title')}
@@ -144,7 +180,6 @@ export default function Home() {
                             href={withIcon('/airtimes', 'https://plus.unsplash.com/premium_vector-1711987903052-36a37d18bb6b?auto=format&fit=crop&q=80&w=1160')}
                             cta="Explore"
                         />
-
                         {/* 9) Shopping */}
                         <FeatureCard
                             title={t('product.shopping.title')}
