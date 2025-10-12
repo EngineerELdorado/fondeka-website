@@ -54,7 +54,7 @@ export default function Home() {
                                     images={[
                                         'https://images.unsplash.com/photo-1656768151253-bef870f1b7bd?auto=format&fit=crop&q=80&w=1740',
                                         'https://images.unsplash.com/photo-1681597108168-353c13e8e7a5?auto=format&fit=crop&q=80&w=1262',
-                                        'https://images.unsplash.com/photo-1697383904932-94304530a3dd?auto=format&fit=crop&q=80&w=1740'
+                                        'https://images.unsplash.com/photo-1676444322792-9f259e84a1c3?auto=format&fit=crop&q=80&w=1360'
                                     ]}
                                     intervalMs={5500}
                                 />
