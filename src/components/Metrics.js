@@ -24,7 +24,7 @@ export default function Metrics(){
       <div className="container-pad">
         <h2 className="h mb-6">{t('metrics.title')}</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <Counter target={12000} label={t('metrics.users')} />
+          <Counter target={100000} label={t('metrics.users')} />
           <Counter target={6} label={t('metrics.countries')} />
           <Counter target={99} label={t('metrics.uptime') + ' %'} />
         </div>
