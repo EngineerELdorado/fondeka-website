@@ -86,8 +86,8 @@ export default function Home() {
                         <FeatureCard
                             title={t('product.cards.title')}
                             text={t('product.cards.body')}
-                            icon="https://plus.unsplash.com/premium_photo-1728735030984-fef628ee1929?auto=format&fit=crop&q=80&w=1895"
-                            href={withIcon('/cards', 'https://plus.unsplash.com/premium_photo-1728735030984-fef628ee1929?auto=format&fit=crop&q=80&w=1895')}
+                            icon="https://plus.unsplash.com/premium_photo-1675276939507-97d222bb488d?auto=format&fit=crop&q=80&w=1915"
+                            href={withIcon('/cards', 'https://plus.unsplash.com/premium_photo-1675276939507-97d222bb488d?auto=format&fit=crop&q=80&w=1915')}
                             cta="Explore"
                         />
 
@@ -122,8 +122,8 @@ export default function Home() {
                         <FeatureCard
                             title={t('product.payments.title')}
                             text={t('product.payments.body')}
-                            icon="https://plus.unsplash.com/premium_photo-1682339496371-d71e65e3e42d?auto=format&fit=crop&q=80&w=1548"
-                            href={withIcon('/payments', 'https://plus.unsplash.com/premium_photo-1682339496371-d71e65e3e42d?auto=format&fit=crop&q=80&w=1548')}
+                            icon="https://plus.unsplash.com/premium_photo-1740533182105-0d9446d2e10d?auto=format&fit=crop&q=80&w=1867"
+                            href={withIcon('/payments', 'https://plus.unsplash.com/premium_photo-1740533182105-0d9446d2e10d?auto=format&fit=crop&q=80&w=1867')}
                             cta="Explore"
                         />
 
@@ -149,8 +149,8 @@ export default function Home() {
                         <FeatureCard
                             title={t('product.shopping.title')}
                             text={t('product.shopping.body')}
-                            icon="https://plus.unsplash.com/premium_vector-1746177997582-cd5296a66658?auto=format&fit=crop&q=80&w=1800"
-                            href={withIcon('/shopping', 'https://plus.unsplash.com/premium_vector-1746177997582-cd5296a66658?auto=format&fit=crop&q=80&w=1800')}
+                            icon="https://plus.unsplash.com/premium_photo-1683936163027-4d201065a84e?auto=format&fit=crop&q=80&w=1740"
+                            href={withIcon('/shopping', 'https://plus.unsplash.com/premium_photo-1683936163027-4d201065a84e?auto=format&fit=crop&q=80&w=1740')}
                             cta="Explore"
                         />
                     </div>
