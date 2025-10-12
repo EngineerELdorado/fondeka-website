@@ -27,7 +27,7 @@ export default function FeatureCard({ title, text, icon, href, cta }) {
     return (
         <Link
             href={hrefWithIcon}
-            className="block w-full min-w-0 card card-hover p-4 sm:p-5 md:p-6 flex flex-col focus:outline-none focus:ring-2 focus:ring-fondeka-mint"
+            className="block w-full min-w-0 card card-hover card-3d p-4 sm:p-5 md:p-6 preserve-3d focus:outline-none focus:ring-2 focus:ring-fondeka-mint"
         >
             <div className="flex items-center gap-3 mb-3">
                 <div className="badge"><span className="text-fondeka-green">●</span><span>Fondeka</span></div>

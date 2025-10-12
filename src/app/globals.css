@@ -101,3 +101,46 @@ h2.h { @apply text-2xl md:text-4xl font-bold; }
 .card-bleed { padding: 0; }
 html { scroll-behavior: smooth; }
 html, body { overflow-x: hidden; }
+
+/* ===== Depth & 3D polish (safe) ===== */
+:root{
+  --depth-1: 0 6px 16px rgba(0,0,0,.10);
+  --depth-2: 0 12px 30px rgba(0,0,0,.12);
+  --depth-3: 0 24px 60px rgba(0,0,0,.16);
+}
+
+.card-3d    { box-shadow: var(--depth-1); transition: transform .2s ease, box-shadow .2s ease; }
+.card-3d:hover { box-shadow: var(--depth-2); transform: translateY(-2px); }
+
+.btn-3d:active { transform: translateY(1px); }
+
+/* depth frame around media (inner glow + border) */
+.depth-frame {
+  position: relative; border-radius: 1rem; border: 1px solid rgba(0,0,0,.06);
+  box-shadow: var(--depth-1); overflow: hidden; background: #fff;
+}
+.depth-frame::after { /* soft inner highlight */
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background: radial-gradient(120% 70% at 50% 0%, rgba(255,255,255,.25), transparent 60%);
+}
+
+/* animated halo behind hero media (non-interactive, contained) */
+@keyframes halo-rotate { to { transform: rotate(360deg); } }
+.halo {
+  position:absolute; inset:auto; left:50%; top:50%; width:450px; height:450px;
+  transform: translate(-50%, -50%); border-radius:9999px; filter: blur(18px);
+  background:
+          conic-gradient(from 0deg,
+          rgba(133,163,141,.25), rgba(79,128,92,.2), rgba(133,163,141,.25), rgba(79,128,92,.2));
+  opacity:.55; animation: halo-rotate 24s linear infinite;
+}
+@media (max-width: 768px){ .halo{ width:280px; height:280px; } }
+@media (prefers-reduced-motion: reduce){ .halo{ animation:none; } }
+
+/* guard against any tiny overflows */
+html, body { overflow-x:hidden; }
+.hero-3d-title {
+  text-shadow:
+          0.5px 0.5px 0 rgba(0,0,0,.06),
+          1px 1px 0 rgba(0,0,0,.05);
+}

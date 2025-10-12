@@ -43,7 +43,7 @@ export default function DownloadAppButton({ className = '' }){
       <div className={className + ' relative'} ref={menuRef}>
         <button
             onClick={(e)=>{ e.stopPropagation(); setOpen(v=>!v); }}
-            className="btn btn-primary"
+            className="btn btn-primary btn-3d"
             aria-haspopup="dialog"
             aria-expanded={open}
         >

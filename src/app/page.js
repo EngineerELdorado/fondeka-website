@@ -44,15 +44,22 @@ export default function Home() {
                     </div>
 
                     <div className="card card-tight">
-                        <HeroSlider
-                            alt={t('hero.title')}
-                            images={[
-                                'https://images.unsplash.com/photo-1581417660521-38f0fbf18592?auto=format&fit=crop&q=80&w=1592',
-                                'https://images.unsplash.com/photo-1572454023715-ecdc5a221437?auto=format&fit=crop&q=80&w=1550',
-                                'https://images.unsplash.com/photo-1681597108168-353c13e8e7a5?auto=format&fit=crop&q=80&w=1262',
-                            ]}
-                            intervalMs={5500}
-                        />
+                        <div className="relative">
+                            {/* soft rotating halo, sits behind the media, contained by this relative box */}
+                            <div className="halo -z-10" aria-hidden="true" />
+
+                            <div className="depth-frame">
+                                <HeroSlider
+                                    alt={t('hero.title')}
+                                    images={[
+                                        'https://images.unsplash.com/photo-1581417660521-38f0fbf18592?auto=format&fit=crop&q=80&w=1592',
+                                        'https://images.unsplash.com/photo-1572454023715-ecdc5a221437?auto=format&fit=crop&q=80&w=1550',
+                                        'https://images.unsplash.com/photo-1681597108168-353c13e8e7a5?auto=format&fit=crop&q=80&w=1262',
+                                    ]}
+                                    intervalMs={5500}
+                                />
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
