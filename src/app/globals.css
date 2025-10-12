@@ -276,9 +276,11 @@ html, body { overflow-x: hidden; }
 
   /* If later you also want to hide the orbiting icons,
      simply uncomment the line below: */
-  /*
+
   .orbit-anchor {
-    display: none !important;
+    /*display: none !important;*/
+    margin-top: 200px;
+    /*margin-left: 20px;*/
   }
-  */
+
 }
