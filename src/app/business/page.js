@@ -68,7 +68,7 @@ export default function Page(){
             <ul className="mt-6 space-y-2 text-sm">
               <li className="card">Mobile Money, cards & crypto supported</li>
               <li className="card">Clear dashboard & controls</li>
-              <li className="card">Business API available</li>
+              <li className="card">Business API coming soon</li>
             </ul>
 
             <button
