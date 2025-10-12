@@ -52,9 +52,9 @@ export default function Home() {
                                 <HeroSlider
                                     alt={t('hero.title')}
                                     images={[
-                                        'https://images.unsplash.com/photo-1581417660521-38f0fbf18592?auto=format&fit=crop&q=80&w=1592',
-                                        'https://images.unsplash.com/photo-1572454023715-ecdc5a221437?auto=format&fit=crop&q=80&w=1550',
+                                        'https://images.unsplash.com/photo-1656768151253-bef870f1b7bd?auto=format&fit=crop&q=80&w=1740',
                                         'https://images.unsplash.com/photo-1681597108168-353c13e8e7a5?auto=format&fit=crop&q=80&w=1262',
+                                        'https://images.unsplash.com/photo-1697383904932-94304530a3dd?auto=format&fit=crop&q=80&w=1740'
                                     ]}
                                     intervalMs={5500}
                                 />
