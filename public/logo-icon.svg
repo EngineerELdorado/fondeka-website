@@ -1,12 +1,7 @@
+<!-- src/app/icon.svg -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <!-- rounded green square -->
   <rect x="0" y="0" width="60" height="60" rx="14" fill="#4F805C"/>
-  <path d="M35 8c-5 1-8 3-10 6-3 4-6 6-9 8l4 7-3 5 6 6 5 10 6 3 6-5 7 3 3-5-4-6 4-5 7-1 3-6-6-6-2-7-7-3-6 1z"
-        fill="#F2F7F4"/>
-  <circle cx="28" cy="18" r="3" fill="#1FAD66"/>
-  <circle cx="40" cy="30" r="3" fill="#1FAD66"/>
-  <circle cx="24" cy="36" r="3" fill="#1FAD66"/>
-  <path d="M28 18 L34 24" stroke="white" stroke-width="2" stroke-linecap="round"/>
-  <path d="M34 24 L40 30" stroke="white" stroke-width="2" stroke-linecap="round"/>
-  <path d="M34 24 L24 36" stroke="white" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="52" cy="10" r="4" fill="white"/>
+  <!-- white dot (matching your Logo.js: cx=40, cy=20, r=10) -->
+  <circle cx="40" cy="20" r="10" fill="#FFFFFF"/>
 </svg>
