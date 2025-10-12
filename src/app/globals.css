@@ -257,19 +257,28 @@ html, body { overflow-x: hidden; }
   .orbit-ring { animation: none !important; }
 }
 .orbit-right .orbit-ring { animation-direction: reverse; }
-/* Phones: hide corner stickers, keep orbits */
+
+/* --- Mobile behavior: hide corner images, keep orbits --- */
 @media (max-width: 767px) {
+  /* Hide corner stickers (left & right) */
   .fd-left,
   .fd-right {
-    display: none !important;   /* hide the images only */
+    display: none !important;
   }
+
+  /* Keep orbit icons visible on small devices */
   .orbit-anchor {
-    display: block;              /* keep the orbit icons */
-    opacity: .95;                /* a touch more visible on small screens */
+    display: block;
+    opacity: .95;
+    --orbit-radius: 56px;       /* tighten ring on small screens */
+    --orbit-duration: 30s;      /* calm, slow motion */
   }
-  /* optional: make the orbits a bit tighter + slower on phones */
+
+  /* If later you also want to hide the orbiting icons,
+     simply uncomment the line below: */
+  /*
   .orbit-anchor {
-    --orbit-radius: 56px;        /* was 80px; tighten the ring */
-    --orbit-duration: 30s;       /* calmer speed */
+    display: none !important;
   }
+  */
 }
