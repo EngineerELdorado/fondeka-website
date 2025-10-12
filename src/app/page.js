@@ -39,7 +39,7 @@ export default function Home() {
                             </a>
                         </div>
                         <p className="mt-3 text-xs text-gray-500">
-                            Build in Africa, By africans, for the world
+                            Born in DRC, built in Africa, by africans, for the world
                         </p>
                     </div>
 
