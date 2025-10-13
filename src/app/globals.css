@@ -283,21 +283,23 @@ html, body { overflow-x: hidden; }
     /*margin-left: 20px;*/
   }
 }
-/* MacBook/HiDPI (~1440px CSS width): shrink & push LEFT sticker further down */
+/* MacBook/HiDPI (~1440px CSS width): scale stickers down + adjust vertical */
 @media (min-width: 1366px) and (max-width: 1535px) {
   :root{
-    /* pick values that look right for your screen */
-    --corner-left-w:  clamp(180px, 12vw, 320px);
-    --corner-top-left: 500px;   /* ↑ bigger number = lower on screen */
+    /* smaller clamps = visibly smaller stickers in this range */
+    --corner-left-w:  clamp(160px, 10vw, 280px);  /* was 180px, 12vw, 320px */
+    --corner-right-w: clamp(170px, 11vw, 300px);  /* was 180px, 12vw, 320px */
+
+    /* vertical nudges (negative = push up, positive = push down) */
+    --corner-top-left:  -100px;   /* your current choice: push up */
+    --corner-top-right: -100px;   /* your current choice: push up */
+
+    /* optional: tighten orbits so icons stay close to stickers here */
+    /* This works because .orbit-anchor reads these custom properties */
+    --orbit-radius: 64px;        /* was ~80px */
+    --orbit-duration: 26s;       /* calmer speed in this range */
   }
 }
-/* MacBook/HiDPI (~1440px CSS width): shrink & push RIGHT sticker further down */
-@media (min-width: 1366px) and (max-width: 1535px) {
-  :root{
-    /* pick values that look right for your screen */
-    --corner-right-w:  clamp(180px, 12vw, 320px);
-    --corner-top-right: 500px;   /* ↑ bigger number = lower on screen */
-  }
-}
+
 
 
