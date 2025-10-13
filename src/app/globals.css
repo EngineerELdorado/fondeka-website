@@ -283,10 +283,10 @@ html, body { overflow-x: hidden; }
     /*margin-left: 20px;*/
   }
 }
-/* MacBook/HiDPI laptops (~1440px wide CSS): shrink LEFT sticker a bit more */
 @media (min-width: 1366px) and (max-width: 1535px) {
   :root{
-    /* was: clamp(200px, 16vw, 420px) — tighten both the vw and the max */
     --corner-left-w: clamp(180px, 12vw, 320px);
+    --corner-top-left: calc(var(--corner-top-left) + 24px);
   }
 }
+
