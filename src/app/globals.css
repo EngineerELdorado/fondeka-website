@@ -283,9 +283,10 @@ html, body { overflow-x: hidden; }
     /*margin-left: 20px;*/
   }
 }
+/* MacBook/HiDPI (~1440px CSS): push LEFT sticker further down */
 @media (min-width: 1366px) and (max-width: 1535px) {
   :root{
-    --corner-left-w: clamp(180px, 12vw, 320px);
+    /* nudge down by +24px (adjust to taste) */
     --corner-top-left: calc(var(--corner-top-left) + 24px);
   }
 }
