@@ -52,7 +52,7 @@ export default function Footer(){
           <div className="flex items-center gap-4">
             {/* LinkedIn */}
             <a
-              href="https://www.linkedin.com/company/fondeka"
+              href="https://www.linkedin.com/company/fonds-denis-kalenga/?viewAsMember=true"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
