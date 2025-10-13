@@ -291,8 +291,8 @@ html, body { overflow-x: hidden; }
     --corner-right-w: clamp(170px, 11vw, 300px);  /* was 180px, 12vw, 320px */
 
     /* vertical nudges (negative = push up, positive = push down) */
-    --corner-top-left:  500px;   /* your current choice: push up */
-    --corner-top-right: 500px;   /* your current choice: push up */
+    --corner-top-left:  400px;   /* your current choice: push up */
+    --corner-top-right: 400px;   /* your current choice: push up */
 
     /* optional: tighten orbits so icons stay close to stickers here */
     /* This works because .orbit-anchor reads these custom properties */
