@@ -358,6 +358,24 @@ html, body { overflow-x: hidden; }
     --orbit-radius: 46px;
   }
 }
+/* Tablets (portrait & landscape): hide LEFT sticker & LEFT orbit */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .fd-left,
+  .orbit-left {
+    display: none !important;
+  }
+
+  /* Optional: nudge the RIGHT orbit a touch inward for balance on tablets */
+  .orbit-right {
+    right: calc(50% - 50vw + var(--edge-gap) + (var(--corner-right-w) * 0.90)); /* was 0.85 */
+  }
+
+  /* Optional: tighten/slacken the right orbit on tablets */
+  .orbit-anchor.orbit-right {
+    --orbit-radius: 52px;   /* a bit tighter than desktop */
+    --orbit-duration: 28s;  /* a bit slower for calm motion */
+  }
+}
 
 
 
