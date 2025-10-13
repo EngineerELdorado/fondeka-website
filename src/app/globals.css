@@ -288,7 +288,7 @@ html, body { overflow-x: hidden; }
   :root{
     /* pick values that look right for your screen */
     --corner-left-w:  clamp(180px, 12vw, 320px);
-    --corner-top-left: 260px;   /* ↑ bigger number = lower on screen */
+    --corner-top-left: 520px;   /* ↑ bigger number = lower on screen */
   }
 }
 
