@@ -287,8 +287,8 @@ html, body { overflow-x: hidden; }
 @media (min-width: 1366px) and (max-width: 1535px) {
   :root{
     /* smaller clamps = visibly smaller stickers in this range */
-    --corner-left-w:  clamp(160px, 10vw, 280px);  /* was 180px, 12vw, 320px */
-    --corner-right-w: clamp(170px, 11vw, 300px);  /* was 180px, 12vw, 320px */
+    --corner-left-w:  clamp(140px, 8vw, 240px);  /* was 160px, 10vw, 280px */
+    --corner-right-w: clamp(150px, 10vw, 280px);  /* was 170px, 11vw, 300px */
 
     /* vertical nudges (negative = push up, positive = push down) */
     --corner-top-left:  400px;   /* your current choice: push up */
