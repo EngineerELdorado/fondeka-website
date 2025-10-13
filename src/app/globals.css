@@ -283,11 +283,13 @@ html, body { overflow-x: hidden; }
     /*margin-left: 20px;*/
   }
 }
-/* MacBook/HiDPI (~1440px CSS): push LEFT sticker further down */
+/* MacBook/HiDPI (~1440px CSS width): shrink & push LEFT sticker further down */
 @media (min-width: 1366px) and (max-width: 1535px) {
   :root{
-    /* nudge down by +24px (adjust to taste) */
-    --corner-top-left: calc(var(--corner-top-left) + 24px);
+    /* pick values that look right for your screen */
+    --corner-left-w:  clamp(180px, 12vw, 320px);
+    --corner-top-left: 260px;   /* ↑ bigger number = lower on screen */
   }
 }
+
 
