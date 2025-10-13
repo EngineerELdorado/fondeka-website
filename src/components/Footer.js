@@ -29,7 +29,7 @@ export default function Footer(){
         </div>
         <div>
           <h4 className="font-semibold mb-3">Contact</h4>
-          <p className="text-sm text-gray-600">support@fondeka.com<br/>+243 991 079 097</p>
+          <p className="text-sm text-gray-600">info@fondeka.com<br/>+243 991 079 097</p>
           <DownloadAppButton className="mt-6" />
         </div>
       </div>
