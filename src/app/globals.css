@@ -288,7 +288,7 @@ html, body { overflow-x: hidden; }
   :root{
     /* pick values that look right for your screen */
     --corner-left-w:  clamp(180px, 12vw, 320px);
-    --corner-top-left: -20px;   /* ↑ bigger number = lower on screen */
+    --corner-top-left: 500px;   /* ↑ bigger number = lower on screen */
   }
 }
 /* MacBook/HiDPI (~1440px CSS width): shrink & push RIGHT sticker further down */
@@ -296,7 +296,7 @@ html, body { overflow-x: hidden; }
   :root{
     /* pick values that look right for your screen */
     --corner-right-w:  clamp(180px, 12vw, 320px);
-    --corner-top-right: -20px;   /* ↑ bigger number = lower on screen */
+    --corner-top-right: 500px;   /* ↑ bigger number = lower on screen */
   }
 }
 
