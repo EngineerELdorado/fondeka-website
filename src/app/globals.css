@@ -291,5 +291,13 @@ html, body { overflow-x: hidden; }
     --corner-top-left: 520px;   /* ↑ bigger number = lower on screen */
   }
 }
+/* MacBook/HiDPI (~1440px CSS width): shrink & push RIGHT sticker further down */
+@media (min-width: 1366px) and (max-width: 1535px) {
+  :root{
+    /* pick values that look right for your screen */
+    --corner-right-w:  clamp(180px, 12vw, 320px);
+    --corner-top-right: 520px;   /* ↑ bigger number = lower on screen */
+  }
+}
 
 
