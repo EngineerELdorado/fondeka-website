@@ -103,7 +103,7 @@ function AboutEN() {
                                 • Obtain Payment Aggregator License (BCC).<br/>
                                 • Integrate with local payment service providers<br/>
                                 • Launch digital platform .<br/>
-                                • Target: USD 3M annual revenue & first 1M users.
+                                • Target: first 1M users & USD 10M annual revenue
                             </p>
                         </div>
                         <div className="card">
@@ -112,7 +112,7 @@ function AboutEN() {
                                 • Release B2B APIs (collections & payouts).<br/>
                                 • Integrate regional payment service providers (East Africa).<br/>
                                 • Expand to Rwanda, Burundi, Uganda, Kenya, Tanzania<br/>
-                                • Target: Reach 10M users and USD 30M annual revenu
+                                • Target: Reach 10M users & USD 100M annual revenu
                             </p>
                         </div>
                         <div className="card">
@@ -130,7 +130,7 @@ function AboutEN() {
                                 • Regional licenses in Europe, Asia, the Americas.<br/>
                                 • Launch “Fondeka Global” account for borderless payments.<br/>
                                 • Multi-currency clearing + digital asset custody.<br/>
-                                • Power 50M worldwide
+                                • Power 50M users worldwide
                             </p>
                         </div>
                         <div className="card">
@@ -262,7 +262,7 @@ function AboutFR() {
                                 • Enregistrement de la société et ouverture du bureau à Goma.<br/>
                                 • Obtention de tous les documents légaux<br/>
                                 • Activités de microcrédit depuis le bureau, avec plus de 200 clients.<br/>
-                                • Objectif : 1&nbsp;000 demandes de prêts par mois et croissance stable.
+                                • Objectif : 1000 demandes de prêts par mois et croissance stable.
                             </p>
                         </div>
                         <div className="card">
@@ -271,7 +271,7 @@ function AboutFR() {
                                 • Obtenir la licence d’agrégateur de paiements (BCC).<br/>
                                 • Intégration avec les prestataires de services de paiement locaux.<br/>
                                 • Lancement de la plateforme numérique complète.<br/>
-                                • Objectif : 3&nbsp;M&nbsp;USD de revenus annuels et 1&nbsp;M d’utilisateurs.
+                                • Objectif : 1M d’utilisateurs & 10M&nbsp;USD de revenus annuels
                             </p>
                         </div>
                         <div className="card">
@@ -280,7 +280,7 @@ function AboutFR() {
                                 • Lancement des API B2B (collecte & paiement).<br/>
                                 • Intégration de prestataires régionaux (Afrique de l’Est).<br/>
                                 • Expansion vers le Rwanda, le Burundi, l’Ouganda, le Kenya et la Tanzanie.<br/>
-                                • Objectif : 10&nbsp;M d’utilisateurs et 30&nbsp;M&nbsp;USD de revenus annuels.
+                                • Objectif : 10M d’utilisateurs et 100M&nbsp;USD de revenus annuels.
                             </p>
                         </div>
                         <div className="card">
@@ -289,7 +289,7 @@ function AboutFR() {
                                 • Devenir une banque de microfinance pleinement agréée.<br/>
                                 • Banque numérique transfrontalière & IBAN virtuels.<br/>
                                 • Étendre des rails de règlement instantané à l’échelle africaine.<br/>
-                                • Objectif de capital : 50&nbsp;M&nbsp;USD et licence bancaire complète.
+                                • Objectif de capital : 50M&nbsp;USD et licence bancaire complète.
                             </p>
                         </div>
                         <div className="card">
@@ -298,7 +298,7 @@ function AboutFR() {
                                 • Licences régionales en Europe, Asie et Amériques.<br/>
                                 • Lancement du compte « Fondeka Global » <br/>
                                 • Compensation multidevises & conservation d’actifs numériques.<br/>
-                                • Objectif : 50&nbsp;M d’utilisateurs mondialement.
+                                • Objectif : 50M d’utilisateurs mondialement.
                             </p>
                         </div>
                         <div className="card">
