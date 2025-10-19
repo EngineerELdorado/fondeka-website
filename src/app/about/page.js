@@ -130,7 +130,7 @@ function AboutEN() {
                                 • Regional licenses in Europe, Asia, the Americas.<br/>
                                 • Launch “Fondeka Global” account for borderless payments.<br/>
                                 • Multi-currency clearing + digital asset custody.<br/>
-                                • Power 50M users across governments, NGOs, and enterprises.
+                                • Power 50M worldwide
                             </p>
                         </div>
                         <div className="card">
@@ -298,7 +298,7 @@ function AboutFR() {
                                 • Licences régionales en Europe, Asie et Amériques.<br/>
                                 • Lancement du compte « Fondeka Global » <br/>
                                 • Compensation multidevises & conservation d’actifs numériques.<br/>
-                                • Objectif : 50&nbsp;M d’utilisateurs .
+                                • Objectif : 50&nbsp;M d’utilisateurs mondialement.
                             </p>
                         </div>
                         <div className="card">
