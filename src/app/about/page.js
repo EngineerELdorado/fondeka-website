@@ -86,7 +86,7 @@ function AboutEN() {
                 </section>
 
                 <section className="mt-12">
-                    <h2 className="text-2xl font-bold text-fondeka-green mb-4">Our Roadmap — 2025 → 2040</h2>
+                    <h2 className="text-2xl font-bold text-fondeka-green mb-4">Our Roadmap — 2022 → 2040</h2>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div className="card">
                             <h3 className="text-lg font-semibold text-fondeka-green">2022 – 2024 · Registration & Starting</h3>
@@ -254,7 +254,7 @@ function AboutFR() {
                 </section>
 
                 <section className="mt-12">
-                    <h2 className="text-2xl font-bold text-fondeka-green mb-4">Notre Feuille de route — 2025 → 2040</h2>
+                    <h2 className="text-2xl font-bold text-fondeka-green mb-4">Notre Feuille de route — 2022 → 2040</h2>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div className="card">
                             <h3 className="text-lg font-semibold text-fondeka-green">2022 – 2024 · Enregistrement & démarrage</h3>
