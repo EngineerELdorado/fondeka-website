@@ -14,8 +14,8 @@ function AboutEN() {
                 <h1 className="h">About Fondeka</h1>
                 <p className="mt-2 text-gray-700 max-w-3xl">
                     We’re building a world-class payments infrastructure — designed in Africa, by Africans, for the world.
-                    Our mission is to connect people and businesses to every way of moving money: Mobile Money, cards,
-                    bank transfers, and digital assets.
+                    Our mission is to connect people and businesses to every way of moving money: Loans, Mobile Money, cards,
+                    bank transfers, cryptos, airtime, giftcards, etc.
                 </p>
 
                 <section className="mt-10">
@@ -23,9 +23,9 @@ function AboutEN() {
                     <p className="mt-3 text-gray-700 leading-relaxed">
                         Fondeka started in the Democratic Republic of Congo with a simple belief:
                         modern financial tools should be available to everyone. We began as a registered
-                        microfinance effort serving hundreds of customers with flexible, transparent credit.
+                        microcredit/microfinance effort serving hundreds of customers with flexible, transparent credit and flexible repayment options.
                         As we grew, our focus expanded to a digital platform that unifies payments — from Mobile Money
-                        to bank cards to crypto — in one reliable, compliant stack.
+                        to bank cards to crypto and much more— in one reliable, compliant stack.
                     </p>
                 </section>
 
@@ -45,12 +45,12 @@ function AboutEN() {
                         <div className="card">
                             <h3 className="font-semibold">Consumer products</h3>
                             <ul className="mt-3 text-sm text-gray-700 space-y-2">
-                                <li>• Virtual cards (3-D Secure, limits, freeze/unfreeze)</li>
-                                <li>• Link & QR payments (invoicing, crowdfunding)</li>
-                                <li>• Bill payments & airtime top-ups</li>
-                                <li>• eSIM for instant connectivity</li>
+                                <li>• Loans processing instantly</li>
+                                <li>• Virtual cards (VISA & MASTERCARD)</li>
                                 <li>• Crypto on/off-ramp and custody (compliant)</li>
-                                <li>• Shopping tools with better checkout acceptance</li>
+                                <li>• Link & QR payments (invoicing, crowdfunding)</li>
+                                <li>• Bill payments & airtime top-ups </li>
+                                <li>• eSIM for instant connectivity</li>
                             </ul>
                         </div>
                         <div className="card">
@@ -58,7 +58,9 @@ function AboutEN() {
                             <ul className="mt-3 text-sm text-gray-700 space-y-2">
                                 <li>• Collect from Mobile Money, cards, bank transfer, and crypto</li>
                                 <li>• Payout to Mobile Money, bank accounts, cards, and wallets</li>
-                                <li>• Clear realtime status & webhooks</li>
+                                <li>• Payout any gift card to Cash(mobile money, card, bank</li>
+                                <li>• Spend even when your don't have money in your account</li>
+                                <li>• Clear realtime status & notification</li>
                                 <li>• Settlement procedures for normal and crisis scenarios</li>
                             </ul>
                         </div>
@@ -87,21 +89,30 @@ function AboutEN() {
                     <h2 className="text-2xl font-bold text-fondeka-green mb-4">Our Roadmap — 2025 → 2040</h2>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div className="card">
-                            <h3 className="text-lg font-semibold text-fondeka-green">2025 – 2026 · Foundation & Licensing</h3>
+                            <h3 className="text-lg font-semibold text-fondeka-green">2022 – 2024 · Registration & Starting</h3>
                             <p className="mt-2 text-gray-700 text-sm leading-relaxed">
-                                • Obtain Payment Aggregator License (BCC).<br/>
-                                • Harden compliance (KYC/AML), data protection & risk.<br/>
-                                • Launch digital platform (cards, bills, eSIM, wallets).<br/>
-                                • Target: USD 300k annual revenue & first 100k users.
+                                • We registered the company and opened the office in Goma.<br/>
+                                • Obtained all documents<br/>
+                                • Started serving loans from our office to our initial first 200 customers.<br/>
+                                • Target: 1000 loan requests per month and a stable growth.
                             </p>
                         </div>
                         <div className="card">
-                            <h3 className="text-lg font-semibold text-fondeka-green">2027 – 2029 · Expansion & Interoperability</h3>
+                            <h3 className="text-lg font-semibold text-fondeka-green">2025 – 2028 · Going Digital (B2C) & Licensing</h3>
+                            <p className="mt-2 text-gray-700 text-sm leading-relaxed">
+                                • Obtain Payment Aggregator License (BCC).<br/>
+                                • Integrate with local payment service providers<br/>
+                                • Launch digital platform .<br/>
+                                • Target: USD 3M annual revenue & first 1M users.
+                            </p>
+                        </div>
+                        <div className="card">
+                            <h3 className="text-lg font-semibold text-fondeka-green">2029 – 2030 · B2B, Expansion & Interoperability</h3>
                             <p className="mt-2 text-gray-700 text-sm leading-relaxed">
                                 • Release B2B APIs (collections & payouts).<br/>
-                                • Integrate regional Mobile Money & card networks (East/Central Africa).<br/>
+                                • Integrate regional payment service providers (East Africa).<br/>
                                 • Expand to Rwanda, Burundi, Uganda, Kenya, Tanzania<br/>
-                                • Crypto on/off-ramp & stablecoin settlement; reach 10M users.
+                                • Target: Reach 10M users and USD 30M annual revenu
                             </p>
                         </div>
                         <div className="card">
@@ -114,12 +125,21 @@ function AboutEN() {
                             </p>
                         </div>
                         <div className="card">
-                            <h3 className="text-lg font-semibold text-fondeka-green">2035 – 2040 · Global Infrastructure</h3>
+                            <h3 className="text-lg font-semibold text-fondeka-green">2035 – 2040 · Global expansion</h3>
                             <p className="mt-2 text-gray-700 text-sm leading-relaxed">
                                 • Regional licenses in Europe, Asia, the Americas.<br/>
                                 • Launch “Fondeka Global” account for borderless payments.<br/>
                                 • Multi-currency clearing + digital asset custody.<br/>
                                 • Power 50M users across governments, NGOs, and enterprises.
+                            </p>
+                        </div>
+                        <div className="card">
+                            <h3 className="text-lg font-semibold text-fondeka-green">2040 – Future · IPO</h3>
+                            <p className="mt-2 text-gray-700 text-sm leading-relaxed">
+                                • We’ll go public as a profitable, diversified financial group.<br/>
+                                • We’ll have the trust of regulators across multiple jurisdictions.<br/>
+                                • We'll be listed on major stock exchanges.<br/>
+                                • An African fintech that became a pan-African and global bank.
                             </p>
                         </div>
                     </div>
@@ -155,54 +175,58 @@ function AboutFR() {
                 <h1 className="h">À propos de Fondeka</h1>
                 <p className="mt-2 text-gray-700 max-w-3xl">
                     Nous construisons une infrastructure de paiements de classe mondiale — conçue en Afrique,
-                    par des Africains, pour le monde. Notre mission : connecter chacun à tous les moyens de paiement :
-                    Mobile Money, cartes, virements bancaires et actifs numériques.
+                    par des Africains, pour le monde. Notre mission est de connecter les particuliers et les entreprises
+                    à tous les moyens de déplacer de l’argent : crédits, Mobile Money, cartes, virements bancaires,
+                    monnaies numériques, recharges, cartes cadeaux, et bien plus encore.
                 </p>
 
                 <section className="mt-10">
                     <h2 className="text-xl font-semibold text-fondeka-green">Qui nous sommes</h2>
                     <p className="mt-3 text-gray-700 leading-relaxed">
-                        Fondeka est née en République Démocratique du Congo avec une conviction simple :
-                        les outils financiers modernes doivent être accessibles à tous. Nous avons débuté
-                        comme initiative de microfinance enregistrée, accompagnant des centaines de clients
-                        avec des crédits flexibles et transparents. En grandissant, notre ambition a évolué :
-                        bâtir une plateforme numérique unifiant les paiements — du Mobile Money aux cartes
-                        bancaires jusqu’aux actifs numériques — dans un cadre sûr et conforme.
+                        Fondeka est née en République Démocratique du Congo d’une conviction simple :
+                        les outils financiers modernes doivent être accessibles à tous. Nous avons commencé
+                        comme une initiative de microcrédit/microfinance enregistrée, servant des centaines
+                        de clients avec des prêts flexibles, transparents et des plans de remboursement adaptés.
+                        En grandissant, notre mission s’est élargie vers la création d’une plateforme numérique
+                        unifiant les paiements. Du Mobile Money aux cartes bancaires jusqu’aux cryptos
+                        dans un écosystème fiable et conforme.
                     </p>
                 </section>
 
                 <section className="mt-10">
                     <h2 className="text-xl font-semibold text-fondeka-green">Nos origines</h2>
                     <p className="mt-3 text-gray-700 leading-relaxed">
-                        Nous avons choisi de construire depuis le terrain, dans un marché où la majorité reste
-                        non bancarisée. Nous privilégions la robustesse, la sécurité et la conformité, tout en
-                        livrant vite avec une connaissance fine des réalités locales. Notre architecture cloud-native
-                        est pensée pour la scalabilité, l’observabilité et l’alignement réglementaire avec la
-                        Banque Centrale du Congo.
+                        Nous avons choisi de construire depuis le terrain, dans un marché où la majorité de la population
+                        reste non bancarisée. Nous privilégions la robustesse, la sécurité et la conformité,
+                        tout en livrant rapidement avec une profonde compréhension des réalités locales.
+                        Notre architecture cloud-native est conçue pour la scalabilité, l’observabilité et
+                        l’alignement réglementaire avec la Banque Centrale du Congo.
                     </p>
                 </section>
 
                 <section className="mt-10">
-                    <h2 className="text-xl font-semibold text-fondeka-green">Ce que nous avons construit</h2>
+                    <h2 className="text-xl font-semibold text-fondeka-green">Ce que nous avons construit jusqu’ici</h2>
                     <div className="grid md:grid-cols-2 gap-6 mt-4">
                         <div className="card">
                             <h3 className="font-semibold">Produits grand public</h3>
                             <ul className="mt-3 text-sm text-gray-700 space-y-2">
-                                <li>• Cartes virtuelles (3-D Secure, plafonds, gel/dégel)</li>
-                                <li>• Paiements par lien & QR (facturation, crowdfunding)</li>
-                                <li>• Paiement de factures & recharges</li>
+                                <li>• Traitement instantané des prêts</li>
+                                <li>• Cartes virtuelles (VISA & MASTERCARD)</li>
+                                <li>• Conversion et conservation de monnaies numériques (conforme)</li>
+                                <li>• Paiements par lien & QR (facturation, dons, crowdfunding)</li>
+                                <li>• Paiement de factures & recharges téléphoniques</li>
                                 <li>• eSIM pour une connectivité instantanée</li>
-                                <li>• On/Off-ramp crypto et conservation (conforme)</li>
-                                <li>• Outils Shopping pour de meilleurs paiements en ligne</li>
                             </ul>
                         </div>
                         <div className="card">
                             <h3 className="font-semibold">Encaissements & décaissements</h3>
                             <ul className="mt-3 text-sm text-gray-700 space-y-2">
-                                <li>• Encaissez via Mobile Money, cartes, virement et crypto</li>
-                                <li>• Payez vers Mobile Money, banques, cartes et wallets</li>
-                                <li>• Statuts en temps réel & webhooks</li>
-                                <li>• Procédures de règlement en mode normal et crise</li>
+                                <li>• Encaissez depuis Mobile Money, cartes, banque our cryptos</li>
+                                <li>• Payez vers Mobile Money, comptes bancaires, cartes et portefeuilles</li>
+                                <li>• Convertissez toute carte cadeau en espèces </li>
+                                <li>• Dépensez même lorsque votre solde est insuffisant</li>
+                                <li>• Statuts et notifications en temps réel</li>
+                                <li>• Procédures de règlement en mode normal et en situation de crise</li>
                             </ul>
                         </div>
                     </div>
@@ -211,18 +235,20 @@ function AboutFR() {
                 <section className="mt-10">
                     <h2 className="text-xl font-semibold text-fondeka-green">Où nous en sommes</h2>
                     <p className="mt-3 text-gray-700 leading-relaxed">
-                        Aujourd’hui, Fondeka opère comme agrégateur B2C en RDC et formalise sa licence d’agrégateur
-                        auprès du régulateur. Nos applications (mobile + web) offrent une expérience simple tandis que
-                        la plateforme standardise la conformité, le risque et le règlement entre les différents moyens
-                        de paiement. Nous préparons notre couche B2B pour permettre aux marchands et fintechs de se
-                        connecter directement.
+                        Aujourd’hui, Fondeka opère comme agrégateur de paiements B2C en République Démocratique du Congo
+                        et formalise sa licence d’agrégateur auprès du régulateur. Nos applications (mobile et web)
+                        offrent une expérience fluide aux clients tandis que la plateforme unifie la conformité,
+                        le contrôle du risque et les processus de règlement entre les différents moyens de paiement.
+                        Nous préparons actuellement notre couche B2B pour permettre aux marchands et fintechs
+                        de se connecter directement à Fondeka.
                     </p>
                     <div className="card mt-4">
-                        <h3 className="font-semibold">Confiance & conformité</h3>
+                        <h3 className="font-semibold">Conformité & confiance</h3>
                         <p className="text-sm text-gray-700 mt-2">
-                            Nous maintenons des politiques documentées de KYC/AML & sanctions, de protection des données
-                            et chiffrement, de ségrégation des fonds clients, de continuité d’activité & reprise après sinistre,
-                            ainsi que des procédures de gestion des risques conformes aux attentes du régulateur.
+                            Nous maintenons des politiques documentées de KYC/AML et de filtrage des sanctions,
+                            de protection et chiffrement des données, de ségrégation des fonds clients,
+                            ainsi que des plans de continuité d’activité et de reprise après sinistre.
+                            Toutes nos procédures de gestion des risques sont alignées sur les attentes du régulateur.
                         </p>
                     </div>
                 </section>
@@ -231,47 +257,65 @@ function AboutFR() {
                     <h2 className="text-2xl font-bold text-fondeka-green mb-4">Notre Feuille de route — 2025 → 2040</h2>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div className="card">
-                            <h3 className="text-lg font-semibold text-fondeka-green">2025 – 2026 · Fondation & agrément</h3>
+                            <h3 className="text-lg font-semibold text-fondeka-green">2022 – 2024 · Enregistrement & démarrage</h3>
                             <p className="mt-2 text-gray-700 text-sm leading-relaxed">
-                                • Obtenir la licence d’agrégateur (BCC).<br/>
-                                • Renforcer la conformité (KYC/AML), la protection des données & le risque.<br/>
-                                • Lancer la plateforme (cartes, factures, eSIM, portefeuilles).<br/>
-                                • Objectif : 300&nbsp;000&nbsp;USD de revenus annuels & 100&nbsp;000 premiers utilisateurs.
+                                • Enregistrement de la société et ouverture du bureau à Goma.<br/>
+                                • Obtention de tous les documents légaux<br/>
+                                • Activités de microcrédit depuis le bureau, avec plus de 200 clients.<br/>
+                                • Objectif : 1&nbsp;000 demandes de prêts par mois et croissance stable.
                             </p>
                         </div>
                         <div className="card">
-                            <h3 className="text-lg font-semibold text-fondeka-green">2027 – 2029 · Expansion & interopérabilité</h3>
+                            <h3 className="text-lg font-semibold text-fondeka-green">2025 – 2028 · Digitalisation (B2C) & agrément</h3>
                             <p className="mt-2 text-gray-700 text-sm leading-relaxed">
-                                • Lancer des API B2B (collecte & payout).<br/>
-                                • Intégrer les réseaux Mobile Money & cartes (Afrique centrale/orientale).<br/>
-                                • Expand to Rwanda, Burundi, Uganda, Kenya, Tanzania<br/>
-                                • On/Off-ramp crypto & règlement stablecoin ; atteindre 10&nbsp;M d’utilisateurs.
+                                • Obtenir la licence d’agrégateur de paiements (BCC).<br/>
+                                • Intégration avec les prestataires de services de paiement locaux.<br/>
+                                • Lancement de la plateforme numérique complète.<br/>
+                                • Objectif : 3&nbsp;M&nbsp;USD de revenus annuels et 1&nbsp;M d’utilisateurs.
+                            </p>
+                        </div>
+                        <div className="card">
+                            <h3 className="text-lg font-semibold text-fondeka-green">2029 – 2030 · B2B, expansion & interopérabilité</h3>
+                            <p className="mt-2 text-gray-700 text-sm leading-relaxed">
+                                • Lancement des API B2B (collecte & paiement).<br/>
+                                • Intégration de prestataires régionaux (Afrique de l’Est).<br/>
+                                • Expansion vers le Rwanda, le Burundi, l’Ouganda, le Kenya et la Tanzanie.<br/>
+                                • Objectif : 10&nbsp;M d’utilisateurs et 30&nbsp;M&nbsp;USD de revenus annuels.
                             </p>
                         </div>
                         <div className="card">
                             <h3 className="text-lg font-semibold text-fondeka-green">2030 – 2034 · Transformation bancaire</h3>
                             <p className="mt-2 text-gray-700 text-sm leading-relaxed">
-                                • Devenir une banque de microfinance agréée.<br/>
+                                • Devenir une banque de microfinance pleinement agréée.<br/>
                                 • Banque numérique transfrontalière & IBAN virtuels.<br/>
                                 • Étendre des rails de règlement instantané à l’échelle africaine.<br/>
                                 • Objectif de capital : 50&nbsp;M&nbsp;USD et licence bancaire complète.
                             </p>
                         </div>
                         <div className="card">
-                            <h3 className="text-lg font-semibold text-fondeka-green">2035 – 2040 · Infrastructure mondiale</h3>
+                            <h3 className="text-lg font-semibold text-fondeka-green">2035 – 2040 · Expansion mondiale</h3>
                             <p className="mt-2 text-gray-700 text-sm leading-relaxed">
-                                • Licences régionales en Europe, Asie, Amériques.<br/>
-                                • Lancer « Fondeka Global » pour des paiements sans frontières.<br/>
+                                • Licences régionales en Europe, Asie et Amériques.<br/>
+                                • Lancement du compte « Fondeka Global » <br/>
                                 • Compensation multidevises & conservation d’actifs numériques.<br/>
-                                • Servir 50&nbsp;M d’utilisateurs (gouvernements, ONG, entreprises).
+                                • Objectif : 50&nbsp;M d’utilisateurs .
+                            </p>
+                        </div>
+                        <div className="card">
+                            <h3 className="text-lg font-semibold text-fondeka-green">2040 – Futur · Introduction en bourse (IPO)</h3>
+                            <p className="mt-2 text-gray-700 text-sm leading-relaxed">
+                                • Entrée en bourse en tant que groupe financier rentable et diversifié.<br/>
+                                • Reconnaissance et confiance des régulateurs .<br/>
+                                • Cotation sur les principales places boursières internationales.<br/>
+                                • Une fintech africaine devenue banque panafricaine et mondiale.
                             </p>
                         </div>
                     </div>
 
                     <div className="card mt-8 bg-fondeka-light">
                         <p className="text-gray-700 leading-relaxed text-sm">
-                            Notre boussole : <strong>l’inclusion financière par la technologie</strong>.
-                            Chaque étape rapproche l’Afrique d’une économie connectée et sans frontières.
+                            Nous sommes guidés par un principe : <strong>l’inclusion financière par la technologie</strong>.
+                            Chaque étape rapproche l’Afrique d’une économie pleinement connectée et sans frontières.
                         </p>
                     </div>
                 </section>
@@ -282,7 +326,8 @@ function AboutFR() {
                             Construit en Afrique. Pour le monde.
                         </h3>
                         <p className="mt-2 text-gray-700">
-                            Rejoignez-nous pour bâtir une nouvelle génération de paiements pour des millions de personnes.
+                            Rejoignez-nous dans la construction d’une infrastructure moderne pour le mouvement de l’argent,
+                            au service de millions de personnes.
                         </p>
                     </div>
                 </section>
@@ -290,3 +335,4 @@ function AboutFR() {
         </main>
     );
 }
+
