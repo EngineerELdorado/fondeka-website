@@ -57,7 +57,7 @@ function AboutEN() {
                             <h3 className="font-semibold">Collections & payouts</h3>
                             <ul className="mt-3 text-sm text-gray-700 space-y-2">
                                 <li>• Collect from Mobile Money, cards, bank transfer, and crypto</li>
-                                <li>• Payout to Mobile Money, bank accounts, cards, and wallets</li>
+                                <li>• Payout to Mobile Money, bank, cards, e-wallets, cryptos</li>
                                 <li>• Payout any gift card to Cash(mobile money, card, bank</li>
                                 <li>• Spend even when your don't have money in your account</li>
                                 <li>• Clear realtime status & notification</li>
