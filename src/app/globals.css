@@ -282,5 +282,101 @@ html, body { overflow-x: hidden; }
     margin-top: 200px;
     /*margin-left: 20px;*/
   }
-
 }
+/* MacBook/HiDPI (~1440px CSS width): scale stickers down + adjust vertical */
+@media (min-width: 1366px) and (max-width: 1535px) {
+  :root{
+    /* smaller clamps = visibly smaller stickers in this range */
+    --corner-left-w:  clamp(150px, 10vw, 280px);  /* was 160px, 10vw, 280px */
+    --corner-right-w: clamp(150px, 10vw, 280px);  /* was 170px, 11vw, 300px */
+
+    /* vertical nudges (negative = push up, positive = push down) */
+    --corner-top-left:  400px;   /* your current choice: push up */
+    --corner-top-right: 400px;   /* your current choice: push up */
+
+    /* optional: tighten orbits so icons stay close to stickers here */
+    /* This works because .orbit-anchor reads these custom properties */
+    --orbit-radius: 64px;        /* was ~80px */
+    --orbit-duration: 26s;       /* calmer speed in this range */
+  }
+}
+/* ────────────────────────────────────────────────────────────────
+   Large tablets / small laptops (LANDSCAPE): 1024–1279px
+   e.g., iPad Pro landscape, 11" landscape, Surface Go
+   ──────────────────────────────────────────────────────────────── */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  :root{
+    /* smaller stickers in this range */
+    --corner-left-w:  clamp(140px, 12vw, 240px);
+    --corner-right-w: clamp(140px, 12vw, 240px);
+
+    /* push lower so they don't overlap hero copy */
+    --corner-top-left:  420px;  /* increase to push further down */
+    --corner-top-right: 420px;
+
+    /* keep the orbit close & calmer */
+    --orbit-radius: 56px;       /* was 64/80px */
+    --orbit-duration: 28s;      /* slower */
+  }
+}
+
+/* Optional: if landscape still feels a bit tight on some tablets */
+@media (min-width: 1024px) and (max-width: 1279px) and (orientation: landscape) {
+  :root{
+    --corner-top-left:  440px;
+    --corner-top-right: 440px;
+  }
+}
+
+/* ────────────────────────────────────────────────────────────────
+   Tablets / iPad (PORTRAIT): 768–1023px
+   e.g., iPad portrait, iPad mini portrait, small Chromebooks
+   ──────────────────────────────────────────────────────────────── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root{
+    /* shrink more in portrait so text has room */
+    --corner-left-w:  clamp(120px, 18vw, 200px);
+    --corner-right-w: clamp(120px, 18vw, 200px);
+
+    /* push lower in portrait */
+    --corner-top-left:  460px;
+    --corner-top-right: 460px;
+
+    /* tighter, gentler orbit */
+    --orbit-radius: 50px;
+    --orbit-duration: 30s;
+  }
+}
+
+/* Optional: iPad 10/11 portrait specific nudge (fits many 820–912 widths) */
+@media (min-width: 820px) and (max-width: 912px) and (orientation: portrait) {
+  :root{
+    --corner-left-w:  clamp(110px, 17vw, 180px);
+    --corner-right-w: clamp(110px, 17vw, 180px);
+    --corner-top-left:  480px;
+    --corner-top-right: 480px;
+    --orbit-radius: 46px;
+  }
+}
+/* Tablets (portrait & landscape): hide LEFT sticker & LEFT orbit */
+@media (min-width: 768px) and (max-width: 1279px) {
+  .fd-left,
+  .orbit-left {
+    display: none !important;
+  }
+
+  /* Optional: nudge the RIGHT orbit a touch inward for balance on tablets */
+  .orbit-right {
+    right: calc(50% - 50vw + var(--edge-gap) + (var(--corner-right-w) * 0.90)); /* was 0.85 */
+  }
+
+  /* Optional: tighten/slacken the right orbit on tablets */
+  .orbit-anchor.orbit-right {
+    --orbit-radius: 52px;   /* a bit tighter than desktop */
+    --orbit-duration: 28s;  /* a bit slower for calm motion */
+  }
+}
+
+
+
+
