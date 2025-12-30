@@ -99,7 +99,7 @@ export default function Page() {
                         <div className="card">
                             <h3 className="text-lg font-semibold text-fondeka-green">2027 – 2029 · Expansion & interopérabilité</h3>
                             <p className="mt-2 text-gray-700 text-sm leading-relaxed">
-                                • Lancer des API B2B (collecte & payout).<br/>
+                                • Lancer des API B2B (collecte & payout) & Business tools(eg POS).<br/>
                                 • Intégrer les réseaux Mobile Money & cartes (Afrique centrale/orientale).<br/>
                                 • S’étendre au Rwanda, Kenya, Zambie.<br/>
                                 • On/Off-ramp crypto & règlement stablecoin ; atteindre 10&nbsp;M d’utilisateurs.
