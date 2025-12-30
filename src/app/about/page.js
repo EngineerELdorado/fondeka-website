@@ -109,7 +109,7 @@ function AboutEN() {
                         <div className="card">
                             <h3 className="text-lg font-semibold text-fondeka-green">2029 – 2030 · B2B, Expansion & Interoperability</h3>
                             <p className="mt-2 text-gray-700 text-sm leading-relaxed">
-                                • Release B2B APIs (collections & payouts) & Business tools(eg: POS)..<br/>
+                                • Release B2B APIs (collections & payouts) & Business tools(eg: POS).<br/>
                                 • Integrate regional payment service providers (East Africa).<br/>
                                 • Expand to Rwanda, Burundi, Uganda, Kenya, Tanzania<br/>
                                 • Target: Reach 10M users & USD 100M annual revenu
@@ -277,7 +277,7 @@ function AboutFR() {
                         <div className="card">
                             <h3 className="text-lg font-semibold text-fondeka-green">2029 – 2030 · B2B, expansion & interopérabilité</h3>
                             <p className="mt-2 text-gray-700 text-sm leading-relaxed">
-                                • Lancement des API B2B (collecte & paiement) & Outils Business(ex: POS)..<br/>
+                                • Lancement des API B2B (collecte & paiement) & Outils Business(ex: POS).<br/>
                                 • Intégration de prestataires régionaux (Afrique de l’Est).<br/>
                                 • Expansion vers le Rwanda, le Burundi, l’Ouganda, le Kenya et la Tanzanie.<br/>
                                 • Objectif : 10M d’utilisateurs et 100M&nbsp;USD de revenus annuels.
