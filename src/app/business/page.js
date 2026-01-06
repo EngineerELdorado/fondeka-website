@@ -1,6 +1,7 @@
 'use client';
 import { useState, useRef, useEffect } from 'react';
 import { useI18n } from '@/lib/i18n';
+import ProductStatusBadge from '@/components/ProductStatusBadge';
 
 export default function Page(){
   const { t, lang } = useI18n();
@@ -11,7 +12,7 @@ export default function Page(){
   const inputRef = useRef(null);
 
   const txt = {
-    title: t('product.business.title') + ' (Coming Soon)',
+    title: t('product.business.title'),
     body: t('product.business.body'),
     notify: t('business.notify.me') || 'Notify me',
     dialogTitle: (t('business.notify.dialogTitle') || 'Get notified'),
@@ -63,7 +64,10 @@ export default function Page(){
       <main className="section">
         <div className="container-pad grid md:grid-cols-2 gap-10 items-start">
           <div>
-            <h1 className="h">{txt.title}</h1>
+            <div className="flex flex-wrap items-center gap-3">
+              <h1 className="h">{txt.title}</h1>
+              <ProductStatusBadge status="Waiting for license" />
+            </div>
             <p className="mt-3 text-gray-700">{txt.body}</p>
             <ul className="mt-6 space-y-2 text-sm">
               <li className="card">Mobile Money, cards & crypto supported</li>

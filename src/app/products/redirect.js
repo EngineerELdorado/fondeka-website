@@ -2,6 +2,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useI18n } from '@/lib/i18n';
+import ProductStatusBadge from '@/components/ProductStatusBadge';
 
 export default function ProductsRedirect() {
     const { lang } = useI18n();
@@ -20,6 +21,16 @@ export default function ProductsRedirect() {
                 <p className="mt-2 text-gray-600">
                     Redirecting you to the products section…
                 </p>
+                <div className="mt-4 flex flex-col items-center gap-3 text-sm text-gray-700">
+                    <div className="flex flex-wrap items-center justify-center gap-2">
+                        <ProductStatusBadge status="Available" />
+                        <span>eSIM, Bill payments, Virtual cards, Gift cards, Airtimes, Shopping</span>
+                    </div>
+                    <div className="flex flex-wrap items-center justify-center gap-2">
+                        <ProductStatusBadge status="Waiting for license" />
+                        <span>Loans, Crypto, Payments, Collect, Payout, Business API</span>
+                    </div>
+                </div>
                 <a
                     href={`/?lang=${lang}#products`}
                     className="btn btn-primary mt-6 inline-block"

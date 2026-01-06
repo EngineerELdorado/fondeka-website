@@ -1,6 +1,7 @@
 'use client';
 import Image from 'next/image';
 import Link from 'next/link';
+import ProductStatusBadge from './ProductStatusBadge';
 
 function withIconInHref(href, icon) {
     if (!icon) return href;
@@ -21,7 +22,7 @@ function withIconInHref(href, icon) {
     }
 }
 
-export default function FeatureCard({ title, text, icon, href, cta }) {
+export default function FeatureCard({ title, text, icon, href, cta, badge }) {
     const hrefWithIcon = withIconInHref(href, icon);
 
     return (
@@ -30,7 +31,7 @@ export default function FeatureCard({ title, text, icon, href, cta }) {
             className="block w-full min-w-0 card card-hover card-3d p-4 sm:p-5 md:p-6 preserve-3d focus:outline-none focus:ring-2 focus:ring-fondeka-mint"
         >
             <div className="flex items-center gap-3 mb-3">
-                <div className="badge"><span className="text-fondeka-green">●</span><span>Fondeka</span></div>
+                {badge && <ProductStatusBadge status={badge} />}
             </div>
 
             <h3 className="text-base sm:text-lg md:text-xl font-semibold truncate">{title}</h3>

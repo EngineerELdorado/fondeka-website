@@ -123,6 +123,7 @@ export default function Home() {
                             icon="https://plus.unsplash.com/premium_photo-1672660509832-0c749dbd82eb?auto=format&fit=crop&q=80&w=1915"
                             href={withIcon('/loans', 'https://plus.unsplash.com/premium_photo-1672660509832-0c749dbd82eb?auto=format&fit=crop&q=80&w=1915')}
                             cta="Explore"
+                            badge="Waiting for license"
                         />
                         {/* 2) Cards */}
                         <FeatureCard
@@ -131,6 +132,7 @@ export default function Home() {
                             icon="https://plus.unsplash.com/premium_photo-1675276939507-97d222bb488d?auto=format&fit=crop&q=80&w=1915"
                             href={withIcon('/cards', 'https://plus.unsplash.com/premium_photo-1675276939507-97d222bb488d?auto=format&fit=crop&q=80&w=1915')}
                             cta="Explore"
+                            badge="Available"
                         />
                         {/* 3) Bill payments */}
                         <FeatureCard
@@ -139,6 +141,7 @@ export default function Home() {
                             icon="https://images.unsplash.com/photo-1692158962133-6c97ee651ab9?auto=format&fit=crop&q=80&w=1160"
                             href={withIcon('/bills', 'https://images.unsplash.com/photo-1692158962133-6c97ee651ab9?auto=format&fit=crop&q=80&w=1160')}
                             cta="Explore"
+                            badge="Available"
                         />
                         {/* 4) eSIM */}
                         <FeatureCard
@@ -147,6 +150,7 @@ export default function Home() {
                             icon="https://images.unsplash.com/photo-1718631919973-ca9f02f46534?auto=format&fit=crop&q=80&w=1740"
                             href={withIcon('/esim', 'https://images.unsplash.com/photo-1718631919973-ca9f02f46534?auto=format&fit=crop&q=80&w=1740')}
                             cta="Explore"
+                            badge="Available"
                         />
                         {/* 5) Crypto */}
                         <FeatureCard
@@ -155,6 +159,7 @@ export default function Home() {
                             icon="https://plus.unsplash.com/premium_photo-1676998623020-2640a850bdc0?auto=format&fit=crop&q=80&w=870"
                             href={withIcon('/crypto', 'https://plus.unsplash.com/premium_photo-1676998623020-2640a850bdc0?auto=format&fit=crop&q=80&w=870')}
                             cta="Explore"
+                            badge="Waiting for license"
                         />
                         {/* 6) Payments */}
                         <FeatureCard
@@ -163,6 +168,7 @@ export default function Home() {
                             icon="https://plus.unsplash.com/premium_photo-1740533182105-0d9446d2e10d?auto=format&fit=crop&q=80&w=1867"
                             href={withIcon('/payments', 'https://plus.unsplash.com/premium_photo-1740533182105-0d9446d2e10d?auto=format&fit=crop&q=80&w=1867')}
                             cta="Explore"
+                            badge="Waiting for license"
                         />
                         {/* 7) Giftcards */}
                         <FeatureCard
@@ -171,6 +177,7 @@ export default function Home() {
                             icon="https://plus.unsplash.com/premium_photo-1728398068094-d3d30740000f?auto=format&fit=crop&q=80&w=1895"
                             href={withIcon('/giftcards', 'https://plus.unsplash.com/premium_photo-1728398068094-d3d30740000f?auto=format&fit=crop&q=80&w=1895')}
                             cta="Explore"
+                            badge="Available"
                         />
                         {/* 8) Airtimes */}
                         <FeatureCard
@@ -179,6 +186,7 @@ export default function Home() {
                             icon="https://plus.unsplash.com/premium_vector-1711987903052-36a37d18bb6b?auto=format&fit=crop&q=80&w=1160"
                             href={withIcon('/airtimes', 'https://plus.unsplash.com/premium_vector-1711987903052-36a37d18bb6b?auto=format&fit=crop&q=80&w=1160')}
                             cta="Explore"
+                            badge="Available"
                         />
                         {/* 9) Shopping */}
                         <FeatureCard
@@ -187,6 +195,7 @@ export default function Home() {
                             icon="https://plus.unsplash.com/premium_photo-1683936163027-4d201065a84e?auto=format&fit=crop&q=80&w=1740"
                             href={withIcon('/shopping', 'https://plus.unsplash.com/premium_photo-1683936163027-4d201065a84e?auto=format&fit=crop&q=80&w=1740')}
                             cta="Explore"
+                            badge="Available"
                         />
                     </div>
                 </div>
