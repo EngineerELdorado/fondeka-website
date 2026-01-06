@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import Logo from './Logo';
 import { useState, useRef, useEffect } from 'react';
 import { useI18n } from '../lib/i18n';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
@@ -62,7 +61,8 @@ export default function Header(){
       <header className="sticky top-0 z-50 bg-white/80 backdrop-blur">
         <div className="container-pad flex items-center justify-between py-3">
           <Link href={`/?lang=${lang}`} className="flex items-center gap-3">
-            <Logo className="h-8 w-auto" withWordmark />
+            <img src="/icon.svg" alt="Fondeka icon" className="h-8 w-8" />
+            <span className="text-xl font-extrabold tracking-tight text-fondeka-dark">Fondeka</span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-8 text-sm">

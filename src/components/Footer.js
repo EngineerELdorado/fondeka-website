@@ -32,6 +32,7 @@ export default function Footer(){
             <li><a href={`/about?lang=${lang}`} className="hover:text-fondeka-green">{t('nav.about')}</a></li>
             <li><a href={`/compliance?lang=${lang}`} className="hover:text-fondeka-green">{t('nav.compliance')}</a></li>
             <li><a href={`/docs?lang=${lang}`} className="hover:text-fondeka-green">{t('nav.docs')}</a></li>
+            <li><a href={`/privacy?lang=${lang}`} className="hover:text-fondeka-green">{t('nav.privacy')}</a></li>
           </ul>
         </div>
 
