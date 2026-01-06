@@ -6,5 +6,6 @@ export default function sitemap() {
         { url: 'https://fondeka.com/business' },
         { url: 'https://fondeka.com/compliance' },
         { url: 'https://fondeka.com/privacy' },
+        { url: 'https://fondeka.com/end-user-agreement' },
     ];
 }
