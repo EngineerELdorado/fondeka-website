@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.fondeka.app",
+      "sha256_cert_fingerprints": [
+        "0E:E7:6D:61:77:78:F7:4C:A6:77:0F:0F:23:CE:38:37:91:0C:3C:51:A2:35:36:75:B6:9C:EA:05:57:25:67:EF"
+      ]
+    }
+  }
+]
