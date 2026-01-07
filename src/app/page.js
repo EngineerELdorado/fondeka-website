@@ -168,7 +168,7 @@ export default function Home() {
                             icon="https://plus.unsplash.com/premium_photo-1740533182105-0d9446d2e10d?auto=format&fit=crop&q=80&w=1867"
                             href={withIcon('/payments', 'https://plus.unsplash.com/premium_photo-1740533182105-0d9446d2e10d?auto=format&fit=crop&q=80&w=1867')}
                             cta="Explore"
-                            badge="Waiting for license"
+                            badge="Available"
                         />
                         {/* 7) Giftcards */}
                         <FeatureCard
