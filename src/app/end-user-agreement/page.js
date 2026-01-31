@@ -30,12 +30,12 @@ function EndUserAgreementEN() {
                         <ul className="mt-3 text-sm text-gray-700 space-y-2">
                             <li>• Do not use the Services for illegal activity, fraud, or sanctions evasion.</li>
                             <li>• Do not attempt to access or interfere with systems or data you do not own.</li>
-                            <li>• Use payment and crypto features only where legally permitted.</li>
+                            <li>• Use payment features only where legally permitted.</li>
                         </ul>
                     </section>
 
                     <section className="card">
-                        <h2 className="text-lg font-semibold">Payments, wallets, and cards</h2>
+                        <h2 className="text-lg font-semibold">Payments, mobile money, and cards</h2>
                         <p className="mt-3 text-sm text-gray-700">
                             Transactions may be subject to limits, fees, and compliance checks. You are responsible for
                             ensuring payment details and recipient information are correct. Settlement timing can vary
@@ -44,10 +44,18 @@ function EndUserAgreementEN() {
                     </section>
 
                     <section className="card">
-                        <h2 className="text-lg font-semibold">Crypto services</h2>
+                        <h2 className="text-lg font-semibold">eSIM services</h2>
                         <p className="mt-3 text-sm text-gray-700">
-                            Digital asset services may involve volatility and network risk. You understand that crypto
-                            transactions can be irreversible, and you accept the applicable market and technical risks.
+                            eSIM top‑ups are provided subject to availability and operator/network conditions. Service
+                            availability and delivery timing may vary.
+                        </p>
+                    </section>
+
+                    <section className="card">
+                        <h2 className="text-lg font-semibold">Notifications</h2>
+                        <p className="mt-3 text-sm text-gray-700">
+                            You may receive real‑time notifications about account activity and transactions. You are
+                            responsible for keeping your contact details up to date to receive alerts.
                         </p>
                     </section>
 
@@ -110,23 +118,33 @@ function EndUserAgreementFR() {
                         <ul className="mt-3 text-sm text-gray-700 space-y-2">
                             <li>• Ne pas utiliser les Services pour des activités illégales ou frauduleuses.</li>
                             <li>• Ne pas tenter d’accéder à des systèmes ou données non autorisés.</li>
-                            <li>• Utiliser les services de paiement/crypto uniquement là où la loi le permet.</li>
+                            <li>• Utiliser les services de paiement uniquement là où la loi le permet.</li>
                         </ul>
                     </section>
 
                     <section className="card">
-                        <h2 className="text-lg font-semibold">Paiements, wallets et cartes</h2>
+                        <h2 className="text-lg font-semibold">Paiements, Mobile Money et cartes</h2>
                         <p className="mt-3 text-sm text-gray-700">
                             Les transactions peuvent être soumises à des limites, frais et contrôles de conformité.
-                            Vous êtes responsable de l’exactitude des informations de paiement et des destinataires.
+                            Vous êtes responsable de la vérification des détails de paiement et des informations du
+                            destinataire. Les délais de règlement peuvent varier selon la méthode et la disponibilité
+                            du réseau.
                         </p>
                     </section>
 
                     <section className="card">
-                        <h2 className="text-lg font-semibold">Services crypto</h2>
+                        <h2 className="text-lg font-semibold">Services eSIM</h2>
                         <p className="mt-3 text-sm text-gray-700">
-                            Les actifs numériques comportent des risques de volatilité et de réseau. Les transactions
-                            crypto peuvent être irréversibles.
+                            Les recharges eSIM sont fournies sous réserve de disponibilité et des conditions opérateur/réseau.
+                            La disponibilité du service et les délais de livraison peuvent varier.
+                        </p>
+                    </section>
+
+                    <section className="card">
+                        <h2 className="text-lg font-semibold">Notifications</h2>
+                        <p className="mt-3 text-sm text-gray-700">
+                            Vous pouvez recevoir des notifications en temps réel sur l’activité du compte et les transactions.
+                            Vous êtes responsable de tenir vos coordonnées à jour afin de recevoir les alertes.
                         </p>
                     </section>
 
