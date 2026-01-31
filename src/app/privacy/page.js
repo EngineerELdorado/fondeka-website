@@ -21,11 +21,15 @@ function PrivacyEN() {
                     <section className="card">
                         <h2 className="text-lg font-semibold">Information we collect</h2>
                         <ul className="mt-3 text-sm text-gray-700 space-y-2">
-                            <li>• Identity & account data: name, phone, email, date of birth, address, and login credentials.</li>
-                            <li>• KYC/AML data: ID documents, selfies, sanctions screening results, and verification status.</li>
-                            <li>• Transaction data: amounts, balances, payment method identifiers, and merchant details.</li>
-                            <li>• Device & usage data: IP address, device identifiers, browser/app version, logs, and performance data.</li>
+                            <li>• Identity & account data: name, email, phone number, account number, user ID, address, date of birth, and login credentials.</li>
+                            <li>• KYC/AML data: ID numbers, ID documents, selfies, sanctions screening results, and verification status.</li>
+                            <li>• Financial data: balances, transaction history, payment method identifiers, and merchant details.</li>
+                            <li>• Contacts: address book entries and phone numbers, only if you grant permission in the app.</li>
+                            <li>• Device & identifiers: IP address, device identifiers, device name, platform, locale, country, app/browser version, and security keys.</li>
+                            <li>• Notifications data: push tokens and notification interaction data (sent/received/opened).</li>
+                            <li>• Support data: support chats, tickets, and related correspondence.</li>
                             <li>• Business API data: merchant profile details, API keys, webhook events, and support tickets.</li>
+                            <li>• Diagnostics: app performance logs and crash data where enabled.</li>
                         </ul>
                     </section>
 
@@ -37,6 +41,7 @@ function PrivacyEN() {
                             <li>• Monitor reliability, improve products, and troubleshoot issues.</li>
                             <li>• Communicate about transactions, security alerts, and support requests.</li>
                             <li>• Comply with applicable laws and respond to lawful requests.</li>
+                            <li>• Personalize language, location, and regional compliance settings.</li>
                         </ul>
                     </section>
 
@@ -51,6 +56,16 @@ function PrivacyEN() {
                         <p className="mt-3 text-sm text-gray-700">
                             We do not sell personal data.
                         </p>
+                    </section>
+
+                    <section className="card">
+                        <h2 className="text-lg font-semibold">Key third‑party processors</h2>
+                        <ul className="mt-3 text-sm text-gray-700 space-y-2">
+                            <li>• Intercom (customer support).</li>
+                            <li>• Smile Identity (identity verification).</li>
+                            <li>• Cloudinary (secure document uploads).</li>
+                            <li>• AWS Cognito / Amplify (authentication and account management).</li>
+                        </ul>
                     </section>
 
                     <section className="card">
@@ -106,11 +121,15 @@ function PrivacyFR() {
                     <section className="card">
                         <h2 className="text-lg font-semibold">Informations collectées</h2>
                         <ul className="mt-3 text-sm text-gray-700 space-y-2">
-                            <li>• Données d’identité et de compte : nom, téléphone, email, date de naissance, adresse.</li>
-                            <li>• Données KYC/AML : pièces d’identité, selfies, résultats de filtrage et statut de vérification.</li>
-                            <li>• Données de transaction : montants, soldes, identifiants de paiement, détails marchands.</li>
-                            <li>• Données techniques : adresse IP, identifiants d’appareil, version app/navigateur, journaux.</li>
+                            <li>• Données d’identité et de compte : nom, email, numéro de téléphone, numéro de compte, ID utilisateur, adresse, date de naissance, identifiants de connexion.</li>
+                            <li>• Données KYC/AML : numéros d’identité, pièces d’identité, selfies, résultats de filtrage et statut de vérification.</li>
+                            <li>• Données financières : soldes, historique des transactions, identifiants de paiement, détails marchands.</li>
+                            <li>• Contacts : entrées du carnet d’adresses et numéros de téléphone, uniquement avec votre autorisation.</li>
+                            <li>• Données appareil & identifiants : adresse IP, identifiants d’appareil, nom d’appareil, plateforme, langue, pays, version app/navigateur, clés de sécurité.</li>
+                            <li>• Données de notifications : tokens push et interactions (envoyées/reçues/ouvertes).</li>
+                            <li>• Données support : chats, tickets et échanges associés.</li>
                             <li>• Données API Business : profil marchand, clés API, événements webhook, tickets support.</li>
+                            <li>• Diagnostics : journaux de performance et crashs si activés.</li>
                         </ul>
                     </section>
 
@@ -122,6 +141,7 @@ function PrivacyFR() {
                             <li>• Surveiller la fiabilité, améliorer les produits et résoudre les incidents.</li>
                             <li>• Communiquer sur les transactions, alertes de sécurité et demandes support.</li>
                             <li>• Se conformer aux lois et répondre aux requêtes légales.</li>
+                            <li>• Adapter la langue, la localisation et les exigences régionales.</li>
                         </ul>
                     </section>
 
@@ -136,6 +156,16 @@ function PrivacyFR() {
                         <p className="mt-3 text-sm text-gray-700">
                             Nous ne vendons pas vos données personnelles.
                         </p>
+                    </section>
+
+                    <section className="card">
+                        <h2 className="text-lg font-semibold">Principaux sous‑traitants</h2>
+                        <ul className="mt-3 text-sm text-gray-700 space-y-2">
+                            <li>• Intercom (support client).</li>
+                            <li>• Smile Identity (vérification d’identité).</li>
+                            <li>• Cloudinary (téléversement sécurisé de documents).</li>
+                            <li>• AWS Cognito / Amplify (authentification et gestion de compte).</li>
+                        </ul>
                     </section>
 
                     <section className="card">

@@ -18,6 +18,20 @@ function EndUserAgreementEN() {
 
                 <div className="mt-8 grid gap-6">
                     <section className="card">
+                        <h2 className="text-lg font-semibold">Data we collect and why</h2>
+                        <ul className="mt-3 text-sm text-gray-700 space-y-2">
+                            <li>• Identity & account data (name, email, phone number, account number, user ID, address, date of birth, credentials) to create and secure your account.</li>
+                            <li>• KYC/AML data (ID numbers, ID documents, selfies, verification results) to verify identity and meet regulatory obligations.</li>
+                            <li>• Financial data (balances, transaction history, payment method identifiers, merchant details) to process payments, payouts, billing, and support.</li>
+                            <li>• Contacts (address book entries/phone numbers), only if you grant permission, to help you pick recipients.</li>
+                            <li>• Device & identifiers (IP address, device identifiers, device name, platform, locale, country, app/browser version, security keys) for security, fraud prevention, and localization.</li>
+                            <li>• Notifications data (push tokens and interactions) to deliver transaction alerts and routing.</li>
+                            <li>• Support data (support chats, tickets, correspondence) to provide customer support.</li>
+                            <li>• Diagnostics (performance logs and crash data) to improve reliability where enabled.</li>
+                        </ul>
+                    </section>
+
+                    <section className="card">
                         <h2 className="text-lg font-semibold">Eligibility & account</h2>
                         <p className="mt-3 text-sm text-gray-700">
                             You must provide accurate information, keep your credentials secure, and notify us of
@@ -105,6 +119,20 @@ function EndUserAgreementFR() {
                 </p>
 
                 <div className="mt-8 grid gap-6">
+                    <section className="card">
+                        <h2 className="text-lg font-semibold">Données collectées et finalités</h2>
+                        <ul className="mt-3 text-sm text-gray-700 space-y-2">
+                            <li>• Données d’identité et de compte (nom, email, téléphone, numéro de compte, ID utilisateur, adresse, date de naissance, identifiants) pour créer et sécuriser votre compte.</li>
+                            <li>• Données KYC/AML (numéros d’identité, pièces d’identité, selfies, résultats de vérification) pour vérifier l’identité et respecter les obligations légales.</li>
+                            <li>• Données financières (soldes, historique des transactions, identifiants de paiement, détails marchands) pour traiter paiements, règlements, facturation et support.</li>
+                            <li>• Contacts (carnet d’adresses/numéros), uniquement avec votre autorisation, pour choisir des destinataires.</li>
+                            <li>• Données appareil & identifiants (adresse IP, identifiants d’appareil, nom d’appareil, plateforme, langue, pays, version app/navigateur, clés de sécurité) pour la sécurité, la prévention de la fraude et la localisation.</li>
+                            <li>• Données de notifications (tokens push et interactions) pour envoyer des alertes et orienter l’expérience.</li>
+                            <li>• Données support (chats, tickets, échanges) pour l’assistance client.</li>
+                            <li>• Diagnostics (journaux de performance et crashs) pour améliorer la fiabilité si activés.</li>
+                        </ul>
+                    </section>
+
                     <section className="card">
                         <h2 className="text-lg font-semibold">Éligibilité & compte</h2>
                         <p className="mt-3 text-sm text-gray-700">
