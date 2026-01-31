@@ -14,7 +14,7 @@ function PrivacyEN() {
                 <p className="mt-2 text-gray-700 max-w-3xl">
                     This policy explains how Fondeka collects, uses, and shares information across our website,
                     consumer apps, and business APIs. We build regulated financial services for payments, mobile money,
-                    cards, crypto, eSIMs, airtime, and lending.
+                    cards, eSIMs, and airtime.
                 </p>
 
                 <div className="mt-8 grid gap-6">
@@ -23,7 +23,7 @@ function PrivacyEN() {
                         <ul className="mt-3 text-sm text-gray-700 space-y-2">
                             <li>• Identity & account data: name, phone, email, date of birth, address, and login credentials.</li>
                             <li>• KYC/AML data: ID documents, selfies, sanctions screening results, and verification status.</li>
-                            <li>• Transaction data: amounts, balances, payment method identifiers, merchant details, and crypto addresses.</li>
+                            <li>• Transaction data: amounts, balances, payment method identifiers, and merchant details.</li>
                             <li>• Device & usage data: IP address, device identifiers, browser/app version, logs, and performance data.</li>
                             <li>• Business API data: merchant profile details, API keys, webhook events, and support tickets.</li>
                         </ul>
@@ -32,7 +32,7 @@ function PrivacyEN() {
                     <section className="card">
                         <h2 className="text-lg font-semibold">How we use information</h2>
                         <ul className="mt-3 text-sm text-gray-700 space-y-2">
-                            <li>• Provide and operate accounts, wallets, cards, payments, payouts, eSIMs, airtime, and loans.</li>
+                            <li>• Provide and operate accounts, wallets, cards, payments, payouts, eSIMs, and airtime.</li>
                             <li>• Verify identity, prevent fraud, and meet regulatory obligations (KYC/AML, sanctions).</li>
                             <li>• Monitor reliability, improve products, and troubleshoot issues.</li>
                             <li>• Communicate about transactions, security alerts, and support requests.</li>
@@ -43,7 +43,7 @@ function PrivacyEN() {
                     <section className="card">
                         <h2 className="text-lg font-semibold">How we share information</h2>
                         <ul className="mt-3 text-sm text-gray-700 space-y-2">
-                            <li>• Payment networks, mobile money operators, banks, and crypto networks to execute transactions.</li>
+                            <li>• Payment networks and mobile money operators to execute transactions.</li>
                             <li>• Verification, risk, and compliance partners to confirm identity and prevent fraud.</li>
                             <li>• Infrastructure vendors (cloud hosting, communications, QR code generation) to run the service.</li>
                             <li>• Regulators or law enforcement when legally required.</li>
@@ -99,7 +99,7 @@ function PrivacyFR() {
                 <p className="mt-2 text-gray-700 max-w-3xl">
                     Cette politique explique comment Fondeka collecte, utilise et partage les informations sur notre site,
                     nos applications et nos API Business. Nous construisons des services financiers réglementés pour les
-                    paiements, Mobile Money, cartes, crypto, eSIM, recharges et prêts.
+                    paiements, Mobile Money, cartes, eSIM et recharges.
                 </p>
 
                 <div className="mt-8 grid gap-6">
@@ -108,7 +108,7 @@ function PrivacyFR() {
                         <ul className="mt-3 text-sm text-gray-700 space-y-2">
                             <li>• Données d’identité et de compte : nom, téléphone, email, date de naissance, adresse.</li>
                             <li>• Données KYC/AML : pièces d’identité, selfies, résultats de filtrage et statut de vérification.</li>
-                            <li>• Données de transaction : montants, soldes, identifiants de paiement, détails marchands, adresses crypto.</li>
+                            <li>• Données de transaction : montants, soldes, identifiants de paiement, détails marchands.</li>
                             <li>• Données techniques : adresse IP, identifiants d’appareil, version app/navigateur, journaux.</li>
                             <li>• Données API Business : profil marchand, clés API, événements webhook, tickets support.</li>
                         </ul>
@@ -117,7 +117,7 @@ function PrivacyFR() {
                     <section className="card">
                         <h2 className="text-lg font-semibold">Utilisation des informations</h2>
                         <ul className="mt-3 text-sm text-gray-700 space-y-2">
-                            <li>• Fournir et opérer les comptes, wallets, cartes, paiements, eSIM, recharges et prêts.</li>
+                            <li>• Fournir et opérer les comptes, wallets, cartes, paiements, eSIM et recharges.</li>
                             <li>• Vérifier l’identité, prévenir la fraude et respecter les obligations (KYC/AML, sanctions).</li>
                             <li>• Surveiller la fiabilité, améliorer les produits et résoudre les incidents.</li>
                             <li>• Communiquer sur les transactions, alertes de sécurité et demandes support.</li>
@@ -128,7 +128,7 @@ function PrivacyFR() {
                     <section className="card">
                         <h2 className="text-lg font-semibold">Partage des informations</h2>
                         <ul className="mt-3 text-sm text-gray-700 space-y-2">
-                            <li>• Réseaux de paiement, opérateurs Mobile Money, banques et réseaux crypto.</li>
+                            <li>• Réseaux de paiement et opérateurs Mobile Money.</li>
                             <li>• Partenaires de vérification, risque et conformité pour l’identification.</li>
                             <li>• Prestataires d’infrastructure (cloud, communications, QR codes) pour opérer le service.</li>
                             <li>• Régulateurs ou autorités quand la loi l’exige.</li>
