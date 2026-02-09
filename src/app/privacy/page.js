@@ -34,6 +34,27 @@ function PrivacyEN() {
                     </section>
 
                     <section className="card">
+                        <h2 className="text-lg font-semibold">Face data (TrueDepth API): collection, use, disclosure, sharing, and retention</h2>
+                        <p className="mt-3 text-sm text-gray-700">
+                            For identity verification and fraud prevention, our iOS app may request camera access and use
+                            Apple TrueDepth camera capabilities during selfie capture and liveness checks.
+                        </p>
+                        <p className="mt-3 text-sm text-gray-700">
+                            We do not directly collect, store, or process raw TrueDepth biometric templates (for example:
+                            depth maps, face mesh, or facial geometry templates). When Face ID is used for app
+                            unlock/re-authentication, authentication is performed by iOS on-device and our app receives
+                            only a success/failure result.
+                        </p>
+                        <ul className="mt-3 text-sm text-gray-700 space-y-2">
+                            <li>• Collection: selfie images, short liveness video frames, and depth-derived facial measurements required to confirm a real person is present.</li>
+                            <li>• Use: account onboarding (KYC), re-verification where required, fraud/risk controls, and account security (biometric unlock/re-authentication before sensitive actions).</li>
+                            <li>• Disclosure and sharing: disclosed only to contracted identity verification and compliance providers acting on our instructions (including Smile Identity), and to approved infrastructure processors needed to operate the service. Face data is not sold, not shared for advertising, not used for profiling/marketing, and not shared with data brokers.</li>
+                            <li>• Storage: encrypted in transit and at rest in controlled infrastructure operated by Fondeka and approved processors (including AWS services and Cloudinary secure uploads, where applicable).</li>
+                            <li>• Retention: retained only as long as necessary for verification and legal/regulatory obligations, then deleted or anonymized according to our retention controls.</li>
+                        </ul>
+                    </section>
+
+                    <section className="card">
                         <h2 className="text-lg font-semibold">How we use information</h2>
                         <ul className="mt-3 text-sm text-gray-700 space-y-2">
                             <li>• Provide and operate accounts, wallets, cards, payments, payouts, eSIMs, and airtime.</li>
@@ -130,6 +151,28 @@ function PrivacyFR() {
                             <li>• Données support : chats, tickets et échanges associés.</li>
                             <li>• Données API Business : profil marchand, clés API, événements webhook, tickets support.</li>
                             <li>• Diagnostics : journaux de performance et crashs si activés.</li>
+                        </ul>
+                    </section>
+
+                    <section className="card">
+                        <h2 className="text-lg font-semibold">Donnees faciales (API TrueDepth) : collecte, utilisation, divulgation, partage et conservation</h2>
+                        <p className="mt-3 text-sm text-gray-700">
+                            Pour la verification d'identite et la prevention de la fraude, notre application iOS peut
+                            demander l'acces camera et utiliser les capacites TrueDepth d'Apple pendant la capture selfie
+                            et les controles de vivacite.
+                        </p>
+                        <p className="mt-3 text-sm text-gray-700">
+                            Nous ne collectons, stockons ni traitons directement de modeles biométriques TrueDepth bruts
+                            (par exemple : cartes de profondeur, maillage facial ou geometrie faciale). Lorsque Face ID est
+                            utilise pour le deverrouillage/la re-authentification, l'authentification est effectuee par iOS
+                            sur l'appareil et notre application recoit uniquement un resultat succes/echec.
+                        </p>
+                        <ul className="mt-3 text-sm text-gray-700 space-y-2">
+                            <li>• Collecte : selfies, courtes frames video de vivacite et mesures faciales derivees de la profondeur necessaires pour confirmer la presence d'une personne reelle.</li>
+                            <li>• Utilisation : onboarding de compte (KYC), reverification si requise, controles de risque/fraude et securite du compte (deverrouillage/re-authentification biométrique avant actions sensibles).</li>
+                            <li>• Divulgation et partage : divulgation uniquement a des prestataires contractuels de verification d'identite et de conformite, selon nos instructions (y compris Smile Identity), ainsi qu'aux sous-traitants d'infrastructure approuves necessaires au service. Ces donnees ne sont jamais vendues, ni partagees a des fins publicitaires, ni utilisees pour le profilage/marketing, ni partagees avec des courtiers en donnees.</li>
+                            <li>• Stockage : chiffrees en transit et au repos dans une infrastructure controlee exploitee par Fondeka et des sous-traitants approuves (y compris les services AWS et les televersements securises Cloudinary, le cas echeant).</li>
+                            <li>• Conservation : conservees uniquement pendant la duree necessaire a la verification et aux obligations legales/reglementaires, puis supprimees ou anonymisees selon nos regles de conservation.</li>
                         </ul>
                     </section>
 
