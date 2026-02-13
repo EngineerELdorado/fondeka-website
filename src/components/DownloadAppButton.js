@@ -26,8 +26,8 @@ export default function DownloadAppButton({ className = '' }){
     const menuRef = useRef(null);
 
     // Store URLs (replace with real app links when live)
-    const playUrl = 'https://play.google.com/store/search?q=Fondeka&c=apps';
-    const appStoreUrl = 'https://apps.apple.com/us/search?term=Fondeka';
+    const playUrl = 'https://play.google.com/store/apps/details?id=com.fondeka.app';
+    const appStoreUrl = 'https://apps.apple.com/cd/app/fondeka/id6757371679';
 
     // QR images for desktop dropdown
     const qrSize = '180x180';
