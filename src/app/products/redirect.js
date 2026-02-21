@@ -27,7 +27,7 @@ export default function ProductsRedirect() {
                         <span>eSIM, Bill payments, Virtual cards, Gift cards, Airtimes, Shopping, Payments</span>
                     </div>
                     <div className="flex flex-wrap items-center justify-center gap-2">
-                        <ProductStatusBadge status="Waiting for license" />
+                        <ProductStatusBadge status="Pending license" />
                         <span>Loans, Crypto, Collect, Payout, Business API</span>
                     </div>
                 </div>

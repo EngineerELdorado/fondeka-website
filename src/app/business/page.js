@@ -66,7 +66,7 @@ export default function Page(){
           <div>
             <div className="flex flex-wrap items-center gap-3">
               <h1 className="h">{txt.title}</h1>
-              <ProductStatusBadge status="Waiting for license" />
+              <ProductStatusBadge status="Pending license" />
             </div>
             <p className="mt-3 text-gray-700">{txt.body}</p>
             <ul className="mt-6 space-y-2 text-sm">
