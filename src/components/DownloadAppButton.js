@@ -28,6 +28,7 @@ export default function DownloadAppButton({ className = '' }){
     // Store URLs (replace with real app links when live)
     const playUrl = 'https://play.google.com/store/apps/details?id=com.fondeka.app';
     const appStoreUrl = 'https://apps.apple.com/cd/app/fondeka/id6757371679';
+    const smartOpenUrl = '/open?target=home&source=website';
 
     // QR images for desktop dropdown
     const qrSize = '180x180';
@@ -53,17 +54,14 @@ export default function DownloadAppButton({ className = '' }){
     // MOBILE (android/ios): single "Download the app" button with icon
     if (platform === 'android' || platform === 'ios') {
         const isAndroid = platform === 'android';
-        const href = isAndroid ? playUrl : appStoreUrl;
         const Icon = isAndroid ? PlayIcon : AppleIcon;
 
         return (
             <div className={className}>
                 <a
-                    href={href}
+                    href={smartOpenUrl}
                     className="btn btn-primary btn-3d inline-flex items-center gap-2"
                     aria-label="Download the app"
-                    target="_blank"
-                    rel="noopener noreferrer"
                 >
                     <Icon />
                     <span>{t('cta.download') || 'Download the app'}</span>
