@@ -4,7 +4,15 @@
     "details": [
       {
         "appID": "2KCBNTYASC.com.fondeka.app",
-        "paths": ["/transaction", "/transaction/*"]
+        "paths": ["*"]
+      },
+      {
+        "appID": "2KCBNTYASC.com.fondeka.app.dev",
+        "paths": ["*"]
+      },
+      {
+        "appID": "2KCBNTYASC.com.fondeka.app.preview",
+        "paths": ["*"]
       }
     ]
   }
