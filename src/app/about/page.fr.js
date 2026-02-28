@@ -49,7 +49,7 @@ export default function Page() {
                                 <li>• Paiement de factures & recharges</li>
                                 <li>• eSIM pour une connectivité instantanée</li>
                                 <li>• On/Off-ramp crypto et conservation (conforme)</li>
-                                <li>• Outils Shopping pour de meilleurs paiements en ligne</li>
+                                <li>• Outils d'épargne pour mieux planifier vos finances</li>
                             </ul>
                         </div>
                         <div className="card">

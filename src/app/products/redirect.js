@@ -24,7 +24,7 @@ export default function ProductsRedirect() {
                 <div className="mt-4 flex flex-col items-center gap-3 text-sm text-gray-700">
                     <div className="flex flex-wrap items-center justify-center gap-2">
                         <ProductStatusBadge status="Available" />
-                        <span>eSIM, Bill payments, Virtual cards, Gift cards, Airtimes, Shopping, Payments</span>
+                        <span>eSIM, Bill payments, Virtual cards, Gift cards, Airtimes, Savings, Payments</span>
                     </div>
                     <div className="flex flex-wrap items-center justify-center gap-2">
                         <ProductStatusBadge status="Pending license" />

@@ -188,12 +188,12 @@ export default function Home() {
                             cta="Explore"
                             badge="Available"
                         />
-                        {/* 9) Shopping */}
+                        {/* 9) Savings */}
                         <FeatureCard
-                            title={t('product.shopping.title')}
-                            text={t('product.shopping.body')}
-                            icon="https://plus.unsplash.com/premium_photo-1683936163027-4d201065a84e?auto=format&fit=crop&q=80&w=1740"
-                            href={withIcon('/shopping', 'https://plus.unsplash.com/premium_photo-1683936163027-4d201065a84e?auto=format&fit=crop&q=80&w=1740')}
+                            title={t('product.savings.title')}
+                            text={t('product.savings.body')}
+                            icon="https://plus.unsplash.com/premium_photo-1676679689999-bee60ae55f1f?q=80&w=2532"
+                            href={withIcon('/savings', 'https://plus.unsplash.com/premium_photo-1676679689999-bee60ae55f1f?q=80&w=2532')}
                             cta="Explore"
                             badge="Available"
                         />
