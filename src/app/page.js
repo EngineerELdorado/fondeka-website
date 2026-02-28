@@ -195,7 +195,7 @@ export default function Home() {
                             icon="https://plus.unsplash.com/premium_photo-1676679689999-bee60ae55f1f?q=80&w=2532"
                             href={withIcon('/savings', 'https://plus.unsplash.com/premium_photo-1676679689999-bee60ae55f1f?q=80&w=2532')}
                             cta="Explore"
-                            badge="Available"
+                            badge="Pending license"
                         />
                     </div>
                 </div>

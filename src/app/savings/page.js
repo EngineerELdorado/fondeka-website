@@ -16,7 +16,7 @@ export default function Page(){
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-3">
             <h1 className="h">{t('product.savings.title')}</h1>
-            <ProductStatusBadge status="Available" />
+            <ProductStatusBadge status="Pending license" />
           </div>
 
           <p className="mt-3 text-gray-700">{t('product.savings.body')}</p>
