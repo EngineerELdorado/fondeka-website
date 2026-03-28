@@ -123,7 +123,6 @@ export default function Home() {
                             icon="https://plus.unsplash.com/premium_photo-1672660509832-0c749dbd82eb?auto=format&fit=crop&q=80&w=1915"
                             href={withIcon('/loans', 'https://plus.unsplash.com/premium_photo-1672660509832-0c749dbd82eb?auto=format&fit=crop&q=80&w=1915')}
                             cta="Explore"
-                            badge="Pending license"
                         />
                         {/* 2) Cards */}
                         <FeatureCard
@@ -159,7 +158,6 @@ export default function Home() {
                             icon="https://plus.unsplash.com/premium_photo-1676998623020-2640a850bdc0?auto=format&fit=crop&q=80&w=870"
                             href={withIcon('/crypto', 'https://plus.unsplash.com/premium_photo-1676998623020-2640a850bdc0?auto=format&fit=crop&q=80&w=870')}
                             cta="Explore"
-                            badge="Pending license"
                         />
                         {/* 6) Payments */}
                         <FeatureCard
@@ -195,7 +193,7 @@ export default function Home() {
                             icon="https://plus.unsplash.com/premium_photo-1676679689999-bee60ae55f1f?q=80&w=2532"
                             href={withIcon('/savings', 'https://plus.unsplash.com/premium_photo-1676679689999-bee60ae55f1f?q=80&w=2532')}
                             cta="Explore"
-                            badge="Pending license"
+                            badge="Coming soon"
                         />
                     </div>
                 </div>

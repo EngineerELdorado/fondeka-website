@@ -1,7 +1,6 @@
 'use client';
 import { useI18n } from '../../lib/i18n';
 import { useSearchParams } from 'next/navigation';
-import ProductStatusBadge from '../../components/ProductStatusBadge';
 
 export default function Page(){
   const { t, lang } = useI18n();
@@ -16,7 +15,6 @@ export default function Page(){
           <div>
             <div className="flex flex-wrap items-center gap-3">
               <h1 className="h">{t('product.loans.title')}</h1>
-              <ProductStatusBadge status="Pending license" />
             </div>
             <p className="mt-3 text-gray-700">{t('product.loans.body')}</p>
             <ul className="mt-6 space-y-2 text-sm">
