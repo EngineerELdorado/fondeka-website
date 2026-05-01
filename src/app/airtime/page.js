@@ -30,11 +30,11 @@ export default function Page(){
             </div>
             <p className="mt-3 text-gray-700">{body}</p>
             <ul className="mt-6 space-y-2 text-sm">
-              <li className="card">Mobile Money, cards & crypto supported</li>
-              <li className="card">Clear dashboard & controls</li>
-              <li className="card">Business API available</li>
+              <li className="card">{t('product.feature.supportedMethods')}</li>
+              <li className="card">{t('product.feature.dashboardControls')}</li>
+              <li className="card">{t('product.feature.businessApi')}</li>
             </ul>
-            <a href={`/business?lang=${lang}`} className="btn btn-primary mt-6 w-fit">Use the API</a>
+            <a href={`/business?lang=${lang}`} className="btn btn-primary mt-6 w-fit">{t('common.cta.useApi')}</a>
           </div>
 
           {/* Visual: elevation + sheen + rounded border, using the passed icon */}

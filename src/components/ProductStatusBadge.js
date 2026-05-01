@@ -1,7 +1,17 @@
 'use client';
+import { useI18n } from '@/lib/i18n';
 
 export default function ProductStatusBadge({ status }) {
     if (!status) return null;
+    const { t } = useI18n();
+
+    const normalizedStatus = status.trim().toLowerCase();
+    const localizedStatus =
+        normalizedStatus === 'available'
+            ? t('common.status.available')
+            : normalizedStatus === 'coming soon'
+                ? t('common.status.comingSoon')
+                : status;
 
     const tone =
         status === 'Available'
@@ -13,7 +23,7 @@ export default function ProductStatusBadge({ status }) {
     return (
         <span className={`badge border ${tone}`}>
             <span className={dotTone}>●</span>
-            <span>{status}</span>
+            <span>{localizedStatus}</span>
         </span>
     );
 }

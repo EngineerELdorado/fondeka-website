@@ -20,11 +20,11 @@ export default function Page(){
             </div>
             <p className="mt-3 text-gray-700">{t('product.shopping.body')}</p>
             <ul className="mt-6 space-y-2 text-sm">
-              <li className="card">Do your shopping from our app</li>
-              <li className="card">Or integrate our API</li>
+              <li className="card">{t('product.shopping.feature.app')}</li>
+              <li className="card">{t('product.feature.integrateApi')}</li>
             </ul>
             <a href={`/business?lang=${lang}`} className="btn btn-primary mt-6 w-fit">
-              Use the API
+              {t('common.cta.useApi')}
             </a>
           </div>
 
