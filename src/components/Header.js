@@ -31,6 +31,18 @@ export default function Header(){
     setLangOpenMob(false);
   };
 
+  const goDownload = (e) => {
+    e.preventDefault();
+    const onHome = pathname === '/' || pathname === '';
+    setOpen(false);
+    if (onHome) {
+      const el = document.getElementById('download');
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      router.push(`/?lang=${lang}#download`);
+    }
+  };
+
   // close dropdowns on outside click
   const deskRef = useRef(null);
   const mobRef = useRef(null);
@@ -135,7 +147,7 @@ export default function Header(){
                   );
                 })}
 
-                <Link href={`#download?lang=${lang}`} className="btn btn-primary w-full text-center">{t('cta.download')}</Link>
+                <a href="#download" onClick={goDownload} className="btn btn-primary w-full text-center">{t('cta.download')}</a>
               </div>
             </div>
         )}

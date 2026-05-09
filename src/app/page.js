@@ -63,10 +63,14 @@ export default function Home() {
                     <div className="relative z-10 grid md:grid-cols-2 gap-6 md:gap-10 items-center">
                         <div className="min-w-0">
                             <div className="kicker">{t('hero.kicker')}</div>
-                            <h1 className="display">{t('hero.title')}</h1>
+                            <h1 className="display hero-3d-title">{t('hero.title')}</h1>
                             <p className="mt-4 text-gray-700 max-w-lg">{t('hero.body')}</p>
 
-                            <DownloadAppButton className="mt-6" />
+                            <DownloadAppButton
+                                className="mt-6 max-w-xl"
+                                variant="hero"
+                                ctaLabel={t('hero.downloadStrong') || 'Download the app and start now'}
+                            />
                             <div className="mt-3">
                                 <a
                                     href="#products"
@@ -183,8 +187,8 @@ export default function Home() {
                         <FeatureCard
                             title={t('product.airtimes.title')}
                             text={t('product.airtimes.body')}
-                            icon="https://plus.unsplash.com/premium_vector-1711987903052-36a37d18bb6b?auto=format&fit=crop&q=80&w=1160"
-                            href={withIcon('/airtimes', 'https://plus.unsplash.com/premium_vector-1711987903052-36a37d18bb6b?auto=format&fit=crop&q=80&w=1160')}
+                            icon="https://plus.unsplash.com/premium_photo-1718560022081-d7bc146c1e14?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                            href={withIcon('/airtimes', 'https://plus.unsplash.com/premium_photo-1718560022081-d7bc146c1e14?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')}
                             cta="Explore"
                             badge="Available"
                         />

@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState, useRef } from 'react';
 import { useI18n } from '@/lib/i18n';
+import { appStoreUrl, getDevicePlatform, playUrl } from '@/lib/appStores';
 
 const PlayIcon = () => (
     <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
@@ -17,17 +18,16 @@ const AppleIcon = () => (
     </svg>
 );
 
-export default function DownloadAppButton({ className = '' }){
+export default function DownloadAppButton({
+    className = '',
+    variant = 'default',
+    ctaLabel = '',
+}) {
     const { t } = useI18n();
 
-    // Platform detection
     const [platform, setPlatform] = useState('other');
     const [open, setOpen] = useState(false);
     const menuRef = useRef(null);
-
-    // Store URLs (replace with real app links when live)
-    const playUrl = 'https://play.google.com/store/apps/details?id=com.fondeka.app';
-    const appStoreUrl = 'https://apps.apple.com/cd/app/fondeka/id6757371679';
 
     // QR images for desktop dropdown
     const qrSize = '180x180';
@@ -35,11 +35,7 @@ export default function DownloadAppButton({ className = '' }){
     const qrApple = `https://api.qrserver.com/v1/create-qr-code/?size=${qrSize}&data=${encodeURIComponent(appStoreUrl)}&margin=0`;
 
     useEffect(() => {
-        const ua = typeof navigator !== 'undefined' ? navigator.userAgent : '';
-        const plt = typeof navigator !== 'undefined' ? (navigator).platform : '';
-        const isAndroid = /Android/i.test(ua);
-        const isiOS = /iPhone|iPad|iPod/i.test(ua) || (plt === 'MacIntel' && (navigator).maxTouchPoints > 1); // iPadOS Safari
-        setPlatform(isAndroid ? 'android' : isiOS ? 'ios' : 'other');
+        setPlatform(getDevicePlatform());
     }, []);
 
     useEffect(() => {
@@ -50,14 +46,23 @@ export default function DownloadAppButton({ className = '' }){
         return () => document.removeEventListener('click', onClick);
     }, []);
 
-    // MOBILE (android/ios): single "Download the app" button with icon
+    const isHero = variant === 'hero';
+    const isSticky = variant === 'sticky';
+
     if (platform === 'android' || platform === 'ios') {
         const isAndroid = platform === 'android';
         const Icon = isAndroid ? PlayIcon : AppleIcon;
         const mobileDownloadUrl = isAndroid ? playUrl : appStoreUrl;
-        const mobileDownloadLabel = isAndroid
+        const defaultLabel = isAndroid
             ? (t('cta.downloadAndroid') || 'Download for Android')
             : (t('cta.downloadIphone') || 'Download for iPhone');
+        const mobileDownloadLabel = ctaLabel || defaultLabel;
+
+        const buttonClassName = isSticky
+            ? 'btn btn-primary btn-3d mobile-install-button'
+            : isHero
+              ? 'btn btn-primary btn-3d hero-download-pulse w-full sm:w-auto min-h-[60px] px-5 text-base shadow-[0_14px_30px_rgba(79,128,92,0.22)]'
+              : 'btn btn-primary btn-3d inline-flex items-center gap-2';
 
         return (
             <div className={className}>
@@ -65,34 +70,65 @@ export default function DownloadAppButton({ className = '' }){
                     href={mobileDownloadUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn btn-primary btn-3d inline-flex items-center gap-2"
+                    className={buttonClassName}
                     aria-label={mobileDownloadLabel}
                 >
                     <Icon />
                     <span>{mobileDownloadLabel}</span>
                 </a>
+                {isHero && (
+                    <div className="mt-4 grid grid-cols-2 gap-2 text-sm text-gray-700">
+                        <a
+                            href={mobileDownloadUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="download-proof-card block"
+                        >
+                            {t('download.proof.instant') ||
+                                'Install now, open your account in minutes'}
+                        </a>
+                        <a
+                            href={mobileDownloadUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="download-proof-card block"
+                        >
+                            {t('download.proof.mobile') ||
+                                'Best experience is inside the mobile app'}
+                        </a>
+                    </div>
+                )}
             </div>
         );
     }
 
-    // DESKTOP: dropdown with QR codes for both stores
     return (
         <div className={className + ' relative'} ref={menuRef}>
             <button
                 onClick={(e)=>{ e.stopPropagation(); setOpen(v=>!v); }}
-                className="btn btn-primary btn-3d inline-flex items-center gap-2"
+                className={`btn btn-primary btn-3d inline-flex items-center gap-2 ${isHero ? 'hero-download-pulse min-h-[60px] px-5 text-base shadow-[0_14px_30px_rgba(79,128,92,0.22)]' : ''}`}
                 aria-haspopup="dialog"
                 aria-expanded={open}
             >
-                <span>{t('cta.download')}</span>
+                <span>{ctaLabel || t('cta.download')}</span>
             </button>
 
             {open && (
                 <div
-                    className="absolute z-50 right-0 mt-2 w-80 rounded-2xl border bg-white p-4 shadow-soft grid grid-cols-2 gap-4"
+                    className="absolute z-50 right-0 mt-2 w-80 rounded-3xl border bg-white p-4 shadow-soft grid grid-cols-2 gap-4"
                     role="dialog"
                     aria-label="Download the Fondeka app"
                 >
+                    <div className="col-span-2 rounded-2xl bg-fondeka-light px-4 py-3">
+                        <p className="text-sm font-semibold text-fondeka-dark">
+                            {t('download.desktop.title') ||
+                                'Scan and install Fondeka'}
+                        </p>
+                        <p className="mt-1 text-xs text-gray-600">
+                            {t('download.desktop.body') ||
+                                'Use the app for cards, bills, airtime, crypto, payments and more.'}
+                        </p>
+                    </div>
                     {/* Google Play */}
                     <a
                         href={playUrl}
@@ -138,7 +174,7 @@ export default function DownloadAppButton({ className = '' }){
                         className="col-span-2 btn btn-ghost w-full text-center"
                         onClick={()=>setOpen(false)}
                     >
-                        Open store page
+                        {t('download.desktop.cta') || 'Open store page'}
                     </a>
                 </div>
             )}

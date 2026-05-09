@@ -96,6 +96,57 @@ html, body { overflow-x: hidden; }
 .card-3d:hover { box-shadow: var(--depth-2); transform: translateY(-2px); }
 .btn-3d:active { transform: translateY(1px); }
 
+.download-proof-card {
+  @apply rounded-2xl border border-fondeka-mint/60 bg-white/90 px-3 py-3 shadow-soft;
+}
+
+.mobile-install-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: env(safe-area-inset-bottom, 0);
+  z-index: 60;
+  padding: 0 12px calc(12px + env(safe-area-inset-bottom, 0));
+}
+
+.mobile-install-shell {
+  @apply mx-auto flex max-w-md items-center gap-3 rounded-[28px] border border-fondeka-mint/60 bg-white/95 px-4 py-3 shadow-[0_18px_50px_rgba(10,26,18,0.16)] backdrop-blur;
+}
+
+.mobile-install-eyebrow {
+  @apply text-[11px] font-semibold uppercase tracking-[0.18em] text-fondeka-green;
+}
+
+.mobile-install-title {
+  @apply mt-1 text-sm font-semibold leading-tight text-fondeka-dark;
+}
+
+.mobile-install-button {
+  @apply min-h-[48px] shrink-0 rounded-2xl px-4 text-sm whitespace-nowrap;
+}
+
+@keyframes hero-download-pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 14px 30px rgba(79,128,92,0.22);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 18px 36px rgba(79,128,92,0.34);
+  }
+}
+
+.hero-download-pulse {
+  animation: hero-download-pulse 1.9s ease-in-out infinite;
+  will-change: transform, box-shadow;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-download-pulse {
+    animation: none !important;
+  }
+}
+
 /* Depth frame around media (inner glow + border) */
 .depth-frame {
   position: relative; border-radius: 1rem; border: 1px solid rgba(0,0,0,.06);
@@ -376,7 +427,5 @@ html, body { overflow-x: hidden; }
     --orbit-duration: 28s;  /* a bit slower for calm motion */
   }
 }
-
-
 
 

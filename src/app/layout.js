@@ -1,4 +1,3 @@
-import Script from 'next/script';
 import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 import Header from '../components/Header';
@@ -6,6 +5,7 @@ import Footer from '../components/Footer';
 import GoogleTag from '../components/GoogleTag';
 import LinkedInInsightTag from '../components/LinkedInInsightTag';
 import MetaPixel from '../components/MetaPixel';
+import MobileInstallBar from '../components/MobileInstallBar';
 import { I18nProvider } from '../lib/i18n';
 import { Suspense } from 'react';
 
@@ -47,7 +47,7 @@ export default function RootLayout({ children }) {
                 <link rel="canonical" href="https://fondeka.com" />
                 <meta name="robots" content="index, follow" />
             </head>
-            <body>
+            <body className="pb-28 md:pb-0">
                 <MetaPixel />
                 <GoogleTag />
                 <LinkedInInsightTag />
@@ -57,6 +57,7 @@ export default function RootLayout({ children }) {
                         <Header />
                         {children}
                         <Footer />
+                        <MobileInstallBar />
                     </I18nProvider>
                 </Suspense>
                 <script type="application/ld+json" suppressHydrationWarning>
