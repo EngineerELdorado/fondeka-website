@@ -18,6 +18,13 @@ NEXT_PUBLIC_GOOGLE_TAG_IDS=AW-123456789,GT-ABCDEFGH
 
 Use a comma-separated list if you need to load more than one Google tag. For Google Ads, the important ID is typically your `AW-...` tag.
 
+## LinkedIn Insight Tag
+Set `NEXT_PUBLIC_LINKEDIN_PARTNER_ID` before building or deploying the site.
+
+```bash
+NEXT_PUBLIC_LINKEDIN_PARTNER_ID=9131674
+```
+
 ## Customize
 - Edit `src/lib/brand.js` for colors and strings.
 - Sections live in `src/app/page.js` and `src/components/*`.
