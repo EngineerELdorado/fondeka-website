@@ -11,13 +11,13 @@ import { Suspense } from 'react';
 
 export const metadata = {
     metadataBase: new URL('https://fondeka.com'),
-    title: 'Fondeka — Money and Payments without Borders',
+    title: 'The mobile bank that offers you 0% interest loans. | La banque mobile qui vous offre des prêts à 0% d’intérêt.',
     description:
-        'Fondeka connects Africa to global finance: Mobile Money, cards, crypto, QR payments, eSIMs, airtime & more.',
+        'Loans, MasterCard, crypto, payment links, savings, and bill payments. | Prêts, MasterCard, cryptos, liens de paiements, épargnes et paiement des factures.',
     openGraph: {
-        title: 'Fondeka — Money and Payments without Borders',
+        title: 'The mobile bank that offers you 0% interest loans. | La banque mobile qui vous offre des prêts à 0% d’intérêt.',
         description:
-            'All your payments and financial services in one super-app.',
+            'Loans, MasterCard, crypto, payment links, savings, and bill payments. | Prêts, MasterCard, cryptos, liens de paiements, épargnes et paiement des factures.',
         url: 'https://fondeka.com',
         siteName: 'Fondeka',
         images: [
@@ -33,9 +33,9 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Fondeka — Money and Payments without Borders',
+        title: 'The mobile bank that offers you 0% interest loans. | La banque mobile qui vous offre des prêts à 0% d’intérêt.',
         description:
-            'All your payments and financial services in one super-app.',
+            'Loans, MasterCard, crypto, payment links, savings, and bill payments. | Prêts, MasterCard, cryptos, liens de paiements, épargnes et paiement des factures.',
         images: ['/og-image.jpg'],
     },
 };
