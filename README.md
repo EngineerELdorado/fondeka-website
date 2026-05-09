@@ -25,6 +25,15 @@ Set `NEXT_PUBLIC_LINKEDIN_PARTNER_ID` before building or deploying the site.
 NEXT_PUBLIC_LINKEDIN_PARTNER_ID=9131674
 ```
 
+## Meta Pixel
+Set `NEXT_PUBLIC_META_PIXEL_IDS` before building or deploying the site.
+
+```bash
+NEXT_PUBLIC_META_PIXEL_IDS=1661830491640331,1338589508117186
+```
+
+Use a comma-separated list to keep multiple Meta pixels active on the same site.
+
 ## Customize
 - Edit `src/lib/brand.js` for colors and strings.
 - Sections live in `src/app/page.js` and `src/components/*`.
