@@ -2,6 +2,7 @@ import Script from 'next/script';
 import './globals.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import GoogleTag from '../components/GoogleTag';
 import { I18nProvider } from '../lib/i18n';
 import { Suspense } from 'react';
 
@@ -62,6 +63,7 @@ export default function RootLayout({ children }) {
                 />
             </head>
             <body>
+                <GoogleTag />
                 <noscript>
                     <img
                         height="1"
