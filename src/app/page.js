@@ -23,41 +23,40 @@ export default function Home() {
                     {/* Decorative corner images behind the grid */}
                     <HeroCorners />
                     {/* Orbiting icons around the left corner image */}
-                    <HeroOrbitIcons
-                        side="left"
-                        radius={80}    // distance from center
-                        duration={32}  // seconds per full spin
-                        icons={[
-                            { src: '/icons/img1.svg' },
-                            { src: '/icons/img2.svg' },
-                            { src: '/icons/img3.svg' },
-                            { src: '/icons/img5.svg' },
-                            { src: '/icons/img4.svg' },
-                            // { src: '/icons/img7.svg' },
-                            // { src: '/icons/img8.svg' },
-                            { src: '/icons/img9.svg' },
-                            { src: '/icons/img10.svg' },
-                        ]}
-                    />
+                    <div className="hidden md:block">
+                        <HeroOrbitIcons
+                            side="left"
+                            radius={80}
+                            duration={32}
+                            icons={[
+                                { src: '/icons/img1.svg' },
+                                { src: '/icons/img2.svg' },
+                                { src: '/icons/img3.svg' },
+                                { src: '/icons/img5.svg' },
+                                { src: '/icons/img4.svg' },
+                                { src: '/icons/img9.svg' },
+                                { src: '/icons/img10.svg' },
+                            ]}
+                        />
+                    </div>
 
                     {/* Orbiting icons around the right corner image */}
-                    <HeroOrbitIcons
-                        side="right"
-                        radius={80}
-                        duration={32}
-                        icons={[
-                            // { src: '/icons/img10.svg' },
-                            // { src: '/icons/img11.svg' },
-                            // { src: '/icons/img12.svg' },
-                            { src: '/icons/img13.svg' },
-                            { src: '/icons/img14.svg' },
-                            { src: '/icons/img15.svg' },
-                            { src: '/icons/img16.svg' },
-                            { src: '/icons/img17.svg' },
-                            { src: '/icons/img18.svg' },
-                            { src: '/icons/img19.svg' },
-                        ]}
-                    />
+                    <div className="hidden md:block">
+                        <HeroOrbitIcons
+                            side="right"
+                            radius={80}
+                            duration={32}
+                            icons={[
+                                { src: '/icons/img13.svg' },
+                                { src: '/icons/img14.svg' },
+                                { src: '/icons/img15.svg' },
+                                { src: '/icons/img16.svg' },
+                                { src: '/icons/img17.svg' },
+                                { src: '/icons/img18.svg' },
+                                { src: '/icons/img19.svg' },
+                            ]}
+                        />
+                    </div>
 
 
                     <div className="relative z-10 grid md:grid-cols-2 gap-6 md:gap-10 items-center">
@@ -89,7 +88,7 @@ export default function Home() {
                             </p>
                         </div>
 
-                        <div className="card card-tight">
+                        <div className="hidden md:block card card-tight">
                             <div className="relative">
                                 {/* soft rotating halo, sits behind the media, contained by this relative box */}
                                 <div className="halo -z-10" aria-hidden="true" />
