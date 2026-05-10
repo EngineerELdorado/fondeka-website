@@ -76,28 +76,6 @@ export default function DownloadAppButton({
                     <Icon />
                     <span>{mobileDownloadLabel}</span>
                 </a>
-                {isHero && (
-                    <div className="mt-4 grid grid-cols-2 gap-2 text-sm text-gray-700">
-                        <a
-                            href={mobileDownloadUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="download-proof-card block"
-                        >
-                            {t('download.proof.instant') ||
-                                'Install now, open your account in minutes'}
-                        </a>
-                        <a
-                            href={mobileDownloadUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="download-proof-card block"
-                        >
-                            {t('download.proof.mobile') ||
-                                'Best experience is inside the mobile app'}
-                        </a>
-                    </div>
-                )}
             </div>
         );
     }
