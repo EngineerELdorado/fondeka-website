@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="80" y1="60" x2="1480" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEF7F2" />
+      <stop offset="1" stop-color="#D5EBDD" />
+    </linearGradient>
+    <linearGradient id="accent" x1="420" y1="150" x2="1240" y2="780" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F6A48" />
+      <stop offset="1" stop-color="#5AA57C" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" rx="36" fill="url(#bg)" />
+  <g opacity=".5" stroke="#A8D1B7">
+    <path d="M120 180H1480" />
+    <path d="M120 300H1480" />
+    <path d="M120 420H1480" />
+    <path d="M120 540H1480" />
+    <path d="M120 660H1480" />
+    <path d="M120 780H1480" />
+  </g>
+
+  <rect x="128" y="110" width="352" height="96" rx="28" fill="#FFFFFF" stroke="#C6E2CF" />
+  <circle cx="184" cy="158" r="10" fill="#0F6A48" />
+  <text x="212" y="165" fill="#0B2018" font-family="Arial, sans-serif" font-size="28" font-weight="700">Payment stack</text>
+
+  <rect x="250" y="370" width="780" height="380" rx="34" fill="#0B2018" />
+  <rect x="292" y="414" width="320" height="116" rx="22" fill="#113628" stroke="#2E6E51" />
+  <text x="330" y="468" fill="#D8F5E3" font-family="Arial, sans-serif" font-size="18">Card processing</text>
+  <text x="330" y="508" fill="#9CE9C3" font-family="Arial, sans-serif" font-size="30" font-weight="700">99.97%</text>
+
+  <rect x="650" y="414" width="338" height="116" rx="22" fill="#113628" stroke="#2E6E51" />
+  <text x="688" y="468" fill="#D8F5E3" font-family="Arial, sans-serif" font-size="18">Mobile money</text>
+  <text x="688" y="508" fill="#9CE9C3" font-family="Arial, sans-serif" font-size="30" font-weight="700">24 routes</text>
+
+  <rect x="292" y="566" width="696" height="144" rx="22" fill="#113628" stroke="#2E6E51" />
+  <path d="M336 660C400 610 458 600 514 620C576 642 648 648 716 602C784 556 846 552 944 606" stroke="url(#accent)" stroke-width="10" stroke-linecap="round" />
+  <circle cx="514" cy="620" r="10" fill="#9CE9C3" />
+  <circle cx="716" cy="602" r="10" fill="#9CE9C3" />
+  <circle cx="944" cy="606" r="10" fill="#9CE9C3" />
+
+  <g transform="translate(1080 280)">
+    <rect width="296" height="500" rx="40" fill="#FFFFFF" stroke="#C6E2CF" />
+    <rect x="28" y="36" width="240" height="122" rx="22" fill="#EAF6EE" />
+    <text x="52" y="90" fill="#4C7C62" font-family="Arial, sans-serif" font-size="18">Instant payout</text>
+    <text x="52" y="130" fill="#0F6A48" font-family="Arial, sans-serif" font-size="30" font-weight="700">1.2 sec</text>
+    <rect x="28" y="196" width="240" height="18" rx="9" fill="#D2EAD8" />
+    <rect x="28" y="234" width="180" height="18" rx="9" fill="#D2EAD8" />
+    <rect x="28" y="300" width="240" height="126" rx="24" fill="#0F6A48" />
+    <text x="54" y="352" fill="#F4FFF8" font-family="Arial, sans-serif" font-size="20" font-weight="700">Unified ledger</text>
+  </g>
+</svg>

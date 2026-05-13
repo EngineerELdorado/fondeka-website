@@ -11,6 +11,11 @@ import HeroOrbitIcons from "@/components/HeroOrbitIcons";
 
 export default function Home() {
     const { t, lang } = useI18n();
+    const heroImages = [
+        '/hero-tech-network.svg',
+        '/hero-tech-payments.svg',
+        '/hero-tech-security.svg',
+    ];
 
     // helper to shorten href object creation (pass icon to target page)
     const withIcon = (pathname, icon) => ({ pathname, query: { lang, icon } });
@@ -96,11 +101,7 @@ export default function Home() {
                                 <div className="depth-frame">
                                     <HeroSlider
                                         alt={t('hero.title')}
-                                        images={[
-                                            'https://images.unsplash.com/photo-1656768151253-bef870f1b7bd?auto=format&fit=crop&q=80&w=1740',
-                                            'https://images.unsplash.com/photo-1681597108168-353c13e8e7a5?auto=format&fit=crop&q=80&w=1262',
-                                            'https://images.unsplash.com/photo-1676444322792-9f259e84a1c3?auto=format&fit=crop&q=80&w=1360'
-                                        ]}
+                                        images={heroImages}
                                         intervalMs={5500}
                                     />
                                 </div>

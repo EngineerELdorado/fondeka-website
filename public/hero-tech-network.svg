@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="160" y1="120" x2="1460" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#071A14" />
+      <stop offset="1" stop-color="#123528" />
+    </linearGradient>
+    <linearGradient id="glow" x1="220" y1="120" x2="1120" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8FE3BA" />
+      <stop offset="1" stop-color="#3E8D68" />
+    </linearGradient>
+    <radialGradient id="pulse" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1180 220) rotate(130) scale(460 420)">
+      <stop stop-color="#9CE9C3" stop-opacity=".45" />
+      <stop offset="1" stop-color="#9CE9C3" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" rx="36" fill="url(#bg)" />
+  <rect x="56" y="56" width="1488" height="788" rx="28" stroke="rgba(143,227,186,.18)" />
+  <circle cx="1180" cy="220" r="460" fill="url(#pulse)" />
+
+  <g stroke="url(#glow)" stroke-width="3" stroke-linecap="round" opacity=".82">
+    <path d="M250 650L500 470L760 560L1030 340L1290 470" />
+    <path d="M300 260L500 470L760 310L1030 340L1320 210" />
+    <path d="M500 470L650 710L900 700L1030 340" />
+    <path d="M760 560L760 310" />
+  </g>
+
+  <g>
+    <circle cx="300" cy="260" r="18" fill="#9CE9C3" />
+    <circle cx="250" cy="650" r="18" fill="#9CE9C3" />
+    <circle cx="500" cy="470" r="24" fill="#9CE9C3" />
+    <circle cx="650" cy="710" r="16" fill="#9CE9C3" />
+    <circle cx="760" cy="310" r="20" fill="#9CE9C3" />
+    <circle cx="760" cy="560" r="22" fill="#9CE9C3" />
+    <circle cx="900" cy="700" r="14" fill="#9CE9C3" />
+    <circle cx="1030" cy="340" r="28" fill="#9CE9C3" />
+    <circle cx="1290" cy="470" r="18" fill="#9CE9C3" />
+    <circle cx="1320" cy="210" r="20" fill="#9CE9C3" />
+  </g>
+
+  <g>
+    <rect x="126" y="110" width="320" height="102" rx="20" fill="rgba(7,26,20,.52)" stroke="rgba(156,233,195,.16)" />
+    <circle cx="174" cy="151" r="8" fill="#9CE9C3" />
+    <text x="196" y="158" fill="#F3FFF8" font-family="Arial, sans-serif" font-size="28" font-weight="700">Global rails</text>
+    <text x="196" y="188" fill="#9CE9C3" font-family="Arial, sans-serif" font-size="16">Wallets, cards, crypto</text>
+  </g>
+
+  <g>
+    <rect x="1098" y="606" width="258" height="96" rx="20" fill="rgba(7,26,20,.6)" stroke="rgba(156,233,195,.16)" />
+    <text x="1136" y="646" fill="#CBEFDC" font-family="Arial, sans-serif" font-size="15">Throughput</text>
+    <text x="1136" y="681" fill="#9CE9C3" font-family="Arial, sans-serif" font-size="30" font-weight="700">12.8k tx/min</text>
+  </g>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="170" y1="70" x2="1450" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#08130F" />
+      <stop offset="1" stop-color="#152B21" />
+    </linearGradient>
+    <linearGradient id="accent" x1="460" y1="240" x2="1130" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#89E4B8" />
+      <stop offset="1" stop-color="#2E6E51" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" rx="36" fill="url(#bg)" />
+  <g opacity=".18" stroke="#9CE9C3">
+    <path d="M180 210H1420" />
+    <path d="M180 350H1420" />
+    <path d="M180 490H1420" />
+    <path d="M180 630H1420" />
+    <path d="M180 770H1420" />
+    <path d="M300 110V810" />
+    <path d="M520 110V810" />
+    <path d="M740 110V810" />
+    <path d="M960 110V810" />
+    <path d="M1180 110V810" />
+  </g>
+
+  <rect x="170" y="122" width="282" height="96" rx="28" fill="rgba(8,19,15,.62)" stroke="rgba(156,233,195,.16)" />
+  <circle cx="216" cy="170" r="10" fill="#9CE9C3" />
+  <text x="244" y="177" fill="#F3FFF8" font-family="Arial, sans-serif" font-size="28" font-weight="700">Secure core</text>
+
+  <path d="M800 250L1090 360V520C1090 627 1017 726 910 764L800 804L690 764C583 726 510 627 510 520V360L800 250Z" fill="rgba(12,35,26,.88)" stroke="url(#accent)" stroke-width="12" />
+  <path d="M800 378C735 378 682 431 682 496V536H648V646H952V536H918V496C918 431 865 378 800 378ZM736 496C736 461 765 432 800 432C835 432 864 461 864 496V536H736V496Z" fill="#9CE9C3" />
+
+  <g>
+    <rect x="1080" y="320" width="284" height="112" rx="22" fill="rgba(12,35,26,.88)" stroke="rgba(156,233,195,.22)" />
+    <text x="1118" y="372" fill="#E4F8EC" font-family="Arial, sans-serif" font-size="17">Threats blocked</text>
+    <text x="1118" y="410" fill="#9CE9C3" font-family="Arial, sans-serif" font-size="30" font-weight="700">14,281</text>
+  </g>
+
+  <g>
+    <rect x="1096" y="478" width="268" height="164" rx="24" fill="rgba(12,35,26,.88)" stroke="rgba(156,233,195,.22)" />
+    <text x="1134" y="536" fill="#E4F8EC" font-family="Arial, sans-serif" font-size="18">Controls</text>
+    <text x="1134" y="574" fill="#9CE9C3" font-family="Arial, sans-serif" font-size="16">KYC / AML</text>
+    <text x="1134" y="604" fill="#9CE9C3" font-family="Arial, sans-serif" font-size="16">3DS rules</text>
+  </g>
+
+  <g>
+    <rect x="238" y="600" width="248" height="120" rx="22" fill="rgba(12,35,26,.88)" stroke="rgba(156,233,195,.22)" />
+    <text x="276" y="658" fill="#E4F8EC" font-family="Arial, sans-serif" font-size="18">Audit trail</text>
+    <text x="276" y="694" fill="#9CE9C3" font-family="Arial, sans-serif" font-size="24" font-weight="700">Real-time logs</text>
+  </g>
+</svg>
