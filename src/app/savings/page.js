@@ -170,7 +170,7 @@ export default function Page(){
             <p className="mt-4 text-sm text-gray-700">{t('product.savings.personal.locked.interest')}</p>
             <p className="mt-3 text-sm text-gray-700">{t('product.savings.personal.locked.withdrawal')}</p>
           </div>
-          <DownloadAppButton className="mt-6" variant="hero" ctaLabel={t('product.savings.cta')} />
+          <DownloadAppButton className="mt-6 hidden md:block" variant="hero" ctaLabel={t('product.savings.cta')} />
         </div>
 
         <div className="min-w-0">
