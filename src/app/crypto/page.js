@@ -1,42 +1,27 @@
 'use client';
 import { useI18n } from '../../lib/i18n';
 import { useSearchParams } from 'next/navigation';
-import ProductStatusBadge from '@/components/ProductStatusBadge';
+import ProductPageTemplate from '@/components/ProductPageTemplate';
 
 export default function Page(){
-  const { t, lang } = useI18n();
+  const { t } = useI18n();
   const sp = useSearchParams();
 
   const fallbackIcon = 'https://images.unsplash.com/photo-1620310194681-1a1dfbec20b8?q=80&w=1200';
   const icon = sp.get('icon') || fallbackIcon;
 
   return (
-      <main className="section">
-        <div className="container-pad grid md:grid-cols-2 gap-10 items-start">
-          <div>
-            <div className="flex flex-wrap items-center gap-3">
-              <h1 className="h">{t('product.crypto.title')}</h1>
-              <ProductStatusBadge status="Available" />
-            </div>
-            <p className="mt-3 text-gray-700">{t('product.crypto.body')}</p>
-            <ul className="mt-6 space-y-2 text-sm">
-              <li className="card">{t('product.crypto.feature.app')}</li>
-              <li className="card">{t('product.feature.integrateApi')}</li>
-            </ul>
-            <a href={`/business?lang=${lang}`} className="btn btn-primary mt-6 w-fit">{t('common.cta.useApi')}</a>
-          </div>
-
-          {/* Visual uses the passed icon */}
-          <div className="elevate-hero">
-            <div className="hero-sheen rounded-2xl border">
-              <img
-                  src={icon}
-                  alt={t('product.crypto.title')}
-                  className="w-full h-80 object-cover rounded-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </main>
+    <ProductPageTemplate
+      t={t}
+      title={t('product.crypto.title')}
+      body={t('product.crypto.body')}
+      status="Available"
+      icon={icon}
+      accent="plum"
+      mode="app"
+      highlights={[t('product.crypto.feature.app'), t('product.feature.supportedMethods'), t('download.proof.mobile')]}
+      points={[t('product.crypto.feature.app'), t('product.page.crypto.point2'), t('product.page.crypto.point3')]}
+      ctaLabel={t('product.page.cta.app')}
+    />
   );
 }

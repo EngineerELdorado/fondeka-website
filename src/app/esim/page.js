@@ -1,42 +1,27 @@
 'use client';
 import { useI18n } from '../../lib/i18n';
 import { useSearchParams } from 'next/navigation';
-import ProductStatusBadge from '../../components/ProductStatusBadge';
+import ProductPageTemplate from '@/components/ProductPageTemplate';
 
 export default function Page(){
-  const { t, lang } = useI18n();
+  const { t } = useI18n();
   const sp = useSearchParams();
 
   const fallbackIcon = 'https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200';
   const icon = sp.get('icon') || fallbackIcon;
 
   return (
-      <main className="section">
-        <div className="container-pad grid md:grid-cols-2 gap-10 items-start">
-          <div>
-            <div className="flex flex-wrap items-center gap-3">
-              <h1 className="h">{t('product.esim.title')}</h1>
-              <ProductStatusBadge status="Available" />
-            </div>
-            <p className="mt-3 text-gray-700">{t('product.esim.body')}</p>
-            <ul className="mt-6 space-y-2 text-sm">
-              <li className="card">{t('product.esim.feature.app')}</li>
-              <li className="card">{t('product.feature.integrateApi')}</li>
-            </ul>
-            <a href={`/business?lang=${lang}`} className="btn btn-primary mt-6 w-fit">{t('common.cta.useApi')}</a>
-          </div>
-
-          {/* Visual uses the passed icon */}
-          <div className="elevate-hero">
-            <div className="hero-sheen rounded-2xl border">
-              <img
-                  src={icon}
-                  alt={t('product.esim.title')}
-                  className="w-full h-80 object-cover rounded-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </main>
+    <ProductPageTemplate
+      t={t}
+      title={t('product.esim.title')}
+      body={t('product.esim.body')}
+      status="Available"
+      icon={icon}
+      accent="slate"
+      mode="app"
+      highlights={[t('product.esim.feature.app'), t('download.proof.mobile'), t('download.proof.instant')]}
+      points={[t('product.esim.feature.app'), t('product.page.esim.point2'), t('product.page.esim.point3')]}
+      ctaLabel={t('product.page.cta.app')}
+    />
   );
 }

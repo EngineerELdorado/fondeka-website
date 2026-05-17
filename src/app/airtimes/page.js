@@ -1,38 +1,27 @@
 'use client';
 import { useI18n } from '@/lib/i18n';
 import { useSearchParams } from 'next/navigation';
-import ProductStatusBadge from '@/components/ProductStatusBadge';
+import ProductPageTemplate from '@/components/ProductPageTemplate';
 
 export default function Page(){
-  const { t, lang } = useI18n();
+  const { t } = useI18n();
   const sp = useSearchParams();
 
   const fallbackIcon = 'https://images.unsplash.com/photo-1517433456452-f9633a875f6f?q=80&w=1200';
   const icon = sp.get('icon') || fallbackIcon;
 
   return (
-      <main className="section">
-        <div className="container-pad grid md:grid-cols-2 gap-10 items-start">
-          <div>
-            <div className="flex flex-wrap items-center gap-3">
-              <h1 className="h">{t('product.airtimes.title')}</h1>
-              <ProductStatusBadge status="Available" />
-            </div>
-            <p className="mt-3 text-gray-700">{t('product.airtimes.body')}</p>
-            <ul className="mt-6 space-y-2 text-sm">
-              <li className="card">{t('product.airtimes.feature.app')}</li>
-              <li className="card">{t('product.feature.integrateApi')}</li>
-            </ul>
-            <a href={`/business?lang=${lang}`} className="btn btn-primary mt-6 w-fit">{t('common.cta.useApi')}</a>
-          </div>
-          <div className="card">
-            <img
-                src={icon}
-                alt={t('product.airtimes.title')}
-                className="w-full h-80 object-cover rounded-2xl border"
-            />
-          </div>
-        </div>
-      </main>
+    <ProductPageTemplate
+      t={t}
+      title={t('product.airtimes.title')}
+      body={t('product.airtimes.body')}
+      status="Available"
+      icon={icon}
+      accent="blue"
+      mode="app"
+      highlights={[t('product.airtimes.feature.app'), t('download.proof.mobile'), t('download.proof.instant')]}
+      points={[t('product.page.airtime.point1'), t('product.page.airtime.point2'), t('product.page.airtime.point3')]}
+      ctaLabel={t('product.page.cta.app')}
+    />
   );
 }

@@ -1,28 +1,22 @@
 'use client';
 import { useI18n } from '../../lib/i18n';
-import ProductStatusBadge from '../../components/ProductStatusBadge';
+import ProductPageTemplate from '@/components/ProductPageTemplate';
 export default function Page(){
   const { t, lang } = useI18n();
   return (
-    <main className="section">
-      <div className="container-pad grid md:grid-cols-2 gap-10 items-start">
-        <div>
-          <div className="flex flex-wrap items-center gap-3">
-            <h1 className="h">{t('product.payout.title')}</h1>
-            <ProductStatusBadge status="Coming soon" />
-          </div>
-          <p className="mt-3 text-gray-700">{t('product.payout.body')}</p>
-          <ul className="mt-6 space-y-2 text-sm">
-            <li className="card">{t('product.feature.supportedMethods')}</li>
-            <li className="card">{t('product.feature.dashboardControls')}</li>
-            <li className="card">{t('product.feature.businessApi')}</li>
-          </ul>
-          <a href={`/business?lang=${lang}`} className="btn btn-primary mt-6 w-fit">{t('common.cta.useApi')}</a>
-        </div>
-        <div className="card">
-          <img src="https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?q=80&w=1200" alt="" className="w-full h-80 object-contain" />
-        </div>
-      </div>
-    </main>
+    <ProductPageTemplate
+      t={t}
+      title={t('product.payout.title')}
+      body={t('product.payout.body')}
+      status="Coming soon"
+      icon="https://images.unsplash.com/photo-1579621970588-a35d0e7ab9b6?q=80&w=1200"
+      accent="slate"
+      mode="business"
+      highlights={[t('product.feature.supportedMethods'), t('product.feature.dashboardControls'), t('product.feature.businessApi')]}
+      points={[t('product.feature.supportedMethods'), t('product.page.payout.point2'), t('product.page.payout.point3')]}
+      ctaHref={`/business?lang=${lang}`}
+      ctaLabel={t('common.cta.useApi')}
+      visualFit="contain"
+    />
   );
 }

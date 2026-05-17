@@ -1,10 +1,10 @@
 'use client';
 import { useI18n } from '@/lib/i18n';
 import { useSearchParams } from 'next/navigation';
-import ProductStatusBadge from '@/components/ProductStatusBadge';
+import ProductPageTemplate from '@/components/ProductPageTemplate';
 
 export default function Page(){
-  const { t, lang } = useI18n();
+  const { t } = useI18n();
   const sp = useSearchParams();
 
   // Try plural keys first, then singular (in case locales use one or the other)
@@ -21,33 +21,17 @@ export default function Page(){
   const icon = sp.get('icon') || fallbackIcon;
 
   return (
-      <main className="section">
-        <div className="container-pad grid md:grid-cols-2 gap-10 items-start">
-          <div>
-            <div className="flex flex-wrap items-center gap-3">
-              <h1 className="h">{title}</h1>
-              <ProductStatusBadge status="Available" />
-            </div>
-            <p className="mt-3 text-gray-700">{body}</p>
-            <ul className="mt-6 space-y-2 text-sm">
-              <li className="card">{t('product.feature.supportedMethods')}</li>
-              <li className="card">{t('product.feature.dashboardControls')}</li>
-              <li className="card">{t('product.feature.businessApi')}</li>
-            </ul>
-            <a href={`/business?lang=${lang}`} className="btn btn-primary mt-6 w-fit">{t('common.cta.useApi')}</a>
-          </div>
-
-          {/* Visual: elevation + sheen + rounded border, using the passed icon */}
-          <div className="elevate-hero">
-            <div className="hero-sheen rounded-2xl border">
-              <img
-                  src={icon}
-                  alt={title}
-                  className="w-full h-80 object-cover rounded-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </main>
+    <ProductPageTemplate
+      t={t}
+      title={title}
+      body={body}
+      status="Available"
+      icon={icon}
+      accent="blue"
+      mode="app"
+      highlights={[t('product.page.airtime.highlight1'), t('download.proof.mobile'), t('download.proof.instant')]}
+      points={[t('product.page.airtime.point1'), t('product.page.airtime.point2'), t('product.page.airtime.point3')]}
+      ctaLabel={t('product.page.cta.app')}
+    />
   );
 }
