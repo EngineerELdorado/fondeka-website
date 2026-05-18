@@ -66,16 +66,16 @@ export default function Page(){
     t('product.savings.avec.governance.point.3'),
     t('product.savings.avec.governance.point.4'),
   ];
+  const videoLinks = {
+    personal: 'https://youtube.com/shorts/Skoq_VK_ziE',
+    likelemba: 'https://youtube.com/shorts/uHhmkjU4vm0',
+    avec: 'https://youtube.com/shorts/ijrOvWkvzRQ',
+  };
+  const toEmbedUrl = (url) => url.replace('https://youtube.com/shorts/', 'https://www.youtube.com/embed/');
   const videos = {
-    personal: lang === 'fr'
-      ? 'https://www.youtube.com/embed/JDEbMkgb_x0'
-      : 'https://www.youtube.com/embed/O4qTWATKaEE',
-    likelemba: lang === 'fr'
-      ? 'https://www.youtube.com/embed/vptm3ulgSsQ'
-      : 'https://www.youtube.com/embed/sVpBxdjG2jQ',
-    avec: lang === 'fr'
-      ? 'https://www.youtube.com/embed/tr2wi0Y8-UY'
-      : 'https://www.youtube.com/embed/1L2thcdoBKs',
+    personal: toEmbedUrl(videoLinks.personal),
+    likelemba: toEmbedUrl(videoLinks.likelemba),
+    avec: toEmbedUrl(videoLinks.avec),
   };
 
   return (
@@ -112,7 +112,7 @@ export default function Page(){
                 <p className="mt-2 text-sm text-gray-700">{t('product.savings.personal.video.body')}</p>
               </div>
               <a
-                href={lang === 'fr' ? 'https://youtube.com/shorts/JDEbMkgb_x0' : 'https://youtube.com/shorts/O4qTWATKaEE'}
+                href={videoLinks.personal}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-semibold text-fondeka-dark underline underline-offset-4"
@@ -195,7 +195,7 @@ export default function Page(){
                   <p className="mt-1 text-sm text-gray-700">{t('product.savings.likelemba.video.body')}</p>
                 </div>
                 <a
-                  href={lang === 'fr' ? 'https://youtu.be/vptm3ulgSsQ' : 'https://youtu.be/sVpBxdjG2jQ'}
+                  href={videoLinks.likelemba}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-semibold text-fondeka-dark underline underline-offset-4"
@@ -241,7 +241,7 @@ export default function Page(){
                   <p className="mt-1 text-sm text-gray-700">{t('product.savings.avec.video.body')}</p>
                 </div>
                 <a
-                  href={lang === 'fr' ? 'https://youtube.com/shorts/tr2wi0Y8-UY' : 'https://youtube.com/shorts/1L2thcdoBKs'}
+                  href={videoLinks.avec}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-sm font-semibold text-fondeka-dark underline underline-offset-4"
