@@ -203,7 +203,7 @@ export default function Page(){
                   {t('product.savings.video.watchOnYoutube')}
                 </a>
               </div>
-              <div className="mt-4 overflow-hidden rounded-2xl border bg-black aspect-video">
+              <div className="mt-4 overflow-hidden rounded-2xl border bg-black aspect-[9/16] max-w-xs">
                 <iframe
                   src={videos.likelemba}
                   title={t('product.savings.likelemba.video.title')}
