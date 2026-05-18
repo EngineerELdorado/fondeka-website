@@ -67,9 +67,9 @@ export default function Page(){
     t('product.savings.avec.governance.point.4'),
   ];
   const videoLinks = {
-    personal: 'https://youtube.com/shorts/Skoq_VK_ziE',
-    likelemba: 'https://youtube.com/shorts/uHhmkjU4vm0',
-    avec: 'https://youtube.com/shorts/ijrOvWkvzRQ',
+    personal: 'https://youtube.com/shorts/E7HvzMzB7tQ',
+    likelemba: 'https://youtube.com/shorts/PQrA-T3u2Kg',
+    avec: 'https://youtube.com/shorts/XWqJGPvtCyw',
   };
   const toEmbedUrl = (url) => url.replace('https://youtube.com/shorts/', 'https://www.youtube.com/embed/');
   const videos = {
