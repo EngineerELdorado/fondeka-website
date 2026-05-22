@@ -22,6 +22,7 @@ export default function DownloadAppButton({
     className = '',
     variant = 'default',
     ctaLabel = '',
+    trackingId = '',
 }) {
     const { t } = useI18n();
 
@@ -72,6 +73,7 @@ export default function DownloadAppButton({
                     rel="noopener noreferrer"
                     className={buttonClassName}
                     aria-label={mobileDownloadLabel}
+                    data-download-button={trackingId || undefined}
                 >
                     <Icon />
                     <span>{mobileDownloadLabel}</span>
@@ -87,6 +89,7 @@ export default function DownloadAppButton({
                 className={`btn btn-primary btn-3d inline-flex items-center gap-2 ${isHero ? 'hero-download-pulse min-h-[60px] px-5 text-base shadow-[0_14px_30px_rgba(79,128,92,0.22)]' : ''}`}
                 aria-haspopup="dialog"
                 aria-expanded={open}
+                data-download-button={trackingId || undefined}
             >
                 <span>{ctaLabel || t('cta.download')}</span>
             </button>

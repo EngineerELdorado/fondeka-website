@@ -75,6 +75,7 @@ export default function Home() {
                                 className="mt-6 max-w-xl"
                                 variant="hero"
                                 ctaLabel={t('hero.downloadStrong') || 'Download the app and start now'}
+                                trackingId="hero-home-cta"
                             />
                             <div className="mt-3">
                                 <a

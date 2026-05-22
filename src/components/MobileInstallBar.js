@@ -8,12 +8,35 @@ import { useI18n } from '@/lib/i18n';
 export default function MobileInstallBar() {
     const { t } = useI18n();
     const [platform, setPlatform] = useState('other');
+    const [showBar, setShowBar] = useState(true);
 
     useEffect(() => {
         setPlatform(getDevicePlatform());
     }, []);
 
-    if (platform === 'other') {
+    useEffect(() => {
+        if (typeof window === 'undefined') return undefined;
+
+        const heroCta = document.querySelector('[data-download-button="hero-home-cta"]');
+        if (!heroCta) {
+            setShowBar(true);
+            return undefined;
+        }
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setShowBar(!entry.isIntersecting);
+            },
+            {
+                threshold: 0.2,
+            }
+        );
+
+        observer.observe(heroCta);
+        return () => observer.disconnect();
+    }, []);
+
+    if (platform === 'other' || !showBar) {
         return null;
     }
 
