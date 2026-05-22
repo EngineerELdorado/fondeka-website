@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 /**
  * Decorative corner art for the hero.
  * - Images are absolute, behind content, pointer-events: none.
@@ -7,18 +9,29 @@
  * - Supply any image URLs; transparent PNGs/SVGs work best.
  */
 export default function HeroCorners({
-                                        leftSrc  = 'https://images.unsplash.com/photo-1751986416203-6f51aae09f5e?auto=format&fit=crop&q=80&w=674',   // replace with yours
-                                        rightSrc = 'https://images.unsplash.com/photo-1612271648831-454f05e23039?auto=format&fit=crop&q=80&w=774',   // replace with yours
-                                        leftAlt  = '',
-                                        rightAlt = '',
                                     }) {
     return (
         <>
             <div className="fd-corner fd-left"  aria-hidden="true">
-                <img src={leftSrc}  alt={leftAlt} />
+                <Image
+                    src="/welcome-portrait.png"
+                    alt=""
+                    width={1419}
+                    height={2796}
+                    sizes="(min-width: 1024px) 240px, 180px"
+                    className="h-auto w-full rounded-2xl object-cover"
+                    priority
+                />
             </div>
             <div className="fd-corner fd-right" aria-hidden="true">
-                <img src={rightSrc} alt={rightAlt} />
+                <Image
+                    src="/fondeka-portrait.png"
+                    alt=""
+                    width={1419}
+                    height={2796}
+                    sizes="(min-width: 1024px) 240px, 180px"
+                    className="h-auto w-full rounded-2xl object-cover"
+                />
             </div>
         </>
     );

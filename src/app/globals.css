@@ -229,6 +229,7 @@ html, body { overflow-x: hidden; }
 }
 .fd-corner img { display:block; width:100%; height:auto; border-radius: 1rem; }
 
+
 /* Dock to the real screen edges from inside a centered container */
 .fd-left  { top: var(--corner-top-left);  left:  calc(50% - 50vw + var(--edge-gap)); width: var(--corner-left-w);  transform-origin: left top; }
 .fd-right { top: var(--corner-top-right); right: calc(50% - 50vw + var(--edge-gap)); width: var(--corner-right-w); transform-origin: right top; }
@@ -427,5 +428,3 @@ html, body { overflow-x: hidden; }
     --orbit-duration: 28s;  /* a bit slower for calm motion */
   }
 }
-
-

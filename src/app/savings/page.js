@@ -22,6 +22,11 @@ export default function Page(){
     t('product.savings.personal.opened.benefits.3'),
     t('product.savings.personal.opened.benefits.4'),
   ];
+  const personalCompareOpenedPoints = [
+    t('product.savings.personal.compare.opened.i1'),
+    t('product.savings.personal.compare.opened.i2'),
+    t('product.savings.personal.compare.opened.i3'),
+  ];
   const personalLockedSteps = [
     t('product.savings.personal.locked.steps.1'),
     t('product.savings.personal.locked.steps.2'),
@@ -33,6 +38,11 @@ export default function Page(){
     t('product.savings.personal.locked.benefits.2'),
     t('product.savings.personal.locked.benefits.3'),
     t('product.savings.personal.locked.benefits.4'),
+  ];
+  const personalCompareLockedPoints = [
+    t('product.savings.personal.compare.locked.i1'),
+    t('product.savings.personal.compare.locked.i2'),
+    t('product.savings.personal.compare.locked.i3'),
   ];
   const likelembaSteps = [
     t('product.savings.likelemba.steps.1'),
@@ -66,16 +76,30 @@ export default function Page(){
     t('product.savings.avec.governance.point.3'),
     t('product.savings.avec.governance.point.4'),
   ];
+  const compareLikelembaPoints = [
+    t('product.savings.compare.detail.likelemba.i1'),
+    t('product.savings.compare.detail.likelemba.i2'),
+    t('product.savings.compare.detail.likelemba.i3'),
+  ];
+  const compareAvecPoints = [
+    t('product.savings.compare.detail.avec.i1'),
+    t('product.savings.compare.detail.avec.i2'),
+    t('product.savings.compare.detail.avec.i3'),
+  ];
   const videoLinks = {
     personal: 'https://youtube.com/shorts/E7HvzMzB7tQ',
+    personalCompare: 'https://youtube.com/shorts/VNAr4_Z7Bsc',
     likelemba: 'https://youtube.com/shorts/PQrA-T3u2Kg',
     avec: 'https://youtube.com/shorts/XWqJGPvtCyw',
+    compare: 'https://youtube.com/shorts/CBaqo9I3piE',
   };
   const toEmbedUrl = (url) => url.replace('https://youtube.com/shorts/', 'https://www.youtube.com/embed/');
   const videos = {
     personal: toEmbedUrl(videoLinks.personal),
+    personalCompare: toEmbedUrl(videoLinks.personalCompare),
     likelemba: toEmbedUrl(videoLinks.likelemba),
     avec: toEmbedUrl(videoLinks.avec),
+    compare: toEmbedUrl(videoLinks.compare),
   };
 
   return (
@@ -103,6 +127,53 @@ export default function Page(){
           <div className="card mt-4">
             <h2 className="text-xl font-extrabold tracking-tight text-fondeka-dark">{t('product.savings.personal.title')}</h2>
             <p className="mt-2 text-sm text-gray-700">{t('product.savings.personal.body')}</p>
+            <div className="mt-5 rounded-2xl border border-fondeka-dark/15 bg-gradient-to-br from-white via-fondeka-light/40 to-white p-5">
+              <h3 className="text-lg font-extrabold tracking-tight text-fondeka-dark">{t('product.savings.personal.compare.title')}</h3>
+              <p className="mt-2 text-sm text-gray-700">{t('product.savings.personal.compare.body')}</p>
+              <div className="mt-4 grid gap-4 md:grid-cols-2">
+                <div className="rounded-2xl border border-fondeka-dark/10 bg-white p-4">
+                  <h4 className="font-semibold text-fondeka-dark">{t('product.savings.personal.compare.opened.title')}</h4>
+                  <ul className="mt-3 space-y-2 text-sm text-gray-700">
+                    {personalCompareOpenedPoints.map((item) => (
+                      <li key={item}>• {item}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="rounded-2xl border border-fondeka-dark/10 bg-white p-4">
+                  <h4 className="font-semibold text-fondeka-dark">{t('product.savings.personal.compare.locked.title')}</h4>
+                  <ul className="mt-3 space-y-2 text-sm text-gray-700">
+                    {personalCompareLockedPoints.map((item) => (
+                      <li key={item}>• {item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-5">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <h4 className="font-semibold text-fondeka-dark">{t('product.savings.personal.compare.video.title')}</h4>
+                    <p className="mt-1 text-sm text-gray-700">{t('product.savings.personal.compare.video.body')}</p>
+                  </div>
+                  <a
+                    href={videoLinks.personalCompare}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-fondeka-dark underline underline-offset-4"
+                  >
+                    {t('product.savings.video.watchOnYoutube')}
+                  </a>
+                </div>
+                <div className="mt-4 overflow-hidden rounded-2xl border border-fondeka-dark/20 bg-black aspect-[9/16] max-w-xs shadow-[0_12px_30px_rgba(0,0,0,0.18)]">
+                  <iframe
+                    src={videos.personalCompare}
+                    title={t('product.savings.personal.compare.video.title')}
+                    className="h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="card mt-4">
@@ -300,6 +371,53 @@ export default function Page(){
               <li>• {t('product.savings.compare.i3')}</li>
               <li>• {t('product.savings.compare.i4')}</li>
             </ul>
+            <div className="mt-5 rounded-2xl border border-fondeka-dark/15 bg-gradient-to-br from-white via-fondeka-light/40 to-white p-5">
+              <h4 className="text-lg font-extrabold tracking-tight text-fondeka-dark">{t('product.savings.compare.detail.title')}</h4>
+              <p className="mt-2 text-sm text-gray-700">{t('product.savings.compare.detail.body')}</p>
+              <div className="mt-4 grid gap-4 md:grid-cols-2">
+                <div className="rounded-2xl border border-fondeka-dark/10 bg-white p-4">
+                  <h5 className="font-semibold text-fondeka-dark">{t('product.savings.compare.detail.likelemba.title')}</h5>
+                  <ul className="mt-3 space-y-2 text-sm text-gray-700">
+                    {compareLikelembaPoints.map((item) => (
+                      <li key={item}>• {item}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="rounded-2xl border border-fondeka-dark/10 bg-white p-4">
+                  <h5 className="font-semibold text-fondeka-dark">{t('product.savings.compare.detail.avec.title')}</h5>
+                  <ul className="mt-3 space-y-2 text-sm text-gray-700">
+                    {compareAvecPoints.map((item) => (
+                      <li key={item}>• {item}</li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+              <div className="mt-5">
+                <div className="flex flex-wrap items-center justify-between gap-3">
+                  <div>
+                    <h5 className="font-semibold text-fondeka-dark">{t('product.savings.compare.video.title')}</h5>
+                    <p className="mt-1 text-sm text-gray-700">{t('product.savings.compare.video.body')}</p>
+                  </div>
+                  <a
+                    href={videoLinks.compare}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-sm font-semibold text-fondeka-dark underline underline-offset-4"
+                  >
+                    {t('product.savings.video.watchOnYoutube')}
+                  </a>
+                </div>
+                <div className="mt-4 overflow-hidden rounded-2xl border border-fondeka-dark/20 bg-black aspect-[9/16] max-w-xs shadow-[0_12px_30px_rgba(0,0,0,0.18)]">
+                  <iframe
+                    src={videos.compare}
+                    title={t('product.savings.compare.video.title')}
+                    className="h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
           <p className="mt-4 text-xs text-gray-500">{t('product.savings.note')}</p>

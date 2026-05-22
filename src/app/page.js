@@ -4,18 +4,19 @@ import FeatureCard from '../components/FeatureCard';
 import CTA from '../components/CTA';
 import DownloadAppButton from '../components/DownloadAppButton';
 import Metrics from '../components/Metrics';
-import HeroSlider from '@/components/HeroSlider';
 import { useI18n } from '@/lib/i18n';
 import HeroCorners from '@/components/HeroCorners';
 import HeroOrbitIcons from "@/components/HeroOrbitIcons";
 
 export default function Home() {
     const { t, lang } = useI18n();
-    const heroImages = [
-        '/hero-tech-network.svg',
-        '/hero-tech-payments.svg',
-        '/hero-tech-security.svg',
-    ];
+    const heroVideoLinks = {
+        fr: 'https://youtu.be/5rsbi78o730',
+        en: 'https://youtu.be/9R43pMUs670',
+    };
+    const heroVideoUrl = heroVideoLinks[lang] || heroVideoLinks.en;
+    const heroVideoId = heroVideoUrl.split('/').pop()?.split('?')[0];
+    const heroVideoEmbedUrl = `https://www.youtube.com/embed/${heroVideoId}`;
 
     // helper to shorten href object creation (pass icon to target page)
     const withIcon = (pathname, icon) => ({ pathname, query: { lang, icon } });
@@ -93,17 +94,25 @@ export default function Home() {
                             </p>
                         </div>
 
-                        <div className="hidden md:block card card-tight">
+                        <div className="card card-tight">
                             <div className="relative">
                                 {/* soft rotating halo, sits behind the media, contained by this relative box */}
                                 <div className="halo -z-10" aria-hidden="true" />
 
                                 <div className="depth-frame">
-                                    <HeroSlider
-                                        alt={t('hero.title')}
-                                        images={heroImages}
-                                        intervalMs={5500}
-                                    />
+                                    <div className="elevate-hero">
+                                        <div className="hero-sheen overflow-hidden rounded-2xl border bg-black shadow-[0_22px_48px_rgba(27,67,50,0.14)]">
+                                            <div className="aspect-video w-full">
+                                                <iframe
+                                                    src={heroVideoEmbedUrl}
+                                                    title={t('hero.title')}
+                                                    className="h-full w-full"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    allowFullScreen
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
