@@ -1,14 +1,14 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import DownloadAppButton from '@/components/DownloadAppButton';
 import { getDevicePlatform } from '@/lib/appStores';
-import { useI18n } from '@/lib/i18n';
 
 export default function MobileInstallBar() {
-    const { t } = useI18n();
+    const pathname = usePathname();
     const [platform, setPlatform] = useState('other');
-    const [showBar, setShowBar] = useState(true);
+    const [showBar, setShowBar] = useState(false);
 
     useEffect(() => {
         setPlatform(getDevicePlatform());
@@ -17,24 +17,35 @@ export default function MobileInstallBar() {
     useEffect(() => {
         if (typeof window === 'undefined') return undefined;
 
-        const heroCta = document.querySelector('[data-download-button="hero-home-cta"]');
-        if (!heroCta) {
-            setShowBar(true);
-            return undefined;
-        }
+        let frameId = null;
 
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setShowBar(!entry.isIntersecting);
-            },
-            {
-                threshold: 0.2,
+        const syncVisibility = () => {
+            const heroCta = document.querySelector('[data-download-button="hero-home-cta"]');
+            if (!heroCta) {
+                setShowBar(false);
+                return;
             }
-        );
 
-        observer.observe(heroCta);
-        return () => observer.disconnect();
-    }, []);
+            const rect = heroCta.getBoundingClientRect();
+            const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+            const isVisible = rect.bottom > 0 && rect.top < viewportHeight;
+            setShowBar(!isVisible);
+        };
+
+        const startSync = () => {
+            syncVisibility();
+            window.addEventListener('scroll', syncVisibility, { passive: true });
+            window.addEventListener('resize', syncVisibility);
+        };
+
+        frameId = window.requestAnimationFrame(startSync);
+
+        return () => {
+            if (frameId) window.cancelAnimationFrame(frameId);
+            window.removeEventListener('scroll', syncVisibility);
+            window.removeEventListener('resize', syncVisibility);
+        };
+    }, [pathname]);
 
     if (platform === 'other' || !showBar) {
         return null;
@@ -43,21 +54,10 @@ export default function MobileInstallBar() {
     return (
         <div className="mobile-install-bar md:hidden">
             <div className="mobile-install-shell">
-                <div className="min-w-0">
-                    <p className="mobile-install-eyebrow">
-                        {t('download.sticky.eyebrow') || 'Start in the app'}
-                    </p>
-                    <p className="mobile-install-title">
-                        {t('download.sticky.title') ||
-                            'Download Fondeka before you leave'}
-                    </p>
-                </div>
                 <DownloadAppButton
                     variant="sticky"
-                    className="shrink-0"
-                    ctaLabel={
-                        t('download.sticky.button') || 'Install now'
-                    }
+                    className="w-full"
+                    ctaLabel="Install now"
                 />
             </div>
         </div>

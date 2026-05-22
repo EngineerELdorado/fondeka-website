@@ -110,19 +110,11 @@ html, body { overflow-x: hidden; }
 }
 
 .mobile-install-shell {
-  @apply mx-auto flex max-w-md items-center gap-3 rounded-[28px] border border-fondeka-mint/60 bg-white/95 px-4 py-3 shadow-[0_18px_50px_rgba(10,26,18,0.16)] backdrop-blur;
-}
-
-.mobile-install-eyebrow {
-  @apply text-[11px] font-semibold uppercase tracking-[0.18em] text-fondeka-green;
-}
-
-.mobile-install-title {
-  @apply mt-1 text-sm font-semibold leading-tight text-fondeka-dark;
+  @apply mx-auto flex max-w-sm items-center justify-center rounded-[28px] border border-fondeka-mint/60 bg-white/95 px-3 py-3 shadow-[0_18px_50px_rgba(10,26,18,0.16)] backdrop-blur;
 }
 
 .mobile-install-button {
-  @apply min-h-[48px] shrink-0 rounded-2xl px-4 text-sm whitespace-nowrap;
+  @apply min-h-[48px] w-full rounded-2xl px-4 text-sm whitespace-nowrap;
 }
 
 @keyframes hero-download-pulse {
