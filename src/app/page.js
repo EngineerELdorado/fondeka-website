@@ -11,8 +11,8 @@ import HeroOrbitIcons from "@/components/HeroOrbitIcons";
 export default function Home() {
     const { t, lang } = useI18n();
     const heroVideoLinks = {
-        fr: 'https://youtu.be/5rsbi78o730',
-        en: 'https://youtu.be/9R43pMUs670',
+        fr: 'https://youtu.be/RBZ3jgG_RKs',
+        en: 'https://youtu.be/_Rfy6wxWdhA',
     };
     const heroVideoUrl = heroVideoLinks[lang] || heroVideoLinks.en;
     const heroVideoId = heroVideoUrl.split('/').pop()?.split('?')[0];
