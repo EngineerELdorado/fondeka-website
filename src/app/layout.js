@@ -11,11 +11,11 @@ import { Suspense } from 'react';
 
 export const metadata = {
     metadataBase: new URL('https://fondeka.com'),
-    title: 'The mobile bank for loans at 0% interest rate | La banque mobile pour des prêts à 0% intérêt',
+    title: 'The mobile bank for loans at 0% interest | La banque mobile pour des prêts à 0% intérêt',
     description:
         'Loans, MasterCard, cryptos, payment links, savings, and bill payments. | Prêts, MasterCard, cryptos, liens de paiements, épargnes et paiement des factures.',
     openGraph: {
-        title: 'The mobile bank for loans at 0% interest rate | La banque mobile pour des prêts à 0% intérêt',
+        title: 'The mobile bank for loans at 0% interest | La banque mobile pour des prêts à 0% intérêt',
         description:
             'Loans, MasterCard, cryptos, payment links, savings, and bill payments. | Prêts, MasterCard, cryptos, liens de paiements, épargnes et paiement des factures.',
         url: 'https://fondeka.com',
@@ -33,7 +33,7 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'The mobile bank for loans at 0% interest rate | La banque mobile pour des prêts à 0% intérêt',
+        title: 'The mobile bank for loans at 0% interest | La banque mobile pour des prêts à 0% intérêt',
         description:
             'Loans, MasterCard, cryptos, payment links, savings, and bill payments. | Prêts, MasterCard, cryptos, liens de paiements, épargnes et paiement des factures.',
         images: ['/og-image.jpg'],
