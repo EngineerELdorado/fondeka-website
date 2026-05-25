@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import { useI18n } from '@/lib/i18n';
 
 /**
  * Decorative corner art for the hero.
@@ -10,11 +11,16 @@ import Image from 'next/image';
  */
 export default function HeroCorners({
                                     }) {
+    const { lang } = useI18n();
+    const isFrench = lang === 'fr';
+    const leftSrc = isFrench ? '/left_fr.png' : '/welcome-portrait.png';
+    const rightSrc = isFrench ? '/right_fr.png' : '/fondeka-portrait.png';
+
     return (
         <>
             <div className="fd-corner fd-left"  aria-hidden="true">
                 <Image
-                    src="/welcome-portrait.png"
+                    src={leftSrc}
                     alt=""
                     width={1419}
                     height={2796}
@@ -25,7 +31,7 @@ export default function HeroCorners({
             </div>
             <div className="fd-corner fd-right" aria-hidden="true">
                 <Image
-                    src="/fondeka-portrait.png"
+                    src={rightSrc}
                     alt=""
                     width={1419}
                     height={2796}
