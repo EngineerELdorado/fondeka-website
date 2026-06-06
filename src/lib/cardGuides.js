@@ -364,7 +364,7 @@ export const cardGuides = {
                 'ZIP code: 0401',
               ],
             },
-            { text: 'If Apple asks for a phone number, enter a valid phone number.' },
+            { text: 'If Apple asks for a phone number, feel free to add any random phone number.' },
             { text: 'Tap Next to confirm the card information.' },
             {
               text:
@@ -402,7 +402,7 @@ export const cardGuides = {
                 'Code postal: 0401',
               ],
             },
-            { text: 'Si Apple demande un numéro de téléphone, entrez un numéro valide.' },
+            { text: "Si Apple demande un numéro de téléphone, vous pouvez ajouter n'importe quel numéro de téléphone." },
             { text: 'Touchez Suivant pour confirmer les informations de la carte.' },
             {
               text:
