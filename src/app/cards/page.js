@@ -13,6 +13,7 @@ export default function Page(){
   const icon = sp.get('icon') || fallbackIcon;
   const platformLabel = (slug) => ({
     twitter: 'Twitter/X',
+    'google-play': 'Google Play',
     spotify: 'Spotify',
     apple: 'Apple',
     alibaba: 'Alibaba',
@@ -47,7 +48,7 @@ export default function Page(){
                 : 'Localized guides for setting up and paying with your Fondeka virtual card.'}
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
             {cardGuideOrder.map((slug) => {
               const guide = cardGuides[slug];
               const copy = guide[lang] || guide.en;

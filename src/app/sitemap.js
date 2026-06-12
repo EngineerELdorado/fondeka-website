@@ -5,6 +5,7 @@ export default function sitemap() {
         { url: 'https://fondeka.com/products' },
         { url: 'https://fondeka.com/cards' },
         { url: 'https://fondeka.com/cards/twitter' },
+        { url: 'https://fondeka.com/cards/google-play' },
         { url: 'https://fondeka.com/cards/spotify' },
         { url: 'https://fondeka.com/cards/apple' },
         { url: 'https://fondeka.com/cards/alibaba' },

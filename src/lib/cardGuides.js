@@ -1,4 +1,4 @@
-export const cardGuideOrder = ['twitter', 'spotify', 'apple', 'alibaba'];
+export const cardGuideOrder = ['twitter', 'google-play', 'spotify', 'apple', 'alibaba'];
 
 export const cardGuides = {
   twitter: {
@@ -160,6 +160,158 @@ export const cardGuides = {
               text: 'Votre abonnement Twitter/X Premium est maintenant actif.',
               image:
                 'https://lh7-us.googleusercontent.com/docsz/AD_4nXczu-wcsf_-a618um-y_kx0kXi5QssrB8yLR6Uk4WZF6mgnZxNncqr_cZtQq8NO4Nvl6HgOfbPlbAr-PzHz2TdWlBL-W3sF6tt5tFaYgGaN2AaZoGVUOfjeAV4vRzR_q_2wanWonXain0Mtg-0ykrVvUDKG?key=w3sO8JuNXVoCFtgRyXf2RA',
+            },
+          ],
+        },
+      ],
+      addressTitle: 'Adresse de facturation Google Play',
+      address: [
+        'Adresse: 256 Chapman Road',
+        'Ville: Newark',
+        'État: Delaware',
+        'Code postal: 19702',
+        'Pays: États-Unis',
+      ],
+    },
+  },
+  'google-play': {
+    accent: 'blue',
+    icon: '/cards.svg',
+    en: {
+      eyebrow: 'Card guide',
+      title: 'Use your Fondeka card on Google Play',
+      summary:
+        'Add your Fondeka Mastercard to Google Play and use it for app purchases, subscriptions, and supported in-app payments.',
+      intro: 'How to add your Fondeka Mastercard to Google Play and pay with it.',
+      sections: [
+        {
+          title: 'Add the card to Google Play',
+          steps: [
+            {
+              text:
+                'Open Google Play Store, tap your profile photo in the top-right corner, then select Payment methods.',
+              image:
+                'https://lh7-us.googleusercontent.com/docsz/AD_4nXdP63dWq0vqoduxKDBQPQhjoDk5Rub8DCKY2lxOwcT82hpUojSsJlLbseTbF22dH7N4wPIIOh6XVeDjS8l_GzadWd15kE2DguS7_sGzBa4Xml7cAUcc8QEfIbY7VzrZ1UHbd-9qzDR5xAR5zvuOjhG97ApU?key=w3sO8JuNXVoCFtgRyXf2RA',
+            },
+            {
+              text:
+                'Choose Add credit or debit card and enter your Fondeka card details. Set the country to United States of America and use the billing address below.',
+              image:
+                'https://lh7-us.googleusercontent.com/docsz/AD_4nXfRnxsAcsGVUYBJmlGBUehzWOO0r76BoPlWM9OhnbQRre1msnl5gvx6azUjYvAICx0u5-1TqdMbIzGB4xZOUSM84yIXn995MeG6PZ64Jk89-eg7P9x8kMtCabVLakMC-BSLSJOMQs0f6Q_28oVWPL0UTCVT?key=w3sO8JuNXVoCFtgRyXf2RA',
+            },
+            {
+              text: 'If the card is accepted, it will be added successfully.',
+              image:
+                'https://lh7-us.googleusercontent.com/docsz/AD_4nXd-AmWBGAYZ_QKoFifJOlwjh63WEcHtI_UJoH5JmtpQNQnypXkj3fJIi6IpzHLKtYKksBK35jvGMSiLZu4543N8hd2whCbhFFk1iHw0qGGigx5xCp5X4-O6-wqbcHitwg-jc_M_Y0bDuHHZzpEga-eVeSM?key=w3sO8JuNXVoCFtgRyXf2RA',
+            },
+          ],
+        },
+        {
+          title: 'If Google Play shows the card as unavailable',
+          steps: [
+            { text: 'Tap More payment settings.' },
+            {
+              text:
+                'Google will redirect you to payments.google.com/gp/w/home/settings.',
+            },
+            {
+              text:
+                'Go to Addresses and add the billing address shown on this page.',
+            },
+            {
+              text:
+                'Save the address and try adding the card again. It may still show as unavailable, but purchases should work after the address is saved.',
+            },
+          ],
+        },
+        {
+          title: 'Pay with Google Play',
+          steps: [
+            {
+              text:
+                'Open the app, game, subscription, or digital item you want to buy through Google Play.',
+            },
+            {
+              text:
+                'When the Google Play checkout screen appears, choose your Fondeka Mastercard as the payment method.',
+            },
+            {
+              text:
+                'Confirm the transaction on the Google Play confirmation screen. After confirmation, your purchase or subscription will be processed.',
+            },
+          ],
+        },
+      ],
+      addressTitle: 'Google Play billing address',
+      address: [
+        'Address line: 256 Chapman Road',
+        'City: Newark',
+        'State: Delaware',
+        'ZIP code: 19702',
+        'Country: United States',
+      ],
+    },
+    fr: {
+      eyebrow: 'Guide carte',
+      title: 'Utiliser votre carte Fondeka sur Google Play',
+      summary:
+        'Ajoutez votre Mastercard Fondeka sur Google Play et utilisez-la pour les achats d’apps, les abonnements et les paiements intégrés compatibles.',
+      intro: 'Comment ajouter votre Mastercard Fondeka sur Google Play et payer avec celle-ci.',
+      sections: [
+        {
+          title: 'Ajouter la carte sur Google Play',
+          steps: [
+            {
+              text:
+                'Ouvrez Google Play Store, touchez votre photo de profil en haut à droite, puis sélectionnez Moyens de paiement.',
+              image:
+                'https://lh7-us.googleusercontent.com/docsz/AD_4nXdP63dWq0vqoduxKDBQPQhjoDk5Rub8DCKY2lxOwcT82hpUojSsJlLbseTbF22dH7N4wPIIOh6XVeDjS8l_GzadWd15kE2DguS7_sGzBa4Xml7cAUcc8QEfIbY7VzrZ1UHbd-9qzDR5xAR5zvuOjhG97ApU?key=w3sO8JuNXVoCFtgRyXf2RA',
+            },
+            {
+              text:
+                "Choisissez Ajouter une carte de crédit ou de débit et entrez les informations de votre carte Fondeka. Mettez le pays sur États-Unis et utilisez l'adresse de facturation ci-dessous.",
+              image:
+                'https://lh7-us.googleusercontent.com/docsz/AD_4nXfRnxsAcsGVUYBJmlGBUehzWOO0r76BoPlWM9OhnbQRre1msnl5gvx6azUjYvAICx0u5-1TqdMbIzGB4xZOUSM84yIXn995MeG6PZ64Jk89-eg7P9x8kMtCabVLakMC-BSLSJOMQs0f6Q_28oVWPL0UTCVT?key=w3sO8JuNXVoCFtgRyXf2RA',
+            },
+            {
+              text: 'Si la carte est acceptée, elle sera ajoutée avec succès.',
+              image:
+                'https://lh7-us.googleusercontent.com/docsz/AD_4nXd-AmWBGAYZ_QKoFifJOlwjh63WEcHtI_UJoH5JmtpQNQnypXkj3fJIi6IpzHLKtYKksBK35jvGMSiLZu4543N8hd2whCbhFFk1iHw0qGGigx5xCp5X4-O6-wqbcHitwg-jc_M_Y0bDuHHZzpEga-eVeSM?key=w3sO8JuNXVoCFtgRyXf2RA',
+            },
+          ],
+        },
+        {
+          title: 'Si Google Play indique que la carte est indisponible',
+          steps: [
+            { text: 'Touchez Plus de paramètres de paiement.' },
+            {
+              text:
+                'Google vous redirigera vers payments.google.com/gp/w/home/settings.',
+            },
+            {
+              text:
+                "Allez dans Adresses et ajoutez l'adresse de facturation indiquée sur cette page.",
+            },
+            {
+              text:
+                "Enregistrez l'adresse et essayez d'ajouter la carte à nouveau. Elle peut encore apparaître comme indisponible, mais les achats devraient fonctionner après l'enregistrement de l'adresse.",
+            },
+          ],
+        },
+        {
+          title: 'Payer avec Google Play',
+          steps: [
+            {
+              text:
+                "Ouvrez l'app, le jeu, l'abonnement ou l'article numérique que vous voulez acheter via Google Play.",
+            },
+            {
+              text:
+                "Quand l'écran de paiement Google Play apparaît, choisissez votre Mastercard Fondeka comme moyen de paiement.",
+            },
+            {
+              text:
+                "Confirmez la transaction sur l'écran de confirmation Google Play. Après confirmation, votre achat ou abonnement sera traité.",
             },
           ],
         },

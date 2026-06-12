@@ -39,6 +39,7 @@ export default function CardGuidePageClient({ platform }) {
   const theme = accentClasses[guide.accent] || accentClasses.gold;
   const platformLabel = (slug) => ({
     twitter: 'Twitter/X',
+    'google-play': 'Google Play',
     spotify: 'Spotify',
     apple: 'Apple',
     alibaba: 'Alibaba',
@@ -91,10 +92,10 @@ export default function CardGuidePageClient({ platform }) {
         {(copy.address || copy.addressGroups) && (
           <section className="mt-8 grid gap-4 md:grid-cols-2">
             {copy.address && (
-              <AddressCard title={copy.addressTitle} lines={copy.address} />
+              <AddressCard title={copy.addressTitle} lines={copy.address} lang={lang} />
             )}
             {(copy.addressGroups || []).map((group) => (
-              <AddressCard key={group.title} title={group.title} lines={group.lines} />
+              <AddressCard key={group.title} title={group.title} lines={group.lines} lang={lang} />
             ))}
           </section>
         )}
@@ -123,10 +124,15 @@ export default function CardGuidePageClient({ platform }) {
   );
 }
 
-function AddressCard({ title, lines }) {
+function AddressCard({ title, lines, lang }) {
   return (
     <div className="card">
       <h2 className="text-lg font-extrabold tracking-tight text-fondeka-dark">{title}</h2>
+      <div className="mt-4 rounded-2xl border border-[#d9b562]/40 bg-[#fff7e8] px-4 py-3 text-sm font-extrabold leading-6 text-[#7a5a10]">
+        {lang === 'fr'
+          ? "Utilisez cette adresse lorsqu'on vous demande une adresse de facturation."
+          : 'Use this address when you are asked for a billing address.'}
+      </div>
       <dl className="mt-4 space-y-2 text-sm text-gray-700">
         {lines.map((line) => {
           const [label, ...value] = line.split(':');
