@@ -177,6 +177,7 @@ export const cardGuides = {
   'google-play': {
     accent: 'blue',
     icon: '/cards.svg',
+    logo: '/platforms/google-play.svg',
     en: {
       eyebrow: 'Card guide',
       title: 'Use your Fondeka card on Google Play',
