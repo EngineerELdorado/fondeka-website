@@ -8,7 +8,6 @@ export default function sitemap() {
         { url: 'https://fondeka.com/cards/google-play' },
         { url: 'https://fondeka.com/cards/spotify' },
         { url: 'https://fondeka.com/cards/apple' },
-        { url: 'https://fondeka.com/cards/alibaba' },
         { url: 'https://fondeka.com/business' },
         { url: 'https://fondeka.com/compliance' },
         { url: 'https://fondeka.com/support' },

@@ -48,7 +48,7 @@ export default function Page(){
                 : 'Localized guides for setting up and paying with your Fondeka virtual card.'}
             </p>
           </div>
-          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-5">
+          <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {cardGuideOrder.map((slug) => {
               const guide = cardGuides[slug];
               const copy = guide[lang] || guide.en;
