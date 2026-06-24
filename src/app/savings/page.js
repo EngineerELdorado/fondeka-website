@@ -44,6 +44,29 @@ export default function Page(){
     t('product.savings.personal.compare.locked.i2'),
     t('product.savings.personal.compare.locked.i3'),
   ];
+  const personalInterestRates = [
+    {
+      product: t('product.savings.personal.interest.rates.opened.product'),
+      rate: t('product.savings.personal.interest.rates.opened.rate'),
+    },
+    {
+      product: t('product.savings.personal.interest.rates.locked90.product'),
+      rate: t('product.savings.personal.interest.rates.locked90.rate'),
+    },
+    {
+      product: t('product.savings.personal.interest.rates.locked180.product'),
+      rate: t('product.savings.personal.interest.rates.locked180.rate'),
+    },
+    {
+      product: t('product.savings.personal.interest.rates.locked365.product'),
+      rate: t('product.savings.personal.interest.rates.locked365.rate'),
+    },
+  ];
+  const personalInterestRules = [
+    t('product.savings.personal.interest.rules.1'),
+    t('product.savings.personal.interest.rules.2'),
+    t('product.savings.personal.interest.rules.3'),
+  ];
   const likelembaSteps = [
     t('product.savings.likelemba.steps.1'),
     t('product.savings.likelemba.steps.2'),
@@ -85,6 +108,52 @@ export default function Page(){
     t('product.savings.compare.detail.avec.i1'),
     t('product.savings.compare.detail.avec.i2'),
     t('product.savings.compare.detail.avec.i3'),
+  ];
+  const groupSolves = [
+    t('product.savings.group.solves.1'),
+    t('product.savings.group.solves.2'),
+    t('product.savings.group.solves.3'),
+    t('product.savings.group.solves.4'),
+    t('product.savings.group.solves.5'),
+    t('product.savings.group.solves.6'),
+  ];
+  const groupWorks = [
+    t('product.savings.group.how.1'),
+    t('product.savings.group.how.2'),
+    t('product.savings.group.how.3'),
+    t('product.savings.group.how.4'),
+  ];
+  const groupFeatures = [
+    t('product.savings.group.features.1'),
+    t('product.savings.group.features.2'),
+    t('product.savings.group.features.3'),
+    t('product.savings.group.features.4'),
+    t('product.savings.group.features.5'),
+    t('product.savings.group.features.6'),
+  ];
+  const groupFrequencies = [
+    t('product.savings.group.frequencies.daily'),
+    t('product.savings.group.frequencies.weekly'),
+    t('product.savings.group.frequencies.biweekly'),
+    t('product.savings.group.frequencies.monthly'),
+  ];
+  const groupRoles = [
+    t('product.savings.group.roles.owner'),
+    t('product.savings.group.roles.admin'),
+    t('product.savings.group.roles.member'),
+  ];
+  const likelembaDetails = [
+    t('product.savings.likelemba.details.1'),
+    t('product.savings.likelemba.details.2'),
+    t('product.savings.likelemba.details.3'),
+    t('product.savings.likelemba.details.4'),
+  ];
+  const avecDetails = [
+    t('product.savings.avec.details.1'),
+    t('product.savings.avec.details.2'),
+    t('product.savings.avec.details.3'),
+    t('product.savings.avec.details.4'),
+    t('product.savings.avec.details.5'),
   ];
   const videoLinks = {
     personal: 'https://youtube.com/shorts/E7HvzMzB7tQ',
@@ -203,6 +272,41 @@ export default function Page(){
           </div>
 
           <div className="card mt-4">
+            <h2 className="text-xl font-extrabold tracking-tight text-fondeka-dark">{t('product.savings.personal.interest.title')}</h2>
+            <p className="mt-2 text-sm text-gray-700">{t('product.savings.personal.interest.body')}</p>
+            <div className="mt-5 overflow-hidden rounded-2xl border border-fondeka-dark/15">
+              <table className="w-full border-collapse text-left text-sm">
+                <thead className="bg-fondeka-light/70 text-fondeka-dark">
+                  <tr>
+                    <th scope="col" className="px-4 py-3 font-extrabold">{t('product.savings.personal.interest.table.product')}</th>
+                    <th scope="col" className="px-4 py-3 font-extrabold">{t('product.savings.personal.interest.table.rate')}</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-fondeka-dark/10">
+                  {personalInterestRates.map((row) => (
+                    <tr key={row.product} className="bg-white">
+                      <td className="px-4 py-3 text-gray-700">{row.product}</td>
+                      <td className="px-4 py-3 font-semibold text-fondeka-dark">{row.rate}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <h3 className="mt-5 font-semibold text-sm">{t('product.savings.personal.interest.how.title')}</h3>
+            <ul className="mt-3 space-y-2 text-sm text-gray-700">
+              {personalInterestRules.map((item) => (
+                <li key={item}>• {item}</li>
+              ))}
+            </ul>
+            <div className="mt-5 rounded-2xl border border-fondeka-dark/15 bg-fondeka-dark p-4 text-white">
+              <h3 className="font-semibold text-white">{t('product.savings.personal.interest.guarantee.title')}</h3>
+              <p className="mt-2 text-sm text-white/85">{t('product.savings.personal.interest.guarantee.body')}</p>
+            </div>
+            <p className="mt-4 text-sm text-gray-700">{t('product.savings.personal.interest.special')}</p>
+            <p className="mt-3 text-xs text-gray-500">{t('product.savings.personal.interest.note')}</p>
+          </div>
+
+          <div className="card mt-4">
             <h2 className="text-xl font-extrabold tracking-tight text-fondeka-dark">{t('product.savings.personal.opened.title')}</h2>
             <p className="mt-2 text-sm text-gray-700">{t('product.savings.personal.opened.subtitle')}</p>
             <p className="mt-3 text-sm text-gray-700">{t('product.savings.personal.opened.about')}</p>
@@ -256,6 +360,56 @@ export default function Page(){
           </div>
 
           <div className="card mt-6">
+            <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-fondeka-dark/70">{t('product.savings.group.kicker')}</p>
+            <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-fondeka-dark">{t('product.savings.group.title')}</h2>
+            <p className="mt-3 text-sm text-gray-700">{t('product.savings.group.body')}</p>
+            <p className="mt-3 text-sm text-gray-700">{t('product.savings.group.promise')}</p>
+
+            <div className="mt-5 rounded-2xl border border-fondeka-dark/15 bg-fondeka-light/50 p-4">
+              <h3 className="font-semibold text-fondeka-dark">{t('product.savings.group.solves.title')}</h3>
+              <ul className="mt-3 grid gap-2 text-sm text-gray-700 sm:grid-cols-2">
+                {groupSolves.map((item) => (
+                  <li key={item}>• {item}</li>
+                ))}
+              </ul>
+            </div>
+
+            <h3 className="mt-5 font-semibold text-sm">{t('product.savings.group.how.title')}</h3>
+            <ol className="mt-3 space-y-2 text-sm text-gray-700 list-decimal list-inside">
+              {groupWorks.map((step) => (
+                <li key={step}>{step}</li>
+              ))}
+            </ol>
+
+            <div className="mt-5 grid gap-4 sm:grid-cols-2">
+              <div className="rounded-2xl border border-fondeka-dark/10 bg-white p-4">
+                <h3 className="font-semibold text-fondeka-dark">{t('product.savings.group.frequencies.title')}</h3>
+                <ul className="mt-3 space-y-2 text-sm text-gray-700">
+                  {groupFrequencies.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
+                </ul>
+              </div>
+              <div className="rounded-2xl border border-fondeka-dark/10 bg-white p-4">
+                <h3 className="font-semibold text-fondeka-dark">{t('product.savings.group.roles.title')}</h3>
+                <ul className="mt-3 space-y-2 text-sm text-gray-700">
+                  {groupRoles.map((item) => (
+                    <li key={item}>• {item}</li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <h3 className="mt-5 font-semibold text-sm">{t('product.savings.group.features.title')}</h3>
+            <ul className="mt-3 grid gap-2 text-sm text-gray-700 sm:grid-cols-2">
+              {groupFeatures.map((item) => (
+                <li key={item}>• {item}</li>
+              ))}
+            </ul>
+            <p className="mt-5 text-sm text-gray-700">{t('product.savings.group.activity')}</p>
+          </div>
+
+          <div className="card mt-6">
             <h3 className="text-xl font-extrabold tracking-tight text-fondeka-dark">{t('product.savings.likelemba.title')}</h3>
             <p className="mt-2 text-sm text-gray-700">{t('product.savings.likelemba.subtitle')}</p>
             <p className="mt-3 text-sm text-gray-700">{t('product.savings.likelemba.about')}</p>
@@ -296,6 +450,14 @@ export default function Page(){
                 <li key={item}>• {item}</li>
               ))}
             </ul>
+            <div className="mt-5 rounded-2xl border border-fondeka-dark/10 bg-fondeka-light/50 p-4">
+              <h4 className="font-semibold text-fondeka-dark">{t('product.savings.likelemba.best.title')}</h4>
+              <ul className="mt-3 space-y-2 text-sm text-gray-700">
+                {likelembaDetails.map((item) => (
+                  <li key={item}>• {item}</li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div className="card mt-4 border-fondeka-dark/20 bg-gradient-to-br from-fondeka-light via-white to-fondeka-light/50 shadow-[0_18px_40px_rgba(27,67,50,0.10)]">
@@ -342,6 +504,14 @@ export default function Page(){
                 <li key={item}>• {item}</li>
               ))}
             </ul>
+            <div className="mt-5 rounded-2xl border border-fondeka-dark/10 bg-white/80 p-4">
+              <h4 className="font-semibold text-fondeka-dark">{t('product.savings.avec.best.title')}</h4>
+              <ul className="mt-3 space-y-2 text-sm text-gray-700">
+                {avecDetails.map((item) => (
+                  <li key={item}>• {item}</li>
+                ))}
+              </ul>
+            </div>
             <div className="mt-5 rounded-2xl border border-fondeka-dark/15 bg-fondeka-dark p-4 text-white shadow-[0_14px_32px_rgba(27,67,50,0.24)]">
               <h4 className="text-lg font-extrabold tracking-tight text-white">{t('product.savings.avec.governance.title')}</h4>
               <p className="mt-2 text-sm text-white/85">{t('product.savings.avec.governance.body')}</p>
