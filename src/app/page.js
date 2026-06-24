@@ -91,7 +91,7 @@ export default function Home() {
                                 </a>
                             </div>
                             <p className="mt-3 text-xs text-gray-500">
-                                Born in DRC, built in Africa, by africans, for the world
+                                Born in DR Congo, built in Africa, by africans, for the world
                             </p>
                         </div>
 
@@ -249,7 +249,7 @@ export default function Home() {
                     <h2 className="h">{t('section.coverageTitle')}</h2>
                     <p className="mt-2 text-gray-600">{t('section.coverageBody')}</p>
                     <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 text-sm">
-                        {['DRC', 'Rwanda', 'Burundi', 'Uganda', 'Kenya', 'Tanzania'].map((x) => (
+                        {['DR Congo', 'Rwanda', 'Burundi', 'Uganda', 'Kenya', 'Tanzania'].map((x) => (
                             <div key={x} className="card py-4">{x}</div>
                         ))}
                     </div>

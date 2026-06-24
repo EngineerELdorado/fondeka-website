@@ -70,7 +70,7 @@ function AboutEN() {
                 <section className="mt-10">
                     <h2 className="text-xl font-semibold text-fondeka-green">Where we are now</h2>
                     <p className="mt-3 text-gray-700 leading-relaxed">
-                        Today, Fondeka operates as a B2C payments aggregator in the DRC and is formalizing
+                        Today, Fondeka operates as a B2C payments aggregator in DR Congo and is formalizing
                         its Payment Aggregator License with the regulator. Our apps (mobile + web) deliver a simple
                         customer experience while the platform standardizes compliance, risk controls, and settlement
                         across methods. We’re preparing our B2B layer to let merchants and fintechs plug into Fondeka directly.
@@ -335,4 +335,3 @@ function AboutFR() {
         </main>
     );
 }
-

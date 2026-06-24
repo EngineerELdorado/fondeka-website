@@ -68,7 +68,7 @@ export default function Page() {
                 <section className="mt-10">
                     <h2 className="text-xl font-semibold text-fondeka-green">Où nous en sommes</h2>
                     <p className="mt-3 text-gray-700 leading-relaxed">
-                        Aujourd’hui, Fondeka opère comme agrégateur B2C en RDC et formalise sa licence d’agrégateur
+                        Aujourd’hui, Fondeka opère comme agrégateur B2C en RD Congo et formalise sa licence d’agrégateur
                         auprès du régulateur. Nos applications (mobile + web) offrent une expérience simple tandis que
                         la plateforme standardise la conformité, le risque et le règlement entre les différents moyens de paiement.
                         Nous préparons notre couche B2B pour permettre aux marchands et fintechs de se connecter directement.

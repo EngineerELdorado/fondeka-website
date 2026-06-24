@@ -92,7 +92,7 @@ function PrivacyEN() {
                     <section className="card">
                         <h2 className="text-lg font-semibold">International transfers & retention</h2>
                         <p className="mt-3 text-sm text-gray-700">
-                            Fondeka operates from the DRC and may process data in other countries where our partners and
+                            Fondeka operates from DR Congo and may process data in other countries where our partners and
                             infrastructure providers are located. We retain information for as long as needed to provide
                             services and to meet legal, accounting, and compliance requirements.
                         </p>
@@ -214,7 +214,7 @@ function PrivacyFR() {
                     <section className="card">
                         <h2 className="text-lg font-semibold">Transferts internationaux & conservation</h2>
                         <p className="mt-3 text-sm text-gray-700">
-                            Fondeka opère depuis la RDC et peut traiter les données dans d’autres pays où se trouvent
+                            Fondeka opère depuis la RD Congo et peut traiter les données dans d’autres pays où se trouvent
                             nos partenaires et fournisseurs. Nous conservons les informations aussi longtemps que
                             nécessaire pour fournir le service et respecter les exigences légales et réglementaires.
                         </p>
