@@ -23,7 +23,7 @@ export default function HeroAppPhone() {
                         <div className="hero-balance-copy">
                             <p className="hero-section-label">Available balance</p>
                             <p className="hero-balance-value">$2,480.00</p>
-                            <p className="hero-balance-foot">Loans at 0% interest, cards, crypto and bill pay.</p>
+                            <p className="hero-balance-foot">Instant loans, cards, crypto and bill pay.</p>
                         </div>
                         <div className="hero-card-chip" aria-hidden="true" />
                     </div>
