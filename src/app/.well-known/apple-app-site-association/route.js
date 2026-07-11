@@ -4,15 +4,27 @@ const APPLE_APP_SITE_ASSOCIATION = {
     details: [
       {
         appID: "2KCBNTYASC.com.fondeka.app",
-        paths: ["*"],
+        paths: [
+          "/transaction/*",
+          "/group-savings/*",
+          "/savings/likelemba-join*",
+        ],
       },
       {
         appID: "2KCBNTYASC.com.fondeka.app.dev",
-        paths: ["*"],
+        paths: [
+          "/transaction/*",
+          "/group-savings/*",
+          "/savings/likelemba-join*",
+        ],
       },
       {
         appID: "2KCBNTYASC.com.fondeka.app.preview",
-        paths: ["*"],
+        paths: [
+          "/transaction/*",
+          "/group-savings/*",
+          "/savings/likelemba-join*",
+        ],
       },
     ],
   },
