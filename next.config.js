@@ -11,7 +11,7 @@ module.exports = {
         permanent: true,
       },
       {
-        source: '/:path((?!\\.well-known\\/).*)',
+        source: '/:path((?!\\.well-known\\/|apple-app-site-association$).*)',
         has: [{ type: 'host', value: 'fondeka.com' }],
         destination: 'https://www.fondeka.com/:path',
         permanent: true,
@@ -22,6 +22,10 @@ module.exports = {
     return [
       {
         source: "/.well-known/apple-app-site-association",
+        headers: [{ key: "Content-Type", value: "application/json" }]
+      },
+      {
+        source: "/apple-app-site-association",
         headers: [{ key: "Content-Type", value: "application/json" }]
       },
       {
