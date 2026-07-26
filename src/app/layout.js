@@ -7,17 +7,22 @@ import LinkedInInsightTag from '../components/LinkedInInsightTag';
 import MetaPixel from '../components/MetaPixel';
 import MobileInstallBar from '../components/MobileInstallBar';
 import { I18nProvider } from '../lib/i18n';
+import { organizationSchema, seoKeywords } from '../lib/seo';
 import { Suspense } from 'react';
 
 export const metadata = {
     metadataBase: new URL('https://fondeka.com'),
-    title: 'The mobile bank for instant loans | La banque mobile des prêts rapides',
+    title: 'Fondeka | Neobank and Fintech in Congo and Africa',
     description:
-        'Loans, MasterCard, cryptos, payment links, savings, and bill payments. | Prêts, MasterCard, cryptos, liens de paiements, épargnes et paiement des factures.',
+        'Fondeka is a neobank and fintech platform built in DR Congo for Africa, offering instant loans, savings, Likelemba, AVEC, virtual cards, bill payments, airtime, crypto, payment links, and business APIs.',
+    keywords: seoKeywords,
+    alternates: {
+        canonical: '/',
+    },
     openGraph: {
-        title: 'The mobile bank for instant loans | La banque mobile des prêts rapides',
+        title: 'Fondeka | Neobank and Fintech in Congo and Africa',
         description:
-            'Loans, MasterCard, cryptos, payment links, savings, and bill payments. | Prêts, MasterCard, cryptos, liens de paiements, épargnes et paiement des factures.',
+            'Instant loans, savings, Likelemba, AVEC, virtual cards, bill payments, airtime, crypto, payment links, and business APIs for Congo and Africa.',
         url: 'https://fondeka.com',
         siteName: 'Fondeka',
         images: [
@@ -33,9 +38,9 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'The mobile bank for instant loans | La banque mobile des prêts rapides',
+        title: 'Fondeka | Neobank and Fintech in Congo and Africa',
         description:
-            'Loans, MasterCard, cryptos, payment links, savings, and bill payments. | Prêts, MasterCard, cryptos, liens de paiements, épargnes et paiement des factures.',
+            'A DR Congo-born neobank for loans, savings, cards, bill payments, airtime, crypto, payment links, and business APIs across Africa.',
         images: ['/og-image.jpg'],
     },
 };
@@ -44,7 +49,6 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <head>
-                <link rel="canonical" href="https://fondeka.com" />
                 <meta name="robots" content="index, follow" />
             </head>
             <body className="pb-28 md:pb-0">
@@ -61,16 +65,7 @@ export default function RootLayout({ children }) {
                     </I18nProvider>
                 </Suspense>
                 <script type="application/ld+json" suppressHydrationWarning>
-                    {JSON.stringify({
-                        '@context': 'https://schema.org',
-                        '@type': 'FinancialService',
-                        name: 'Fondeka',
-                        url: 'https://fondeka.com',
-                        logo: 'https://fondeka.com/logo-icon.svg',
-                        description:
-                            'Digital payments and microfinance platform offering cards, Mobile Money, crypto, and APIs.',
-                        areaServed: 'Africa',
-                    })}
+                    {JSON.stringify(organizationSchema)}
                 </script>
                 <Analytics />
             </body>

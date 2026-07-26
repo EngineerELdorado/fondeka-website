@@ -1,4 +1,4 @@
-export const cardGuideOrder = ['apple', 'google-play', 'spotify', 'twitter'];
+export const cardGuideOrder = ['apple', 'google-play', 'spotify', 'twitter', 'alibaba'];
 
 export const cardGuides = {
   twitter: {

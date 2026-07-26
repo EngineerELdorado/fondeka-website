@@ -17,6 +17,39 @@ export default function Home() {
     const heroVideoUrl = heroVideoLinks[lang] || heroVideoLinks.en;
     const heroVideoId = heroVideoUrl.split('/').pop()?.split('?')[0];
     const heroVideoEmbedUrl = `https://www.youtube.com/embed/${heroVideoId}`;
+    const seoContent = {
+        en: {
+            kicker: 'Fintech in Congo and Africa',
+            title: 'A neobank for the financial services people search for every day',
+            body: 'Fondeka is built in DR Congo for Africa: instant loans, savings, Likelemba, AVEC, virtual cards, bill payments, airtime top-up, crypto, payment links, QR payments, invoices, collections, payouts, and business APIs in one mobile-first fintech platform.',
+            services: [
+                { href: '/loans', title: 'Instant loans in Congo', body: 'Apply for digital credit, track repayment, and pay back with Mobile Money and supported methods.' },
+                { href: '/savings', title: 'Savings, Likelemba and AVEC', body: 'Open Savings, Locked Savings, Likelemba, and AVEC group savings for personal and community goals.' },
+                { href: '/cards', title: 'Virtual cards for Africa', body: 'Create cards for subscriptions, online shopping, travel, Google Play, Apple, Spotify, Alibaba, and more.' },
+                { href: '/bills', title: 'Bill payments and utilities', body: 'Pay electricity, water, TV, internet, data, gaming, travel, and digital subscriptions.' },
+                { href: '/airtimes', title: 'Airtime and data top-up', body: 'Buy airtime, mobile data, and bundles for yourself, family, and customers across supported countries.' },
+                { href: '/payments', title: 'Payment links and QR payments', body: 'Send payment links, create QR payments, issue invoices, and collect money for businesses or campaigns.' },
+            ],
+            locationsTitle: 'Search coverage',
+            locationsBody: 'Relevant for people searching neobank Congo, fintech Congo, digital banking RDC, Mobile Money Africa, virtual cards Africa, savings app Congo, and business payment API Africa.',
+        },
+        fr: {
+            kicker: 'Fintech au Congo et en Afrique',
+            title: 'Une neobank pour les services financiers que les gens recherchent chaque jour',
+            body: 'Fondeka est construite en RD Congo pour l’Afrique : prêts rapides, épargnes, Likelemba, AVEC, cartes virtuelles, paiement de factures, recharge téléphonique, crypto, liens de paiement, QR, factures, encaissements, payouts et API business dans une plateforme fintech mobile.',
+            services: [
+                { href: '/loans', title: 'Prêts rapides au Congo', body: 'Demandez un crédit digital, suivez le remboursement et remboursez avec Mobile Money et les moyens pris en charge.' },
+                { href: '/savings', title: 'Épargne, Likelemba et AVEC', body: 'Épargne libre, épargne bloquée, Likelemba et AVEC pour les objectifs personnels et communautaires.' },
+                { href: '/cards', title: 'Cartes virtuelles en Afrique', body: 'Créez des cartes pour abonnements, achats en ligne, voyages, Google Play, Apple, Spotify, Alibaba et plus.' },
+                { href: '/bills', title: 'Paiement de factures', body: 'Payez électricité, eau, TV, internet, data, gaming, voyage et abonnements digitaux.' },
+                { href: '/airtimes', title: 'Recharge et data mobile', body: 'Achetez du crédit, de la data et des forfaits pour vous, vos proches et vos clients dans les pays couverts.' },
+                { href: '/payments', title: 'Liens de paiement et QR', body: 'Envoyez des liens, créez des QR, émettez des factures et encaissez pour une activité ou une campagne.' },
+            ],
+            locationsTitle: 'Couverture de recherche',
+            locationsBody: 'Pertinent pour les recherches neobank Congo, fintech Congo, banque digitale RDC, Mobile Money Afrique, carte virtuelle Afrique, application d’épargne Congo et API de paiement Afrique.',
+        },
+    };
+    const seo = seoContent[lang] || seoContent.en;
 
     // helper to shorten href object creation (pass icon to target page)
     const withIcon = (pathname, icon) => ({ pathname, query: { lang, icon } });
@@ -211,6 +244,39 @@ export default function Home() {
                             cta="Explore"
                             badge="Available"
                         />
+                    </div>
+                </div>
+            </section>
+
+            {/* DISCOVERY */}
+            <section className="section bg-white">
+                <div className="container-pad">
+                    <div className="max-w-3xl">
+                        <p className="kicker">{seo.kicker}</p>
+                        <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-fondeka-dark md:text-4xl">
+                            {seo.title}
+                        </h2>
+                        <p className="mt-4 text-gray-700 leading-7">{seo.body}</p>
+                    </div>
+                    <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                        {seo.services.map((service) => (
+                            <Link
+                                key={service.href}
+                                href={`${service.href}?lang=${lang}`}
+                                className="card card-hover block"
+                            >
+                                <h3 className="text-lg font-extrabold tracking-tight text-fondeka-dark">
+                                    {service.title}
+                                </h3>
+                                <p className="mt-2 text-sm leading-6 text-gray-700">{service.body}</p>
+                            </Link>
+                        ))}
+                    </div>
+                    <div className="mt-6 rounded-2xl border border-fondeka-mint/60 bg-fondeka-light p-5">
+                        <h3 className="text-lg font-extrabold tracking-tight text-fondeka-dark">
+                            {seo.locationsTitle}
+                        </h3>
+                        <p className="mt-2 text-sm leading-6 text-gray-700">{seo.locationsBody}</p>
                     </div>
                 </div>
             </section>
