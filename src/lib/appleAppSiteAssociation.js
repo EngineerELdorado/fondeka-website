@@ -9,6 +9,7 @@ export const appleAppSiteAssociation = {
           "/group-savings/*",
           "/savings/likelemba-join*",
           "/security/device-approval*",
+          "/HomeScreen*",
         ],
       },
       {
@@ -18,6 +19,7 @@ export const appleAppSiteAssociation = {
           "/group-savings/*",
           "/savings/likelemba-join*",
           "/security/device-approval*",
+          "/HomeScreen*",
         ],
       },
       {
@@ -27,6 +29,7 @@ export const appleAppSiteAssociation = {
           "/group-savings/*",
           "/savings/likelemba-join*",
           "/security/device-approval*",
+          "/HomeScreen*",
         ],
       },
     ],
