@@ -1,4 +1,4 @@
-import { createMetadata, createServiceSchema } from '@/lib/seo';
+import { createMetadata, createSavingsFaqSchema, createServiceSchema } from '@/lib/seo';
 
 export const metadata = createMetadata('savings');
 
@@ -8,6 +8,9 @@ export default function SavingsLayout({ children }) {
       {children}
       <script type="application/ld+json" suppressHydrationWarning>
         {JSON.stringify(createServiceSchema('savings'))}
+      </script>
+      <script type="application/ld+json" suppressHydrationWarning>
+        {JSON.stringify(createSavingsFaqSchema())}
       </script>
     </>
   );

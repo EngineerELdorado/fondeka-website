@@ -30,6 +30,107 @@ export default function Page(){
     { title: t('product.bills.catalog.travel.title'), body: t('product.bills.catalog.travel.body') },
     { title: t('product.bills.catalog.utilities.title'), body: t('product.bills.catalog.utilities.body') },
   ];
+  const directPaymentGroups = [
+    {
+      title: t('product.bills.direct.mobile.title'),
+      items: ['Airtime', 'Data', 'Bundles'],
+    },
+    {
+      title: t('product.bills.direct.electricity.title'),
+      items: [
+        'Socodee',
+        'Virunga',
+        'SNEL',
+        'Abuja Electricity Postpaid',
+        'Abuja Electricity Prepaid',
+        'Eko Electricity Postpaid',
+        'Eko Electricity Prepaid',
+        'Enugu Electricity Postpaid',
+        'Enugu Electricity Prepaid',
+        'Ibadan Electricity Postpaid',
+        'Ibadan Electricity Prepaid',
+        'Ikeja Electricity Postpaid',
+        'Ikeja Electricity Prepaid',
+        'Jos Electricity Postpaid',
+        'Jos Electricity Prepaid',
+        'Kaduna Electricity Postpaid',
+        'Kaduna Electricity Prepaid',
+        'Kano Electricity Postpaid',
+        'Kano Electricity Prepaid',
+        'Sen-Elec / Facture Sen-Elec Senegal',
+        'Sonabel',
+        'SBEE',
+        'CIE',
+        'CEPM',
+        'Edesur',
+        'Nawec',
+        'EDG',
+        'EAGB',
+        'CEET',
+        'Malawi Electricity Prepaid',
+        'Mozambique Electricity Prepaid',
+        'Port Harcourt Electricity Postpaid',
+        'Port Harcourt Electricity Prepaid',
+        'Sierra Leone Electricity Prepaid',
+        'South Africa Electricity Prepaid',
+        'Woyofal Senegal',
+        'Zimbabwe Electricity Prepaid',
+      ],
+    },
+    {
+      title: t('product.bills.direct.water.title'),
+      items: ['Regideso', 'Sen Eau / Facture Sen Eau Senegal'],
+    },
+    {
+      title: t('product.bills.direct.tv.title'),
+      items: ['Canal Plus', 'Canal+ Mali', 'StarTimes', 'DSTV', 'Netflix'],
+    },
+    {
+      title: t('product.bills.direct.internet.title'),
+      items: ['Canal Box', 'Starlink', 'Liquid'],
+    },
+    {
+      title: t('product.bills.direct.utilities.title'),
+      items: ['Rapido Senegal', 'Tropigas'],
+    },
+  ];
+  const giftCardGroups = [
+    {
+      title: t('product.bills.giftcards.entertainment.title'),
+      items: [
+        'Netflix gift card',
+        'Spotify gift card',
+        'Apple / App Store gift card',
+        'Google Play gift card',
+        'Amazon gift card',
+      ],
+    },
+    {
+      title: t('product.bills.giftcards.gaming.title'),
+      items: [
+        'PlayStation gift card',
+        'Xbox gift card',
+        'Nintendo gift card',
+        'Mortal Kombat 11 Nintendo Switch US gift card',
+        'Minecraft gift card',
+        'Razer Gold gift card',
+        'Steam gift card',
+        'PUBG Mobile gift card',
+        'PUBG New State gift card',
+        'Roblox gift card',
+        'NetDragon gift card',
+      ],
+    },
+    {
+      title: t('product.bills.giftcards.travel.title'),
+      items: [
+        'Uber gift card',
+        'Hotels.com gift card',
+        'Global Hotel Card',
+        t('product.bills.giftcards.travel.airbnb'),
+      ],
+    },
+  ];
   const tvFeatures = [
     t('product.bills.tv.1'),
     t('product.bills.tv.2'),
@@ -96,6 +197,25 @@ export default function Page(){
             <p className="mt-4 text-xs text-gray-500">{t('product.bills.catalog.note')}</p>
           </div>
 
+          <div className="card mt-4">
+            <h2 className="text-xl font-extrabold tracking-tight text-fondeka-dark">{t('product.bills.direct.title')}</h2>
+            <p className="mt-3 text-sm text-gray-700">{t('product.bills.direct.body')}</p>
+            <div className="mt-5 grid gap-3">
+              {directPaymentGroups.map((group) => (
+                <section key={group.title} className="rounded-2xl border border-fondeka-dark/10 bg-white p-4">
+                  <h3 className="font-semibold text-fondeka-dark">{group.title}</h3>
+                  <ul className="mt-3 flex flex-wrap gap-2 text-xs font-bold text-fondeka-dark">
+                    {group.items.map((item) => (
+                      <li key={item} className="rounded-full border border-fondeka-dark/10 bg-fondeka-light/35 px-3 py-1.5">
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </section>
+              ))}
+            </div>
+          </div>
+
           <DownloadAppButton className="mt-6 hidden md:block" variant="hero" ctaLabel={t('product.page.cta.app')} />
         </div>
 
@@ -128,6 +248,24 @@ export default function Page(){
           <div className="card mt-4">
             <h2 className="text-xl font-extrabold tracking-tight text-fondeka-dark">{t('product.bills.digital.title')}</h2>
             <p className="mt-3 text-sm text-gray-700">{t('product.bills.digital.body')}</p>
+          </div>
+
+          <div className="card mt-4">
+            <h2 className="text-xl font-extrabold tracking-tight text-fondeka-dark">{t('product.bills.giftcards.title')}</h2>
+            <p className="mt-3 text-sm text-gray-700">{t('product.bills.giftcards.body')}</p>
+            <div className="mt-5 grid gap-3">
+              {giftCardGroups.map((group) => (
+                <section key={group.title} className="rounded-2xl border border-fondeka-dark/10 bg-white p-4">
+                  <h3 className="font-semibold text-fondeka-dark">{group.title}</h3>
+                  <ul className="mt-3 space-y-2 text-sm text-gray-700">
+                    {group.items.map((item) => (
+                      <li key={item}>• {item}</li>
+                    ))}
+                  </ul>
+                </section>
+              ))}
+            </div>
+            <p className="mt-4 text-xs text-gray-500">{t('product.bills.giftcards.note')}</p>
           </div>
 
           <div className="card mt-4 border-[#2c6cb0]/15 bg-[#eef6ff]">

@@ -155,6 +155,30 @@ export default function Page(){
     t('product.savings.avec.details.4'),
     t('product.savings.avec.details.5'),
   ];
+  const seoSavingsCards = [
+    {
+      title: t('product.savings.seo.personal.title'),
+      body: t('product.savings.seo.personal.body'),
+    },
+    {
+      title: t('product.savings.seo.likelemba.title'),
+      body: t('product.savings.seo.likelemba.body'),
+    },
+    {
+      title: t('product.savings.seo.avec.title'),
+      body: t('product.savings.seo.avec.body'),
+    },
+  ];
+  const savingsSearchTerms = [
+    'Likelemba app Congo',
+    'Likelemba app RDC',
+    'AVEC savings app',
+    'AVEC app Congo',
+    'personal savings app Congo',
+    'open savings Congo',
+    'locked savings Congo',
+    'group savings app Africa',
+  ];
   const videoLinks = {
     personal: 'https://youtube.com/shorts/E7HvzMzB7tQ',
     personalCompare: 'https://youtube.com/shorts/VNAr4_Z7Bsc',
@@ -182,6 +206,33 @@ export default function Page(){
 
           <p className="mt-3 text-gray-700">{t('product.savings.body')}</p>
           <p className="mt-3 text-gray-700">{t('product.savings.summary')}</p>
+
+          <section className="mt-6 rounded-[28px] border border-fondeka-dark/15 bg-gradient-to-br from-white via-fondeka-light/50 to-white p-5 shadow-[0_18px_38px_rgba(27,67,50,0.08)]">
+            <p className="text-xs font-extrabold uppercase tracking-[0.18em] text-fondeka-dark/70">
+              {t('product.savings.seo.kicker')}
+            </p>
+            <h2 className="mt-3 text-2xl font-extrabold tracking-tight text-fondeka-dark">
+              {t('product.savings.seo.title')}
+            </h2>
+            <p className="mt-3 text-sm leading-6 text-gray-700">
+              {t('product.savings.seo.body')}
+            </p>
+            <div className="mt-5 grid gap-3 md:grid-cols-3">
+              {seoSavingsCards.map((card) => (
+                <article key={card.title} className="rounded-2xl border border-fondeka-dark/10 bg-white p-4">
+                  <h3 className="font-semibold text-fondeka-dark">{card.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-gray-700">{card.body}</p>
+                </article>
+              ))}
+            </div>
+            <div className="mt-5 flex flex-wrap gap-2">
+              {savingsSearchTerms.map((term) => (
+                <span key={term} className="rounded-full border border-fondeka-dark/10 bg-white px-3 py-1.5 text-xs font-bold text-fondeka-dark">
+                  {term}
+                </span>
+              ))}
+            </div>
+          </section>
 
           <div className="card mt-6">
             <h2 className="text-xl font-extrabold tracking-tight text-fondeka-dark">{t('product.savings.categories.title')}</h2>

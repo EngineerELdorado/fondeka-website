@@ -14,10 +14,20 @@ export const seoKeywords = [
   'savings app Congo',
   'Likelemba digital',
   'AVEC savings app',
+  'Likelemba app Congo',
+  'AVEC app Congo',
+  'personal savings app Congo',
+  'eSIM Congo',
+  'eSIM Africa',
+  'travel eSIM Africa',
   'bill payments Africa',
   'airtime top-up Africa',
   'payment links Africa',
   'crypto Mobile Money Africa',
+  'cryptos app Congo',
+  'crypto app DR Congo',
+  'buy crypto with Mobile Money',
+  'sell crypto to Mobile Money',
 ];
 
 export const serviceSeo = {
@@ -39,19 +49,72 @@ export const serviceSeo = {
   },
   savings: {
     path: '/savings',
-    name: 'Savings',
-    title: 'Savings App in Congo: Open, Locked, Likelemba and AVEC | Fondeka',
+    name: 'Savings App',
+    title: 'Likelemba App, AVEC Savings App and Personal Savings App in Congo | Fondeka',
     description:
-      'Save money with Fondeka personal savings, locked savings, Likelemba, and AVEC group savings. A digital savings platform built for DR Congo and African communities.',
-    keywords: ['savings app Congo', 'digital savings Africa', 'Likelemba app', 'AVEC savings', 'locked savings Congo', 'open savings'],
+      'Fondeka is a savings app for DR Congo and Africa with personal savings, open savings, locked savings, Likelemba rotating group savings, and AVEC savings groups.',
+    keywords: [
+      'Likelemba app',
+      'Likelemba app Congo',
+      'Likelemba app RDC',
+      'Likelemba digital',
+      'digital Likelemba Congo',
+      'AVEC savings app',
+      'AVEC app Congo',
+      'AVEC app RDC',
+      'AVEC savings Africa',
+      'personal savings app',
+      'personal savings app Congo',
+      'personal savings app RDC',
+      'savings app Congo',
+      'savings app Africa',
+      'digital savings Africa',
+      'group savings app Congo',
+      'group savings app Africa',
+      'locked savings Congo',
+      'open savings Congo',
+      'save money app Congo',
+    ],
   },
   bills: {
     path: '/bills',
     name: 'Bill Payments',
-    title: 'Bill Payments in Congo and Africa | Fondeka',
+    title: 'Bill Payments and Gift Cards in Congo and Africa | Fondeka',
     description:
-      'Pay electricity, water, TV, internet, airtime, data, gaming, travel, and digital subscriptions with Fondeka from Congo and supported African countries.',
-    keywords: ['bill payments Congo', 'pay SNEL online', 'pay Regideso online', 'Canal Plus Congo payment', 'utility payments Africa'],
+      'Pay bills and buy digital products from one Fondeka account, including airtime, data, electricity, water, TV, internet, streaming products, gaming gift cards, shopping gift cards, and travel gift cards.',
+    keywords: [
+      'bill payments Congo',
+      'pay bills Congo',
+      'pay bills Africa',
+      'buy gift cards Congo',
+      'buy gift cards Africa',
+      'mobile top up Congo',
+      'airtime data bundles Africa',
+      'pay SNEL online',
+      'pay Virunga online',
+      'pay Socodee online',
+      'pay Regideso online',
+      'Canal Plus Congo payment',
+      'DSTV payment Africa',
+      'StarTimes payment Africa',
+      'Starlink payment Africa',
+      'utility payments Africa',
+      'Netflix gift card Africa',
+      'Spotify gift card Africa',
+      'Apple gift card Congo',
+      'Google Play gift card Congo',
+      'Amazon gift card Africa',
+      'gaming gift cards Africa',
+      'PlayStation gift card Africa',
+      'Xbox gift card Africa',
+      'Nintendo gift card Africa',
+      'Mortal Kombat gift card',
+      'Mortal Combat gift card',
+      'Steam gift card Africa',
+      'Roblox gift card Africa',
+      'Uber gift card Africa',
+      'Hotels.com gift card Africa',
+    ],
   },
   airtimes: {
     path: '/airtimes',
@@ -79,19 +142,59 @@ export const serviceSeo = {
   },
   crypto: {
     path: '/crypto',
-    name: 'Crypto',
-    title: 'Crypto and Mobile Money in Africa | Fondeka',
+    name: 'Crypto App',
+    title: 'Crypto App in Congo and Africa: Buy, Sell, Swap with Mobile Money | Fondeka',
     description:
-      'Buy, sell, hold, and move crypto with Fondeka where supported. Connect digital assets with Mobile Money, cards, and local payment methods in Africa.',
-    keywords: ['crypto Congo', 'crypto Mobile Money Africa', 'buy crypto Africa', 'sell crypto to Mobile Money'],
+      'Use Fondeka to buy, sell, receive, swap, send, and hold crypto in supported African markets. Connect crypto with local Mobile Money operators in DR Congo and across Africa.',
+    keywords: [
+      'crypto app Congo',
+      'cryptos app Congo',
+      'crypto app Africa',
+      'buy crypto Congo',
+      'buy crypto Africa',
+      'buy Bitcoin Congo',
+      'buy USDT Congo',
+      'sell crypto Congo',
+      'sell crypto to Mobile Money',
+      'crypto Mobile Money Congo',
+      'crypto Mobile Money Africa',
+      'Mobile Money crypto app',
+      'send crypto Africa',
+      'receive crypto Africa',
+      'swap crypto Africa',
+    ],
   },
   giftcards: {
     path: '/giftcards',
     name: 'Gift Cards',
-    title: 'Gift Cards in Congo and Africa | Fondeka',
+    title: 'Gift Cards in Congo and Africa: Netflix, Gaming, Travel and Digital Cards | Fondeka',
     description:
-      'Buy and sell gift cards with Fondeka. Access digital products, gaming cards, subscriptions, and payouts through Mobile Money or crypto where supported.',
-    keywords: ['gift cards Congo', 'sell gift cards Africa', 'buy Google Play card Congo', 'gaming gift cards Africa'],
+      'Buy and sell gift cards with Fondeka, including Netflix, Spotify, Apple, Google Play, Amazon, PlayStation, Xbox, Nintendo, Mortal Kombat, Steam, Roblox, Uber, Hotels.com, and more where available.',
+    keywords: [
+      'gift cards Congo',
+      'sell gift cards Africa',
+      'buy Google Play card Congo',
+      'Netflix gift card Congo',
+      'Spotify gift card Africa',
+      'Apple App Store gift card Africa',
+      'Amazon gift card Africa',
+      'gaming gift cards Africa',
+      'PlayStation gift card Africa',
+      'Xbox gift card Africa',
+      'Nintendo gift card Africa',
+      'Mortal Kombat gift card',
+      'Mortal Combat gift card',
+      'Mortal Kombat 11 Nintendo Switch US gift card',
+      'Minecraft gift card Africa',
+      'Razer Gold gift card Africa',
+      'Steam gift card Africa',
+      'PUBG Mobile gift card Africa',
+      'Roblox gift card Africa',
+      'Uber gift card Africa',
+      'Hotels.com gift card Africa',
+      'Global Hotel Card Africa',
+      'buy gaming gift cards Congo',
+    ],
   },
   shopping: {
     path: '/shopping',
@@ -104,10 +207,26 @@ export const serviceSeo = {
   esim: {
     path: '/esim',
     name: 'eSIM',
-    title: 'eSIM for Congo, Africa and Travel | Fondeka',
+    title: 'eSIM App for Congo, Africa and International Travel | Fondeka',
     description:
-      'Buy and activate eSIM data with Fondeka for travel, business, and everyday connectivity across supported countries.',
-    keywords: ['eSIM Congo', 'eSIM Africa', 'travel eSIM Africa', 'buy eSIM data'],
+      'Buy, activate, top up, and manage eSIM data with Fondeka for Congo, Africa, international travel, business trips, and everyday connectivity in supported countries.',
+    keywords: [
+      'eSIM Congo',
+      'eSIM DR Congo',
+      'eSIM RDC',
+      'eSIM Africa',
+      'travel eSIM Africa',
+      'international travel eSIM',
+      'buy eSIM data',
+      'buy eSIM Congo',
+      'buy eSIM Africa',
+      'eSIM data plans Africa',
+      'eSIM for travelers Africa',
+      'eSIM app Congo',
+      'eSIM app Africa',
+      'mobile data for travel Africa',
+      'internet abroad Africa',
+    ],
   },
   business: {
     path: '/business',
@@ -191,6 +310,114 @@ export function createServiceSchema(slug) {
       url: siteUrl,
       logo: `${siteUrl}/logo-icon.svg`,
     },
+  };
+}
+
+export function createCryptoFaqSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Can I buy crypto with Mobile Money in Congo?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Fondeka is built to connect crypto with supported local payment methods, including Mobile Money operators in DR Congo and other supported African markets.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I sell crypto and receive Mobile Money?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Where supported, Fondeka lets users sell crypto and move value back to available local methods such as Mobile Money or bank rails.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What crypto actions can I do with Fondeka?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Fondeka supports a mobile crypto experience for buying, selling, holding, receiving, swapping, and sending crypto in supported markets.',
+        },
+      },
+    ],
+  };
+}
+
+export function createSavingsFaqSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'What is a Likelemba app?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'A Likelemba app helps a group organize rotating savings, collect contributions, track turns, and pay the pooled amount to each member according to the agreed order.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What is an AVEC savings app?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'An AVEC savings app helps savings associations build a shared treasury, collect member contributions, manage rules, vote on decisions, and track group activity.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I use Fondeka for personal savings?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Fondeka supports personal savings through open savings for flexible access and locked savings for more disciplined goal-based saving, subject to product rules in the app.',
+        },
+      },
+    ],
+  };
+}
+
+export function createEsimFaqSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Can I buy an eSIM with Fondeka?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Fondeka lets users buy, activate, and manage eSIM data plans for supported countries directly from the app.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is Fondeka eSIM useful for travel in Africa?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Fondeka eSIM is designed for travelers, business users, and everyday connectivity across supported African and international destinations.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Do I need a physical SIM card for eSIM data?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'An eSIM is digital. On compatible devices, users can activate a supported eSIM data plan without inserting a physical SIM card.',
+        },
+      },
+    ],
   };
 }
 
