@@ -1,4 +1,4 @@
-import { createMetadata, createServiceSchema } from '@/lib/seo';
+import { createCardsFaqSchema, createMetadata, createServiceSchema } from '@/lib/seo';
 
 export const metadata = createMetadata('cards');
 
@@ -8,6 +8,9 @@ export default function CardsLayout({ children }) {
       {children}
       <script type="application/ld+json" suppressHydrationWarning>
         {JSON.stringify(createServiceSchema('cards'))}
+      </script>
+      <script type="application/ld+json" suppressHydrationWarning>
+        {JSON.stringify(createCardsFaqSchema())}
       </script>
     </>
   );

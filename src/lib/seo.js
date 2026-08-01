@@ -5,12 +5,30 @@ export const seoKeywords = [
   'neobank Congo',
   'neobank DR Congo',
   'neobank RDC',
+  'digital bank Congo',
+  'digital bank DR Congo',
+  'digital bank Africa',
+  'digital bank RDC',
+  'online bank Congo',
+  'mobile bank Congo',
+  'virtual bank Africa',
   'fintech Congo',
+  'fintech DR Congo',
+  'fintech RDC',
   'fintech Africa',
   'digital banking Congo',
+  'digital banking DR Congo',
+  'digital banking Africa',
   'mobile money Congo',
   'instant loans Congo',
+  'virtual card Congo',
   'virtual cards Africa',
+  'prepaid card Congo',
+  'prepaid cards Africa',
+  'Visa card Congo',
+  'Visa virtual card Africa',
+  'Mastercard Congo',
+  'Mastercard virtual card Africa',
   'savings app Congo',
   'Likelemba digital',
   'AVEC savings app',
@@ -23,6 +41,9 @@ export const seoKeywords = [
   'bill payments Africa',
   'airtime top-up Africa',
   'payment links Africa',
+  'gift cards Congo',
+  'giftcards Congo',
+  'digital gift cards Africa',
   'crypto Mobile Money Africa',
   'cryptos app Congo',
   'crypto app DR Congo',
@@ -41,11 +62,30 @@ export const serviceSeo = {
   },
   cards: {
     path: '/cards',
-    name: 'Virtual Cards',
-    title: 'Virtual Cards in Congo and Africa | Fondeka',
+    name: 'Virtual and Prepaid Cards',
+    title: 'Virtual Cards, Prepaid Cards, Visa and Mastercard in Congo | Fondeka',
     description:
-      'Create Fondeka virtual cards for online payments, subscriptions, shopping, travel, Google Play, Apple, Spotify, and international platforms from Congo and Africa.',
-    keywords: ['virtual card Congo', 'Mastercard virtual card Africa', 'online payment card RDC', 'virtual card for subscriptions'],
+      'Create Fondeka virtual cards and prepaid cards for online payments, subscriptions, shopping, travel, Google Play, Apple, Spotify, Visa, Mastercard, and international platforms from Congo and Africa.',
+    keywords: [
+      'virtual card Congo',
+      'virtual card DR Congo',
+      'virtual card RDC',
+      'virtual cards Africa',
+      'prepaid card Congo',
+      'prepaid card DR Congo',
+      'prepaid card Africa',
+      'prepaid virtual card Africa',
+      'Visa card Congo',
+      'Visa virtual card Congo',
+      'Visa prepaid card Africa',
+      'Mastercard Congo',
+      'Mastercard virtual card Africa',
+      'Mastercard prepaid card Africa',
+      'online payment card RDC',
+      'virtual card for subscriptions',
+      'digital bank virtual card',
+      'fintech virtual cards',
+    ],
   },
   savings: {
     path: '/savings',
@@ -167,12 +207,19 @@ export const serviceSeo = {
   giftcards: {
     path: '/giftcards',
     name: 'Gift Cards',
-    title: 'Gift Cards in Congo and Africa: Netflix, Gaming, Travel and Digital Cards | Fondeka',
+    title: 'Gift Cards in Congo and Africa: Netflix, Gaming, Travel and Digital Giftcards | Fondeka',
     description:
-      'Buy and sell gift cards with Fondeka, including Netflix, Spotify, Apple, Google Play, Amazon, PlayStation, Xbox, Nintendo, Mortal Kombat, Steam, Roblox, Uber, Hotels.com, and more where available.',
+      'Buy and sell gift cards and digital giftcards with Fondeka, including Netflix, Spotify, Apple, Google Play, Amazon, PlayStation, Xbox, Nintendo, Mortal Kombat, Steam, Roblox, Uber, Hotels.com, and more where available.',
     keywords: [
       'gift cards Congo',
+      'giftcards Congo',
+      'gift cards DR Congo',
+      'giftcards DR Congo',
+      'gift cards RDC',
       'sell gift cards Africa',
+      'buy gift cards Africa',
+      'digital gift cards Africa',
+      'digital giftcards Africa',
       'buy Google Play card Congo',
       'Netflix gift card Congo',
       'Spotify gift card Africa',
@@ -421,6 +468,78 @@ export function createEsimFaqSchema() {
   };
 }
 
+export function createCardsFaqSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Can I create a virtual card with Fondeka?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Fondeka lets users create and manage supported virtual cards from the app for online payments, subscriptions, shopping, travel, and digital services.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Does Fondeka support prepaid cards?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Fondeka virtual cards work like prepaid cards where supported, with in-app controls such as limits, 3-D Secure support, and freeze or unfreeze actions.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I use Fondeka cards for Visa or Mastercard payments?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Fondeka focuses on internationally usable card payments where available, including Mastercard virtual cards and supported card rails such as Visa or Mastercard depending on product availability.',
+        },
+      },
+    ],
+  };
+}
+
+export function createGiftCardsFaqSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Can I buy gift cards with Fondeka?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Fondeka lets customers buy supported digital gift cards such as Netflix, Spotify, Apple, Google Play, Amazon, PlayStation, Xbox, Nintendo, Steam, Roblox, Uber, Hotels.com, and more where available.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I sell gift cards with Fondeka?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Where supported, Fondeka lets users sell eligible gift cards and receive value through available payment methods such as Mobile Money or crypto.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Are giftcards available in every country?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Gift card availability depends on country, provider support, product rules, and whether the product is active in the Fondeka app.',
+        },
+      },
+    ],
+  };
+}
+
 export const organizationSchema = {
   '@context': 'https://schema.org',
   '@type': 'FinancialService',
@@ -428,8 +547,8 @@ export const organizationSchema = {
   url: siteUrl,
   logo: `${siteUrl}/logo-icon.svg`,
   description:
-    'Fondeka is a neobank and fintech platform built in DR Congo for Africa, offering loans, savings, virtual cards, bill payments, airtime, crypto, payment links, and business APIs.',
-  slogan: 'The neobank for instant loans',
+    'Fondeka is a neobank, digital bank, and fintech platform built in DR Congo for Africa, offering loans, savings, virtual cards, prepaid cards, bill payments, airtime, gift cards, crypto, payment links, and business APIs.',
+  slogan: 'The digital bank and neobank for everyday financial services',
   areaServed: [
     { '@type': 'Country', name: 'Democratic Republic of the Congo' },
     { '@type': 'Place', name: 'Africa' },

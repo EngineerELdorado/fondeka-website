@@ -19,34 +19,36 @@ export default function Home() {
     const heroVideoEmbedUrl = `https://www.youtube.com/embed/${heroVideoId}`;
     const seoContent = {
         en: {
-            kicker: 'Fintech in Congo and Africa',
-            title: 'A neobank for the financial services people search for every day',
-            body: 'Fondeka is built in DR Congo for Africa: instant loans, savings, Likelemba, AVEC, virtual cards, bill payments, airtime top-up, crypto, payment links, QR payments, invoices, collections, payouts, and business APIs in one mobile-first fintech platform.',
+            kicker: 'Digital bank and fintech in Congo and Africa',
+            title: 'A neobank and digital bank for the financial services people search for every day',
+            body: 'Fondeka is built in DR Congo for Africa: instant loans, savings, Likelemba, AVEC, virtual cards, prepaid cards, Visa and Mastercard payment options where supported, gift cards, bill payments, airtime top-up, crypto, payment links, QR payments, invoices, collections, payouts, and business APIs in one mobile-first fintech platform.',
             services: [
                 { href: '/loans', title: 'Instant loans in Congo', body: 'Apply for digital credit, track repayment, and pay back with Mobile Money and supported methods.' },
                 { href: '/savings', title: 'Savings, Likelemba and AVEC', body: 'Open Savings, Locked Savings, Likelemba, and AVEC group savings for personal and community goals.' },
-                { href: '/cards', title: 'Virtual cards for Africa', body: 'Create cards for subscriptions, online shopping, travel, Google Play, Apple, Spotify, Alibaba, and more.' },
+                { href: '/cards', title: 'Virtual cards, prepaid cards, Visa and Mastercard', body: 'Create cards for subscriptions, online shopping, travel, Google Play, Apple, Spotify, Alibaba, and more.' },
+                { href: '/giftcards', title: 'Gift cards and digital giftcards', body: 'Buy or sell supported entertainment, gaming, shopping, subscription, and travel gift cards in the Fondeka app.' },
                 { href: '/bills', title: 'Bill payments and utilities', body: 'Pay electricity, water, TV, internet, data, gaming, travel, and digital subscriptions.' },
                 { href: '/airtimes', title: 'Airtime and data top-up', body: 'Buy airtime, mobile data, and bundles for yourself, family, and customers across supported countries.' },
                 { href: '/payments', title: 'Payment links and QR payments', body: 'Send payment links, create QR payments, issue invoices, and collect money for businesses or campaigns.' },
             ],
             locationsTitle: 'Search coverage',
-            locationsBody: 'Relevant for people searching neobank Congo, fintech Congo, digital banking RDC, Mobile Money Africa, virtual cards Africa, savings app Congo, and business payment API Africa.',
+            locationsBody: 'Relevant for people searching neobank Congo, digital bank Congo, fintech Congo, digital banking RDC, Mobile Money Africa, virtual card Congo, prepaid card Africa, Visa card Congo, Mastercard virtual card Africa, giftcards Congo, savings app Congo, and business payment API Africa.',
         },
         fr: {
-            kicker: 'Fintech au Congo et en Afrique',
-            title: 'Une neobank pour les services financiers que les gens recherchent chaque jour',
-            body: 'Fondeka est construite en RD Congo pour l’Afrique : prêts rapides, épargnes, Likelemba, AVEC, cartes virtuelles, paiement de factures, recharge téléphonique, crypto, liens de paiement, QR, factures, encaissements, payouts et API business dans une plateforme fintech mobile.',
+            kicker: 'Banque digitale et fintech au Congo et en Afrique',
+            title: 'Une neobank et banque digitale pour les services financiers que les gens recherchent chaque jour',
+            body: 'Fondeka est construite en RD Congo pour l’Afrique : prêts rapides, épargnes, Likelemba, AVEC, cartes virtuelles, cartes prépayées, options de paiement Visa et Mastercard quand elles sont prises en charge, cartes cadeaux, paiement de factures, recharge téléphonique, crypto, liens de paiement, QR, factures, encaissements, payouts et API business dans une plateforme fintech mobile.',
             services: [
                 { href: '/loans', title: 'Prêts rapides au Congo', body: 'Demandez un crédit digital, suivez le remboursement et remboursez avec Mobile Money et les moyens pris en charge.' },
                 { href: '/savings', title: 'Épargne, Likelemba et AVEC', body: 'Épargne libre, épargne bloquée, Likelemba et AVEC pour les objectifs personnels et communautaires.' },
-                { href: '/cards', title: 'Cartes virtuelles en Afrique', body: 'Créez des cartes pour abonnements, achats en ligne, voyages, Google Play, Apple, Spotify, Alibaba et plus.' },
+                { href: '/cards', title: 'Cartes virtuelles, cartes prépayées, Visa et Mastercard', body: 'Créez des cartes pour abonnements, achats en ligne, voyages, Google Play, Apple, Spotify, Alibaba et plus.' },
+                { href: '/giftcards', title: 'Cartes cadeaux et giftcards digitales', body: 'Achetez ou vendez des cartes cadeaux divertissement, gaming, shopping, abonnements et voyage prises en charge dans Fondeka.' },
                 { href: '/bills', title: 'Paiement de factures', body: 'Payez électricité, eau, TV, internet, data, gaming, voyage et abonnements digitaux.' },
                 { href: '/airtimes', title: 'Recharge et data mobile', body: 'Achetez du crédit, de la data et des forfaits pour vous, vos proches et vos clients dans les pays couverts.' },
                 { href: '/payments', title: 'Liens de paiement et QR', body: 'Envoyez des liens, créez des QR, émettez des factures et encaissez pour une activité ou une campagne.' },
             ],
             locationsTitle: 'Couverture de recherche',
-            locationsBody: 'Pertinent pour les recherches neobank Congo, fintech Congo, banque digitale RDC, Mobile Money Afrique, carte virtuelle Afrique, application d’épargne Congo et API de paiement Afrique.',
+            locationsBody: 'Pertinent pour les recherches neobank Congo, banque digitale Congo, fintech Congo, banque digitale RDC, Mobile Money Afrique, carte virtuelle Congo, carte prépayée Afrique, carte Visa Congo, carte Mastercard Afrique, giftcards Congo, application d’épargne Congo et API de paiement Afrique.',
         },
     };
     const seo = seoContent[lang] || seoContent.en;

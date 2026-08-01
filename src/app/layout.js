@@ -12,17 +12,17 @@ import { Suspense } from 'react';
 
 export const metadata = {
     metadataBase: new URL('https://fondeka.com'),
-    title: 'Fondeka | Neobank and Fintech in Congo and Africa',
+    title: 'Fondeka | Digital Bank, Neobank and Fintech in Congo and Africa',
     description:
-        'Fondeka is a neobank and fintech platform built in DR Congo for Africa, offering instant loans, savings, Likelemba, AVEC, virtual cards, bill payments, airtime, crypto, payment links, and business APIs.',
+        'Fondeka is a digital bank, neobank and fintech platform built in DR Congo for Africa, offering instant loans, savings, Likelemba, AVEC, virtual cards, prepaid cards, gift cards, bill payments, airtime, crypto, payment links, and business APIs.',
     keywords: seoKeywords,
     alternates: {
         canonical: '/',
     },
     openGraph: {
-        title: 'Fondeka | Neobank and Fintech in Congo and Africa',
+        title: 'Fondeka | Digital Bank, Neobank and Fintech in Congo and Africa',
         description:
-            'Instant loans, savings, Likelemba, AVEC, virtual cards, bill payments, airtime, crypto, payment links, and business APIs for Congo and Africa.',
+            'Instant loans, savings, Likelemba, AVEC, virtual cards, prepaid cards, gift cards, bill payments, airtime, crypto, payment links, and business APIs for Congo and Africa.',
         url: 'https://fondeka.com',
         siteName: 'Fondeka',
         images: [
@@ -38,9 +38,9 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Fondeka | Neobank and Fintech in Congo and Africa',
+        title: 'Fondeka | Digital Bank, Neobank and Fintech in Congo and Africa',
         description:
-            'A DR Congo-born neobank for loans, savings, cards, bill payments, airtime, crypto, payment links, and business APIs across Africa.',
+            'A DR Congo-born digital bank and neobank for loans, savings, virtual cards, prepaid cards, gift cards, bill payments, airtime, crypto, payment links, and business APIs across Africa.',
         images: ['/og-image.jpg'],
     },
 };
