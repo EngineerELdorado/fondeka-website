@@ -1,5 +1,6 @@
 import { serviceSeo, siteUrl } from '@/lib/seo';
 import { cardGuideOrder } from '@/lib/cardGuides';
+import { billPaymentProviderSlugs } from '@/lib/billPaymentProviders';
 
 export default function sitemap() {
     const lastModified = new Date();
@@ -21,8 +22,12 @@ export default function sitemap() {
         path: `/cards/${platform}`,
         priority: 0.65,
     }));
+    const billPaymentProviderRoutes = billPaymentProviderSlugs.map((provider) => ({
+        path: `/bills/${provider}`,
+        priority: 0.92,
+    }));
 
-    return [...routes, ...productRoutes, ...cardGuideRoutes].map(({ path, priority }) => ({
+    return [...routes, ...productRoutes, ...billPaymentProviderRoutes, ...cardGuideRoutes].map(({ path, priority }) => ({
         url: `${siteUrl}${path}`,
         lastModified,
         changeFrequency: path === '/' ? 'weekly' : 'monthly',

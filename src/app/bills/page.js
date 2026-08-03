@@ -1,8 +1,10 @@
 'use client';
 import { useI18n } from '@/lib/i18n';
 import { useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 import ProductStatusBadge from '@/components/ProductStatusBadge';
 import DownloadAppButton from '@/components/DownloadAppButton';
+import { billPaymentProviders } from '@/lib/billPaymentProviders';
 
 export default function Page(){
   const { t } = useI18n();
@@ -143,6 +145,12 @@ export default function Page(){
     t('product.bills.trust.2'),
     t('product.bills.trust.3'),
   ];
+  const featuredProviders = [
+    billPaymentProviders.socodee,
+    billPaymentProviders.virunga,
+    billPaymentProviders.snel,
+    billPaymentProviders['canal-plus'],
+  ];
 
   return (
     <main className="section">
@@ -200,6 +208,25 @@ export default function Page(){
           <div className="card mt-4">
             <h2 className="text-xl font-extrabold tracking-tight text-fondeka-dark">{t('product.bills.direct.title')}</h2>
             <p className="mt-3 text-sm text-gray-700">{t('product.bills.direct.body')}</p>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              {featuredProviders.map((provider) => (
+                <Link
+                  key={provider.slug}
+                  href={`/bills/${provider.slug}`}
+                  className="rounded-2xl border border-[#2c6cb0]/15 bg-[#eef6ff] p-4 transition hover:border-[#2c6cb0]/35 hover:bg-white"
+                >
+                  <span className="text-xs font-extrabold uppercase tracking-[0.16em] text-[#1d4f86]">
+                    {provider.type}
+                  </span>
+                  <span className="mt-2 block font-extrabold text-fondeka-dark">
+                    Pay {provider.displayName} online
+                  </span>
+                  <span className="mt-2 block text-sm text-gray-700">
+                    {provider.searchPhrases[1]}
+                  </span>
+                </Link>
+              ))}
+            </div>
             <div className="mt-5 grid gap-3">
               {directPaymentGroups.map((group) => (
                 <section key={group.title} className="rounded-2xl border border-fondeka-dark/10 bg-white p-4">
