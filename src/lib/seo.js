@@ -56,6 +56,12 @@ export const seoKeywords = [
   'crypto app DR Congo',
   'buy crypto with Mobile Money',
   'sell crypto to Mobile Money',
+  'PayPal Congo',
+  'PayPal DR Congo',
+  'PayPal RDC',
+  'withdraw PayPal money Congo',
+  'PayPal to Mobile Money Congo',
+  'PayPal to M-Pesa Congo',
 ];
 
 export const serviceSeo = {
@@ -320,6 +326,35 @@ export const serviceSeo = {
       'Send payouts to Mobile Money, banks, cards, wallets, and crypto rails with Fondeka business infrastructure for African markets.',
     keywords: ['payouts Africa', 'Mobile Money payouts Congo', 'bulk payouts Africa', 'fintech payouts API'],
   },
+  paypalCongo: {
+    path: '/paypal-congo',
+    name: 'PayPal Withdrawals to Mobile Money in Congo',
+    title: 'Withdraw PayPal Money to Mobile Money in Congo | Fondeka',
+    description:
+      'Use Fondeka to withdraw money from a PayPal account to supported Mobile Money wallets in Congo. A practical PayPal cash-out option for freelancers, creators, sellers, and remote workers in DR Congo.',
+    keywords: [
+      'PayPal Congo',
+      'PayPal DR Congo',
+      'PayPal RDC',
+      'PayPal Kinshasa',
+      'PayPal Goma',
+      'withdraw PayPal money Congo',
+      'withdraw PayPal money DR Congo',
+      'withdraw PayPal money RDC',
+      'PayPal withdrawal Congo',
+      'PayPal withdrawal DR Congo',
+      'PayPal cash out Congo',
+      'PayPal to Mobile Money Congo',
+      'PayPal to Mobile Money RDC',
+      'PayPal to M-Pesa Congo',
+      'PayPal to Airtel Money Congo',
+      'PayPal to Orange Money Congo',
+      'receive PayPal money Congo',
+      'PayPal services Congo',
+      'PayPal services RDC',
+      'freelancer PayPal Congo',
+    ],
+  },
   pricing: {
     path: '/pricing',
     name: 'Pricing',
@@ -411,6 +446,42 @@ export function createCryptoFaqSchema() {
           '@type': 'Answer',
           text:
             'Fondeka supports a mobile crypto experience for buying, selling, holding, receiving, swapping, and sending crypto in supported markets.',
+        },
+      },
+    ],
+  };
+}
+
+export function createPaypalCongoFaqSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Can I withdraw money from PayPal in Congo with Fondeka?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Fondeka helps eligible users in Congo move money from a PayPal account to supported Mobile Money wallets, subject to account checks, supported operators, limits, and compliance review.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Which Mobile Money wallets can receive a PayPal withdrawal?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'Supported payout methods can include local Mobile Money wallets such as M-Pesa, Airtel Money, Orange Money, or other rails when available in the app.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Who uses PayPal withdrawals to Mobile Money in Congo?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text:
+            'The service is useful for freelancers, creators, online sellers, remote workers, and businesses in Congo that receive international payments through PayPal and need local Mobile Money access.',
         },
       },
     ],

@@ -21,6 +21,7 @@ export default function Footer(){
           <h4 className="font-semibold mb-3">{t('nav.products')}</h4>
           <ul className="space-y-2 text-sm">
             <li><a href={`/products?lang=${lang}`} className="hover:text-fondeka-green">Catalogue</a></li>
+            <li><a href={`/paypal-congo?lang=${lang}`} className="hover:text-fondeka-green">PayPal Congo</a></li>
             <li><a href={`/business?lang=${lang}`} className="hover:text-fondeka-green">Business (API)</a></li>
           </ul>
         </div>
