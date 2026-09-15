@@ -11,6 +11,20 @@
         "0E:E7:6D:61:77:78:F7:4C:A6:77:0F:0F:23:CE:38:37:91:0C:3C:51:A2:35:36:75:B6:9C:EA:05:57:25:67:EF",
         "E4:5D:55:39:65:C8:4B:AC:F9:22:60:ED:00:BE:37:09:C1:97:44:A2:C8:08:46:36:CE:E7:82:EC:A9:6B:DE:2E"
       ]
+    },
+    "relation_extensions": {
+      "delegate_permission/common.handle_all_urls": {
+        "dynamic_app_link_components": [
+          { "/": "/HomeScreen*" },
+          { "/": "/transaction/*" },
+          { "/": "/group-savings/*" },
+          { "/": "/commerce" },
+          { "/": "/commerce/*" },
+          { "/": "/payment-request/pay/*" },
+          { "/": "/savings/likelemba-join*" },
+          { "/": "/security/device-approval*" }
+        ]
+      }
     }
   },
   {
@@ -25,6 +39,20 @@
         "0E:E7:6D:61:77:78:F7:4C:A6:77:0F:0F:23:CE:38:37:91:0C:3C:51:A2:35:36:75:B6:9C:EA:05:57:25:67:EF",
         "E4:5D:55:39:65:C8:4B:AC:F9:22:60:ED:00:BE:37:09:C1:97:44:A2:C8:08:46:36:CE:E7:82:EC:A9:6B:DE:2E"
       ]
+    },
+    "relation_extensions": {
+      "delegate_permission/common.handle_all_urls": {
+        "dynamic_app_link_components": [
+          { "/": "/HomeScreen*" },
+          { "/": "/transaction/*" },
+          { "/": "/group-savings/*" },
+          { "/": "/commerce" },
+          { "/": "/commerce/*" },
+          { "/": "/payment-request/pay/*" },
+          { "/": "/savings/likelemba-join*" },
+          { "/": "/security/device-approval*" }
+        ]
+      }
     }
   },
   {
@@ -39,6 +67,20 @@
         "0E:E7:6D:61:77:78:F7:4C:A6:77:0F:0F:23:CE:38:37:91:0C:3C:51:A2:35:36:75:B6:9C:EA:05:57:25:67:EF",
         "E4:5D:55:39:65:C8:4B:AC:F9:22:60:ED:00:BE:37:09:C1:97:44:A2:C8:08:46:36:CE:E7:82:EC:A9:6B:DE:2E"
       ]
+    },
+    "relation_extensions": {
+      "delegate_permission/common.handle_all_urls": {
+        "dynamic_app_link_components": [
+          { "/": "/HomeScreen*" },
+          { "/": "/transaction/*" },
+          { "/": "/group-savings/*" },
+          { "/": "/commerce" },
+          { "/": "/commerce/*" },
+          { "/": "/payment-request/pay/*" },
+          { "/": "/savings/likelemba-join*" },
+          { "/": "/security/device-approval*" }
+        ]
+      }
     }
   }
 ]

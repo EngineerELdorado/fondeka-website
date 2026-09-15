@@ -7,6 +7,8 @@ export const appleAppSiteAssociation = {
         paths: [
           "/transaction/*",
           "/group-savings/*",
+          "/commerce",
+          "/commerce/*",
           "/savings/likelemba-join*",
           "/security/device-approval*",
           "/payment-request/pay/*",
@@ -18,6 +20,8 @@ export const appleAppSiteAssociation = {
         paths: [
           "/transaction/*",
           "/group-savings/*",
+          "/commerce",
+          "/commerce/*",
           "/savings/likelemba-join*",
           "/security/device-approval*",
           "/payment-request/pay/*",
@@ -29,6 +33,8 @@ export const appleAppSiteAssociation = {
         paths: [
           "/transaction/*",
           "/group-savings/*",
+          "/commerce",
+          "/commerce/*",
           "/savings/likelemba-join*",
           "/security/device-approval*",
           "/payment-request/pay/*",
