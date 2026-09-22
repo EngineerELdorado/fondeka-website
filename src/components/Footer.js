@@ -49,15 +49,6 @@ export default function Footer(){
         </div>
       </div>
 
-      {/* Binance ownership verification badge */}
-      <div className="container-pad pb-8">
-        <div className="rounded-md border border-fondeka-mint/50 bg-fondeka-mint/10 px-4 py-3 text-sm leading-6 text-gray-700">
-          <span className="font-semibold text-fondeka-green">Ownership verification: </span>
-          this text STE FONDS DENIS KALENGA is temporarily added to proved ownership of the website as required by Binance.
-          Please note that FONDEKA and FONDS DENIS KALENGA is the same company. FONDEKA is just the short form of FONDS DENIS KALENGA
-        </div>
-      </div>
-
       {/* Social + Copyright */}
       <div className="border-t">
         <div className="container-pad py-6 flex flex-col md:flex-row justify-between items-center gap-4">
