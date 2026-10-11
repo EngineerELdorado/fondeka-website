@@ -12,6 +12,7 @@ export default function Header(){
   const { t, lang } = useI18n();
   const nav = [
     { href: '/products', label: t('nav.products') },
+    { href: '/commerce', label: 'Commerce' },
     // { href: '/pricing', label: t('nav.pricing') },
     { href: '/compliance', label: t('nav.compliance') },
     { href: '/docs', label: t('nav.docs') },

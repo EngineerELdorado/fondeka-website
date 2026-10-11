@@ -22,6 +22,7 @@ export default function Footer(){
           <ul className="space-y-2 text-sm">
             <li><a href={`/products?lang=${lang}`} className="hover:text-fondeka-green">Catalogue</a></li>
             <li><a href={`/paypal-congo?lang=${lang}`} className="hover:text-fondeka-green">PayPal Congo</a></li>
+            <li><a href={`/commerce?lang=${lang}`} className="hover:text-fondeka-green">Commerce</a></li>
             <li><a href={`/business?lang=${lang}`} className="hover:text-fondeka-green">Business (API)</a></li>
           </ul>
         </div>

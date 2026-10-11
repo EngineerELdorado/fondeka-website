@@ -62,6 +62,11 @@ export const seoKeywords = [
   'withdraw PayPal money Congo',
   'PayPal to Mobile Money Congo',
   'PayPal to M-Pesa Congo',
+  'create online store Congo',
+  'online store Africa',
+  'POS software Congo',
+  'mobile cash register Africa',
+  'Mobile Money ecommerce',
 ];
 
 export const serviceSeo = {
@@ -639,7 +644,7 @@ export const organizationSchema = {
   url: siteUrl,
   logo: `${siteUrl}/logo-icon.svg`,
   description:
-    'Fondeka is a neobank, digital bank, and fintech platform built in DR Congo for Africa, offering loans, savings, virtual cards, prepaid cards, bill payments, airtime, gift cards, crypto, payment links, and business APIs.',
+    'Fondeka is a digital bank and fintech platform built in DR Congo for Africa, offering payments, savings, cards, online store creation, POS tools, and business services.',
   slogan: 'The digital bank and neobank for everyday financial services',
   areaServed: [
     { '@type': 'Country', name: 'Democratic Republic of the Congo' },

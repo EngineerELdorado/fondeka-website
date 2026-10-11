@@ -1,6 +1,7 @@
 import { serviceSeo, siteUrl } from '@/lib/seo';
 import { cardGuideOrder } from '@/lib/cardGuides';
 import { billPaymentProviderSlugs } from '@/lib/billPaymentProviders';
+import { commercePages } from '@/lib/commerce';
 
 export default function sitemap() {
     const lastModified = new Date();
@@ -11,6 +12,7 @@ export default function sitemap() {
         { path: '/compliance', priority: 0.7 },
         { path: '/support', priority: 0.6 },
         { path: '/docs', priority: 0.55 },
+        { path: '/commerce', priority: 0.95 },
         { path: '/privacy', priority: 0.35 },
         { path: '/end-user-agreement', priority: 0.35 },
     ];
@@ -26,8 +28,12 @@ export default function sitemap() {
         path: `/bills/${provider}`,
         priority: 0.92,
     }));
+    const commerceRoutes = Object.keys(commercePages).map((slug) => ({
+        path: `/commerce/${slug}`,
+        priority: 0.85,
+    }));
 
-    return [...routes, ...productRoutes, ...billPaymentProviderRoutes, ...cardGuideRoutes].map(({ path, priority }) => ({
+    return [...routes, ...productRoutes, ...commerceRoutes, ...billPaymentProviderRoutes, ...cardGuideRoutes].map(({ path, priority }) => ({
         url: `${siteUrl}${path}`,
         lastModified,
         changeFrequency: path === '/' ? 'weekly' : 'monthly',

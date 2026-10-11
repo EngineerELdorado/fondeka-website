@@ -14,7 +14,7 @@ export const metadata = {
     metadataBase: new URL('https://fondeka.com'),
     title: 'Fondeka | Digital Bank, Neobank and Fintech in Congo and Africa',
     description:
-        'Fondeka is a digital bank, neobank and fintech platform built in DR Congo for Africa, offering instant loans, savings, Likelemba, AVEC, virtual cards, prepaid cards, gift cards, bill payments, airtime, crypto, payment links, and business APIs.',
+        'Fondeka is a digital bank and fintech platform built in DR Congo for Africa, offering payments, savings, cards, online store creation, POS tools and business services.',
     keywords: seoKeywords,
     alternates: {
         canonical: '/',
