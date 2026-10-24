@@ -151,7 +151,7 @@ export default function Home() {
                         />
                         {/* 2) Cards */}
                         <FeatureCard
-                            title={t('product.cards.title')}
+                            title={t('products.cards.title')}
                             text={t('product.cards.body')}
                             icon="https://plus.unsplash.com/premium_photo-1675276939507-97d222bb488d?auto=format&fit=crop&q=80&w=1915"
                             href={withIcon('/cards', 'https://plus.unsplash.com/premium_photo-1675276939507-97d222bb488d?auto=format&fit=crop&q=80&w=1915')}
@@ -169,7 +169,7 @@ export default function Home() {
                         />
                         {/* 4) eSIM */}
                         <FeatureCard
-                            title={t('product.esim.title')}
+                            title={t('products.esim.title')}
                             text={t('product.esim.body')}
                             icon="https://images.unsplash.com/photo-1718631919973-ca9f02f46534?auto=format&fit=crop&q=80&w=1740"
                             href={withIcon('/esim', 'https://images.unsplash.com/photo-1718631919973-ca9f02f46534?auto=format&fit=crop&q=80&w=1740')}
@@ -178,7 +178,7 @@ export default function Home() {
                         />
                         {/* 5) Crypto */}
                         <FeatureCard
-                            title={t('product.crypto.title')}
+                            title={t('products.crypto.title')}
                             text={t('product.crypto.body')}
                             icon="https://plus.unsplash.com/premium_photo-1676998623020-2640a850bdc0?auto=format&fit=crop&q=80&w=870"
                             href={withIcon('/crypto', 'https://plus.unsplash.com/premium_photo-1676998623020-2640a850bdc0?auto=format&fit=crop&q=80&w=870')}
@@ -187,7 +187,7 @@ export default function Home() {
                         />
                         {/* 6) Payments */}
                         <FeatureCard
-                            title={t('product.payments.title')}
+                            title={t('products.payments.title')}
                             text={t('product.payments.body')}
                             icon="https://plus.unsplash.com/premium_photo-1740533182105-0d9446d2e10d?auto=format&fit=crop&q=80&w=1867"
                             href={withIcon('/payments', 'https://plus.unsplash.com/premium_photo-1740533182105-0d9446d2e10d?auto=format&fit=crop&q=80&w=1867')}
@@ -205,7 +205,7 @@ export default function Home() {
                         />
                         {/* 8) Airtimes */}
                         <FeatureCard
-                            title={t('product.airtimes.title')}
+                            title={t('products.airtimes.title')}
                             text={t('product.airtimes.body')}
                             icon="https://plus.unsplash.com/premium_photo-1718560022081-d7bc146c1e14?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             href={withIcon('/airtimes', 'https://plus.unsplash.com/premium_photo-1718560022081-d7bc146c1e14?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')}
@@ -214,8 +214,8 @@ export default function Home() {
                         />
                         {/* 9) Savings */}
                         <FeatureCard
-                            title={t('product.savings.title')}
-                            text={t('product.savings.body')}
+                            title={t('products.savings.title')}
+                            text={t('products.savings.body')}
                             icon="https://plus.unsplash.com/premium_photo-1676679689999-bee60ae55f1f?q=80&w=2532"
                             href={withIcon('/savings', 'https://plus.unsplash.com/premium_photo-1676679689999-bee60ae55f1f?q=80&w=2532')}
                             cta="Explore"

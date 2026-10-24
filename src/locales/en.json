@@ -556,6 +556,13 @@
   "product.crypto.faq.a3": "Fondeka supports a mobile crypto experience for buying, selling, holding, receiving, swapping, and sending crypto in supported markets.",
   "product.airtimes.feature.app": "Purchase airtime and bundles from our app",
   "products.title": "Our products",
+  "products.cards.title": "Virtual cards",
+  "products.esim.title": "eSIM",
+  "products.crypto.title": "Cryptos",
+  "products.payments.title": "Payment links",
+  "products.airtimes.title": "Airtime and data",
+  "products.savings.title": "Savings",
+  "products.savings.body": "Likelemba, AVEC and personal savings.",
   "products.subtitle": "Everyhing you need for your financial needs"
 
 }

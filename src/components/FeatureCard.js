@@ -35,7 +35,7 @@ export default function FeatureCard({ title, text, icon, href, cta, badge }) {
             </div>
 
             <h3 className="text-base sm:text-lg md:text-xl font-semibold truncate">{title}</h3>
-            <p className="mt-1 text-sm text-gray-600 truncate">{text}</p>
+            <p className="mt-1 min-h-[2.5rem] line-clamp-2 text-sm text-gray-600">{text}</p>
 
             <div className="mt-4 sm:mt-5 flex-1 min-h-0">
                 {/* Aspect wrapper prevents overflow; Image uses fill and object-cover */}
