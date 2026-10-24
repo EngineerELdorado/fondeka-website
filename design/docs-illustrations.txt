@@ -1,0 +1,26 @@
+Fondeka docs page illustration assets
+Generated with the built-in image_gen tool.
+Saved assets: public/illustrations/docs-developers.jpg and public/illustrations/docs-integration.jpg
+JPEG encoding at quality 85 for website delivery; original composition and dimensions preserved.
+
+ASSET 1: docs-developers.jpg
+Use case: illustration-story.
+Asset type: primary hero illustration for the Fondeka Business API developer webpage.
+Primary request: a polished editorial illustration of two African software developers collaborating on a payment API integration, with laptops, an oversized floating code editor, abstract code lines and curly-brace symbols, small connected app windows and a phone.
+Style/medium: sophisticated contemporary digital illustration, clean geometric shapes with softly shaded volume and subtle grain, expressive adult human characters, professional and welcoming.
+Scene/backdrop: very pale warm mint #F2F7F4 background, simple airy studio workspace. One developer seated at a laptop and another standing nearby discussing the floating code window. Natural proportions and believable hands.
+Composition/framing: landscape 3:2 composition, full scene comfortably inside the frame with generous margins, strong visual hierarchy, large readable shapes at webpage size.
+Color palette: Fondeka forest green #0D1F14, sage #4F805C, soft mint #85A38D, ivory, warm brown skin tones, restrained light apricot accents.
+Text: no words or labels. Code is represented by small abstract colored strokes and simple < > { } symbols only.
+Constraints: no logos, no watermarks, no screenshots, no charts with invented metrics, no photorealism. Create an illustration asset, not a page mockup.
+
+ASSET 2: docs-integration.jpg
+Use case: stylized-concept.
+Asset type: secondary illustration for the Fondeka Business API developer webpage.
+Primary request: an elegant isometric illustration of a laptop with a floating code editor, a smartphone and connected payment modules; visual metaphor for code connecting apps to payments. Large curly braces, structured abstract code lines and fine connection paths between the laptop, phone and small payment tiles.
+Style/medium: refined digital illustration with softly shaded geometric volume, restrained detail and subtle grain; professional editorial technology artwork.
+Scene/backdrop: solid very pale warm mint #F2F7F4 background with soft grounded shadows; airy uncluttered composition.
+Composition/framing: landscape 3:2, the laptop anchors the center with the phone beside it and a few floating code and connection tiles, ample safe margins.
+Color palette: Fondeka forest green #0D1F14, sage #4F805C, mint #85A38D, ivory and a few restrained apricot accents.
+Text: no words or labels; use abstract colored code strokes and simple < > { } symbols only.
+Constraints: no people, no logos, no watermarks, no real API endpoints, no invented metrics, no page layout or screenshot.
