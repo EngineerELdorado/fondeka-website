@@ -1,5 +1,6 @@
 'use client';
 import { useI18n } from '../../lib/i18n';
+import { businessAppUrl } from '@/lib/business';
 const Code = ({ children }) => (
   <pre className="mt-3 p-4 bg-gray-900 text-white rounded-xl overflow-auto text-xs"><code>{children}</code></pre>
 );
@@ -10,6 +11,7 @@ export default function Docs(){
       <div className="container-pad">
         <h1 className="h">{t('docs.title')}</h1>
         <p className="mt-2 text-gray-600">{t('docs.subtitle')}</p>
+        <a href={businessAppUrl} className="btn btn-primary mt-6 w-fit">{t('common.cta.useApi')}</a>
         <div className="card mt-8">
           <h2 className="text-lg font-semibold">{t('docs.auth')}</h2>
           <p className="text-sm text-gray-600 mt-1">Use API keys (test & live). Pass via Authorization: Bearer.</p>

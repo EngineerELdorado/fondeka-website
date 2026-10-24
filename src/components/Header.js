@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useI18n } from '../lib/i18n';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import DownloadAppButton from "@/components/DownloadAppButton";
+import { businessAppUrl } from '@/lib/business';
 
 export default function Header(){
   const [open, setOpen] = useState(false);
@@ -16,7 +17,7 @@ export default function Header(){
     // { href: '/pricing', label: t('nav.pricing') },
     { href: '/compliance', label: t('nav.compliance') },
     { href: '/docs', label: t('nav.docs') },
-    { href: '/business', label: t('nav.business') },
+    { href: businessAppUrl, label: t('nav.business'), external: true },
     { href: '/about', label: t('nav.about') },
   ];
 
@@ -93,6 +94,13 @@ export default function Header(){
                     </a>
                 );
               }
+              if (i.external) {
+                return (
+                    <a key={i.href} href={i.href} className="hover:text-fondeka-green">
+                      {i.label}
+                    </a>
+                );
+              }
               return (
                   <Link key={i.href} href={`${i.href}?lang=${lang}`} className="hover:text-fondeka-green">
                     {i.label}
@@ -137,6 +145,13 @@ export default function Header(){
                   if (i.href === '/products') {
                     return (
                         <a key={i.href} href="#products" onClick={goProducts} className="py-2">
+                          {i.label}
+                        </a>
+                    );
+                  }
+                  if (i.external) {
+                    return (
+                        <a key={i.href} href={i.href} className="py-2" onClick={()=>setOpen(false)}>
                           {i.label}
                         </a>
                     );

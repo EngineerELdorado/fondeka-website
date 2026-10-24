@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useI18n } from '@/lib/i18n';
 import ProductStatusBadge from '@/components/ProductStatusBadge';
+import { businessAppUrl } from '@/lib/business';
 
 export default function ProductsRedirect() {
     const { lang } = useI18n();
@@ -24,11 +25,10 @@ export default function ProductsRedirect() {
                 <div className="mt-4 flex flex-col items-center gap-3 text-sm text-gray-700">
                     <div className="flex flex-wrap items-center justify-center gap-2">
                         <ProductStatusBadge status="Available" />
-                        <span>eSIM, Bill payments, Virtual cards, Gift cards, Airtimes, Savings, Payments, Loans, Crypto</span>
-                    </div>
-                    <div className="flex flex-wrap items-center justify-center gap-2">
-                        <ProductStatusBadge status="Coming soon" />
-                        <span>Collect, Payout, Business API</span>
+                        <span>
+                            eSIM, Bill payments, Virtual cards, Gift cards, Airtimes, Savings, Payments, Loans, Crypto, Collect, Payout,{' '}
+                            <a href={businessAppUrl} className="text-fondeka-green underline">Business API</a>
+                        </span>
                     </div>
                 </div>
                 <a

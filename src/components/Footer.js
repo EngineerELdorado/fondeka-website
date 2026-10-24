@@ -1,6 +1,7 @@
 'use client';
 import Logo from './Logo';
 import { useI18n } from '@/lib/i18n';
+import { businessAppUrl } from '@/lib/business';
 import DownloadAppButton from "@/components/DownloadAppButton";
 
 export default function Footer(){
@@ -23,7 +24,7 @@ export default function Footer(){
             <li><a href={`/products?lang=${lang}`} className="hover:text-fondeka-green">Catalogue</a></li>
             <li><a href={`/paypal-congo?lang=${lang}`} className="hover:text-fondeka-green">PayPal Congo</a></li>
             <li><a href={`/commerce?lang=${lang}`} className="hover:text-fondeka-green">Commerce</a></li>
-            <li><a href={`/business?lang=${lang}`} className="hover:text-fondeka-green">Business (API)</a></li>
+            <li><a href={businessAppUrl} className="hover:text-fondeka-green">Business (API)</a></li>
           </ul>
         </div>
 

@@ -5,6 +5,7 @@ import CTA from '../components/CTA';
 import DownloadAppButton from '../components/DownloadAppButton';
 import Metrics from '../components/Metrics';
 import { useI18n } from '@/lib/i18n';
+import { businessAppUrl } from '@/lib/business';
 import HeroCorners from '@/components/HeroCorners';
 import HeroOrbitIcons from "@/components/HeroOrbitIcons";
 
@@ -268,9 +269,9 @@ export default function Home() {
                     <div className="card mt-6 md:mt-0">
                         <h3 className="text-xl font-semibold">{t('section.businessTitle')}</h3>
                         <p className="text-gray-600 mt-2">{t('section.businessBody')}</p>
-                        <Link href={`/business?lang=${lang}`} className="btn btn-primary mt-6 w-fit">
-                            Get started
-                        </Link>
+                        <a href={businessAppUrl} className="btn btn-primary mt-6 w-fit">
+                            {t('common.cta.useApi')}
+                        </a>
                     </div>
                 </div>
             </section>

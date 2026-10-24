@@ -1,8 +1,9 @@
 'use client';
 import { useI18n } from '../../lib/i18n';
 import ProductPageTemplate from '@/components/ProductPageTemplate';
+import { businessAppUrl } from '@/lib/business';
 export default function Page(){
-  const { t, lang } = useI18n();
+  const { t } = useI18n();
   return (
     <ProductPageTemplate
       t={t}
@@ -14,7 +15,7 @@ export default function Page(){
       mode="business"
       highlights={[t('product.feature.supportedMethods'), t('product.feature.dashboardControls'), t('product.feature.businessApi')]}
       points={[t('product.feature.supportedMethods'), t('product.page.payments.point2'), t('product.page.payments.point3')]}
-      ctaHref={`/business?lang=${lang}`}
+      ctaHref={businessAppUrl}
       ctaLabel={t('common.cta.useApi')}
     />
   );

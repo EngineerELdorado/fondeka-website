@@ -1,5 +1,6 @@
 'use client';
 import { useI18n } from '@/lib/i18n';
+import { businessAppUrl } from '@/lib/business';
 
 export default function Page() {
     const { lang } = useI18n();
@@ -73,7 +74,8 @@ function AboutEN() {
                         Today, Fondeka operates as a B2C payments aggregator in DR Congo and is formalizing
                         its Payment Aggregator License with the regulator. Our apps (mobile + web) deliver a simple
                         customer experience while the platform standardizes compliance, risk controls, and settlement
-                        across methods. We’re preparing our B2B layer to let merchants and fintechs plug into Fondeka directly.
+                        across methods. Our <a href={businessAppUrl} className="text-fondeka-green underline">B2B API</a> is available
+                        for merchants and fintechs to plug into Fondeka directly.
                     </p>
                     <div className="card mt-4">
                         <h3 className="font-semibold">Compliance & trust</h3>
@@ -109,7 +111,7 @@ function AboutEN() {
                         <div className="card">
                             <h3 className="text-lg font-semibold text-fondeka-green">2029 – 2030 · B2B, Expansion & Interoperability</h3>
                             <p className="mt-2 text-gray-700 text-sm leading-relaxed">
-                                • Release B2B APIs (collections & payouts) & Business tools(eg: POS).<br/>
+                                • Expand B2B APIs (collections & payouts) & Business tools(eg: POS).<br/>
                                 • Integrate regional payment service providers (East Africa).<br/>
                                 • Expand to Rwanda, Burundi, Uganda, Kenya, Tanzania<br/>
                                 • Target: Reach 10M users & USD 100M annual revenu
@@ -239,8 +241,8 @@ function AboutFR() {
                         et formalise sa licence d’agrégateur auprès du régulateur. Nos applications (mobile et web)
                         offrent une expérience fluide aux clients tandis que la plateforme unifie la conformité,
                         le contrôle du risque et les processus de règlement entre les différents moyens de paiement.
-                        Nous préparons actuellement notre couche B2B pour permettre aux marchands et fintechs
-                        de se connecter directement à Fondeka.
+                        Notre <a href={businessAppUrl} className="text-fondeka-green underline">API B2B</a> est disponible
+                        pour permettre aux marchands et fintechs de se connecter directement à Fondeka.
                     </p>
                     <div className="card mt-4">
                         <h3 className="font-semibold">Conformité & confiance</h3>
@@ -277,7 +279,7 @@ function AboutFR() {
                         <div className="card">
                             <h3 className="text-lg font-semibold text-fondeka-green">2029 – 2030 · B2B, expansion & interopérabilité</h3>
                             <p className="mt-2 text-gray-700 text-sm leading-relaxed">
-                                • Lancement des API B2B (collecte & paiement) & Outils Business(ex: POS).<br/>
+                                • Extension des API B2B (collecte & paiement) & Outils Business(ex: POS).<br/>
                                 • Intégration de prestataires régionaux (Afrique de l’Est).<br/>
                                 • Expansion vers le Rwanda, le Burundi, l’Ouganda, le Kenya et la Tanzanie.<br/>
                                 • Objectif : 10M d’utilisateurs et 100M&nbsp;USD de revenus annuels.

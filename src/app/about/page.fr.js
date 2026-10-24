@@ -1,3 +1,5 @@
+import { businessAppUrl } from '@/lib/business';
+
 export const metadata = { title: 'À propos — Fondeka' };
 
 export default function Page() {
@@ -71,7 +73,8 @@ export default function Page() {
                         Aujourd’hui, Fondeka opère comme agrégateur B2C en RD Congo et formalise sa licence d’agrégateur
                         auprès du régulateur. Nos applications (mobile + web) offrent une expérience simple tandis que
                         la plateforme standardise la conformité, le risque et le règlement entre les différents moyens de paiement.
-                        Nous préparons notre couche B2B pour permettre aux marchands et fintechs de se connecter directement.
+                        Notre <a href={businessAppUrl} className="text-fondeka-green underline">API B2B</a> est disponible
+                        pour permettre aux marchands et fintechs de se connecter directement.
                     </p>
                     <div className="card mt-4">
                         <h3 className="font-semibold">Confiance & conformité</h3>
@@ -99,7 +102,7 @@ export default function Page() {
                         <div className="card">
                             <h3 className="text-lg font-semibold text-fondeka-green">2027 – 2029 · Expansion & interopérabilité</h3>
                             <p className="mt-2 text-gray-700 text-sm leading-relaxed">
-                                • Lancer des API B2B (collecte & payout) & Business tools(eg POS).<br/>
+                                • Étendre les API B2B (collecte & payout) & Business tools(eg POS).<br/>
                                 • Intégrer les réseaux Mobile Money & cartes (Afrique centrale/orientale).<br/>
                                 • S’étendre au Rwanda, Kenya, Zambie.<br/>
                                 • On/Off-ramp crypto & règlement stablecoin ; atteindre 10&nbsp;M d’utilisateurs.
