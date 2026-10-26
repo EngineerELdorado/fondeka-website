@@ -37,6 +37,28 @@ MOBILE_STORE_REDIRECT_ENABLED=false
 Unset it or set it to `true` and redeploy to enable redirects again. Redirects use
 temporary HTTP 307 responses with caching disabled.
 
+## Payment API search pages
+
+`/business` and `/docs` render their content on the server in English by default
+and French with `?lang=fr`. Each language has its own canonical URL, metadata,
+language alternates and sitemap entry. The Business page describes access for
+small businesses, students, independent developers, freelancers and startups
+whose company documents are still in preparation, together with account
+verification, sandbox and live-payment requirements.
+
+The homepage and footer link to the public Payment API page; existing portal
+sign-in CTAs still point to `https://web.fondeka.com`. Public integration guides
+remain the source for supported REST API capabilities. Keep eligibility,
+coverage and fees aligned with the published product before adding claims.
+
+After deployment, inspect both languages in Search Console and request indexing
+of the updated canonical URLs. Track impressions, clicks and qualified API
+sign-ups for the intended searches, including payment APIs for startups,
+individuals and students, payment gateway alternatives, API de paiement sans
+société, and API de paiement pour startups sans documents. Use actual query data
+to choose further guides or customer examples. These changes do not guarantee
+rankings, and meta keywords alone do not establish search visibility.
+
 ## Google Tag
 Set `NEXT_PUBLIC_GOOGLE_TAG_IDS` to your Google tag IDs before building or deploying the site.
 

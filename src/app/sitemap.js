@@ -11,15 +11,21 @@ export default function sitemap() {
         { path: '/products', priority: 0.7 },
         { path: '/compliance', priority: 0.7 },
         { path: '/support', priority: 0.6 },
-        { path: '/docs', priority: 0.55 },
         { path: '/commerce', priority: 0.95 },
         { path: '/privacy', priority: 0.35 },
         { path: '/end-user-agreement', priority: 0.35 },
     ];
-    const productRoutes = Object.values(serviceSeo).map((page) => ({
-        path: page.path,
-        priority: page.path === '/savings' || page.path === '/loans' ? 0.95 : 0.9,
-    }));
+    const productRoutes = Object.values(serviceSeo).flatMap((page) => {
+        const priority = page.path === '/savings' || page.path === '/loans' ? 0.95 : 0.9;
+        if (!page.locales) return [{ path: page.path, priority }];
+        const alternates = {
+            languages: { en: `${siteUrl}${page.path}`, fr: `${siteUrl}${page.path}?lang=fr` },
+        };
+        return [
+            { path: page.path, priority, alternates },
+            { path: `${page.path}?lang=fr`, priority, alternates },
+        ];
+    });
     const cardGuideRoutes = cardGuideOrder.map((platform) => ({
         path: `/cards/${platform}`,
         priority: 0.65,
@@ -33,10 +39,11 @@ export default function sitemap() {
         priority: 0.85,
     }));
 
-    return [...routes, ...productRoutes, ...commerceRoutes, ...billPaymentProviderRoutes, ...cardGuideRoutes].map(({ path, priority }) => ({
+    return [...routes, ...productRoutes, ...commerceRoutes, ...billPaymentProviderRoutes, ...cardGuideRoutes].map(({ path, priority, alternates }) => ({
         url: `${siteUrl}${path}`,
         lastModified,
         changeFrequency: path === '/' ? 'weekly' : 'monthly',
         priority,
+        ...(alternates ? { alternates } : {}),
     }));
 }

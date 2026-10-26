@@ -268,10 +268,16 @@ export default function Home() {
                     </div>
                     <div className="card mt-6 md:mt-0">
                         <h3 className="text-xl font-semibold">{t('section.businessTitle')}</h3>
+                        <p className="text-gray-700 mt-3">{t('section.businessAudience')}</p>
                         <p className="text-gray-600 mt-2">{t('section.businessBody')}</p>
                         <a href={businessAppUrl} className="btn btn-primary mt-6 w-fit">
                             {t('common.cta.useApi')}
                         </a>
+                        <div className="mt-4">
+                            <Link href={`/business?lang=${lang}`} className="text-sm text-fondeka-green underline">
+                                {t('common.cta.explorePaymentApi')}
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </section>

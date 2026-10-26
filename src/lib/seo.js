@@ -1,7 +1,15 @@
+import { paymentApiContent, paymentApiLanguage } from './paymentApiContent';
+
 export const siteUrl = 'https://fondeka.com';
 
 export const seoKeywords = [
   'Fondeka',
+  'payment API for small businesses',
+  'payment API for startups',
+  'payment API for students',
+  'payment gateway alternative Africa',
+  'API de paiement RDC',
+  'API de paiement startup sans documents',
   'neobank Congo',
   'neobank DR Congo',
   'neobank RDC',
@@ -309,11 +317,13 @@ export const serviceSeo = {
   },
   business: {
     path: '/business',
-    name: 'Business API',
-    title: 'Fintech Payment API for Congo and Africa | Fondeka Business',
-    description:
-      'Fondeka Business API helps merchants and fintechs collect and pay out with Mobile Money, cards, bank transfers, crypto, payment links, and QR payments.',
-    keywords: ['payment API Africa', 'fintech API Congo', 'Mobile Money API Congo', 'collections payouts Africa'],
+    ...paymentApiContent.en.metadata,
+    locales: { fr: paymentApiContent.fr.metadata },
+  },
+  docs: {
+    path: '/docs',
+    ...paymentApiContent.en.docsMetadata,
+    locales: { fr: paymentApiContent.fr.docsMetadata },
   },
   collect: {
     path: '/collect',
@@ -370,22 +380,30 @@ export const serviceSeo = {
   },
 };
 
-export function createMetadata(slug) {
-  const page = serviceSeo[slug];
-  const url = `${siteUrl}${page.path}`;
+export function createMetadata(slug, language = 'en') {
+  const lang = paymentApiLanguage(language);
+  const base = serviceSeo[slug];
+  const page = { ...base, ...base.locales?.[lang] };
+  const path = `${page.path}${base.locales && lang === 'fr' ? '?lang=fr' : ''}`;
+  const url = `${siteUrl}${path}`;
 
   return {
     title: page.title,
     description: page.description,
-    keywords: [...seoKeywords, ...page.keywords],
-    alternates: { canonical: page.path },
+    keywords: base.locales ? page.keywords : [...seoKeywords, ...page.keywords],
+    alternates: {
+      canonical: path,
+      ...(base.locales ? {
+        languages: { en: page.path, fr: `${page.path}?lang=fr`, 'x-default': page.path },
+      } : {}),
+    },
     openGraph: {
       title: page.title,
       description: page.description,
       url,
       siteName: 'Fondeka',
       images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: `${page.name} by Fondeka` }],
-      locale: 'en_US',
+      locale: lang === 'fr' ? 'fr_CD' : 'en_US',
       type: 'website',
     },
     twitter: {
@@ -397,9 +415,11 @@ export function createMetadata(slug) {
   };
 }
 
-export function createServiceSchema(slug) {
-  const page = serviceSeo[slug];
-  const url = `${siteUrl}${page.path}`;
+export function createServiceSchema(slug, language = 'en') {
+  const lang = paymentApiLanguage(language);
+  const base = serviceSeo[slug];
+  const page = { ...base, ...base.locales?.[lang] };
+  const url = `${siteUrl}${page.path}${base.locales && lang === 'fr' ? '?lang=fr' : ''}`;
 
   return {
     '@context': 'https://schema.org',
@@ -408,6 +428,12 @@ export function createServiceSchema(slug) {
     serviceType: page.name,
     url,
     description: page.description,
+    ...(slug === 'business' ? {
+      serviceType: lang === 'fr' ? 'API REST de paiement' : 'REST Payment API',
+      audience: paymentApiContent[lang].audiences.map((item) => ({
+        '@type': 'Audience', audienceType: item.title,
+      })),
+    } : {}),
     areaServed: [
       { '@type': 'Country', name: 'Democratic Republic of the Congo' },
       { '@type': 'Place', name: 'Africa' },
@@ -644,7 +670,7 @@ export const organizationSchema = {
   url: siteUrl,
   logo: `${siteUrl}/logo-icon.svg`,
   description:
-    'Fondeka is a digital bank and fintech platform built in DR Congo for Africa, offering payments, savings, cards, online store creation, POS tools, and business services.',
+    'Fondeka is a digital bank and fintech platform built in DR Congo for Africa, offering payments, savings, cards, online stores, POS tools and a payment API for small businesses, students and startups.',
   slogan: 'The digital bank and neobank for everyday financial services',
   areaServed: [
     { '@type': 'Country', name: 'Democratic Republic of the Congo' },

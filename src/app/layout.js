@@ -6,23 +6,24 @@ import GoogleTag from '../components/GoogleTag';
 import LinkedInInsightTag from '../components/LinkedInInsightTag';
 import MetaPixel from '../components/MetaPixel';
 import MobileInstallBar from '../components/MobileInstallBar';
+import JsonLd from '../components/JsonLd';
 import { I18nProvider } from '../lib/i18n';
 import { organizationSchema, seoKeywords } from '../lib/seo';
 import { Suspense } from 'react';
 
 export const metadata = {
     metadataBase: new URL('https://fondeka.com'),
-    title: 'Fondeka | Digital Bank, Neobank and Fintech in Congo and Africa',
+    title: 'Fondeka | Digital Bank and Payment API for Congo and Africa',
     description:
-        'Fondeka is a digital bank and fintech platform built in DR Congo for Africa, offering payments, savings, cards, online store creation, POS tools and business services.',
+        'Fondeka combines digital banking with a payment API for small businesses, students and early-stage startups in DR Congo and supported African markets.',
     keywords: seoKeywords,
     alternates: {
         canonical: '/',
     },
     openGraph: {
-        title: 'Fondeka | Digital Bank, Neobank and Fintech in Congo and Africa',
+        title: 'Fondeka | Digital Bank and Payment API for Congo and Africa',
         description:
-            'Instant loans, savings, Likelemba, AVEC, virtual cards, prepaid cards, gift cards, bill payments, airtime, crypto, payment links, and business APIs for Congo and Africa.',
+            'Digital banking, cards, savings and a payment API for small businesses, students and startups building with Mobile Money and crypto in supported African markets.',
         url: 'https://fondeka.com',
         siteName: 'Fondeka',
         images: [
@@ -38,9 +39,9 @@ export const metadata = {
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Fondeka | Digital Bank, Neobank and Fintech in Congo and Africa',
+        title: 'Fondeka | Digital Bank and Payment API for Congo and Africa',
         description:
-            'A DR Congo-born digital bank and neobank for loans, savings, virtual cards, prepaid cards, gift cards, bill payments, airtime, crypto, payment links, and business APIs across Africa.',
+            'Digital banking, cards, savings and a payment API for small businesses, students and startups building with Mobile Money and crypto in supported African markets.',
         images: ['/og-image.jpg'],
     },
 };
@@ -64,9 +65,7 @@ export default function RootLayout({ children }) {
                         <MobileInstallBar />
                     </I18nProvider>
                 </Suspense>
-                <script type="application/ld+json" suppressHydrationWarning>
-                    {JSON.stringify(organizationSchema)}
-                </script>
+                <JsonLd data={organizationSchema} />
                 <Analytics />
             </body>
         </html>

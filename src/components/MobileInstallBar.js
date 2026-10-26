@@ -30,9 +30,10 @@ export default function MobileInstallBar() {
             }
 
             const rect = heroCta.getBoundingClientRect();
-            // Show the dock once the hero action has scrolled above the sticky header.
-            const headerBottom = document.querySelector('header')?.getBoundingClientRect().bottom || 0;
-            setShowBar(rect.bottom <= headerBottom);
+            const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+            // Use the viewport: the header can scroll away with its overflow container.
+            const heroIsVisible = rect.bottom > 0 && rect.top < viewportHeight;
+            setShowBar(!heroIsVisible);
         };
 
         const scheduleSync = () => {
