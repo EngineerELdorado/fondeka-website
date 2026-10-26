@@ -12,9 +12,15 @@ This repo uses the App Router and `/src` directory. JS only (no TS).
 ## Temporary mobile campaign redirect
 
 Enabled by default: phone visitors to marketing pages are immediately redirected
-to the Fondeka App Store listing on iOS or Google Play listing on Android, before
-the page renders. No prompt or click is required. Android redirects forward URL
-query parameters in Google Play's `referrer` parameter for campaign attribution.
+to the Fondeka App Store listing on iOS or a lightweight native Google Play handoff
+on Android, before the marketing page renders. No website prompt or click is
+required. The Android handoff attempts to open the Google Play app directly to
+Fondeka, with the web listing as an automatic fallback after 1.2 seconds if the
+browser blocks the app launch. Browsers and operating systems may still require
+their own confirmation; a native launch cannot be guaranteed without a tap.
+Android redirects forward URL query parameters in Google Play's `referrer`
+parameter for campaign attribution. Android install buttons also use a Google
+Play intent with the web listing as its browser fallback.
 
 Desktop visitors, tablets, and known crawlers receive the website. `/privacy`,
 `/end-user-agreement`, `/compliance`, `/support`, and `/open` (including subpaths)

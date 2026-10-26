@@ -1,7 +1,8 @@
 'use client';
 import { useEffect, useState, useRef } from 'react';
 import { useI18n } from '@/lib/i18n';
-import { appStoreUrl, getDevicePlatform, playUrl } from '@/lib/appStores';
+import { useSearchParams } from 'next/navigation';
+import { appStoreUrl, buildPlayStoreUrls, getDevicePlatform, openPlayStore, playUrl } from '@/lib/appStores';
 
 const PlayIcon = () => (
     <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
@@ -25,6 +26,7 @@ export default function DownloadAppButton({
     trackingId = '',
 }) {
     const { t } = useI18n();
+    const searchParams = useSearchParams();
 
     const [platform, setPlatform] = useState('other');
     const [open, setOpen] = useState(false);
@@ -53,7 +55,7 @@ export default function DownloadAppButton({
     if (platform === 'android' || platform === 'ios') {
         const isAndroid = platform === 'android';
         const Icon = isAndroid ? PlayIcon : AppleIcon;
-        const mobileDownloadUrl = isAndroid ? playUrl : appStoreUrl;
+        const mobileDownloadUrl = isAndroid ? buildPlayStoreUrls(searchParams).intentUrl : appStoreUrl;
         const defaultLabel = isAndroid
             ? (t('cta.downloadAndroid') || 'Download for Android')
             : (t('cta.downloadIphone') || 'Download for iPhone');
@@ -69,11 +71,15 @@ export default function DownloadAppButton({
             <div className={className}>
                 <a
                     href={mobileDownloadUrl}
-                    target="_blank"
+                    target={isAndroid ? undefined : '_blank'}
                     rel="noopener noreferrer"
                     className={buttonClassName}
                     aria-label={mobileDownloadLabel}
                     data-download-button={trackingId || undefined}
+                    onClick={isAndroid ? (event) => {
+                        event.preventDefault();
+                        openPlayStore(searchParams);
+                    } : undefined}
                 >
                     <Icon />
                     <span>{mobileDownloadLabel}</span>

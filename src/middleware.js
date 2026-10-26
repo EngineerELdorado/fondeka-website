@@ -1,5 +1,5 @@
 import { NextResponse, userAgent } from 'next/server';
-import { appStoreUrl, playUrl } from './lib/appStores';
+import { appStoreUrl } from './lib/appStores';
 
 // Keep app links and essential legal/support pages directly accessible.
 const directAccessRoutes = new Set([
@@ -26,9 +26,8 @@ export function middleware(request) {
 
     let destination;
     if (os.name === 'Android') {
-        destination = new URL(playUrl);
-        const referrer = request.nextUrl.searchParams.toString();
-        if (referrer) destination.searchParams.set('referrer', referrer);
+        destination = new URL('/install/android', request.url);
+        destination.search = request.nextUrl.search;
     } else if (os.name === 'iOS') {
         destination = new URL(appStoreUrl);
     } else {
@@ -43,5 +42,5 @@ export function middleware(request) {
 }
 
 export const config = {
-    matcher: ['/((?!api(?:/|$)|_next(?:/|$)|_vercel(?:/|$)|apple-app-site-association(?:/|$)|.*\\.).*)'],
+    matcher: ['/((?!api(?:/|$)|_next(?:/|$)|_vercel(?:/|$)|install/android(?:/|$)|apple-app-site-association(?:/|$)|.*\\.).*)'],
 };
