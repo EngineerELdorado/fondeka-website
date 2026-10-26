@@ -68,7 +68,7 @@ export default function MobileInstallBar() {
                 <DownloadAppButton
                     variant="sticky"
                     className="w-full"
-                    ctaLabel={t('download.sticky.button')}
+                    ctaLabel={t('download.install.button')}
                     trackingId="sticky-install-cta"
                 />
             </div>

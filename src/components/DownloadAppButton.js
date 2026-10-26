@@ -5,12 +5,7 @@ import { useSearchParams } from 'next/navigation';
 import { appStoreUrl, buildPlayStoreUrls, getDevicePlatform, openPlayStore, playUrl } from '@/lib/appStores';
 
 const PlayIcon = () => (
-    <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true">
-        <path fill="#3DDC84" d="M1.5 3.5v17l10-8.5z"/>
-        <path fill="#0F9D58" d="M21 12L11.5 3.5v17z"/>
-        <path fill="#FFCD40" d="M21 12l-4.5 2.9L11.5 12l4.9-2.9z"/>
-        <path fill="#4285F4" d="M1.5 3.5l10 8.5-2 1.5-8-7z"/>
-    </svg>
+    <img src="/platforms/google-play.svg" width="16" height="16" alt="" aria-hidden="true" />
 );
 
 const AppleIcon = () => (
@@ -60,8 +55,9 @@ export default function DownloadAppButton({
         const defaultLabel = isAndroid
             ? (t('cta.downloadAndroid') || 'Download for Android')
             : (t('cta.downloadIphone') || 'Download for iPhone');
-        const mobileDownloadLabel = ctaLabel || defaultLabel;
+        const mobileDownloadLabel = isInstallCta ? t('download.install.button') : ctaLabel || defaultLabel;
         const storeName = isAndroid ? 'Google Play' : 'App Store';
+        const storeLabel = t(isAndroid ? 'download.install.googlePlay' : 'download.install.appStore');
 
         const buttonClassName = isInstallCta
             ? `app-install-cta ${isSticky ? 'mobile-install-button' : 'mobile-hero-install-button'}`
@@ -86,7 +82,7 @@ export default function DownloadAppButton({
                             <span className="app-install-cta-icon"><Icon /></span>
                             <span className="app-install-cta-copy">
                                 <span className="app-install-cta-label">{mobileDownloadLabel}</span>
-                                <span className="app-install-cta-store">{storeName}</span>
+                                <span className="app-install-cta-store">{storeLabel}</span>
                             </span>
                             <span className="app-install-cta-arrow" aria-hidden="true">
                                 <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="2.75" strokeLinecap="round" strokeLinejoin="round">
