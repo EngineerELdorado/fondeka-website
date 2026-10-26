@@ -9,6 +9,28 @@ npm run dev
 ```
 This repo uses the App Router and `/src` directory. JS only (no TS).
 
+## Temporary mobile campaign redirect
+
+Enabled by default: phone visitors to marketing pages are immediately redirected
+to the Fondeka App Store listing on iOS or Google Play listing on Android, before
+the page renders. No prompt or click is required. Android redirects forward URL
+query parameters in Google Play's `referrer` parameter for campaign attribution.
+
+Desktop visitors, tablets, and known crawlers receive the website. `/privacy`,
+`/end-user-agreement`, `/compliance`, `/support`, and `/open` (including subpaths)
+remain directly accessible, as do static files and app association endpoints.
+Mobile marketing page-view pixels do not run because the redirect happens before
+the page loads.
+
+To end the campaign, set this server environment variable and redeploy:
+
+```bash
+MOBILE_STORE_REDIRECT_ENABLED=false
+```
+
+Unset it or set it to `true` and redeploy to enable redirects again. Redirects use
+temporary HTTP 307 responses with caching disabled.
+
 ## Google Tag
 Set `NEXT_PUBLIC_GOOGLE_TAG_IDS` to your Google tag IDs before building or deploying the site.
 
