@@ -51,6 +51,7 @@ export default function DownloadAppButton({
 
     const isHero = variant === 'hero';
     const isSticky = variant === 'sticky';
+    const isInstallCta = isHero || isSticky;
 
     if (platform === 'android' || platform === 'ios') {
         const isAndroid = platform === 'android';
@@ -60,12 +61,11 @@ export default function DownloadAppButton({
             ? (t('cta.downloadAndroid') || 'Download for Android')
             : (t('cta.downloadIphone') || 'Download for iPhone');
         const mobileDownloadLabel = ctaLabel || defaultLabel;
+        const storeName = isAndroid ? 'Google Play' : 'App Store';
 
-        const buttonClassName = isSticky
-            ? 'btn btn-primary btn-3d mobile-install-button'
-            : isHero
-              ? 'btn btn-primary btn-3d hero-download-pulse w-full sm:w-auto min-h-[60px] px-5 text-base shadow-[0_14px_30px_rgba(79,128,92,0.22)]'
-              : 'btn btn-primary btn-3d inline-flex items-center gap-2';
+        const buttonClassName = isInstallCta
+            ? `app-install-cta ${isSticky ? 'mobile-install-button' : 'mobile-hero-install-button'}`
+            : 'btn btn-primary btn-3d inline-flex items-center gap-2';
 
         return (
             <div className={className}>
@@ -74,15 +74,29 @@ export default function DownloadAppButton({
                     target={isAndroid ? undefined : '_blank'}
                     rel="noopener noreferrer"
                     className={buttonClassName}
-                    aria-label={mobileDownloadLabel}
+                    aria-label={isInstallCta ? `${mobileDownloadLabel}, ${storeName}` : mobileDownloadLabel}
                     data-download-button={trackingId || undefined}
                     onClick={isAndroid ? (event) => {
                         event.preventDefault();
                         openPlayStore(searchParams);
                     } : undefined}
                 >
-                    <Icon />
-                    <span>{mobileDownloadLabel}</span>
+                    {isInstallCta ? (
+                        <>
+                            <span className="app-install-cta-icon"><Icon /></span>
+                            <span className="app-install-cta-copy">
+                                <span className="app-install-cta-label">{mobileDownloadLabel}</span>
+                                <span className="app-install-cta-store">{storeName}</span>
+                            </span>
+                            <span className="app-install-cta-arrow" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M5 12h14m-6-6 6 6-6 6" />
+                                </svg>
+                            </span>
+                        </>
+                    ) : (
+                        <><Icon /><span>{mobileDownloadLabel}</span></>
+                    )}
                 </a>
             </div>
         );

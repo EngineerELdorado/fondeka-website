@@ -114,20 +114,76 @@ html, body { overflow-x: hidden; }
   animation: mobile-install-enter 280ms ease-out both;
 }
 
-.mobile-install-button {
-  @apply min-h-[60px] w-full gap-3 rounded-2xl border border-fondeka-mint px-4 text-base font-bold whitespace-nowrap;
-  animation: hero-download-pulse 2.4s ease-in-out 2;
+.app-install-cta {
+  @apply relative isolate flex min-h-[76px] w-full items-center gap-3 overflow-hidden rounded-3xl bg-fondeka-accent px-4 py-3 text-fondeka-dark;
+  text-decoration: none;
+  box-shadow: 0 5px 0 theme('colors.fondeka.green'), 0 16px 32px rgba(79,128,92,0.24), inset 0 1px 0 rgba(255,255,255,0.4);
+  transition: transform 160ms ease, box-shadow 160ms ease;
 }
 
-.mobile-install-button svg {
-  width: 22px;
-  height: 22px;
-  flex-shrink: 0;
+.app-install-cta::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.32) 48%, transparent 66%);
+  transform: translateX(-160%);
+  animation: app-install-sheen 2.2s ease-in-out 2;
 }
 
-.mobile-install-button:focus-visible {
-  outline: 3px solid theme('colors.fondeka.mint');
+.app-install-cta:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 theme('colors.fondeka.green'), 0 8px 20px rgba(79,128,92,0.2);
+}
+
+.app-install-cta:focus-visible {
+  outline: 3px solid theme('colors.fondeka.green');
   outline-offset: 4px;
+}
+
+.mobile-install-shell .app-install-cta:focus-visible {
+  outline-color: theme('colors.fondeka.light');
+}
+
+.mobile-hero-install-button {
+  max-width: 400px;
+}
+
+.app-install-cta-icon {
+  @apply flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-white;
+  box-shadow: inset 0 0 0 1px rgba(13,31,20,0.06);
+}
+
+.app-install-cta-icon svg {
+  width: 27px;
+  height: 27px;
+}
+
+.app-install-cta-copy {
+  @apply min-w-0 flex-1 text-left;
+}
+
+.app-install-cta-label {
+  @apply block text-base font-extrabold leading-tight;
+}
+
+.app-install-cta-store {
+  @apply mt-1 block text-xs font-semibold leading-tight;
+}
+
+.app-install-cta-arrow {
+  @apply flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-fondeka-dark text-white;
+}
+
+.app-install-cta-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+
+@keyframes app-install-sheen {
+  0%, 20% { transform: translateX(-160%); }
+  75%, 100% { transform: translateX(160%); }
 }
 
 @keyframes mobile-install-enter {
@@ -137,7 +193,7 @@ html, body { overflow-x: hidden; }
 
 @media (max-width: 767px) {
   body:has(.mobile-install-bar) {
-    padding-bottom: calc(12rem + env(safe-area-inset-bottom, 0));
+    padding-bottom: calc(14rem + env(safe-area-inset-bottom, 0));
   }
 }
 
@@ -158,8 +214,11 @@ html, body { overflow-x: hidden; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-download-pulse, .mobile-install-button, .mobile-install-shell {
+  .hero-download-pulse, .mobile-install-shell, .app-install-cta::after {
     animation: none !important;
+  }
+  .app-install-cta {
+    transition: none;
   }
 }
 
