@@ -14,6 +14,75 @@ const AppleIcon = () => (
     </svg>
 );
 
+function RunnerRotation({ animated, values }) {
+    return animated ? (
+        <animateTransform
+            attributeName="transform"
+            type="rotate"
+            values={values}
+            dur="800ms"
+            repeatCount="indefinite"
+            calcMode="spline"
+            keyTimes="0;0.5;1"
+            keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+        />
+    ) : null;
+}
+
+function RunnerLeg({ animated, front }) {
+    const hip = front ? '-44 22 27;32 22 27;-44 22 27' : '32 22 27;-44 22 27;32 22 27';
+    const knee = front ? '12 22 35;68 22 35;12 22 35' : '68 22 35;12 22 35;68 22 35';
+    return (
+        <g transform={`rotate(${hip.split(';')[0]})`} opacity={front ? 1 : 0.75}>
+            <RunnerRotation animated={animated} values={hip} />
+            <path d="M22 27v8" stroke="#0D1F14" strokeWidth="5" />
+            <g transform={`rotate(${knee.split(';')[0]})`}>
+                <RunnerRotation animated={animated} values={knee} />
+                <path d="M22 35v8" stroke="#C98E64" strokeWidth="3.4" />
+                <path d="m21 43 5 1" stroke="currentColor" strokeWidth="3.2" />
+            </g>
+        </g>
+    );
+}
+
+function RunnerArm({ animated, front }) {
+    const swing = front ? '48 28 17;-48 28 17;48 28 17' : '-48 28 17;48 28 17;-48 28 17';
+    return (
+        <g transform={`rotate(${swing.split(';')[0]})`} opacity={front ? 1 : 0.75}>
+            <RunnerRotation animated={animated} values={swing} />
+            <path d="M28 17v6l6-3" stroke="#C98E64" strokeWidth="3.2" />
+            <path d="M28 17v2" stroke="currentColor" strokeWidth="4.5" />
+        </g>
+    );
+}
+
+function RunningManIcon({ animated = false }) {
+    return (
+        <svg
+            viewBox="0 0 48 48"
+            className={animated ? 'app-install-runner-motion' : 'app-install-runner-still'}
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            focusable="false"
+        >
+            <g>
+                {animated && <animateTransform attributeName="transform" type="translate" values="0 0;0 -1;0 0;0 -1;0 0" dur="800ms" repeatCount="indefinite" />}
+                <RunnerArm animated={animated} front={false} />
+                <RunnerLeg animated={animated} front={false} />
+                <RunnerLeg animated={animated} front />
+                <path d="m28 11 3 2-3 4-3-2z" fill="#C98E64" />
+                <path d="M25 15q4-3 6 2l-5 11-8-2z" fill="currentColor" />
+                <RunnerArm animated={animated} front />
+                <circle cx="30" cy="8" r="4.3" fill="#C98E64" />
+                <path d="m33 7 2.5 2-2.5.5z" fill="#C98E64" />
+                <path d="M25.8 8q-1-5 4.4-4.6 4 .2 4.1 3l-3.2-.7q-3-.4-5.3 2.3" fill="#0D1F14" />
+                <circle cx="32.4" cy="7.6" r="0.45" fill="#0D1F14" />
+            </g>
+        </svg>
+    );
+}
+
 export default function DownloadAppButton({
     className = '',
     variant = 'default',
@@ -84,11 +153,9 @@ export default function DownloadAppButton({
                                 <span className="app-install-cta-label">{mobileDownloadLabel}</span>
                                 <span className="app-install-cta-store">{storeLabel}</span>
                             </span>
-                            <span className="app-install-cta-arrow" aria-hidden="true">
-                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="2.75" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="m7 7 9 9-9 9" opacity="0.55" />
-                                    <path d="m17 7 9 9-9 9" />
-                                </svg>
+                            <span className="app-install-cta-runner" aria-hidden="true">
+                                <RunningManIcon animated />
+                                <RunningManIcon />
                             </span>
                         </>
                     ) : (

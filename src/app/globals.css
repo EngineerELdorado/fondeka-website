@@ -115,29 +115,17 @@ html, body { overflow-x: hidden; }
 }
 
 .app-install-cta {
-  @apply relative isolate flex min-h-[76px] w-full items-center gap-3 overflow-hidden rounded-3xl bg-fondeka-accent px-4 py-3 text-white;
-  background-image: linear-gradient(rgba(13,31,20,0.36), rgba(13,31,20,0.36));
+  @apply relative isolate flex min-h-[76px] w-full items-center gap-3 overflow-hidden rounded-3xl bg-fondeka-green-warm px-4 py-3 text-white;
   text-decoration: none;
-  box-shadow: 0 5px 0 theme('colors.fondeka.green'), 0 16px 32px rgba(79,128,92,0.24), inset 0 1px 0 rgba(255,255,255,0.4);
+  box-shadow: 0 6px 14px rgba(13,31,20,0.12);
   transition: transform 160ms ease, box-shadow 160ms ease;
-  animation: app-install-pulse 2.4s ease-in-out infinite;
-}
-
-.app-install-cta::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background: linear-gradient(110deg, transparent 30%, rgba(255,255,255,0.08) 48%, transparent 66%);
-  transform: translateX(-160%);
-  animation: app-install-sheen 6s ease-in-out infinite;
+  animation: app-install-pulse 3.2s ease-in-out infinite;
 }
 
 .app-install-cta:active {
   animation: none;
-  transform: translateY(3px);
-  box-shadow: 0 2px 0 theme('colors.fondeka.green'), 0 8px 20px rgba(79,128,92,0.2);
+  transform: translateY(2px);
+  box-shadow: 0 2px 8px rgba(13,31,20,0.12);
 }
 
 .app-install-cta:focus-visible {
@@ -178,39 +166,43 @@ html, body { overflow-x: hidden; }
   @apply mt-1 block text-xs font-semibold leading-tight;
 }
 
-.app-install-cta-arrow {
-  @apply flex h-8 w-8 shrink-0 items-center justify-center text-white;
-  animation: app-install-chevron 2.4s ease-in-out infinite;
+.app-install-cta-runner {
+  @apply flex h-11 w-11 shrink-0 items-center justify-center text-white;
+  animation: app-install-run 1.6s ease-in-out infinite;
 }
 
-.app-install-cta-arrow svg {
-  width: 32px;
-  height: 32px;
+.app-install-cta-runner svg {
+  width: 40px;
+  height: 40px;
+  overflow: visible;
 }
 
-.app-install-cta:active .app-install-cta-arrow,
-.app-install-cta:focus-visible .app-install-cta-arrow {
+.app-install-runner-motion {
+  display: block;
+}
+
+.app-install-runner-still {
+  display: none;
+}
+
+.app-install-cta:active .app-install-cta-runner,
+.app-install-cta:focus-visible .app-install-cta-runner {
   animation-play-state: paused;
 }
 
-@keyframes app-install-chevron {
-  0%, 60%, 100% { transform: translateX(0); }
-  30% { transform: translateX(3px); }
-}
-
-@keyframes app-install-sheen {
-  0%, 55% { transform: translateX(-160%); }
-  85%, 100% { transform: translateX(160%); }
+@keyframes app-install-run {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(3px); }
 }
 
 @keyframes app-install-pulse {
   0%, 100% {
     transform: scale(1);
-    box-shadow: 0 5px 0 theme('colors.fondeka.green'), 0 16px 32px rgba(79,128,92,0.24), inset 0 1px 0 rgba(255,255,255,0.4);
+    box-shadow: 0 6px 14px rgba(13,31,20,0.12);
   }
   50% {
-    transform: scale(1.025);
-    box-shadow: 0 5px 0 theme('colors.fondeka.green'), 0 0 0 6px rgba(31,173,102,0.12), 0 20px 40px rgba(31,173,102,0.32), inset 0 1px 0 rgba(255,255,255,0.4);
+    transform: scale(1.015);
+    box-shadow: 0 9px 18px rgba(13,31,20,0.15);
   }
 }
 
@@ -242,11 +234,17 @@ html, body { overflow-x: hidden; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-download-pulse, .mobile-install-shell, .app-install-cta, .app-install-cta::after, .app-install-cta-arrow {
+  .hero-download-pulse, .mobile-install-shell, .app-install-cta, .app-install-cta-runner {
     animation: none !important;
   }
   .app-install-cta {
     transition: none;
+  }
+  .app-install-runner-motion {
+    display: none;
+  }
+  .app-install-runner-still {
+    display: block;
   }
 }
 
