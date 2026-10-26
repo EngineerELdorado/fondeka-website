@@ -89,8 +89,9 @@ export default function DownloadAppButton({
                                 <span className="app-install-cta-store">{storeName}</span>
                             </span>
                             <span className="app-install-cta-arrow" aria-hidden="true">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                    <path d="M5 12h14m-6-6 6 6-6 6" />
+                                <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" strokeWidth="2.75" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="m7 7 9 9-9 9" opacity="0.55" />
+                                    <path d="m17 7 9 9-9 9" />
                                 </svg>
                             </span>
                         </>

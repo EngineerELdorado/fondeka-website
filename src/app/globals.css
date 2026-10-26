@@ -177,12 +177,23 @@ html, body { overflow-x: hidden; }
 }
 
 .app-install-cta-arrow {
-  @apply flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-fondeka-dark text-white;
+  @apply flex h-8 w-8 shrink-0 items-center justify-center text-white;
+  animation: app-install-chevron 2.4s ease-in-out infinite;
 }
 
 .app-install-cta-arrow svg {
-  width: 18px;
-  height: 18px;
+  width: 32px;
+  height: 32px;
+}
+
+.app-install-cta:active .app-install-cta-arrow,
+.app-install-cta:focus-visible .app-install-cta-arrow {
+  animation-play-state: paused;
+}
+
+@keyframes app-install-chevron {
+  0%, 60%, 100% { transform: translateX(0); }
+  30% { transform: translateX(3px); }
 }
 
 @keyframes app-install-sheen {
@@ -229,7 +240,7 @@ html, body { overflow-x: hidden; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-download-pulse, .mobile-install-shell, .app-install-cta, .app-install-cta::after {
+  .hero-download-pulse, .mobile-install-shell, .app-install-cta, .app-install-cta::after, .app-install-cta-arrow {
     animation: none !important;
   }
   .app-install-cta {
