@@ -5,6 +5,7 @@ import { useI18n } from '../lib/i18n';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import DownloadAppButton from "@/components/DownloadAppButton";
 import { businessAppUrl } from '@/lib/business';
+import { trackAppDownloadClick } from '@/lib/metaPixel';
 
 export default function Header(){
   const [open, setOpen] = useState(false);
@@ -35,6 +36,7 @@ export default function Header(){
 
   const goDownload = (e) => {
     e.preventDefault();
+    trackAppDownloadClick({ action: 'view_download_section', location: 'header-menu-download-cta' });
     const onHome = pathname === '/' || pathname === '';
     setOpen(false);
     if (onHome) {
@@ -120,7 +122,7 @@ export default function Header(){
               )}
             </div>
 
-            <DownloadAppButton />
+            <DownloadAppButton trackingId="header-download-cta" />
           </nav>
 
           <div className="md:hidden flex items-center gap-2">

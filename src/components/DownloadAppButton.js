@@ -3,6 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import { useI18n } from '@/lib/i18n';
 import { useSearchParams } from 'next/navigation';
 import { appStoreUrl, buildPlayStoreUrls, getDevicePlatform, openPlayStore, playUrl } from '@/lib/appStores';
+import { trackAppDownloadClick } from '@/lib/metaPixel';
 
 const PlayIcon = () => (
     <img src="/platforms/google-play.svg" width="16" height="16" alt="" aria-hidden="true" />
@@ -116,6 +117,12 @@ export default function DownloadAppButton({
     const isHero = variant === 'hero';
     const isSticky = variant === 'sticky';
     const isInstallCta = isHero || isSticky;
+    const ctaLocation = trackingId || `${variant}-download-cta`;
+
+    const onStoreClick = (store) => {
+        trackAppDownloadClick({ store, location: ctaLocation });
+        setOpen(false);
+    };
 
     if (platform === 'android' || platform === 'ios') {
         const isAndroid = platform === 'android';
@@ -141,10 +148,13 @@ export default function DownloadAppButton({
                     className={buttonClassName}
                     aria-label={isInstallCta ? `${mobileDownloadLabel}, ${storeName}` : mobileDownloadLabel}
                     data-download-button={trackingId || undefined}
-                    onClick={isAndroid ? (event) => {
-                        event.preventDefault();
-                        openPlayStore(searchParams);
-                    } : undefined}
+                    onClick={(event) => {
+                        onStoreClick(isAndroid ? 'google_play' : 'app_store');
+                        if (isAndroid) {
+                            event.preventDefault();
+                            openPlayStore(searchParams);
+                        }
+                    }}
                 >
                     {isInstallCta ? (
                         <>
@@ -169,7 +179,13 @@ export default function DownloadAppButton({
     return (
         <div className={className + ' relative'} ref={menuRef}>
             <button
-                onClick={(e)=>{ e.stopPropagation(); setOpen(v=>!v); }}
+                onClick={(e) => {
+                    e.stopPropagation();
+                    if (!open) {
+                        trackAppDownloadClick({ action: 'open_options', location: ctaLocation });
+                    }
+                    setOpen(v => !v);
+                }}
                 className={`btn btn-primary btn-3d inline-flex items-center gap-2 ${isHero ? 'hero-download-pulse min-h-[60px] px-5 text-base shadow-[0_14px_30px_rgba(79,128,92,0.22)]' : ''}`}
                 aria-haspopup="dialog"
                 aria-expanded={open}
@@ -200,7 +216,7 @@ export default function DownloadAppButton({
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-center group"
-                        onClick={()=>setOpen(false)}
+                        onClick={() => onStoreClick('google_play')}
                     >
                         <img
                             src={qrPlay}
@@ -219,7 +235,7 @@ export default function DownloadAppButton({
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-center group"
-                        onClick={()=>setOpen(false)}
+                        onClick={() => onStoreClick('app_store')}
                     >
                         <img
                             src={qrApple}
@@ -237,7 +253,7 @@ export default function DownloadAppButton({
                         target="_blank"
                         rel="noopener noreferrer"
                         className="col-span-2 btn btn-ghost w-full text-center"
-                        onClick={()=>setOpen(false)}
+                        onClick={() => onStoreClick('google_play')}
                     >
                         {t('download.desktop.cta') || 'Open store page'}
                     </a>

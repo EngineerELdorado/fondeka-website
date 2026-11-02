@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
+import { trackAppDownloadClick } from '@/lib/metaPixel';
 
 const APP_SCHEME = 'fondeka';
 const ANDROID_PACKAGE = 'com.fondeka.app';
@@ -157,6 +158,7 @@ export default function OpenLandingClient() {
                     </a>
                     <a
                         href={deepLinkConfig.appStoreUrl}
+                        onClick={() => trackAppDownloadClick({ store: 'app_store', location: 'smart-open-install-cta' })}
                         className="btn btn-ghost w-full"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -165,6 +167,7 @@ export default function OpenLandingClient() {
                     </a>
                     <a
                         href={deepLinkConfig.playStoreUrl}
+                        onClick={() => trackAppDownloadClick({ store: 'google_play', location: 'smart-open-install-cta' })}
                         className="btn btn-ghost w-full"
                         target="_blank"
                         rel="noopener noreferrer"

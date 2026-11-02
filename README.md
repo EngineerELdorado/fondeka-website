@@ -89,6 +89,22 @@ NEXT_PUBLIC_META_PIXEL_IDS=1661830491640331,1338589508117186
 Use a comma-separated list to keep multiple Meta pixels active on the same site.
 Duplicate IDs are initialized only once.
 
+Download and Install CTAs send the custom Meta event `AppDownloadClick` to all
+initialized pixels. Parameters include `cta_location`, `platform` (`ios`,
+`android`, or `other`), and `page_path` without query parameters. The `action`
+parameter distinguishes these interactions:
+
+| Action | Meaning | Store parameter |
+| --- | --- | --- |
+| `open_store` | Visitor clicks a store link, including mobile, desktop picker, and `/open` install links | `app_store` or `google_play` |
+| `open_options` | Visitor opens the desktop download picker | Omitted |
+| `view_download_section` | Visitor clicks Download in the mobile navigation menu | Omitted |
+
+Use `action=open_store` to measure store handoffs separately from other CTA
+interactions. Click events run before store navigation, without delaying it.
+Automatic redirects and fallbacks do not emit click events. A click measures
+download intent, not a completed app installation.
+
 ## Customize
 - Edit `src/lib/brand.js` for colors and strings.
 - Sections live in `src/app/page.js` and `src/components/*`.

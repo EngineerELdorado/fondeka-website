@@ -18,7 +18,7 @@ export default function CTA(){
           </div>
         </div>
         <div className="flex gap-3 md:justify-end">
-          <DownloadAppButton variant="hero" ctaLabel={t('download.section.cta') || 'Download Fondeka now'} />
+          <DownloadAppButton variant="hero" ctaLabel={t('download.section.cta') || 'Download Fondeka now'} trackingId="download-section-cta" />
         </div>
       </div>
     </section>

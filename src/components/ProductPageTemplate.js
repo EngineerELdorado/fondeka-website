@@ -101,7 +101,7 @@ export default function ProductPageTemplate({
               {mode === 'app' ? t('product.page.next.app') : t('product.page.next.business')}
             </p>
             {mode === 'app' ? (
-              <DownloadAppButton className="mt-5" variant="hero" ctaLabel={ctaLabel || t('product.page.cta.app')} />
+              <DownloadAppButton className="mt-5" variant="hero" ctaLabel={ctaLabel || t('product.page.cta.app')} trackingId="product-download-cta" />
             ) : (
               <a href={ctaHref} className="btn btn-primary mt-5 w-fit">{ctaLabel || t('product.page.cta.business')}</a>
             )}

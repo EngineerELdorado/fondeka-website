@@ -48,7 +48,7 @@ export default function Footer(){
           <p className="text-sm text-gray-600">
             info@fondeka.com<br/>+243 991 079 097
           </p>
-          <DownloadAppButton className="mt-6" />
+          <DownloadAppButton className="mt-6" trackingId="footer-download-cta" />
         </div>
       </div>
 
