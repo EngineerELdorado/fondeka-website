@@ -4,21 +4,22 @@ import Script from 'next/script';
 
 const rawPixelIds = process.env.NEXT_PUBLIC_META_PIXEL_IDS || '';
 
-const metaPixelIds = rawPixelIds
-    .split(',')
-    .map((id) => id.trim())
-    .filter(Boolean);
+const metaPixelIds = [
+    ...new Set([
+        '1563520629132919',
+        ...rawPixelIds
+            .split(',')
+            .map((id) => id.trim())
+            .filter(Boolean),
+    ]),
+];
 
 export default function MetaPixel() {
-    if (!metaPixelIds.length) {
-        return null;
-    }
-
     return (
         <>
             <Script
                 id="meta-pixel-base"
-                strategy="afterInteractive"
+                strategy="beforeInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `
                         !function(f,b,e,v,n,t,s)

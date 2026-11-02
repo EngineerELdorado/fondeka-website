@@ -76,13 +76,18 @@ NEXT_PUBLIC_LINKEDIN_PARTNER_ID=9131674
 ```
 
 ## Meta Pixel
-Set `NEXT_PUBLIC_META_PIXEL_IDS` before building or deploying the site.
+Meta dataset pixel `1563520629132919` is included site-wide, with its script
+loaded in the document head and a noscript image fallback in the body.
+
+Set `NEXT_PUBLIC_META_PIXEL_IDS` before building or deploying the site to add
+other Meta pixels.
 
 ```bash
 NEXT_PUBLIC_META_PIXEL_IDS=1661830491640331,1338589508117186
 ```
 
 Use a comma-separated list to keep multiple Meta pixels active on the same site.
+Duplicate IDs are initialized only once.
 
 ## Customize
 - Edit `src/lib/brand.js` for colors and strings.
