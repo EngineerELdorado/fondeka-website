@@ -47,11 +47,6 @@ export default function ApiFaqPage({ searchParams }) {
           <FaqIconTile icon="help" tone="blue" />
           <div><h1>{content.title}</h1><p>{content.intro[0]}</p><div className="faq-header-meta"><span className="faq-count">120 {ui.answers}</span><span>{ui.reviewed}</span></div></div>
         </div>
-        <div className="faq-header-actions">
-          <a href={businessAppUrl} className="faq-button faq-button-primary" data-api-portal-cta>{ui.portal}<FaqIcon name="external" /></a>
-          <a href="#questions" className="faq-button">{ui.search}<FaqIcon name="search" /></a>
-          <Link href={`/docs?lang=${lang}`} className="faq-text-action">{ui.docs}<FaqIcon name="arrow" /></Link>
-        </div>
         <details className="faq-essentials faq-surface">
           <summary><FaqIconTile icon="book" tone="teal" /><span>{ui.essentials}</span><span className="faq-chevron"><FaqIcon name="chevron" /></span></summary>
           <div className="faq-essentials-body"><p><FaqInline text={content.intro[1]} /></p><FaqBlocks blocks={[content.essentials]} tableLabel={ui.essentials} /><p>{content.intro[2]}</p></div>
@@ -59,13 +54,13 @@ export default function ApiFaqPage({ searchParams }) {
       </div>
     </section>
     <FaqExplorer key={lang} sections={content.sections} lang={lang} />
-    <div className="container-pad"><section className="faq-next-step faq-surface"><div><h2>{ui.nextTitle}</h2><p>{ui.nextBody}</p></div><a href={businessAppUrl} className="faq-button faq-button-primary" data-api-portal-cta>{ui.portal}<FaqIcon name="external" /></a></section></div>
     <section id="faq-resources" className="faq-resources scroll-mt-24">
       <div className="container-pad faq-resources-grid">
         <div className="faq-glossary faq-surface"><h2>{content.glossary.title}</h2><FaqBlocks blocks={content.glossary.blocks} tableLabel={content.glossary.title} /></div>
         <aside className="faq-help faq-surface"><FaqIconTile icon="help" tone="violet" /><h2 className="mt-4">{ui.support}</h2><p>{ui.supportBody}</p><Link href={`/support?lang=${lang}`} className="faq-button">{ui.contact}</Link><a href="mailto:info@fondeka.com" className="faq-inline-link">info@fondeka.com</a></aside>
       </div>
     </section>
+    <div className="container-pad"><section className="faq-next-step faq-surface"><div><h2>{ui.nextTitle}</h2><p>{ui.nextBody}</p></div><a href={businessAppUrl} className="faq-button faq-button-primary" data-api-portal-cta>{ui.portal}<FaqIcon name="external" /></a></section></div>
     <JsonLd data={schema} /><JsonLd data={breadcrumbs} />
   </main>;
 }

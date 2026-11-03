@@ -61,9 +61,18 @@ rankings, and meta keywords alone do not establish search visibility.
 
 ## Bilingual Payment API Q&A
 
-`/docs/faq` serves the English guide; `/docs/faq?lang=fr` serves French. Both
-versions contain 120 numbered questions, fee and country tables, a glossary and
-public resource links. Links appear on the API introduction, Business page and
+`/docs/faq` detects the browser's preferred supported language before rendering:
+French visitors land on `/docs/faq?lang=fr`; English and unsupported languages
+use the English default. Explicit `?lang=en` and `?lang=fr` links take priority.
+A one-click English/Français switch stays in the header (EN/FR on phones) and
+saves manual choices in the `fondeka_language` preference cookie for one year.
+That saved choice takes priority over browser detection on later FAQ visits.
+Without cookies, explicit language URLs still work. Crawlers receive the English
+default and can discover both languages through the sitemap and alternates.
+Language-dependent responses are private and uncached. Redirects also vary by
+browser language, preference cookie and user agent. Mobile campaign redirects
+elsewhere are unchanged. Both versions contain 120 numbered questions, fee and
+country tables, a glossary and public resource links. Links appear on the API introduction, Business page and
 footer. Each language has its own canonical URL, metadata, sitemap entry and
 FAQ structured data.
 
@@ -83,16 +92,17 @@ The reader adopts the Business portal's neutral surfaces, semantic color tokens,
 topic icon tiles, framed chevrons and comfortable controls through the scoped
 `src/app/docs/faq/faq.css` stylesheet. It uses existing fonts and dependencies.
 Dark token overrides follow `data-theme="dark"` when supplied by a theme host;
-the page does not introduce a theme selector. Main API CTAs, including the
-FAQ-specific header and footer actions, open `https://web.fondeka.com`.
+the page does not introduce a theme selector. The introduction has no action row
+or conversion CTA. The main API CTA follows the guide and glossary; it and the
+footer action open `https://web.fondeka.com`.
 Reading controls, documentation links and support links retain their purposes.
 
 Keep the FAQ country tables aligned with `src/lib/supportedCountries.js`, which
 also supplies homepage coverage and the country counter. Current coverage is
 12 countries; routes, directions and currencies remain account-specific.
 
-Run `npm run test:faq` and `npm run build` after content changes. Verify both
-languages, mobile access, tables, search, question links and progress persistence
+Run `npm run test:faq`, `npm run test:language` and `npm run build` after changes.
+Verify both languages, mobile access, tables, search, question links and progress persistence
 in the browser. The review date describes the supplied content; it is not an
 announcement that new Live payments are enabled.
 

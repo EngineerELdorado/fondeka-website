@@ -6,6 +6,27 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import DownloadAppButton from "@/components/DownloadAppButton";
 import { businessAppUrl } from '@/lib/business';
 import { trackAppDownloadClick } from '@/lib/metaPixel';
+import { languagePreferenceCookie } from '@/lib/language';
+
+function LanguageSwitch({ lang, onChange, compact = false }) {
+  return (
+    <div role="group" aria-label={lang === 'fr' ? 'Langue' : 'Language'} className="inline-flex gap-1 rounded-xl border border-gray-200 bg-gray-50 p-1">
+      {[{ value: 'en', label: 'English' }, { value: 'fr', label: 'Français' }].map(option => (
+        <button
+          key={option.value}
+          type="button"
+          aria-label={option.label}
+          aria-pressed={lang === option.value}
+          title={option.label}
+          onClick={() => onChange(option.value)}
+          className={`rounded-lg px-3 py-2 text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fondeka-green ${lang === option.value ? 'bg-fondeka-green text-white shadow-sm' : 'text-gray-600 hover:bg-white'}`}
+        >
+          {compact ? option.value.toUpperCase() : option.label}
+        </button>
+      ))}
+    </div>
+  );
+}
 
 export default function Header(){
   const [open, setOpen] = useState(false);
@@ -23,10 +44,14 @@ export default function Header(){
   ];
 
   const pathname = usePathname();
+  const isApiFaq = pathname === '/docs/faq';
   const router = useRouter();
   const sp = useSearchParams();
 
   const setLang = (lng) => {
+    try {
+      document.cookie = `${languagePreferenceCookie}=${lng}; Path=/; Max-Age=31536000; SameSite=Lax${window.location.protocol === 'https:' ? '; Secure' : ''}`;
+    } catch { /* An explicit language URL still works if cookies are unavailable. */ }
     const params = new URLSearchParams(sp.toString());
     params.set('lang', lng);
     const hash = pathname === '/docs/faq' ? window.location.hash : '';
@@ -82,7 +107,7 @@ export default function Header(){
             <span className="text-xl font-extrabold tracking-tight text-fondeka-dark">Fondeka</span>
           </Link>
 
-          <nav className="hidden md:flex items-center gap-8 text-sm">
+          <nav className={`${isApiFaq ? 'hidden lg:flex' : 'hidden md:flex'} items-center gap-8 text-sm`}>
             {/* Desktop nav — intercept Products only */}
             {nav.map(i => {
               if (i.href === '/products') {
@@ -111,7 +136,7 @@ export default function Header(){
               );
             })}
 
-            <div className="relative" ref={deskRef}>
+            {isApiFaq ? <LanguageSwitch lang={lang} onChange={setLang} /> : <div className="relative" ref={deskRef}>
               <button onClick={(e)=>{e.stopPropagation(); setLangOpenDesk(v=>!v);}} className="text-xs px-3 py-1 rounded-lg border inline-flex items-center gap-2">
                 {lang.toUpperCase()} ▾
               </button>
@@ -121,15 +146,13 @@ export default function Header(){
                     <button onClick={()=>setLang('fr')} className="w-full text-left px-3 py-2 rounded-lg hover:bg-fondeka-light">Français</button>
                   </div>
               )}
-            </div>
+            </div>}
 
-            {pathname === '/docs/faq' ? (
-                <a href={businessAppUrl} className="btn btn-primary" data-api-portal-cta>{lang === 'fr' ? 'Portail Business' : 'Business portal'}</a>
-            ) : <DownloadAppButton trackingId="header-download-cta" />}
+            {!isApiFaq && <DownloadAppButton trackingId="header-download-cta" />}
           </nav>
 
-          <div className="md:hidden flex items-center gap-2">
-            <div className="relative" ref={mobRef}>
+          <div className={`${isApiFaq ? 'lg:hidden' : 'md:hidden'} flex items-center gap-2`}>
+            {isApiFaq ? <LanguageSwitch lang={lang} onChange={setLang} compact /> : <div className="relative" ref={mobRef}>
               <button onClick={(e)=>{e.stopPropagation(); setLangOpenMob(v=>!v);}} className="text-xs px-3 py-1 rounded-lg border">{lang.toUpperCase()} ▾</button>
               {langOpenMob && (
                   <div className="absolute right-0 mt-2 w-36 rounded-xl border bg-white shadow-soft p-1 z-50">
@@ -137,13 +160,13 @@ export default function Header(){
                     <button onClick={()=>setLang('fr')} className="w-full text-left px-3 py-2 rounded-lg hover:bg-fondeka-light">Français</button>
                   </div>
               )}
-            </div>
+            </div>}
             <button onClick={()=>setOpen(!open)} className="p-2 rounded-lg border">{open ? '✕' : '☰'}</button>
           </div>
         </div>
 
         {open && (
-            <div className="md:hidden border-t bg-white">
+            <div className={`${isApiFaq ? 'lg:hidden' : 'md:hidden'} border-t bg-white`}>
               <div className="container-pad py-3 flex flex-col gap-3">
                 {/* Mobile nav — intercept Products only */}
                 {nav.map(i => {
@@ -168,9 +191,7 @@ export default function Header(){
                   );
                 })}
 
-                {pathname === '/docs/faq' ? (
-                    <a href={businessAppUrl} className="btn btn-primary w-full text-center" data-api-portal-cta>{lang === 'fr' ? 'Ouvrir le portail Business' : 'Open the Business portal'}</a>
-                ) : <a href="#download" onClick={goDownload} className="btn btn-primary w-full text-center">{t('cta.download')}</a>}
+                {!isApiFaq && <a href="#download" onClick={goDownload} className="btn btn-primary w-full text-center">{t('cta.download')}</a>}
               </div>
             </div>
         )}

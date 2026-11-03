@@ -1,5 +1,6 @@
 import { NextResponse, userAgent } from 'next/server';
 import { appStoreUrl } from './lib/appStores';
+import { languagePreferenceCookie, preferredLanguage } from './lib/language';
 
 // Keep app links, API Q&A, and essential legal/support pages directly accessible.
 const directAccessRoutes = new Set([
@@ -11,10 +12,30 @@ const directAccessRoutes = new Set([
 ]);
 
 export function middleware(request) {
+    const isRead = ['GET', 'HEAD'].includes(request.method);
+    const isApiFaq = request.nextUrl.pathname.replace(/\/+$/, '') === '/docs/faq';
+
+    if (isRead && isApiFaq) {
+        // Explicit links and the language switch always override browser detection.
+        if (request.nextUrl.searchParams.has('lang')) return NextResponse.next();
+        const { isBot } = userAgent(request);
+        const lang = isBot ? 'en' : preferredLanguage(
+            request.headers.get('accept-language'),
+            request.cookies.get(languagePreferenceCookie)?.value,
+        );
+        const destination = request.nextUrl.clone();
+        destination.searchParams.set('lang', lang);
+        const response = lang === 'fr'
+            ? NextResponse.redirect(destination, 307)
+            : NextResponse.next();
+        response.headers.set('Cache-Control', 'private, no-store, max-age=0');
+        response.headers.set('Vary', 'Accept-Language, Cookie, User-Agent');
+        return response;
+    }
+
     if (
         process.env.MOBILE_STORE_REDIRECT_ENABLED === 'false' ||
-        !['GET', 'HEAD'].includes(request.method) ||
-        request.nextUrl.pathname.replace(/\/+$/, '') === '/docs/faq' ||
+        !isRead ||
         directAccessRoutes.has(request.nextUrl.pathname.split('/')[1])
     ) {
         return NextResponse.next();
