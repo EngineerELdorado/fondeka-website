@@ -24,7 +24,7 @@ Play intent with the web listing as its browser fallback.
 
 Desktop visitors, tablets, and known crawlers receive the website. `/privacy`,
 `/end-user-agreement`, `/compliance`, `/support`, and `/open` (including subpaths)
-remain directly accessible, as do static files and app association endpoints.
+remain directly accessible, as do `/docs/faq`, static files and app association endpoints.
 Mobile marketing page-view pixels do not run because the redirect happens before
 the page loads.
 
@@ -58,6 +58,43 @@ individuals and students, payment gateway alternatives, API de paiement sans
 société, and API de paiement pour startups sans documents. Use actual query data
 to choose further guides or customer examples. These changes do not guarantee
 rankings, and meta keywords alone do not establish search visibility.
+
+## Bilingual Payment API Q&A
+
+`/docs/faq` serves the English guide; `/docs/faq?lang=fr` serves French. Both
+versions contain 120 numbered questions, fee and country tables, a glossary and
+public resource links. Links appear on the API introduction, Business page and
+footer. Each language has its own canonical URL, metadata, sitemap entry and
+FAQ structured data.
+
+Customer-facing source documents live in `src/content/business-api-faq.en.md`
+and `src/content/business-api-faq.fr.md`. Update both when the contract or
+commercial explanation changes. The lightweight server parser supports their
+paragraphs, lists and tables, and checks the complete question sequence.
+Publication notes are not part of these public documents.
+
+The reader includes search, expandable answers, stable question links, a
+four-question starter trail and optional reading milestones. Read markers are
+stored only in the visitor's browser, shared across languages, and never affect
+API access or Live eligibility. The FAQ remains accessible on phones during the
+mobile campaign; the sticky app-install bar is hidden on this reading page.
+
+The reader adopts the Business portal's neutral surfaces, semantic color tokens,
+topic icon tiles, framed chevrons and comfortable controls through the scoped
+`src/app/docs/faq/faq.css` stylesheet. It uses existing fonts and dependencies.
+Dark token overrides follow `data-theme="dark"` when supplied by a theme host;
+the page does not introduce a theme selector. Main API CTAs, including the
+FAQ-specific header and footer actions, open `https://web.fondeka.com`.
+Reading controls, documentation links and support links retain their purposes.
+
+Keep the FAQ country tables aligned with `src/lib/supportedCountries.js`, which
+also supplies homepage coverage and the country counter. Current coverage is
+12 countries; routes, directions and currencies remain account-specific.
+
+Run `npm run test:faq` and `npm run build` after content changes. Verify both
+languages, mobile access, tables, search, question links and progress persistence
+in the browser. The review date describes the supplied content; it is not an
+announcement that new Live payments are enabled.
 
 ## Google Tag
 Set `NEXT_PUBLIC_GOOGLE_TAG_IDS` to your Google tag IDs before building or deploying the site.

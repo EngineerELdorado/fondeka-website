@@ -29,7 +29,8 @@ export default function Header(){
   const setLang = (lng) => {
     const params = new URLSearchParams(sp.toString());
     params.set('lang', lng);
-    router.push(`${pathname}?${params.toString()}`);
+    const hash = pathname === '/docs/faq' ? window.location.hash : '';
+    router.push(`${pathname}?${params.toString()}${hash}`);
     setLangOpenDesk(false);
     setLangOpenMob(false);
   };
@@ -122,7 +123,9 @@ export default function Header(){
               )}
             </div>
 
-            <DownloadAppButton trackingId="header-download-cta" />
+            {pathname === '/docs/faq' ? (
+                <a href={businessAppUrl} className="btn btn-primary" data-api-portal-cta>{lang === 'fr' ? 'Portail Business' : 'Business portal'}</a>
+            ) : <DownloadAppButton trackingId="header-download-cta" />}
           </nav>
 
           <div className="md:hidden flex items-center gap-2">
@@ -165,7 +168,9 @@ export default function Header(){
                   );
                 })}
 
-                <a href="#download" onClick={goDownload} className="btn btn-primary w-full text-center">{t('cta.download')}</a>
+                {pathname === '/docs/faq' ? (
+                    <a href={businessAppUrl} className="btn btn-primary w-full text-center" data-api-portal-cta>{lang === 'fr' ? 'Ouvrir le portail Business' : 'Open the Business portal'}</a>
+                ) : <a href="#download" onClick={goDownload} className="btn btn-primary w-full text-center">{t('cta.download')}</a>}
               </div>
             </div>
         )}

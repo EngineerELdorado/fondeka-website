@@ -6,6 +6,7 @@ import DownloadAppButton from '../components/DownloadAppButton';
 import Metrics from '../components/Metrics';
 import { useI18n } from '@/lib/i18n';
 import { businessAppUrl } from '@/lib/business';
+import { supportedCountries } from '@/lib/supportedCountries';
 import HeroCorners from '@/components/HeroCorners';
 import HeroOrbitIcons from "@/components/HeroOrbitIcons";
 
@@ -291,8 +292,8 @@ export default function Home() {
                     <h2 className="h">{t('section.coverageTitle')}</h2>
                     <p className="mt-2 text-gray-600">{t('section.coverageBody')}</p>
                     <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 text-sm">
-                        {['DR Congo', 'Rwanda', 'Burundi', 'Uganda', 'Kenya', 'Tanzania'].map((x) => (
-                            <div key={x} className="card py-4">{x}</div>
+                        {supportedCountries.map((country) => (
+                            <div key={country.code} className="card py-4">{country[lang]}</div>
                         ))}
                     </div>
                 </div>

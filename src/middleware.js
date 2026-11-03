@@ -1,7 +1,7 @@
 import { NextResponse, userAgent } from 'next/server';
 import { appStoreUrl } from './lib/appStores';
 
-// Keep app links and essential legal/support pages directly accessible.
+// Keep app links, API Q&A, and essential legal/support pages directly accessible.
 const directAccessRoutes = new Set([
     'open',
     'privacy',
@@ -14,6 +14,7 @@ export function middleware(request) {
     if (
         process.env.MOBILE_STORE_REDIRECT_ENABLED === 'false' ||
         !['GET', 'HEAD'].includes(request.method) ||
+        request.nextUrl.pathname.replace(/\/+$/, '') === '/docs/faq' ||
         directAccessRoutes.has(request.nextUrl.pathname.split('/')[1])
     ) {
         return NextResponse.next();

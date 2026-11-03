@@ -3,10 +3,12 @@ import Logo from './Logo';
 import { useI18n } from '@/lib/i18n';
 import { businessAppUrl } from '@/lib/business';
 import DownloadAppButton from "@/components/DownloadAppButton";
+import { usePathname } from 'next/navigation';
 
 export default function Footer(){
   const year = new Date().getFullYear();
   const { t, lang } = useI18n();
+  const pathname = usePathname();
 
   return (
     <footer className="border-t bg-white">
@@ -25,6 +27,7 @@ export default function Footer(){
             <li><a href={`/paypal-congo?lang=${lang}`} className="hover:text-fondeka-green">PayPal Congo</a></li>
             <li><a href={`/commerce?lang=${lang}`} className="hover:text-fondeka-green">Commerce</a></li>
             <li><a href={`/business?lang=${lang}`} className="hover:text-fondeka-green">{t('section.businessTitle')}</a></li>
+            <li><a href={`/docs/faq?lang=${lang}`} className="hover:text-fondeka-green">{lang === 'fr' ? 'Questions sur l’API' : 'API Q&A'}</a></li>
             <li><a href={businessAppUrl} className="hover:text-fondeka-green">Business (API)</a></li>
           </ul>
         </div>
@@ -48,7 +51,9 @@ export default function Footer(){
           <p className="text-sm text-gray-600">
             info@fondeka.com<br/>+243 991 079 097
           </p>
-          <DownloadAppButton className="mt-6" trackingId="footer-download-cta" />
+          {pathname === '/docs/faq' ? (
+            <a href={businessAppUrl} className="btn btn-primary mt-6" data-api-portal-cta>{lang === 'fr' ? 'Ouvrir le portail Business' : 'Open the Business portal'}</a>
+          ) : <DownloadAppButton className="mt-6" trackingId="footer-download-cta" />}
         </div>
       </div>
 

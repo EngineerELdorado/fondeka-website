@@ -51,7 +51,7 @@ export default function MobileInstallBar() {
         };
     }, [pathname]);
 
-    if (platform === 'other' || !showBar || pathname === '/open') {
+    if (platform === 'other' || !showBar || pathname === '/open' || pathname === '/docs/faq') {
         return null;
     }
 

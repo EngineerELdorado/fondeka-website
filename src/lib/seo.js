@@ -325,6 +325,21 @@ export const serviceSeo = {
     ...paymentApiContent.en.docsMetadata,
     locales: { fr: paymentApiContent.fr.docsMetadata },
   },
+  apiFaq: {
+    path: '/docs/faq',
+    name: 'Payment API Q&A',
+    title: 'Payment API FAQ: Fees, Sandbox and Coverage | Fondeka',
+    description: 'Answers to 120 questions about Fondeka Payment API access, fees, supported countries, Sandbox, Live, credentials and safe payment integration.',
+    keywords: ['Fondeka API FAQ', 'payment API fees', 'Mobile Money API Sandbox', 'payment API for students', 'payment API without company documents'],
+    locales: {
+      fr: {
+        name: 'Questions sur l’API de paiement',
+        title: 'FAQ API de paiement : frais, Sandbox et pays couverts | Fondeka',
+        description: '120 réponses sur l’accès à l’API Fondeka, les frais, les pays couverts, la Sandbox, le Live, les identifiants et la sécurité des paiements.',
+        keywords: ['FAQ API Fondeka', 'frais API de paiement', 'Sandbox API Mobile Money', 'API de paiement étudiant', 'API de paiement sans documents d’entreprise'],
+      },
+    },
+  },
   collect: {
     path: '/collect',
     name: 'Collections',

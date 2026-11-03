@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import { useI18n } from '../lib/i18n';
+import { supportedCountries } from '@/lib/supportedCountries';
 
 function Counter({ target, label }){
   const ref = useRef(null);
@@ -25,7 +26,7 @@ export default function Metrics(){
         <h2 className="h mb-6">{t('metrics.title')}</h2>
         <div className="grid md:grid-cols-3 gap-6">
           <Counter target={100000} label={t('metrics.users')} />
-          <Counter target={6} label={t('metrics.countries')} />
+          <Counter target={supportedCountries.length} label={t('metrics.countries')} />
           <Counter target={99} label={t('metrics.uptime') + ' %'} />
         </div>
       </div>
