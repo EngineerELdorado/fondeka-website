@@ -22,6 +22,7 @@ export const apiFaqUi = {
     nextTitle: 'Ready to start building?', nextBody: 'Open the Business portal to review API access and prepare your Sandbox integration.',
     noScript: 'All answers are available below. Search and reading progress need JavaScript.',
     reviewed: 'Reviewed 3 November 2026',
+    publisher: 'Published by Fondeka',
   },
   fr: {
     home: 'Accueil', api: 'API de paiement', label: 'Questions API',
@@ -46,5 +47,6 @@ export const apiFaqUi = {
     nextTitle: 'Prêt à construire votre projet ?', nextBody: 'Ouvrez le portail Business pour consulter l’accès à l’API et préparer votre intégration Sandbox.',
     noScript: 'Toutes les réponses sont disponibles ci-dessous. La recherche et le suivi de lecture nécessitent JavaScript.',
     reviewed: 'Révisé le 3 novembre 2026',
+    publisher: 'Publié par Fondeka',
   },
 };

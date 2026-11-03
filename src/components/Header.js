@@ -8,21 +8,27 @@ import { businessAppUrl } from '@/lib/business';
 import { trackAppDownloadClick } from '@/lib/metaPixel';
 import { languagePreferenceCookie } from '@/lib/language';
 
-function LanguageSwitch({ lang, onChange, compact = false }) {
+function LanguageSwitch({ lang, onChange, hrefForLanguage, compact = false }) {
   return (
     <div role="group" aria-label={lang === 'fr' ? 'Langue' : 'Language'} className="inline-flex gap-1 rounded-xl border border-gray-200 bg-gray-50 p-1">
       {[{ value: 'en', label: 'English' }, { value: 'fr', label: 'Français' }].map(option => (
-        <button
+        <a
           key={option.value}
-          type="button"
+          href={hrefForLanguage(option.value)}
+          hrefLang={option.value}
+          lang={option.value}
           aria-label={option.label}
-          aria-pressed={lang === option.value}
+          aria-current={lang === option.value ? 'page' : undefined}
           title={option.label}
-          onClick={() => onChange(option.value)}
-          className={`rounded-lg px-3 py-2 text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fondeka-green ${lang === option.value ? 'bg-fondeka-green text-white shadow-sm' : 'text-gray-600 hover:bg-white'}`}
+          onClick={(event) => {
+            if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+            event.preventDefault();
+            onChange(option.value);
+          }}
+          className={`inline-flex min-h-11 min-w-11 items-center justify-center rounded-lg px-3 py-2 text-sm font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-fondeka-green ${lang === option.value ? 'bg-fondeka-green text-white shadow-sm' : 'text-gray-600 hover:bg-white'}`}
         >
           {compact ? option.value.toUpperCase() : option.label}
-        </button>
+        </a>
       ))}
     </div>
   );
@@ -48,14 +54,18 @@ export default function Header(){
   const router = useRouter();
   const sp = useSearchParams();
 
+  const languageHref = (lng) => {
+    const params = new URLSearchParams(sp.toString());
+    params.set('lang', lng);
+    return `${pathname}?${params.toString()}`;
+  };
+
   const setLang = (lng) => {
     try {
       document.cookie = `${languagePreferenceCookie}=${lng}; Path=/; Max-Age=31536000; SameSite=Lax${window.location.protocol === 'https:' ? '; Secure' : ''}`;
     } catch { /* An explicit language URL still works if cookies are unavailable. */ }
-    const params = new URLSearchParams(sp.toString());
-    params.set('lang', lng);
     const hash = pathname === '/docs/faq' ? window.location.hash : '';
-    router.push(`${pathname}?${params.toString()}${hash}`);
+    router.push(`${languageHref(lng)}${hash}`);
     setLangOpenDesk(false);
     setLangOpenMob(false);
   };
@@ -136,7 +146,7 @@ export default function Header(){
               );
             })}
 
-            {isApiFaq ? <LanguageSwitch lang={lang} onChange={setLang} /> : <div className="relative" ref={deskRef}>
+            {isApiFaq ? <LanguageSwitch lang={lang} onChange={setLang} hrefForLanguage={languageHref} /> : <div className="relative" ref={deskRef}>
               <button onClick={(e)=>{e.stopPropagation(); setLangOpenDesk(v=>!v);}} className="text-xs px-3 py-1 rounded-lg border inline-flex items-center gap-2">
                 {lang.toUpperCase()} ▾
               </button>
@@ -152,7 +162,7 @@ export default function Header(){
           </nav>
 
           <div className={`${isApiFaq ? 'lg:hidden' : 'md:hidden'} flex items-center gap-2`}>
-            {isApiFaq ? <LanguageSwitch lang={lang} onChange={setLang} compact /> : <div className="relative" ref={mobRef}>
+            {isApiFaq ? <LanguageSwitch lang={lang} onChange={setLang} hrefForLanguage={languageHref} compact /> : <div className="relative" ref={mobRef}>
               <button onClick={(e)=>{e.stopPropagation(); setLangOpenMob(v=>!v);}} className="text-xs px-3 py-1 rounded-lg border">{lang.toUpperCase()} ▾</button>
               {langOpenMob && (
                   <div className="absolute right-0 mt-2 w-36 rounded-xl border bg-white shadow-soft p-1 z-50">

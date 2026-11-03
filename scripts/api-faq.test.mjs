@@ -16,7 +16,7 @@ for (const lang of ['en', 'fr']) {
     assert.equal(apiFaqUi[lang].topicNames.length, content.sections.length);
     assert.deepEqual(questions.map(item => item.number), Array.from({ length: 120 }, (_, index) => index + 1));
     assert.equal(new Set(questions.map(item => item.id)).size, 120);
-    assert.equal(content.essentials.rows.length, 8);
+    assert.equal(content.essentials.rows.length, 7);
     assert.equal(content.intro.length, 3);
     assert.equal(content.glossary.blocks.find(block => block.type === 'table').rows.length, 19);
     assert.equal(content.glossary.blocks.find(block => block.type === 'list').items.length, 13);
@@ -46,6 +46,20 @@ for (const lang of ['en', 'fr']) {
     assert.ok(JSON.stringify(question(59)).includes('BUSINESS_API_LIVE_PAYMENTS_DISABLED'));
     const statuses = question(93).blocks.find(block => block.type === 'table');
     assert.deepEqual(statuses.rows.map(row => row[0]), ['`ACCEPTED`', '`PROCESSING`', '`COMPLETED`', '`FAILED`']);
+  });
+  test(`${lang}: search-focused answers retain eligibility and fee qualifications and link to primary guides`, () => {
+    assert.ok(content.title.includes('Mobile Money'));
+    assert.ok(content.title.toLowerCase().includes('crypto'));
+    assert.ok(content.intro[0].includes(lang === 'fr' ? 'RDC' : 'DR Congo'));
+    const eligibility = JSON.stringify(question(3));
+    assert.ok(eligibility.includes(lang === 'fr' ? 'vérifications' : 'verification'));
+    assert.ok(eligibility.includes(`/business?lang=${lang}`));
+    const fees = JSON.stringify(question(35));
+    assert.ok(fees.includes(lang === 'fr' ? 'environ' : 'approximately'));
+    assert.ok(fees.includes(lang === 'fr' ? 'taux réel' : 'actual rate'));
+    for (const [number, file] of [[48,'testing.md'], [60,'go-live.md'], [62,'quickstart.md'], [72,'guides/mobile-money-collection.md'], [76,'guides/crypto-collection.md'], [80,'guides/mobile-money-payout.md'], [81,'guides/crypto-payout.md'], [97,'webhooks.md']]) {
+      assert.ok(JSON.stringify(question(number)).includes(`https://web.fondeka.com/docs/business-api/${file}`));
+    }
   });
 }
 

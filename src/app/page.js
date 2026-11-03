@@ -278,6 +278,7 @@ export default function Home() {
                             <Link href={`/business?lang=${lang}`} className="text-sm text-fondeka-green underline">
                                 {t('common.cta.explorePaymentApi')}
                             </Link>
+                            <p className="mt-3"><Link href={`/docs/faq?lang=${lang}`} className="text-sm text-fondeka-green underline">{lang === 'fr' ? 'FAQ API de paiement : frais et tests Sandbox' : 'Payment API FAQ: fees and Sandbox testing'}</Link></p>
                         </div>
                     </div>
                 </div>

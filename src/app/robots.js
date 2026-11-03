@@ -1,6 +1,8 @@
+import { siteUrl } from '@/lib/seo';
+
 export default function robots() {
     return {
         rules: [{ userAgent: '*', allow: '/' }],
-        sitemap: 'https://fondeka.com/sitemap.xml',
+        sitemap: `${siteUrl}/sitemap.xml`,
     };
 }

@@ -88,7 +88,7 @@ export default function BusinessPage({ searchParams }) {
               </article>
             ))}
           </div>
-          <Link href={`/docs/faq?lang=${lang}`} className="btn btn-ghost mt-5">{lang === 'fr' ? 'Explorer les 120 questions sur l’API' : 'Explore all 120 API questions'}<span aria-hidden="true" className="ml-3">→</span></Link>
+          <Link href={`/docs/faq?lang=${lang}`} className="btn btn-ghost mt-5">{lang === 'fr' ? 'FAQ API de paiement : frais, accès et Sandbox' : 'Payment API FAQ: fees, access and Sandbox'}<span aria-hidden="true" className="ml-3">→</span></Link>
         </div>
       </section>
 

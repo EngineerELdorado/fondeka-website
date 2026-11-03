@@ -69,6 +69,11 @@ saves manual choices in the `fondeka_language` preference cookie for one year.
 That saved choice takes priority over browser detection on later FAQ visits.
 Without cookies, explicit language URLs still work. Crawlers receive the English
 default and can discover both languages through the sitemap and alternates.
+The canonical URLs are `/docs/faq?lang=en` and `/docs/faq?lang=fr`, so either
+language can be opened directly regardless of browser preferences. The bare
+`/docs/faq` entry is the `x-default` language-detection URL. The visible language
+switch uses crawlable links and works without JavaScript; JavaScript also saves
+the visitor's choice and preserves the current question when switching.
 Language-dependent responses are private and uncached. Redirects also vary by
 browser language, preference cookie and user agent. Mobile campaign redirects
 elsewhere are unchanged. Both versions contain 120 numbered questions, fee and
@@ -101,10 +106,39 @@ Keep the FAQ country tables aligned with `src/lib/supportedCountries.js`, which
 also supplies homepage coverage and the country counter. Current coverage is
 12 countries; routes, directions and currencies remain account-specific.
 
-Run `npm run test:faq`, `npm run test:language` and `npm run build` after changes.
+Run `npm run test:faq`, `npm run test:language`, `npm run test:seo` and
+`npm run build` after changes.
 Verify both languages, mobile access, tables, search, question links and progress persistence
 in the browser. The review date describes the supplied content; it is not an
 announcement that new Live payments are enabled.
+
+## Payment API search visibility
+
+The English and French FAQ titles, summaries and selected questions describe
+Mobile Money and crypto payment APIs, fees, Sandbox testing, account eligibility
+and DR Congo / RDC coverage in natural language. Keep identity checks, variable
+route fees and Live-readiness conditions beside the corresponding answers.
+Contextual links lead to the matching published integration guide. Preserve the
+120 stable question IDs so saved reading progress and shared links keep working.
+
+Canonical URLs, language alternates, structured data and sitemap URLs use
+`https://www.fondeka.com`, the public host that serves pages without the apex
+redirect. The FAQ sitemap review date comes from `serviceSeo.apiFaq.lastModified`;
+change it after a substantive content review, rather than on every deployment.
+The FAQ's social preview uses an existing developer illustration.
+
+Keep FAQ structured data aligned with the visible answers. Google discontinued
+FAQ rich results in May 2026; markup is not a promise of a special search display
+or improved ranking. See [Google's documentation updates](https://developers.google.com/search/updates).
+Meta keywords are not a Google ranking signal; the work here concerns useful
+content, descriptive links and consistent indexing signals.
+
+After deployment, submit `https://www.fondeka.com/sitemap.xml` in Search Console
+and inspect both explicit-language FAQ URLs. Review indexing, queries,
+impressions, clicks, CTR and position by country/device over time. Query themes
+in this change reflect product scope and sample searches, not measured search
+volumes or a Search Console ranking report. Use observed queries to choose the
+next substantive content improvements. Search rankings cannot be guaranteed.
 
 ## Google Tag
 Set `NEXT_PUBLIC_GOOGLE_TAG_IDS` to your Google tag IDs before building or deploying the site.

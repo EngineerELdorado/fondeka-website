@@ -46,7 +46,7 @@ export default function Docs({ audience }){
             <p className="mt-4 text-sm">
               <Link href={`/business?lang=${lang}`} className="text-fondeka-green underline">{t('docs.businessLink')}</Link>
               <span className="mx-3 text-gray-400" aria-hidden="true">·</span>
-              <Link href={`/docs/faq?lang=${lang}`} className="text-fondeka-green underline">{lang === 'fr' ? 'Questions sur l’API' : 'API questions answered'}</Link>
+              <Link href={`/docs/faq?lang=${lang}`} className="text-fondeka-green underline">{lang === 'fr' ? 'FAQ API : frais, accès et Sandbox' : 'API FAQ: fees, eligibility and Sandbox'}</Link>
             </p>
           </div>
           <div className="min-w-0 rounded-[28px] border border-fondeka-mint/25 bg-white p-2 shadow-[0_20px_60px_rgba(13,31,20,0.08)]">

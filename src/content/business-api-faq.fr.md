@@ -1,6 +1,6 @@
-# API de paiement Fondeka : les réponses à vos questions
+# FAQ API de paiement Fondeka : Mobile Money, crypto et frais
 
-Ajoutez les paiements Mobile Money et crypto à votre site ou application, même si votre activité est encore en construction.
+Comprenez l’intégration des paiements Mobile Money et crypto avec Fondeka en RDC et dans les pays africains pris en charge : frais, conditions d’accès et tests en Sandbox.
 
 Fondeka a conçu cette API pour les **étudiants, freelances, petites entreprises et startups qui ne disposent pas encore des documents administratifs nécessaires à une intégration directe avec de nombreux agrégateurs de paiement**. Vous pouvez développer et tester vos paiements avec Fondeka, puis passer aux paiements réels lorsque votre compte et les routes concernées sont prêts.
 
@@ -16,14 +16,13 @@ Ce guide explique les fonctionnalités, l’accès payant, les frais, les pays c
 | Quels sont les frais par opération ? | En moyenne, environ 3 % pour l’agrégateur et 2 % pour Fondeka, regroupés en un seul frais d’environ 5 %. Les frais réels varient selon l’opérateur et la route. |
 | Où consulter les frais détaillés ? | Dans l’espace API après activation de l’accès, parmi les moyens de paiement disponibles et leurs informations tarifaires actuelles. |
 | Puis-je tester sans argent réel ? | Oui. La Sandbox utilise des identifiants distincts, des soldes virtuels et des paiements simulés. |
-| Le paiement de l’accès active-t-il automatiquement le Live ? | Non. L’accès, les conditions du compte, la disponibilité des routes et celle des paiements Live sont vérifiés séparément. |
 | Que se passe-t-il lorsque mon entreprise grandit ? | Fondeka suit l’activité et les volumes. Lorsqu’une intégration directe devient plus adaptée, nous vous conseillons et recommandons votre entreprise à un agrégateur pour aider à établir la confiance. |
 
-## Comprendre l’API et son public
+## API de paiement pour étudiants, freelances et startups
 
 ### 1. Qu’est-ce que l’API de paiement Fondeka ?
 
-Elle permet à votre logiciel de demander des paiements, d’effectuer les paiements sortants pris en charge et de vérifier leurs résultats via Fondeka.
+L’API de paiement Fondeka est une API REST pour encaisser les paiements des clients et envoyer les paiements sortants Mobile Money et crypto pris en charge depuis votre site ou application.
 
 Par exemple, un client commande sur votre site. Votre serveur demande à Fondeka d’encaisser le paiement avec un moyen compatible. Fondeka traite la demande et informe votre serveur lorsque le résultat est connu. Votre application peut alors mettre à jour la commande.
 
@@ -40,11 +39,13 @@ Nous l’avons conçue en particulier pour :
 
 Les équipes établies peuvent aussi évaluer si le service répond à leurs besoins. Notre objectif principal est de faciliter les premières intégrations de paiement.
 
-### 3. Puis-je commencer sans documents d’entreprise ?
+### 3. Les étudiants et freelances peuvent-ils utiliser une API de paiement sans documents d’entreprise ?
 
-Oui. C’est l’une des raisons d’être de cette API. L’intégration directe auprès d’un agrégateur peut être difficile sans les documents qu’il exige. Fondeka propose un parcours d’intégration plus accessible pendant le développement de votre activité.
+Oui. Les étudiants, freelances et jeunes startups peuvent commencer leur intégration de paiement avec Fondeka pendant la préparation de leurs documents d’entreprise. Fondeka simplifie la connexion aux routes prises en charge pendant le développement de l’activité.
 
 Il vous faut néanmoins un compte Fondeka éligible et les vérifications adaptées à votre situation. L’identité, les restrictions du compte et les règles de paiement restent applicables, notamment pour les paiements sortants réels. Commencer sans documents d’entreprise ne signifie pas utiliser le service anonymement.
+
+[Consulter les conditions d’accès à l’API de paiement](/business?lang=fr).
 
 ### 4. Qu’est-ce qu’un agrégateur de paiement ?
 
@@ -95,11 +96,11 @@ Il vous faut un développeur ou une plateforme capable d’envoyer des requêtes
 
 Pour un encaissement avec une interface prête à l’emploi, explorez les liens de paiement, boutiques ou POS Fondeka. Pour intégrer les paiements à votre propre produit, choisissez l’API.
 
-## Pays, devises et moyens de paiement
+## Couverture Mobile Money : pays, devises et opérateurs
 
-### 11. Quels pays Fondeka couvre-t-il ?
+### 11. Dans quels pays et devises l’API de paiement Fondeka est-elle disponible ?
 
-La couverture de l’API suit les pays et devises pris en charge dans l’application Fondeka. Elle comprend actuellement :
+La couverture comprend la RDC (CDF et USD sur les routes compatibles), le Congo-Brazzaville, la Côte d’Ivoire et les autres marchés africains du tableau ci-dessous. La disponibilité dépend des routes activées pour votre compte.
 
 | Pays | Autres noms courants | Devises locales concernées |
 | --- | --- | --- |
@@ -168,9 +169,9 @@ Oui, l’élargissement de la couverture est prévu avec le développement des c
 
 Si votre projet dépend d’un pays, opérateur, actif, réseau ou d’une devise absents, contactez le support avec les détails. N’annoncez une route à vos clients qu’après confirmation de sa disponibilité.
 
-## Accès payant et fonctionnalités débloquées
+## Accès API, activation et prix des Business Tools
 
-### 20. Pourquoi l’accès à l’API est-il payant ?
+### 20. Pourquoi l’accès à l’API de paiement Fondeka est-il payant ?
 
 L’accès est payant parce que Fondeka simplifie le travail et les difficultés d’intégration avec les agrégateurs. C’est particulièrement utile aux étudiants, indépendants, petites entreprises et startups dont les documents sont encore en préparation.
 
@@ -185,9 +186,9 @@ Ces frais correspondent à deux services distincts :
 
 Payer l’accès ne rend pas le traitement des paiements gratuit. Ce paiement n’est ni un dépôt dans votre portefeuille ni un solde à envoyer à vos clients.
 
-### 22. Combien coûte l’accès ?
+### 22. Combien coûte l’accès à l’API de paiement Fondeka ?
 
-Le portail Business affiche l’offre actuelle de votre compte : montant, devise et durée de facturation. Consultez-la avant de payer.
+Le prix de l’accès dépend de l’offre API ou Business Tools actuelle de votre compte. Le portail Business affiche le montant, la devise et la durée de facturation avant le paiement.
 
 L’offre peut couvrir le pack Business Tools ou l’API seule. Les prix et offres peuvent évoluer : un ancien message ou le prix d’un autre utilisateur ne définit pas votre offre. Le total peut aussi inclure les frais du moyen utilisé pour payer l’activation.
 
@@ -277,11 +278,11 @@ Non. L’accès ne supprime ni les limites, ni les exigences de solde, ni les r�
 
 Votre projet doit correspondre aux parcours pris en charge. Si vous prévoyez de gros volumes ou une activité spécialisée, parlez-en à Fondeka avant de vous appuyer sur une configuration opérationnelle particulière.
 
-## Frais de transaction et exemples
+## Frais de l’API de paiement et exemples
 
-### 35. Quels sont les frais moyens de Fondeka par opération ?
+### 35. Quels sont les frais API pour les paiements Mobile Money et crypto ?
 
-Fondeka regroupe les frais de l’agrégateur et ses propres frais en un seul montant consolidé pour l’opération.
+Fondeka regroupe les frais de l’agrégateur et ses propres frais en un seul montant par opération de paiement. La moyenne consolidée est d’environ 5 % ; le taux réel dépend de l’opérateur et de la route.
 
 | Composant | Moyenne |
 | --- | ---: |
@@ -311,7 +312,7 @@ Les opérateurs et routes n’ont pas tous la même structure de coûts. Une rou
 
 Appliquer systématiquement 5 % dans votre code serait donc trompeur. La moyenne explique le modèle ; les informations actuelles de la route et les montants calculés par le serveur déterminent l’opération.
 
-### 39. Où consulter les frais exacts ?
+### 39. Où consulter les frais API par opérateur et route de paiement ?
 
 Après activation de l’accès, ouvrez **Guides API → Moyens de paiement disponibles** dans le portail Business. Consultez l’opérateur ou le moyen crypto, pour l’opération et la devise voulues.
 
@@ -358,6 +359,8 @@ Pour un paiement sortant, le brut correspond à la somme réservée ou débitée
 
 Les requêtes utilisent les unités monétaires normales : `10` avec `currency: "USD"` signifie 10 USD, pas 10 cents. Les montants acceptent au maximum deux décimales. Utilisez une arithmétique décimale et ne multipliez pas systématiquement les montants par 100.
 
+[Lire le guide des montants et modes de frais en anglais](https://web.fondeka.com/docs/business-api/concepts.md).
+
 ### 44. Les conversions de devises ou taux crypto influencent-ils le résultat ?
 
 Oui. Le montant fiat demandé, la route, une éventuelle conversion et les instructions crypto ont des rôles différents.
@@ -382,13 +385,15 @@ Consultez les tarifs actuels pour chaque nouvelle opération. Un paiement API ac
 
 Un statut d’échec ne prouve pas que les fonds ou frais ont été restitués. Le remboursement dépend de l’opération et de la politique applicable. Vérifiez le portefeuille et contactez le support en cas de doute. N’envoyez pas automatiquement un paiement compensatoire.
 
-## Sandbox et Live
+## Sandbox et Live : tester l’API de paiement
 
-### 48. Qu’est-ce que la Sandbox ?
+### 48. Qu’est-ce qu’une Sandbox API de paiement et utilise-t-elle de l’argent réel ?
 
-**La Sandbox est l’environnement de test de l’API.** Elle permet de développer avec des soldes virtuels et des résultats simulés.
+**La Sandbox Fondeka est l’environnement de test de l’API de paiement.** Elle utilise des soldes virtuels et des résultats simulés sans déplacer d’argent réel.
 
 Vous pouvez tester les soumissions, statuts, webhooks signés, échecs et effets sur les portefeuilles virtuels. La Sandbox ne contacte pas les fournisseurs réels et ne déplace pas d’argent réel. Commencez ici avant d’utiliser les fonds de vos clients.
+
+[Lire le guide de test Sandbox en anglais](https://web.fondeka.com/docs/business-api/testing.md).
 
 ### 49. Qu’est-ce que le Live ?
 
@@ -412,7 +417,7 @@ Oui. Générez des identifiants distincts par environnement. Les nouvelles clés
 
 L’environnement dépend de l’identifiant enregistré. Changer une étiquette, un préfixe ou ajouter « sandbox » à une URL ne change pas les droits d’une clé. D’anciens formats valides peuvent rester acceptés : suivez l’environnement enregistré.
 
-### 52. Faut-il une autre URL API pour la Sandbox ?
+### 52. La Sandbox et le Live utilisent-ils des URL API différentes ?
 
 L’URL de base documentée est `https://api.fondeka.com`, avec les routes marchandes sous `/business-api/v1`. Sandbox et Live utilisent les mêmes routes ; les identifiants choisissent l’environnement.
 
@@ -474,7 +479,9 @@ Avant de changer d’environnement :
 
 Séparez les identifiants et données Sandbox pour éviter qu’un développement ne déclenche un paiement de production.
 
-## Démarrer et gérer ses identifiants
+[Lire la liste de préparation au Live en anglais](https://web.fondeka.com/docs/business-api/go-live.md).
+
+## Démarrage : clés API, Business ID et identifiants
 
 ### 61. De quoi ai-je besoin pour commencer ?
 
@@ -482,7 +489,7 @@ Il vous faut un compte Fondeka éligible, l’accès à l’API, votre identité
 
 Prévoyez aussi une destination webhook HTTPS publique avant de compter sur les notifications automatiques. Vous pouvez préparer votre site et serveur pendant la configuration du compte. Vérifiez la route visée avant de la promettre à vos clients.
 
-### 62. Quelles sont les étapes pour démarrer ?
+### 62. Comment intégrer l’API de paiement Fondeka à mon site ou application ?
 
 1. Créez un compte par le parcours Fondeka pris en charge ou utilisez votre compte existant.
 2. Connectez-vous au [portail Business](https://web.fondeka.com).
@@ -491,6 +498,8 @@ Prévoyez aussi une destination webhook HTTPS publique avant de compter sur les 
 5. Générez les identifiants Sandbox et enregistrez les deux secrets en sécurité.
 6. Suivez le guide de démarrage, testez les parcours utiles et vérifiez les webhooks.
 7. Terminez les étapes de préparation Live avant d’utiliser l’argent de vos clients.
+
+[Suivre le guide de démarrage de l’API en anglais](https://web.fondeka.com/docs/business-api/quickstart.md).
 
 ### 63. Qu’est-ce que mon Business ID ?
 
@@ -504,11 +513,13 @@ Le portail utilise les profils Business appartenant à votre compte. Lorsque plu
 
 Les identifiants et références de paiement sont propres au Business. Les Business d’un même compte partagent toutefois les soldes concernés de ce compte. Ne supposez pas qu’un profil dispose automatiquement d’un portefeuille financièrement séparé. Contactez Fondeka pour des soldes distincts ou une plateforme destinée à des marchands indépendants.
 
-### 65. Qu’est-ce qu’une clé API et où l’utiliser ?
+### 65. Comment obtenir et protéger une clé API Fondeka ?
 
-C’est un secret utilisé par votre serveur pour authentifier ses requêtes marchandes. Envoyez-le dans l’en-tête documenté `X-API-Key`.
+Une clé API est le secret envoyé par votre serveur dans l’en-tête documenté `X-API-Key`. Après activation de l’accès, générez l’identifiant Sandbox ou Live adapté dans le portail Business, selon les conditions de votre compte.
 
 Conservez-le côté serveur ou dans un gestionnaire de secrets. Ne l’intégrez pas à une page publique, une application mobile, un dépôt Git, une capture ou un exemple partagé. Vos clients utilisent votre application, sans recevoir votre clé secrète.
+
+[Lire la configuration des identifiants API en anglais](https://web.fondeka.com/docs/business-api/quickstart.md).
 
 ### 66. Qu’est-ce que le secret de signature webhook ?
 
@@ -546,13 +557,15 @@ L’API utilise HTTPS et JSON : tout langage ou framework qui les prend en charg
 
 La documentation fournit aussi une référence OpenAPI et une collection Postman Sandbox. Ces aides ne remplacent pas une configuration sécurisée, des enregistrements durables, la gestion des erreurs et un récepteur webhook vérifié pour la production.
 
-## Encaisser les paiements des clients
+## Encaissements Mobile Money et crypto
 
-### 72. Comment fonctionne un encaissement Mobile Money ?
+### 72. Comment accepter les paiements Mobile Money sur mon site avec Fondeka ?
 
 Votre serveur transmet le montant, la devise fiat, le moyen compatible, le numéro du payeur et un identifiant unique pour les nouvelles tentatives. Fondeka renvoie une référence et traite la demande de manière asynchrone.
 
 Selon l’opérateur, le client doit approuver sur son téléphone. Votre application suit le paiement jusqu’à sa réussite ou son échec. Ne livrez qu’après une fin vérifiée et les contrôles de montant nécessaires.
+
+[Lire le guide d’encaissement Mobile Money en anglais](https://web.fondeka.com/docs/business-api/guides/mobile-money-collection.md).
 
 ### 73. Mon client doit-il avoir un compte Fondeka pour payer ?
 
@@ -572,11 +585,13 @@ Le paiement peut échouer ou expirer selon le résultat de l’opérateur. Affic
 
 Tant que le résultat final n’est pas établi, ne lancez pas automatiquement une demande de remplacement. Après un échec confirmé, si le client veut réessayer, créez volontairement une nouvelle tentative avec sa propre identité.
 
-### 76. Comment fonctionne un encaissement crypto ?
+### 76. Comment accepter un paiement crypto pour une facture en devise fiat ?
 
 Vous demandez un prix en devise fiat, par exemple 25 USD, puis choisissez un moyen crypto et un réseau compatibles. Fondeka prépare les instructions de paiement de manière asynchrone.
 
 Lorsqu’elles sont disponibles, affichez l’actif, le réseau, l’adresse, la quantité de jetons, l’expiration ou le lien de facture renvoyés. N’inventez pas d’adresse, ne substituez pas de réseau et ne calculez pas les jetons à partir d’un taux supposé.
+
+[Lire le guide d’encaissement crypto en anglais](https://web.fondeka.com/docs/business-api/guides/crypto-collection.md).
 
 ### 77. « 25 USD payés en USDT » signifie-t-il exactement 25 USDT ?
 
@@ -596,19 +611,23 @@ Lorsque votre serveur a confirmé que le bon paiement est `COMPLETED`, appartien
 
 Une page de succès, une capture client, une réponse HTTP 202 ou un webhook non vérifié ne suffisent pas. Conservez le lien entre commande et paiement et vérifiez le règlement terminé avant de livrer.
 
-## Effectuer des paiements sortants
+## Paiements sortants Mobile Money et crypto
 
-### 80. Comment fonctionne un paiement sortant Mobile Money ?
+### 80. Comment envoyer un paiement sortant Mobile Money avec l’API ?
 
 Votre serveur demande un paiement vers le numéro international compatible du bénéficiaire, avec le montant fiat, la devise, le moyen et le mode de frais.
 
 Le portefeuille doit couvrir le débit brut, frais compris. À l’acceptation, le montant concerné est réservé ou débité, puis traité. Confirmez le statut final avant d’annoncer au bénéficiaire que le paiement est terminé.
 
-### 81. Comment fonctionne un paiement sortant crypto ?
+[Lire le guide des paiements sortants Mobile Money en anglais](https://web.fondeka.com/docs/business-api/guides/mobile-money-payout.md).
+
+### 81. Comment envoyer un paiement crypto depuis un portefeuille fiat Fondeka ?
 
 Vous précisez le montant fiat à utiliser, le moyen et réseau crypto compatibles et l’adresse du bénéficiaire. L’opération applique la conversion cotée et réserve ou débite le montant fiat brut du portefeuille.
 
 Le bénéficiaire reçoit la quantité de jetons cotée sur le réseau choisi. Vérifiez soigneusement l’adresse et le réseau : une erreur peut être irrécupérable. Des adresses d’apparence similaire ne prouvent pas leur compatibilité.
+
+[Lire le guide des paiements sortants crypto en anglais](https://web.fondeka.com/docs/business-api/guides/crypto-payout.md).
 
 ### 82. Dois-je approvisionner le portefeuille avant un paiement sortant ?
 
@@ -640,7 +659,7 @@ Le contrat marchand publié ne fournit pas de point d’accès universel d’ann
 
 Contactez le support avec la référence. La récupération dépend du statut, du moyen et du résultat financier réel. N’envoyez pas automatiquement un paiement sortant compensatoire.
 
-## Portefeuilles, devises et règlement
+## Portefeuilles API, devises et règlement
 
 ### 87. Où va l’argent encaissé ?
 
@@ -682,11 +701,11 @@ Le délai dépend du moyen, de l’approbation client, du fournisseur et, en cry
 
 Les minimums, maximums, vérifications et conditions de solde varient aussi selon la route et le compte. Vérifiez votre cas actuel. Une requête acceptée peut rester non résolue : l’expiration d’un délai dans votre interface ne prouve pas un échec.
 
-## Statuts, notifications et nouvelles tentatives sûres
+## Statuts de paiement, webhooks et reprises idempotentes
 
-### 93. Quels sont les statuts de paiement ?
+### 93. Que signifient les statuts ACCEPTED, PROCESSING, COMPLETED et FAILED ?
 
-Les réponses publiées utilisent quatre statuts :
+L’API de paiement Fondeka utilise quatre statuts pour les opérations Mobile Money et crypto :
 
 | Statut | Signification | Action de votre application |
 | --- | --- | --- |
@@ -696,6 +715,8 @@ Les réponses publiées utilisent quatre statuts :
 | `FAILED` | Échec établi, y compris les annulations ou expirations applicables. | Expliquer l’échec connu et rapprocher l’effet sur le portefeuille ou le remboursement. |
 
 « En attente » est une description utile pour les clients, mais `PENDING` n’est pas un statut supplémentaire de ce contrat marchand.
+
+[Lire la référence des statuts de paiement en anglais](https://web.fondeka.com/docs/business-api/concepts.md).
 
 ### 94. HTTP 202 signifie-t-il que mon client a payé ?
 
@@ -721,17 +742,21 @@ N’agissez sur une notification qu’après vérification de sa signature, de s
 
 La livraison peut se répéter, notamment si un accusé de réception est perdu. Stockez les identifiants d’événements vérifiés et rendez la livraison de commande idempotente pour une même référence. Deux réceptions ne doivent ni livrer deux fois un produit numérique ni déclencher un autre paiement sortant.
 
+[Lire le guide des signatures webhook et des doublons en anglais](https://web.fondeka.com/docs/business-api/webhooks.md).
+
 ### 98. Que se passe-t-il si mon récepteur webhook est indisponible ?
 
 Fondeka réessaie selon sa politique de livraison : la documentation actuelle prévoit jusqu’à dix tentatives avec des délais croissants. Une redirection n’est pas considérée comme une réception réussie.
 
 Votre application doit aussi consulter la référence enregistrée pour rapprocher le résultat. Réparez le récepteur plutôt que de créer un nouveau paiement. Changer l’URL ne rejoue pas automatiquement tous les événements déjà livrés ou dont les tentatives sont épuisées.
 
-### 99. Qu’est-ce qu’une clé d’idempotence, simplement ?
+### 99. Comment les clés d’idempotence évitent-elles les paiements API en double ?
 
 C’est un identifiant unique pour une opération voulue. En cas de nouvelle tentative après un problème de connexion, renvoyez la même clé et les mêmes informations. Fondeka peut ainsi reconnaître la demande existante au lieu de créer un autre paiement.
 
 Utilisez une autre clé pour un paiement réellement nouveau. Stockez durablement la clé et la requête originales côté serveur. Réutiliser une clé avec des informations différentes provoque un conflit plutôt qu’une modification sûre de l’opération.
+
+[Lire le guide de l’idempotence et des reprises sûres en anglais](https://web.fondeka.com/docs/business-api/concepts.md).
 
 ### 100. Que faire après un délai dépassé, une réponse perdue ou un traitement bloqué ?
 
@@ -739,7 +764,7 @@ Conservez la clé d’idempotence, la requête et toute référence déjà reçu
 
 Ne générez pas automatiquement une nouvelle clé pour un nouvel encaissement ou paiement sortant. Un délai réseau dépassé indique l’absence de réponse chez vous, pas l’absence d’un paiement accepté. Faites examiner les attentes prolongées par le support en gardant leurs références.
 
-## Sécurité, vérification et utilisation responsable
+## Sécurité de l’API et vérification d’identité
 
 ### 101. Accepter les entreprises sans documents signifie-t-il ne faire aucun contrôle ?
 
@@ -797,7 +822,7 @@ Cette FAQ ne fixe aucun seuil public unique pour toutes les activités et routes
 
 Tenez à jour vos informations, vos démarches administratives et vos enregistrements de paiement. Préparez l’équipe technique à la prochaine intégration. En cas de migration, rapprochez correctement les paiements Fondeka existants, les soldes et les obligations webhook.
 
-## Problèmes courants et assistance
+## Résolution des erreurs API et assistance
 
 ### 110. Pourquoi l’accès est-il requis alors que je suis connecté ?
 
@@ -873,7 +898,7 @@ Fondeka aide les étudiants, freelances, petites entreprises et startups à int�
 
 Vous payez l’accès API ou le pack, puis les frais applicables aux opérations utilisées. Le modèle moyen regroupe **environ 3 % de frais agrégateur et 2 % de frais Fondeka en un seul frais d’environ 5 % par opération** ; les tarifs réels sont visibles après activation. Testez avec de l’argent virtuel en Sandbox, confirmez séparément le Live et intégrez la sécurité et les confirmations. Avec votre croissance, Fondeka peut vous guider et vous recommander pour une intégration directe avec un agrégateur.
 
-## Glossaire et liens utiles
+## Glossaire API de paiement et documentation développeur
 
 | Terme | Explication simple |
 | --- | --- |

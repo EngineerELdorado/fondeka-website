@@ -1,6 +1,6 @@
 import { paymentApiContent, paymentApiLanguage } from './paymentApiContent';
 
-export const siteUrl = 'https://fondeka.com';
+export const siteUrl = 'https://www.fondeka.com';
 
 export const seoKeywords = [
   'Fondeka',
@@ -327,15 +327,18 @@ export const serviceSeo = {
   },
   apiFaq: {
     path: '/docs/faq',
+    explicitLanguageQuery: true,
+    lastModified: '2026-11-03',
+    image: { url: '/illustrations/docs-developers.jpg', width: 1536, height: 1024 },
     name: 'Payment API Q&A',
-    title: 'Payment API FAQ: Fees, Sandbox and Coverage | Fondeka',
-    description: 'Answers to 120 questions about Fondeka Payment API access, fees, supported countries, Sandbox, Live, credentials and safe payment integration.',
+    title: 'Mobile Money & Crypto Payment API FAQ | Fondeka',
+    description: 'Payment API answers for DR Congo and supported African markets: Mobile Money, crypto, fees, access for students and startups, Sandbox testing and Live payments.',
     keywords: ['Fondeka API FAQ', 'payment API fees', 'Mobile Money API Sandbox', 'payment API for students', 'payment API without company documents'],
     locales: {
       fr: {
         name: 'Questions sur l’API de paiement',
-        title: 'FAQ API de paiement : frais, Sandbox et pays couverts | Fondeka',
-        description: '120 réponses sur l’accès à l’API Fondeka, les frais, les pays couverts, la Sandbox, le Live, les identifiants et la sécurité des paiements.',
+        title: 'FAQ API paiement Mobile Money et crypto | Fondeka',
+        description: 'L’API de paiement Fondeka en RDC et en Afrique : Mobile Money, crypto, frais, accès sans documents d’entreprise, tests Sandbox et conditions Live.',
         keywords: ['FAQ API Fondeka', 'frais API de paiement', 'Sandbox API Mobile Money', 'API de paiement étudiant', 'API de paiement sans documents d’entreprise'],
       },
     },
@@ -395,12 +398,19 @@ export const serviceSeo = {
   },
 };
 
+export function servicePath(slug, language = 'en') {
+  const page = serviceSeo[slug];
+  const lang = paymentApiLanguage(language);
+  return `${page.path}${page.locales && (lang === 'fr' || page.explicitLanguageQuery) ? `?lang=${lang}` : ''}`;
+}
+
 export function createMetadata(slug, language = 'en') {
   const lang = paymentApiLanguage(language);
   const base = serviceSeo[slug];
   const page = { ...base, ...base.locales?.[lang] };
-  const path = `${page.path}${base.locales && lang === 'fr' ? '?lang=fr' : ''}`;
+  const path = servicePath(slug, lang);
   const url = `${siteUrl}${path}`;
+  const image = { ...(page.image || { url: '/og-image.jpg', width: 1200, height: 630 }), alt: `${page.name} ${lang === 'fr' ? 'par' : 'by'} Fondeka` };
 
   return {
     title: page.title,
@@ -409,7 +419,7 @@ export function createMetadata(slug, language = 'en') {
     alternates: {
       canonical: path,
       ...(base.locales ? {
-        languages: { en: page.path, fr: `${page.path}?lang=fr`, 'x-default': page.path },
+        languages: { en: servicePath(slug, 'en'), fr: servicePath(slug, 'fr'), 'x-default': page.path },
       } : {}),
     },
     openGraph: {
@@ -417,7 +427,7 @@ export function createMetadata(slug, language = 'en') {
       description: page.description,
       url,
       siteName: 'Fondeka',
-      images: [{ url: '/og-image.jpg', width: 1200, height: 630, alt: `${page.name} by Fondeka` }],
+      images: [image],
       locale: lang === 'fr' ? 'fr_CD' : 'en_US',
       type: 'website',
     },
@@ -425,7 +435,7 @@ export function createMetadata(slug, language = 'en') {
       card: 'summary_large_image',
       title: page.title,
       description: page.description,
-      images: ['/og-image.jpg'],
+      images: [image.url],
     },
   };
 }
@@ -434,7 +444,7 @@ export function createServiceSchema(slug, language = 'en') {
   const lang = paymentApiLanguage(language);
   const base = serviceSeo[slug];
   const page = { ...base, ...base.locales?.[lang] };
-  const url = `${siteUrl}${page.path}${base.locales && lang === 'fr' ? '?lang=fr' : ''}`;
+  const url = `${siteUrl}${servicePath(slug, lang)}`;
 
   return {
     '@context': 'https://schema.org',

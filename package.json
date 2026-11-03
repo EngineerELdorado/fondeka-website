@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint .",
     "test:faq": "node --test scripts/api-faq.test.mjs",
-    "test:language": "node --test scripts/language.test.mjs"
+    "test:language": "node --test scripts/language.test.mjs",
+    "test:seo": "node --test scripts/seo.test.mjs"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

@@ -8,11 +8,11 @@ import MetaPixel from '../components/MetaPixel';
 import MobileInstallBar from '../components/MobileInstallBar';
 import JsonLd from '../components/JsonLd';
 import { I18nProvider } from '../lib/i18n';
-import { organizationSchema, seoKeywords } from '../lib/seo';
+import { organizationSchema, seoKeywords, siteUrl } from '../lib/seo';
 import { Suspense } from 'react';
 
 export const metadata = {
-    metadataBase: new URL('https://fondeka.com'),
+    metadataBase: new URL(siteUrl),
     title: 'Fondeka | Digital Bank and Payment API for Congo and Africa',
     description:
         'Fondeka combines digital banking with a payment API for small businesses, students and early-stage startups in DR Congo and supported African markets.',
@@ -24,7 +24,7 @@ export const metadata = {
         title: 'Fondeka | Digital Bank and Payment API for Congo and Africa',
         description:
             'Digital banking, cards, savings and a payment API for small businesses, students and startups building with Mobile Money and crypto in supported African markets.',
-        url: 'https://fondeka.com',
+        url: siteUrl,
         siteName: 'Fondeka',
         images: [
             {

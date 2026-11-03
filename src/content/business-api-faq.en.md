@@ -1,6 +1,6 @@
-# Fondeka Payment API: your questions answered
+# Fondeka Payment API FAQ: Mobile Money, crypto and fees
 
-Add Mobile Money and crypto payments to your website or application, even while your business is still taking shape.
+Learn how to integrate Mobile Money and crypto payments with Fondeka in DR Congo and supported African markets, including fees, eligibility and Sandbox testing.
 
 Fondeka built this API for **students, freelancers, small businesses and startups that do not yet have the administrative documents needed to integrate directly with many payment aggregators**. You can build and test your payment flow through Fondeka, then use real payments when your account and the relevant payment routes are ready.
 
@@ -16,31 +16,30 @@ This guide explains what you get, why access is paid, how transaction fees work,
 | What are the transaction fees?                  | On average, approximately 3% for the aggregator plus 2% for Fondeka, combined into one approximately 5% fee per operation. Actual fees vary by operator and payment route.                             |
 | Where can I see detailed fees?                  | In the API area after access is active, through the available payment methods and their current fee information.                                                                                       |
 | Can I test without real money?                  | Yes. Sandbox uses separate credentials, virtual balances and simulated payments.                                                                                                                       |
-| Does paying automatically enable Live payments? | No. Access, identity/account requirements, route availability and Live-payment availability are separate checks.                                                                                       |
 | What happens as my business grows?              | Fondeka monitors business activity and volumes. When direct integration becomes more suitable, we will advise you to work directly with an aggregator and recommend your business to help build trust. |
 
 ## Contents
 
-- [Understanding the API and who it serves](#understanding-the-api-and-who-it-serves)
-- [Countries, currencies and payment methods](#countries-currencies-and-payment-methods)
-- [Paid access and what your payment unlocks](#paid-access-and-what-your-payment-unlocks)
-- [Transaction fees, with examples](#transaction-fees-with-examples)
-- [Sandbox and Live](#sandbox-and-live)
-- [Getting started and managing your credentials](#getting-started-and-managing-your-credentials)
-- [Collecting customer payments](#collecting-customer-payments)
-- [Sending payouts](#sending-payouts)
-- [Wallets, currencies and settlement](#wallets-currencies-and-settlement)
-- [Payment status, notifications and safe retries](#payment-status-notifications-and-safe-retries)
-- [Security, verification and responsible use](#security-verification-and-responsible-use)
-- [Growing your business and moving to an aggregator](#growing-your-business-and-moving-to-an-aggregator)
-- [Common problems and support](#common-problems-and-support)
-- [Glossary and useful links](#glossary-and-useful-links)
+- [Payment API for students, freelancers and startups](#payment-api-for-students-freelancers-and-startups)
+- [Mobile Money API coverage: countries, currencies and operators](#mobile-money-api-coverage-countries-currencies-and-operators)
+- [API access, activation and Business Tools pricing](#api-access-activation-and-business-tools-pricing)
+- [Payment API transaction fees and examples](#payment-api-transaction-fees-and-examples)
+- [Sandbox vs Live: testing the payment API](#sandbox-vs-live-testing-the-payment-api)
+- [Getting started: API keys, Business ID and credentials](#getting-started-api-keys-business-id-and-credentials)
+- [Mobile Money and crypto collections](#mobile-money-and-crypto-collections)
+- [Mobile Money and crypto payouts](#mobile-money-and-crypto-payouts)
+- [API wallets, currencies and settlement](#api-wallets-currencies-and-settlement)
+- [Payment statuses, webhooks and idempotent retries](#payment-statuses-webhooks-and-idempotent-retries)
+- [Payment API security and identity verification](#payment-api-security-and-identity-verification)
+- [Growing your business and direct aggregator integration](#growing-your-business-and-direct-aggregator-integration)
+- [Payment API troubleshooting and support](#payment-api-troubleshooting-and-support)
+- [Payment API glossary and developer documentation](#payment-api-glossary-and-developer-documentation)
 
-## Understanding the API and who it serves
+## Payment API for students, freelancers and startups
 
 ### 1. What is the Fondeka Payment API?
 
-It is a way for your software to request payments, send supported payouts and check the results through Fondeka.
+The Fondeka Payment API is a REST API for collecting customer payments and sending supported Mobile Money and crypto payouts from your own website or application.
 
 For example, a customer places an order on your website. Your server asks Fondeka to collect the payment using a supported method. Fondeka processes the request and sends your server an update when the result is known. Your application can then update the order.
 
@@ -57,11 +56,13 @@ We built it especially for:
 
 Established teams can also assess whether the service fits their needs. Our main purpose is to make payment integration more accessible at an early stage.
 
-### 3. Can I start if I do not have company documents yet?
+### 3. Can students and freelancers use a payment API without company documents?
 
-Yes. This is one of the reasons the API exists. Direct aggregator onboarding can be difficult when you do not yet have the administrative documents that a provider requests. Fondeka gives you a simpler integration path while your business develops.
+Yes. Students, freelancers and early-stage startups can start integrating payments through Fondeka while their company documents are still in preparation. Fondeka simplifies the connection to supported payment routes while the business develops.
 
 You still need an eligible Fondeka account and must complete the checks required for your situation. Identity verification, account restrictions and payment rules remain applicable, especially for real payouts. Starting without company paperwork does not mean using the service anonymously.
+
+[Read the payment API eligibility overview](/business?lang=en).
 
 ### 4. What is a payment aggregator?
 
@@ -112,11 +113,11 @@ You need a developer or a platform that can make secure requests from a server a
 
 If you simply want a ready-to-use way to collect payments, explore Fondeka's Payment Links, Online Stores or POS tools. If you want payments inside your own product, the API is the relevant tool.
 
-## Countries, currencies and payment methods
+## Mobile Money API coverage: countries, currencies and operators
 
-### 11. Which countries does Fondeka cover?
+### 11. Which African countries and currencies does the Fondeka Payment API support?
 
-The API's coverage follows the countries and currencies supported by the Fondeka app. The current country coverage includes:
+Coverage includes DR Congo (CDF and USD on supported routes), Congo-Brazzaville, Côte d’Ivoire and the other African markets in the table below. Availability follows the payment routes enabled for your account.
 
 | Country                          | Name you may also see                   | Relevant local payment currencies                  |
 | -------------------------------- | --------------------------------------- | -------------------------------------------------- |
@@ -185,9 +186,9 @@ Yes, more coverage is planned as Fondeka expands its supported connections. Chec
 
 If your project needs a country, operator, currency or crypto network that is not currently available, contact support with the details. A requested route should only be advertised to your customers after its availability has been confirmed.
 
-## Paid access and what your payment unlocks
+## API access, activation and Business Tools pricing
 
-### 20. Why does Fondeka charge for API access?
+### 20. Why is Fondeka Payment API access paid?
 
 We charge for access because we simplify the work and complications involved in integrating with payment aggregators. This is particularly useful when you are still a student, working independently, running a small business or preparing your startup's administrative documents.
 
@@ -202,9 +203,9 @@ They pay for different things:
 
 Paying for access does not make payment processing free. It also does not turn the access charge into a wallet deposit or a balance you can send to customers.
 
-### 22. How much does access cost?
+### 22. How much does Fondeka Payment API access cost?
 
-The Business portal shows the current offer for your account, including the amount, currency and billing term. Check that screen before paying.
+API access prices depend on the current API or Business Tools offer for your account. The Business portal shows the amount, currency and billing term before payment.
 
 The offer can be for the full Business Tools bundle or for API access alone. Prices and available offers can change, so a price quoted by another user or shown in an old message may not be the offer available to you. The displayed payment total can also include the processing fees for the method used to pay for activation.
 
@@ -294,11 +295,11 @@ No. Access does not remove transaction limits, available-balance requirements, o
 
 Your project must fit the supported payment flows. If you expect substantial volumes or have a specialized activity, discuss it with Fondeka before relying on a particular operational setup.
 
-## Transaction fees, with examples
+## Payment API transaction fees and examples
 
-### 35. What is Fondeka's average fee per operation?
+### 35. What are the Mobile Money and crypto API transaction fees?
 
-Fondeka combines the underlying aggregator's fee and its own fee into a single consolidated charge for the operation.
+Fondeka combines the aggregator’s fee and its own fee into one charge for each payment operation. The average consolidated fee is approximately 5%; the actual rate depends on the operator and payment route.
 
 The average explanation is:
 
@@ -330,7 +331,7 @@ Operators and payment routes do not all have the same cost structure. A route ma
 
 For that reason, applying a hard-coded 5% to every request would be misleading. The average helps explain the model; the current route-specific information and the server-calculated amounts determine the actual operation.
 
-### 39. Where can I see the exact fee details?
+### 39. Where can I find API fees by operator and payment route?
 
 After access is active, open **API Guides → Available payment methods** in the Business portal. Explore the relevant operator or crypto method and check the fee information for the operation and currency you intend to use.
 
@@ -377,6 +378,8 @@ For a payout, the gross amount is the amount reserved or debited from the wallet
 
 Request amounts use normal currency units: `10` with `currency: "USD"` means 10 USD, not 10 cents. Monetary requests allow at most two decimal places. Your developer should handle money with decimal arithmetic and should not automatically multiply every amount by 100.
 
+[Read the payment amounts and fee-mode guide](https://web.fondeka.com/docs/business-api/concepts.md).
+
 ### 44. Do currency conversion or crypto rates affect the result?
 
 They can. The request's fiat amount, the selected payment route, any necessary currency conversion and the crypto instructions have different roles.
@@ -401,13 +404,15 @@ Review current pricing for each new operation. An accepted API payment retains i
 
 A failure status alone does not establish that money or fees have been returned. Refund handling depends on the operation and applicable policy. Check the relevant wallet records and contact support if the result is unclear. Do not automatically send another payout to compensate for a failed or unresolved one.
 
-## Sandbox and Live
+## Sandbox vs Live: testing the payment API
 
-### 48. What is Sandbox?
+### 48. What is a payment API Sandbox, and does it use real money?
 
-**Sandbox is the API's testing environment.** It lets you develop a payment integration using virtual balances and simulated payment outcomes.
+**Fondeka Sandbox is the Payment API’s testing environment.** It uses virtual balances and simulated payment outcomes without moving real money.
 
 You can test submitting payments, following their status, receiving signed webhooks, handling failures and checking virtual wallet effects. Sandbox does not call the real payment providers or move real money. It is where you should build confidence in your integration before using customer funds.
+
+[Read the Sandbox testing guide](https://web.fondeka.com/docs/business-api/testing.md).
 
 ### 49. What is Live?
 
@@ -431,7 +436,7 @@ Yes. Generate separate credentials for each environment. Newly issued keys use `
 
 The stored credential determines the environment. Changing a label in your interface, editing a prefix or adding “sandbox” to an unrelated URL does not change what a key can do. Older valid key formats can remain supported; follow the environment recorded for the credential.
 
-### 52. Do I need a different API URL for Sandbox?
+### 52. Do Sandbox and Live use different API base URLs?
 
 The documented base URL is `https://api.fondeka.com`, with merchant routes under `/business-api/v1`. Sandbox and Live use the same documented routes; the credential selects the environment.
 
@@ -493,7 +498,9 @@ Before switching:
 
 Keep Sandbox credentials and data separate so development cannot accidentally trigger a production payment.
 
-## Getting started and managing your credentials
+[Read the go-live checklist](https://web.fondeka.com/docs/business-api/go-live.md).
+
+## Getting started: API keys, Business ID and credentials
 
 ### 61. What do I need before I start?
 
@@ -501,7 +508,7 @@ You need an eligible Fondeka account, access to the API tool, your Business iden
 
 You also need a public HTTPS webhook destination before relying on automatic payment notifications. You can prepare your website and server while completing account setup. Review the supported route you intend to use before promising it to customers.
 
-### 62. How do I start, step by step?
+### 62. How do I integrate the Fondeka Payment API with my website or app?
 
 1. Create your Fondeka account through the supported account-registration flow, or use your existing account.
 2. Sign in to the [Business portal](https://web.fondeka.com).
@@ -510,6 +517,8 @@ You also need a public HTTPS webhook destination before relying on automatic pay
 5. Generate Sandbox credentials and save both secrets securely.
 6. Follow the quickstart, test the payment flows you need and verify your webhooks.
 7. Complete the Live-readiness steps before using real customer money.
+
+[Follow the Payment API quickstart](https://web.fondeka.com/docs/business-api/quickstart.md).
 
 ### 63. What is my Business ID?
 
@@ -523,11 +532,13 @@ The portal works with the Business profiles owned by your account. Where multipl
 
 Credentials and payment references are Business-specific. However, Businesses belonging to the same account share that account's relevant wallet balances. Do not assume each profile automatically receives a financially separate wallet. If you need separate balances or a platform model for unrelated merchants, discuss the required structure with Fondeka.
 
-### 65. What is an API key, and where do I use it?
+### 65. How do I get and secure a Fondeka API key?
 
-An API key is a secret your server uses to authenticate merchant API requests. Send it in the documented `X-API-Key` header.
+An API key is the secret your server sends in the documented `X-API-Key` header. After API access is active, generate the appropriate Sandbox or Live credential in the Business portal, subject to your account’s requirements.
 
 Keep it on your server or in a secret manager. Do not place it in a public web page, a mobile-app bundle, a Git repository, a screenshot or a shared example. Your customers should interact with your application; they should not receive your secret key.
+
+[Read the API credential setup guide](https://web.fondeka.com/docs/business-api/quickstart.md).
 
 ### 66. What is the webhook signing secret?
 
@@ -565,13 +576,15 @@ The API uses HTTPS requests and JSON, so you can integrate it from a language or
 
 The documentation also includes an OpenAPI reference and a Sandbox Postman collection. These are integration aids and examples; your production application still needs secure configuration, durable payment records, error handling and a verified webhook receiver.
 
-## Collecting customer payments
+## Mobile Money and crypto collections
 
-### 72. How does a Mobile Money collection work?
+### 72. How do I accept Mobile Money payments on my website with Fondeka?
 
 Your server submits the amount, fiat currency, supported payment method and the payer's phone number, together with a unique retry identifier. Fondeka returns a payment reference and processes the request asynchronously.
 
 Depending on the operator, the customer may need to approve the request on their phone. Your application follows the payment until it completes or fails. Deliver the product or service only after verified completion and the appropriate amount checks.
+
+[Read the Mobile Money collection guide](https://web.fondeka.com/docs/business-api/guides/mobile-money-collection.md).
 
 ### 73. Does my customer need a Fondeka account to pay?
 
@@ -593,11 +606,13 @@ The payment may fail or expire according to the provider's outcome. Your applica
 
 Until the final outcome is established, do not automatically issue a replacement request. If the original payment is confirmed failed and the customer wants to try again, treat that as a deliberate new payment attempt with its own identity.
 
-### 76. How does a crypto collection work?
+### 76. How do I accept crypto payments for a fiat-priced invoice?
 
 You request a price in fiat currency, such as 25 USD, and select a supported crypto method and network. Fondeka creates the payment instructions asynchronously.
 
 Once available, show the customer the returned asset, network, address, token quantity and expiry or invoice link. Your application must not invent an address, substitute a network or calculate its own token quantity from an assumed rate.
+
+[Read the crypto collection guide](https://web.fondeka.com/docs/business-api/guides/crypto-collection.md).
 
 ### 77. Does “25 USD paid in USDT” mean the customer sends exactly 25 USDT?
 
@@ -617,19 +632,23 @@ After your server has established that the correct payment is `COMPLETED`, belon
 
 A browser success page, customer screenshot, HTTP 202 response or unverified webhook is not sufficient evidence on its own. Keep your order-to-payment mapping and check the completed settlement before fulfilling.
 
-## Sending payouts
+## Mobile Money and crypto payouts
 
-### 80. How does a Mobile Money payout work?
+### 80. How do I send a Mobile Money payout through the API?
 
 Your server requests a payout to the recipient's supported international phone number. The request specifies the fiat amount, currency, selected method and fee mode.
 
 The wallet must have enough available funds to cover the gross debit, including fees. When the request is accepted, the relevant amount is reserved or debited, and the payment is then processed. Confirm the final status before telling the recipient it is completed.
 
-### 81. How does a crypto payout work?
+[Read the Mobile Money payout guide](https://web.fondeka.com/docs/business-api/guides/mobile-money-payout.md).
+
+### 81. How do I send a crypto payout from a Fondeka fiat wallet?
 
 You specify the fiat amount to use, the supported crypto method/network and the recipient's address. The operation uses the quoted conversion and debits or reserves the gross fiat amount from the account wallet.
 
 The recipient receives the quoted token quantity on the selected network. Check the address and network carefully. A transfer to the wrong address or network may be unrecoverable, so do not infer compatibility from similar-looking address formats.
+
+[Read the crypto payout guide](https://web.fondeka.com/docs/business-api/guides/crypto-payout.md).
 
 ### 82. Must I fund the wallet before sending a payout?
 
@@ -661,7 +680,7 @@ The published merchant payment contract does not provide a general-purpose cance
 
 Contact support with the payment reference when you need help with an accepted operation. Whether funds can be recovered depends on the payment's state, the method and the actual financial outcome. Do not send a compensating payout automatically.
 
-## Wallets, currencies and settlement
+## API wallets, currencies and settlement
 
 ### 87. Where does collected money go?
 
@@ -703,11 +722,11 @@ Timing depends on the method, customer approval, provider response and, for cryp
 
 Minimums, maximums, verification requirements and available-balance rules also depend on the route and account. Check current information for your use case. A request accepted for processing can still have an unresolved outcome; do not turn a user-interface timeout into a claim that the payment failed.
 
-## Payment status, notifications and safe retries
+## Payment statuses, webhooks and idempotent retries
 
-### 93. What are the payment statuses?
+### 93. What do ACCEPTED, PROCESSING, COMPLETED and FAILED mean?
 
-The published payment responses use four statuses:
+The Fondeka Payment API returns four statuses for Mobile Money and crypto payments:
 
 | Status       | Meaning                                                                                           | What your app should do                                                       |
 | ------------ | ------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------- |
@@ -717,6 +736,8 @@ The published payment responses use four statuses:
 | `FAILED`     | The payment has a definite failure outcome, including applicable cancellation or expiry outcomes. | Explain the known failure and reconcile any wallet/refund effect.             |
 
 “Pending” is a useful description for customers, but `PENDING` is not an additional status in this merchant response contract.
+
+[Read the payment-state reference](https://web.fondeka.com/docs/business-api/concepts.md).
 
 ### 94. Does HTTP 202 mean my customer has paid?
 
@@ -742,17 +763,21 @@ Your server should only act on a notification after verifying its signature, fre
 
 Delivery can repeat, for example when an acknowledgment is lost. Store verified event IDs and make order fulfillment safe to run more than once for the same payment reference. Receiving the same event twice should not deliver a digital product twice or send another payout.
 
+[Read the webhook signature and duplicate-delivery guide](https://web.fondeka.com/docs/business-api/webhooks.md).
+
 ### 98. What happens if my webhook endpoint is down?
 
 Fondeka retries unsuccessful deliveries according to its delivery policy. The current documented policy allows up to ten attempts, with increasing delays. A redirect is not treated as a successful delivery.
 
 Your application should also be able to look up the stored payment reference and reconcile the result. Fix the receiver rather than submitting a new payment. Updating a webhook URL does not automatically replay every previously delivered or exhausted event.
 
-### 99. What is an idempotency key, in simple terms?
+### 99. How do idempotency keys prevent duplicate API payments?
 
 It is a unique label for one intended operation. Send the same key and the same payment information if you must retry that operation after a connection problem. This helps Fondeka recognize the existing request instead of creating another payment.
 
 Use a different key for a genuinely new payment. Store the original key and request durably on your server. Reusing a key with different payment information causes a conflict rather than safely changing the original operation.
+
+[Read the idempotency and safe-retry guide](https://web.fondeka.com/docs/business-api/concepts.md).
 
 ### 100. What should I do after a timeout, a lost response or a payment stuck in processing?
 
@@ -760,7 +785,7 @@ Keep the original idempotency key, request information and any Fondeka reference
 
 Do not automatically generate a new key and start another collection or payout. A network timeout says that your application did not obtain an answer; it does not establish that no payment was accepted. Investigate long-running payments with support while keeping their references intact.
 
-## Security, verification and responsible use
+## Payment API security and identity verification
 
 ### 101. Does serving businesses without company documents mean there are no checks?
 
@@ -792,7 +817,7 @@ Yes. Keep secrets on the server, use HTTPS, restrict who can request payouts, ve
 
 Your application should also prevent accidental double-click submissions and make fulfillment idempotent. These controls complement the API's own request validation and retry protection; they are part of operating a dependable payment feature.
 
-## Growing your business and moving to an aggregator
+## Growing your business and direct aggregator integration
 
 ### 106. Does Fondeka monitor each business?
 
@@ -818,7 +843,7 @@ There is no single public threshold in this FAQ that applies to every business, 
 
 Maintain clear business information, progress on your administrative documents, reliable payment records and a technical team able to manage the next integration. If you move to a direct provider, plan the transition so existing Fondeka payments, balances and webhook obligations can be reconciled correctly.
 
-## Common problems and support
+## Payment API troubleshooting and support
 
 ### 110. Why do I see “access required” after signing in?
 
@@ -894,7 +919,7 @@ Fondeka helps students, freelancers, small businesses and startups connect suppo
 
 You pay for API or bundle access, then pay the applicable fees for the operations you use. The average fee model combines approximately **3% aggregator fees and 2% Fondeka fees into one approximately 5% charge per operation**, with actual operator-specific pricing available after access. Test with virtual money in Sandbox, confirm Live readiness separately, and keep payment confirmation and security built into your application. As your business grows, Fondeka can guide and recommend you toward direct aggregator integration.
 
-## Glossary and useful links
+## Payment API glossary and developer documentation
 
 | Term              | Simple meaning                                                                                         |
 | ----------------- | ------------------------------------------------------------------------------------------------------ |

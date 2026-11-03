@@ -5,7 +5,7 @@ import { getApiFaqContent, faqBlockText } from '@/lib/apiFaqContent';
 import { apiFaqUi } from '@/lib/apiFaqUi';
 import { paymentApiLanguage } from '@/lib/paymentApiContent';
 import { businessAppUrl } from '@/lib/business';
-import { createMetadata, siteUrl } from '@/lib/seo';
+import { createMetadata, servicePath, serviceSeo, siteUrl } from '@/lib/seo';
 import FaqExplorer from './FaqExplorer';
 import FaqIcon, { FaqIconTile } from '@/components/FaqIcon';
 import './faq.css';
@@ -18,10 +18,15 @@ export default function ApiFaqPage({ searchParams }) {
   const lang = paymentApiLanguage(searchParams.lang);
   const content = getApiFaqContent(lang);
   const ui = apiFaqUi[lang];
-  const canonical = `${siteUrl}/docs/faq${lang === 'fr' ? '?lang=fr' : ''}`;
+  const canonical = `${siteUrl}${servicePath('apiFaq', lang)}`;
+  const metadata = createMetadata('apiFaq', lang);
   const schema = {
     '@context': 'https://schema.org', '@type': 'FAQPage', inLanguage: lang,
-    name: content.title, url: canonical, dateModified: '2026-11-03',
+    '@id': `${canonical}#faq`,
+    name: content.title, description: metadata.description, url: canonical,
+    dateModified: serviceSeo.apiFaq.lastModified,
+    publisher: { '@type': 'Organization', name: 'Fondeka', url: siteUrl },
+    about: { '@type': 'Service', name: ui.api, url: `${siteUrl}${servicePath('business', lang)}` },
     mainEntity: content.sections.flatMap(section => section.questions.map(question => ({
       '@type': 'Question', name: question.question, url: `${canonical}#${question.id}`,
       acceptedAnswer: { '@type': 'Answer', text: question.blocks.map(faqBlockText).join('\n\n') },
@@ -45,7 +50,7 @@ export default function ApiFaqPage({ searchParams }) {
         </nav>
         <div className="faq-heading">
           <FaqIconTile icon="help" tone="blue" />
-          <div><h1>{content.title}</h1><p>{content.intro[0]}</p><div className="faq-header-meta"><span className="faq-count">120 {ui.answers}</span><span>{ui.reviewed}</span></div></div>
+          <div><h1>{content.title}</h1><p>{content.intro[0]}</p><div className="faq-header-meta"><span className="faq-count">120 {ui.answers}</span><span>{ui.publisher}</span><span>{ui.reviewed}</span></div></div>
         </div>
         <details className="faq-essentials faq-surface">
           <summary><FaqIconTile icon="book" tone="teal" /><span>{ui.essentials}</span><span className="faq-chevron"><FaqIcon name="chevron" /></span></summary>
