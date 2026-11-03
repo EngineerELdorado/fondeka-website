@@ -496,10 +496,8 @@ Prévoyez aussi une destination webhook HTTPS publique avant de compter sur les 
 3. Ouvrez l’espace API et consultez l’offre si une activation est nécessaire.
 4. Après activation, vérifiez votre Business ID, les moyens et frais actuels.
 5. Générez les identifiants Sandbox et enregistrez les deux secrets en sécurité.
-6. Suivez le guide de démarrage, testez les parcours utiles et vérifiez les webhooks.
+6. Consultez les guides API du portail pour tester les parcours utiles et vérifier les webhooks.
 7. Terminez les étapes de préparation Live avant d’utiliser l’argent de vos clients.
-
-[Suivre le guide de démarrage de l’API en anglais](https://web.fondeka.com/docs/business-api/quickstart.md).
 
 ### 63. Qu’est-ce que mon Business ID ?
 
@@ -518,8 +516,6 @@ Les identifiants et références de paiement sont propres au Business. Les Busin
 Une clé API est le secret envoyé par votre serveur dans l’en-tête documenté `X-API-Key`. Après activation de l’accès, générez l’identifiant Sandbox ou Live adapté dans le portail Business, selon les conditions de votre compte.
 
 Conservez-le côté serveur ou dans un gestionnaire de secrets. Ne l’intégrez pas à une page publique, une application mobile, un dépôt Git, une capture ou un exemple partagé. Vos clients utilisent votre application, sans recevoir votre clé secrète.
-
-[Lire la configuration des identifiants API en anglais](https://web.fondeka.com/docs/business-api/quickstart.md).
 
 ### 66. Qu’est-ce que le secret de signature webhook ?
 
@@ -927,7 +923,6 @@ Pour commencer :
 - [Ouvrir le portail Business Fondeka](https://web.fondeka.com).
 - [Découvrir l’introduction publique à l’API](https://www.fondeka.com/docs?lang=fr).
 - [Ouvrir les guides API du portail](https://web.fondeka.com/developers/guides).
-- [Lire le guide de démarrage publié en anglais](https://web.fondeka.com/docs/business-api/quickstart.md).
 - [Lire les concepts de paiement et portefeuilles en anglais](https://web.fondeka.com/docs/business-api/concepts.md).
 - [Lire le guide de test en anglais](https://web.fondeka.com/docs/business-api/testing.md).
 - [Lire le guide webhook en anglais](https://web.fondeka.com/docs/business-api/webhooks.md).

@@ -515,10 +515,8 @@ You also need a public HTTPS webhook destination before relying on automatic pay
 3. Open the API area and review the access offer if activation is required.
 4. Once access is active, check your Business ID, payment methods and current fees.
 5. Generate Sandbox credentials and save both secrets securely.
-6. Follow the quickstart, test the payment flows you need and verify your webhooks.
+6. Use the portal's API Guides to test the payment flows you need and verify your webhooks.
 7. Complete the Live-readiness steps before using real customer money.
-
-[Follow the Payment API quickstart](https://web.fondeka.com/docs/business-api/quickstart.md).
 
 ### 63. What is my Business ID?
 
@@ -537,8 +535,6 @@ Credentials and payment references are Business-specific. However, Businesses be
 An API key is the secret your server sends in the documented `X-API-Key` header. After API access is active, generate the appropriate Sandbox or Live credential in the Business portal, subject to your account’s requirements.
 
 Keep it on your server or in a secret manager. Do not place it in a public web page, a mobile-app bundle, a Git repository, a screenshot or a shared example. Your customers should interact with your application; they should not receive your secret key.
-
-[Read the API credential setup guide](https://web.fondeka.com/docs/business-api/quickstart.md).
 
 ### 66. What is the webhook signing secret?
 
@@ -948,7 +944,6 @@ Useful starting points:
 - [Open the Fondeka Business portal](https://web.fondeka.com).
 - [Explore the public API introduction](https://www.fondeka.com/docs?lang=en).
 - [Open the portal's API Guides](https://web.fondeka.com/developers/guides).
-- [Read the published quickstart](https://web.fondeka.com/docs/business-api/quickstart.md).
 - [Read the payment and wallet concepts](https://web.fondeka.com/docs/business-api/concepts.md).
 - [Read the testing guide](https://web.fondeka.com/docs/business-api/testing.md).
 - [Read the webhook guide](https://web.fondeka.com/docs/business-api/webhooks.md).

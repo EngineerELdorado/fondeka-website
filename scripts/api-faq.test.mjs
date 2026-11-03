@@ -19,7 +19,7 @@ for (const lang of ['en', 'fr']) {
     assert.equal(content.essentials.rows.length, 7);
     assert.equal(content.intro.length, 3);
     assert.equal(content.glossary.blocks.find(block => block.type === 'table').rows.length, 19);
-    assert.equal(content.glossary.blocks.find(block => block.type === 'list').items.length, 13);
+    assert.equal(content.glossary.blocks.find(block => block.type === 'list').items.length, 12);
     for (const item of questions) {
       assert.ok(item.question && item.blocks.length > 0);
       for (const block of item.blocks) {
@@ -57,7 +57,7 @@ for (const lang of ['en', 'fr']) {
     const fees = JSON.stringify(question(35));
     assert.ok(fees.includes(lang === 'fr' ? 'environ' : 'approximately'));
     assert.ok(fees.includes(lang === 'fr' ? 'taux réel' : 'actual rate'));
-    for (const [number, file] of [[48,'testing.md'], [60,'go-live.md'], [62,'quickstart.md'], [72,'guides/mobile-money-collection.md'], [76,'guides/crypto-collection.md'], [80,'guides/mobile-money-payout.md'], [81,'guides/crypto-payout.md'], [97,'webhooks.md']]) {
+    for (const [number, file] of [[48,'testing.md'], [60,'go-live.md'], [72,'guides/mobile-money-collection.md'], [76,'guides/crypto-collection.md'], [80,'guides/mobile-money-payout.md'], [81,'guides/crypto-payout.md'], [97,'webhooks.md']]) {
       assert.ok(JSON.stringify(question(number)).includes(`https://web.fondeka.com/docs/business-api/${file}`));
     }
   });
