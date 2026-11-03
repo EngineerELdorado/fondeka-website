@@ -179,10 +179,9 @@ details[open] > summary .faq-chevron svg { transform: rotate(180deg); }
 .faq-help > .faq-inline-link { display: inline-block; margin-top: 16px; font-size: .875rem; }
 @media (max-width: 1023px) {
   .faq-workspace-grid, .faq-resources-grid { grid-template-columns: minmax(0,1fr); }
+  .faq-learning, .faq-read-button { display: none; }
   .faq-topic-sidebar { display: none; }
   .faq-select-control { display: block; }
-  .faq-learning-grid { grid-template-columns: minmax(0,1fr); }
-  .faq-progress .faq-card-heading { align-items: start; }
   .faq-next-step { flex-wrap: wrap; }
 }
 @media (max-width: 639px) {

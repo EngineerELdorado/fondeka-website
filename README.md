@@ -92,6 +92,8 @@ four-question starter trail and optional reading milestones. Read markers are
 stored only in the visitor's browser, shared across languages, and never affect
 API access or Live eligibility. The FAQ remains accessible on phones during the
 mobile campaign; the sticky app-install bar is hidden on this reading page.
+Below 1024px, the starter trail, progress panel and mark-as-read buttons are
+hidden so visitors can get straight to the questions.
 
 The reader adopts the Business portal's neutral surfaces, semantic color tokens,
 topic icon tiles, framed chevrons and comfortable controls through the scoped
