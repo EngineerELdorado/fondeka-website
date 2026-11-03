@@ -296,7 +296,7 @@ Ce sont des moyennes, pas un tarif fixe pour chaque paiement. Les frais réels v
 
 Non. Les 3 % et 2 % expliquent les composants du total moyen de 5 %. Vous ne payez pas 3 %, puis 2 %, puis encore 5 %.
 
-Pour une base illustrative de 100 unités, 3 unités pour l’agrégateur et 2 pour Fondeka donnent 5 unités au total. La réponse de paiement expose un seul champ `fee`, sans ventilation des composants.
+Pour une base illustrative de 100 USD, 3 USD pour l’agrégateur et 2 USD pour Fondeka donnent 5 USD au total. La réponse de paiement expose un seul champ `fee`, sans ventilation des composants.
 
 Les frais par opération ne signifient pas de nouveaux frais de traitement chaque fois que vous consultez le même paiement ou recevez une notification répétée. Ces actions ne créent pas un nouvel encaissement ou paiement sortant.
 
@@ -326,12 +326,12 @@ L’écran d’activation affiche ses frais et son total. Le catalogue de l’es
 
 ### 41. Qui paie les frais : le client ou mon entreprise ?
 
-Pour les requêtes compatibles, le mode de frais définit le rapport entre les frais et le montant demandé :
+Le mode de frais indique si les frais s’ajoutent à votre prix ou sont déjà compris dedans. Pour un encaissement avec 5 USD de frais déjà calculés :
 
-- **EXCLUSIVE** : vous demandez un montant net ; les frais s’ajoutent pour calculer le total.
-- **INCLUSIVE** : vous demandez un budget total ; les frais sont déduits pour calculer le net.
+- **EXCLUSIVE — frais en plus :** vous voulez recevoir **100 USD**. On ajoute 5 USD de frais : le client paie **105 USD** et vous recevez **100 USD**.
+- **INCLUSIVE — frais compris :** le client paie **100 USD** au total. On retire 5 USD de frais de cette somme : vous recevez **95 USD**.
 
-Pour un encaissement, cela distingue votre objectif net majoré des frais d’un total client plafonné au montant annoncé. Affichez le total avant l’approbation. Sans mode explicite, la politique par défaut s’applique ; précisez-le si votre tarification en dépend.
+Les 5 USD servent uniquement à illustrer le calcul ; les frais réels dépendent de l’opération. Affichez toujours le total au client avant son approbation. Si vous ne précisez pas de mode, la politique par défaut de la route s’applique.
 
 ### 42. À quoi correspondent EXCLUSIVE et INCLUSIVE avec des chiffres ?
 

@@ -315,7 +315,7 @@ These are averages, not a fixed tariff for every payment. Actual fees can differ
 
 No. The 3% and 2% explain the average components of the consolidated 5% fee. They are not an additional 3%, then 2%, then another 5%.
 
-For a simple illustration using a 100-unit fee base, 3 units for the aggregator plus 2 units for Fondeka equals 5 units in total. Fondeka presents the operation's combined fee. The merchant payment response exposes one `fee`, rather than a separate breakdown of the underlying components.
+For a simple illustration using a 100 USD fee base, 3 USD for the aggregator plus 2 USD for Fondeka equals 5 USD in total. Fondeka presents the operation's combined fee. The merchant payment response exposes one `fee`, rather than a separate breakdown of the underlying components.
 
 A fee per payment operation does not mean a new payment-processing fee each time you look up that same payment or receive another copy of its notification. Those actions do not create a new collection or payout.
 
@@ -345,12 +345,12 @@ The activation screen shows the processing fees and total for your access purcha
 
 ### 41. Who pays the fee: my customer or my business?
 
-For supported payment requests, the fee mode controls how the fee relates to the requested amount:
+The fee mode tells you whether fees are added to your price or included in it. For a customer payment with a calculated fee of 5 USD:
 
-- **EXCLUSIVE:** request a net amount and add the fee to calculate the total.
-- **INCLUSIVE:** request a total budget and deduct the fee to calculate the net amount.
+- **EXCLUSIVE — fees added:** you want to receive **100 USD**. Add the 5 USD fee: the customer pays **105 USD** and you receive **100 USD**.
+- **INCLUSIVE — fees included:** the customer pays **100 USD** in total. Take the 5 USD fee out of that amount: you receive **95 USD**.
 
-For a collection, this lets you distinguish between collecting your target amount plus fees and keeping the customer's total within a stated amount. Make the customer's total clear before they approve payment. If you omit the mode, the applicable default policy is used; set it explicitly when your pricing depends on it.
+The 5 USD fee is only an illustration; actual fees depend on the operation. Always show the customer their total before they approve payment. If you omit the mode, the payment route’s default policy applies.
 
 ### 42. What do EXCLUSIVE and INCLUSIVE look like with numbers?
 
