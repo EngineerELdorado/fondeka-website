@@ -37,6 +37,21 @@ MOBILE_STORE_REDIRECT_ENABLED=false
 Unset it or set it to `true` and redeploy to enable redirects again. Redirects use
 temporary HTTP 307 responses with caching disabled.
 
+## Terms of Use / Conditions générales d’utilisation
+
+The existing `/end-user-agreement` page contains the 23 articles supplied for
+FONDEKA SASU. Use `/end-user-agreement?lang=fr` for the French source and
+`/end-user-agreement?lang=en` for the English translation. Missing or unsupported
+language values fall back to French on this page. Each version renders only its
+own language and has a localized footer link, canonical URL, reciprocal language
+alternates and sitemap entry. The existing header language switch links both
+versions. The page remains accessible on mobile during the store campaign.
+
+The approved text is stored in `src/content/terms-of-use.fr.json` and
+`src/content/terms-of-use.en.json`. Preserve article numbering and the Democratic
+Republic of the Congo governing law in both versions. Article 23 sets the
+effective date by publication or availability; no calendar date is added.
+
 ## Payment API search pages
 
 `/business` and `/docs` render their content on the server in English by default

@@ -1,0 +1,178 @@
+{
+  "title": "Terms of Use",
+  "company": "FONDEKA SASU",
+  "articles": [
+    {
+      "title": "Article 1 - Purpose",
+      "paragraphs": [
+        "These Terms of Use (the “Terms”) set out the conditions for accessing and using the FONDEKA digital platform, operated by FONDEKA SASU, and the respective rights and obligations of users and the company.",
+        "The FONDEKA platform is a technical solution for aggregating and orchestrating services. It gives users access, through a single interface, to various services and instruments offered or executed by duly authorized partners.",
+        "Any use of the platform constitutes full and unconditional acceptance of these Terms."
+      ]
+    },
+    {
+      "title": "Article 2 - Company identification",
+      "paragraphs": [
+        "The platform is operated by FONDEKA SASU, a single-member simplified joint-stock company. The company acts as the operator of the FONDEKA platform and as a technical intermediary within the scope defined by these Terms."
+      ]
+    },
+    {
+      "title": "Article 3 - Definitions",
+      "paragraphs": [
+        "For the purposes of these Terms, a “User” is any individual or legal entity that accesses the platform and uses its services. The “Platform” is FONDEKA’s technical and digital environment, including its applications, accessible through a mobile app, a web interface or any other authorized channel. A “Service” is any feature made available, including the initiation, orchestration, tracking or technical facilitation of payment transactions or related services.",
+        "A “Partner” is any bank, financial institution, payment institution, electronic money institution, mobile money operator, technology provider or other authorized service provider involved in delivering a service accessible through the platform. A “User Account” is the personal digital space created in the user’s name to access available features. An “Instruction” is any order, request or confirmation submitted by the user through the platform to request the execution of a transaction."
+      ]
+    },
+    {
+      "title": "Article 4 - Nature and scope of services",
+      "paragraphs": [
+        "FONDEKA provides a technical platform through which users can access various payment or related services offered through partners, initiate certain transactions through a single interface, receive information about the status of their transactions and interact with the technical mechanisms used to route, track and manage their requests.",
+        "In this capacity, FONDEKA acts as a technical aggregation platform and operational intermediary. Unless a specific applicable legal, contractual or regulatory provision provides otherwise, FONDEKA is not deemed to hold users’ funds in its own name, does not hold deposits from the public and does not perform, on its own account, functions reserved for entities required to hold a specific license.",
+        "Depending on the transaction, its financial execution remains the responsibility of the licensed or authorized partners involved in the payment chain. FONDEKA primarily provides integration, routing, presentation, orchestration, tracking and technical support services."
+      ]
+    },
+    {
+      "title": "Article 5 - Conditions for accessing the platform",
+      "paragraphs": [
+        "Access to the platform is restricted to users who meet the applicable eligibility conditions. Individuals must have legal capacity. Users must also provide accurate, complete and up-to-date information, satisfy the identification and verification requirements imposed by applicable regulations and FONDEKA’s internal procedures, and have compatible equipment and Internet access where necessary.",
+        "FONDEKA reserves the right to refuse, suspend or restrict access to the platform for any user who fails to meet the eligibility conditions, regulatory obligations or security requirements."
+      ]
+    },
+    {
+      "title": "Article 6 - Creating and managing a user account",
+      "paragraphs": [
+        "Certain platform features require users to create an account before accessing them. Users agree to provide truthful, accurate and complete information, promptly update any inaccurate or outdated information, keep their login credentials, codes, passwords, devices and authentication methods confidential, and refrain from allowing any third party to use their account.",
+        "Users must immediately notify FONDEKA of any unauthorized use, loss, fraud, suspected fraud or breach of account security. Users remain responsible for all use of their account unless a technical failure attributable to FONDEKA or fraudulent use duly reported as soon as possible is proven."
+      ]
+    },
+    {
+      "title": "Article 7 - Identification, know-your-customer checks and regulatory compliance",
+      "paragraphs": [
+        "To meet its legal and regulatory obligations, FONDEKA may at any time require users to provide identity documents, supporting documents or additional information, undergo identity verification, periodically update their information, and provide details about the purpose of a transaction, the source or destination of funds, or any other information relevant to a compliance review.",
+        "FONDEKA may also carry out checks directly or through specialized service providers. These may cover identification and identity verification, politically exposed persons, sanctions lists, fraud alerts, and obligations relating to the prevention of money laundering, terrorist financing and other financial offenses.",
+        "If information is insufficient, inconsistent, suspicious or non-compliant, FONDEKA may refuse, suspend, delay or cancel access to some or all services, without prejudice to reporting or cooperation obligations under applicable regulations."
+      ]
+    },
+    {
+      "title": "Article 8 - General description of transactions",
+      "paragraphs": [
+        "Transactions initiated through the platform generally follow these steps."
+      ],
+      "steps": [
+        "The user enters or selects the transaction.",
+        "Security, compliance and eligibility checks are carried out.",
+        "The instruction is transmitted or routed to the relevant partner.",
+        "The responsible entities process the transaction.",
+        "A status update is returned.",
+        "Supporting documents or relevant information are made available where applicable."
+      ],
+      "afterSteps": [
+        "Users acknowledge that certain transactions may depend on system availability, partner processing times, regulatory or security checks, and technical, network or external processing constraints. FONDEKA therefore does not guarantee that every transaction will be executed instantly."
+      ]
+    },
+    {
+      "title": "Article 9 - Consent and irrevocability of instructions",
+      "paragraphs": [
+        "Confirming a transaction through the platform’s security mechanisms constitutes the user’s express consent to the relevant instruction. A duly confirmed instruction may become irrevocable once it has been transmitted, accepted or taken up for processing by the relevant partner or system.",
+        "Before confirming, users must carefully check all transaction details, including the beneficiary’s identity, the amount, the selected service, any applicable fees and any other information needed for the transaction to be executed correctly. An error attributable to the user may cause the transaction to fail, be delayed, be executed incorrectly or be impossible to recover."
+      ]
+    },
+    {
+      "title": "Article 10 - Fees, commissions and pricing",
+      "paragraphs": [
+        "Some services may be subject to fees, commissions or additional costs. Before a transaction is confirmed, users are informed, to the extent possible, of the applicable pricing details, including the principal transaction amount, fees chargeable by FONDEKA or the partner, the total amount payable or to be borne, and any charges that vary by service or channel.",
+        "Users accept that some fees may be set or collected by the partners involved in delivering the service. The fee schedule may change at any time, subject to appropriate notice to users where required."
+      ]
+    },
+    {
+      "title": "Article 11 - User obligations",
+      "paragraphs": [
+        "Users agree to use the platform in good faith, lawfully and in accordance with these Terms. In particular, users must refrain from using the platform for fraudulent or unlawful purposes or purposes contrary to public policy, providing false, misleading or incomplete information, impersonating a third party, carrying out or attempting transactions involving money laundering, terrorist financing, fraud, scams or any other prohibited activity, disrupting the operation of the platform, or infringing the rights of FONDEKA, its partners or third parties.",
+        "Users are liable for any damage resulting from abusive, improper or unlawful use of the platform."
+      ]
+    },
+    {
+      "title": "Article 12 - FONDEKA’s obligations",
+      "paragraphs": [
+        "FONDEKA undertakes to take the reasonable measures necessary to ensure access to and the general operation of the platform, the logical and organizational security of its systems, the traceability of transactions, the handling of support requests and complaints, and compliance with its legal and regulatory obligations.",
+        "FONDEKA’s obligation is limited to using reasonable efforts, with no guarantee of a specific outcome, particularly where final execution of a transaction depends on a partner, a third-party network, external infrastructure or a regulatory requirement."
+      ]
+    },
+    {
+      "title": "Article 13 - Suspension, restriction and termination of access",
+      "paragraphs": [
+        "FONDEKA may, with or without prior notice depending on the circumstances, suspend, restrict or terminate a user’s access to the platform or to certain services. Grounds include a breach of these Terms, suspected fraud or unlawful activity, a risk to the security of the system or its users, failure to update required information, a regulatory, judicial or administrative requirement, a major technical incident, or abnormal or abusive use of the platform.",
+        "Unless prohibited by law or operational necessity requires otherwise, users will be informed of the action taken within a reasonable time."
+      ]
+    },
+    {
+      "title": "Article 14 - Service availability",
+      "paragraphs": [
+        "FONDEKA strives to keep the platform continuously available. Access may, however, be temporarily interrupted or limited for reasons including maintenance, updates, technical incidents, communications or power failures, events affecting partners or third-party providers, or force majeure.",
+        "FONDEKA is liable for such interruptions only where fault on its part is proven."
+      ]
+    },
+    {
+      "title": "Article 15 - Complaints and support",
+      "paragraphs": [
+        "All requests for assistance, transaction disputes and complaints must be submitted to FONDEKA support through the official channels communicated on the platform. Complaints must include all information relevant to their resolution, including the user’s identity, the transaction reference, the approximate date and time, the specific subject of the dispute, and any relevant supporting documentation.",
+        "FONDEKA undertakes to handle complaints within a reasonable time and to coordinate with the relevant partners where necessary."
+      ]
+    },
+    {
+      "title": "Article 16 - Personal data protection",
+      "paragraphs": [
+        "FONDEKA collects and processes users’ personal data in connection with use of the platform, delivery of services, compliance with legal and regulatory obligations, transaction security and management of the relationship with users.",
+        "Data may be collected for purposes including user identification and verification, account and transaction management, fraud prevention, regulatory compliance, support and complaint handling, and service improvement.",
+        "FONDEKA implements appropriate technical and organizational measures to protect the confidentiality, integrity and security of the data it processes.",
+        "Data may be disclosed to competent authorities, partners or authorized service providers when necessary to deliver a service, comply with regulatory requirements or protect the legitimate interests of FONDEKA and its users. A separate privacy policy may set out the rules applicable to personal data processing."
+      ]
+    },
+    {
+      "title": "Article 17 - Intellectual property",
+      "paragraphs": [
+        "The platform and all of its components, including its software, interfaces, content, graphics, distinctive signs, names and databases, are protected by intellectual property law. Any reproduction, public communication, adaptation, extraction, distribution or exploitation of any of these components, in whole or in part, is prohibited without FONDEKA’s prior written permission."
+      ]
+    },
+    {
+      "title": "Article 18 - Liability",
+      "paragraphs": [
+        "FONDEKA may not be held liable for damages resulting from circumstances including fault, negligence or error attributable to the user, inaccurate or incomplete information provided by the user, unavailability or failure of a partner or third-party network, force majeure, an imposed legal, regulatory or administrative measure, or a delay or refusal due to a compliance or security requirement.",
+        "In all cases, FONDEKA’s liability is subject to the limits prescribed by applicable law and to the nature of its role as a technical platform."
+      ]
+    },
+    {
+      "title": "Article 19 - Prevention of fraud, money laundering and terrorist financing",
+      "paragraphs": [
+        "FONDEKA implements measures to prevent, detect, analyze and manage unusual or suspicious transactions. For these purposes, FONDEKA may request additional information or documentation, delay or block a transaction, deny access to certain services, report the facts to the competent authorities where required by law, and retain the information and evidence it needs to comply with its obligations.",
+        "Users agree to cooperate fully with FONDEKA in this context."
+      ]
+    },
+    {
+      "title": "Article 20 - Evidence",
+      "paragraphs": [
+        "Electronic records, system logs, technical records, digital confirmations, login histories and data retained in the systems of FONDEKA or its service providers constitute admissible evidence that may be relied on to establish the transactions, instructions, communications and events arising from use of the platform, unless proven otherwise."
+      ]
+    },
+    {
+      "title": "Article 21 - Changes to the Terms",
+      "paragraphs": [
+        "FONDEKA reserves the right to amend these Terms at any time to account for developments including legal or regulatory changes, technical or functional adjustments to the platform, changes to the services offered, and requirements of partners or competent authorities.",
+        "The version in effect on the date the service is used applies, subject to any mandatory provisions to the contrary. Users will be informed of any material change by appropriate means."
+      ]
+    },
+    {
+      "title": "Article 22 - Governing law and dispute resolution",
+      "paragraphs": [
+        "These Terms are governed by the law applicable in the Democratic Republic of the Congo. Where possible, the parties will attempt to settle amicably any dispute concerning their interpretation, validity, performance or termination.",
+        "If no amicable settlement is reached, the dispute will be brought before the competent courts of the Democratic Republic of the Congo, subject to any mandatory rule to the contrary."
+      ]
+    },
+    {
+      "title": "Article 23 - Effective date",
+      "paragraphs": [
+        "These Terms of Use take effect on the date they are published or made available on the platform."
+      ]
+    }
+  ]
+}

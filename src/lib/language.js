@@ -1,5 +1,11 @@
 export const languagePreferenceCookie = 'fondeka_language';
 
+// The French source terms apply when no supported translation is requested.
+export function termsLanguage(value) {
+  const requested = Array.isArray(value) ? value[0] : value;
+  return typeof requested === 'string' && /^en(?:-|$)/i.test(requested) ? 'en' : 'fr';
+}
+
 // Prefer a deliberate choice; otherwise negotiate the two supported languages.
 export function preferredLanguage(acceptLanguage = '', savedLanguage) {
   if (savedLanguage === 'en' || savedLanguage === 'fr') return savedLanguage;

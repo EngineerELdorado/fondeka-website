@@ -1,7 +1,7 @@
 'use client';
 import { useI18n } from '../../lib/i18n';
 export default function Compliance(){
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   return (
     <main className="section">
       <div className="container-pad grid md:grid-cols-2 gap-10">
@@ -21,7 +21,7 @@ export default function Compliance(){
             <li>KYC/AML & Sanctions policy</li>
             <li>Business continuity & disaster recovery</li>
             <li>Settlement procedures (normal/crisis)</li>
-            <li>Wallet terms of use</li>
+            <li><a className="underline" href={`/end-user-agreement?lang=${lang}`}>{t('nav.eua')}</a></li>
           </ul>
         </div>
       </div>

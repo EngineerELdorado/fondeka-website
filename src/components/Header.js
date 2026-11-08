@@ -50,7 +50,7 @@ export default function Header(){
   ];
 
   const pathname = usePathname();
-  const isApiFaq = pathname === '/docs/faq';
+  const hasLanguageLinks = pathname === '/docs/faq' || pathname === '/end-user-agreement';
   const router = useRouter();
   const sp = useSearchParams();
 
@@ -64,7 +64,7 @@ export default function Header(){
     try {
       document.cookie = `${languagePreferenceCookie}=${lng}; Path=/; Max-Age=31536000; SameSite=Lax${window.location.protocol === 'https:' ? '; Secure' : ''}`;
     } catch { /* An explicit language URL still works if cookies are unavailable. */ }
-    const hash = pathname === '/docs/faq' ? window.location.hash : '';
+    const hash = hasLanguageLinks ? window.location.hash : '';
     router.push(`${languageHref(lng)}${hash}`);
     setLangOpenDesk(false);
     setLangOpenMob(false);
@@ -117,7 +117,7 @@ export default function Header(){
             <span className="text-xl font-extrabold tracking-tight text-fondeka-dark">Fondeka</span>
           </Link>
 
-          <nav className={`${isApiFaq ? 'hidden lg:flex' : 'hidden md:flex'} items-center gap-8 text-sm`}>
+          <nav className={`${hasLanguageLinks ? 'hidden lg:flex' : 'hidden md:flex'} items-center gap-8 text-sm`}>
             {/* Desktop nav — intercept Products only */}
             {nav.map(i => {
               if (i.href === '/products') {
@@ -146,7 +146,7 @@ export default function Header(){
               );
             })}
 
-            {isApiFaq ? <LanguageSwitch lang={lang} onChange={setLang} hrefForLanguage={languageHref} /> : <div className="relative" ref={deskRef}>
+            {hasLanguageLinks ? <LanguageSwitch lang={lang} onChange={setLang} hrefForLanguage={languageHref} /> : <div className="relative" ref={deskRef}>
               <button onClick={(e)=>{e.stopPropagation(); setLangOpenDesk(v=>!v);}} className="text-xs px-3 py-1 rounded-lg border inline-flex items-center gap-2">
                 {lang.toUpperCase()} ▾
               </button>
@@ -158,11 +158,11 @@ export default function Header(){
               )}
             </div>}
 
-            {!isApiFaq && <DownloadAppButton trackingId="header-download-cta" />}
+            {!hasLanguageLinks && <DownloadAppButton trackingId="header-download-cta" />}
           </nav>
 
-          <div className={`${isApiFaq ? 'lg:hidden' : 'md:hidden'} flex items-center gap-2`}>
-            {isApiFaq ? <LanguageSwitch lang={lang} onChange={setLang} hrefForLanguage={languageHref} compact /> : <div className="relative" ref={mobRef}>
+          <div className={`${hasLanguageLinks ? 'lg:hidden' : 'md:hidden'} flex items-center gap-2`}>
+            {hasLanguageLinks ? <LanguageSwitch lang={lang} onChange={setLang} hrefForLanguage={languageHref} compact /> : <div className="relative" ref={mobRef}>
               <button onClick={(e)=>{e.stopPropagation(); setLangOpenMob(v=>!v);}} className="text-xs px-3 py-1 rounded-lg border">{lang.toUpperCase()} ▾</button>
               {langOpenMob && (
                   <div className="absolute right-0 mt-2 w-36 rounded-xl border bg-white shadow-soft p-1 z-50">
@@ -176,7 +176,7 @@ export default function Header(){
         </div>
 
         {open && (
-            <div className={`${isApiFaq ? 'lg:hidden' : 'md:hidden'} border-t bg-white`}>
+            <div className={`${hasLanguageLinks ? 'lg:hidden' : 'md:hidden'} border-t bg-white`}>
               <div className="container-pad py-3 flex flex-col gap-3">
                 {/* Mobile nav — intercept Products only */}
                 {nav.map(i => {

@@ -63,7 +63,7 @@ function SupportEN() {
                         <h2 className="text-lg font-semibold">Policies</h2>
                         <ul className="mt-3 text-sm text-gray-700 space-y-2">
                             <li>• <a className="underline" href="/privacy">Privacy Policy</a></li>
-                            <li>• <a className="underline" href="/end-user-agreement">Terms of Service</a></li>
+                            <li>• <a className="underline" href="/end-user-agreement?lang=en">Terms of Use</a></li>
                         </ul>
                     </section>
                 </div>
@@ -129,7 +129,7 @@ function SupportFR() {
                         <h2 className="text-lg font-semibold">Politiques</h2>
                         <ul className="mt-3 text-sm text-gray-700 space-y-2">
                             <li>• <a className="underline" href="/privacy">Politique de confidentialité</a></li>
-                            <li>• <a className="underline" href="/end-user-agreement">Conditions d’utilisation</a></li>
+                            <li>• <a className="underline" href="/end-user-agreement?lang=fr">Conditions générales d’utilisation</a></li>
                         </ul>
                     </section>
                 </div>

@@ -1,0 +1,167 @@
+{
+  "title": "Conditions générales d’utilisation",
+  "company": "FONDEKA SASU",
+  "articles": [
+    {
+      "title": "Article 1 - Objet",
+      "paragraphs": [
+        "Les présentes Conditions Générales d’Utilisation, ci-après les « CGU », ont pour objet de définir les modalités et conditions d’accès et d’utilisation de la plateforme numérique FONDEKA, exploitée par FONDEKA SASU, ainsi que les droits et obligations respectifs des utilisateurs et de la société.",
+        "La plateforme FONDEKA constitue une solution technique d’agrégation et d’orchestration de services permettant aux utilisateurs d’accéder, au moyen d’une interface unifiée, à différents services et instruments proposés ou exécutés par des partenaires dûment habilités.",
+        "Toute utilisation de la plateforme vaut acceptation pleine, entière et sans réserve des présentes CGU."
+      ]
+    },
+    {
+      "title": "Article 2 - Identification de la société",
+      "paragraphs": [
+        "La plateforme est exploitée par FONDEKA SASU, société par actions simplifiée unipersonnelle. La société agit en qualité d’exploitant de la plateforme FONDEKA et d’intermédiaire technique dans le périmètre défini par les présentes CGU."
+      ]
+    },
+    {
+      "title": "Article 3 - Définitions",
+      "paragraphs": [
+        "Au sens des présentes CGU, l’« Utilisateur » désigne toute personne physique ou morale accédant à la plateforme et utilisant ses services. La « Plateforme » désigne l’environnement technique, applicatif et numérique de FONDEKA, accessible par application mobile, interface web ou tout autre canal autorisé. Le « Service » désigne toute fonctionnalité mise à disposition, notamment l’initiation, l’orchestration, le suivi ou la facilitation technique d’opérations de paiement ou de services connexes.",
+        "Le « Partenaire » désigne toute banque, institution financière, établissement de paiement, établissement de monnaie électronique, opérateur de mobile money, fournisseur technique ou autre prestataire habilité intervenant dans l’exécution d’un service accessible via la plateforme. Le « Compte utilisateur » désigne l’espace numérique personnel créé au nom de l’utilisateur pour accéder aux fonctionnalités disponibles. L’« Instruction » désigne tout ordre, demande ou validation donné par l’utilisateur au moyen de la plateforme en vue de solliciter l’exécution d’une opération."
+      ]
+    },
+    {
+      "title": "Article 4 - Nature et périmètre des services",
+      "paragraphs": [
+        "FONDEKA met à disposition une plateforme technique permettant à l’utilisateur d’accéder à divers services de paiement ou services connexes proposés via des partenaires, d’initier certaines opérations au moyen d’une interface unifiée, de recevoir des informations relatives au statut de ses opérations et d’interagir avec les mécanismes techniques nécessaires à l’acheminement, au suivi et à la gestion de ses demandes.",
+        "Dans ce cadre, FONDEKA agit comme plateforme technique d’agrégation et d’intermédiation opérationnelle. Sauf disposition légale, contractuelle ou réglementaire spécifique applicable, FONDEKA n’est pas réputée détenir les fonds des utilisateurs en son nom propre, n’assure pas la conservation de dépôts du public et n’exécute pas, pour son propre compte, les fonctions réservées aux entités devant disposer d’un agrément spécifique.",
+        "L’exécution financière des opérations demeure, selon les cas, assurée par les partenaires agréés ou habilités intervenant dans la chaîne de paiement. FONDEKA fournit principalement un service d’intégration, de routage, de présentation, d’orchestration, de suivi et de support technique."
+      ]
+    },
+    {
+      "title": "Article 5 - Conditions d’accès à la plateforme",
+      "paragraphs": [
+        "L’accès à la plateforme est réservé aux utilisateurs remplissant les conditions d’éligibilité applicables. Lorsqu’il s’agit d’une personne physique, l’utilisateur doit être juridiquement capable. Il doit également fournir des informations exactes, complètes et à jour, satisfaire aux exigences d’identification et de vérification imposées par la réglementation applicable et les procédures internes de FONDEKA, et disposer le cas échéant d’un équipement compatible et d’un accès à Internet.",
+        "FONDEKA se réserve le droit de refuser, suspendre ou restreindre l’accès à la plateforme à tout utilisateur ne satisfaisant pas aux conditions d’admissibilité, aux obligations réglementaires ou aux exigences de sécurité."
+      ]
+    },
+    {
+      "title": "Article 6 - Création et gestion du compte utilisateur",
+      "paragraphs": [
+        "L’accès à certaines fonctionnalités de la plateforme nécessite la création préalable d’un compte utilisateur. À ce titre, l’utilisateur s’engage à fournir des informations sincères, exactes et complètes, à mettre à jour sans délai toute information devenue inexacte ou obsolète, à préserver la confidentialité de ses identifiants, codes, mots de passe, appareils et moyens d’authentification, et à ne pas permettre à un tiers d’utiliser son compte.",
+        "L’utilisateur doit informer immédiatement FONDEKA de tout usage non autorisé, perte, fraude, suspicion de fraude ou atteinte à la sécurité de son compte. Il demeure responsable de toute utilisation de son compte, sauf preuve d’une défaillance technique imputable à FONDEKA ou d’un usage frauduleux dûment signalé dans les meilleurs délais."
+      ]
+    },
+    {
+      "title": "Article 7 - Identification, connaissance du client et conformité réglementaire",
+      "paragraphs": [
+        "Dans le cadre de ses obligations légales et réglementaires, FONDEKA peut exiger de l’utilisateur, à tout moment, la fourniture de pièces d’identité, justificatifs ou informations complémentaires, la réalisation d’opérations de vérification d’identité, la mise à jour périodique de ses données, ainsi que des informations sur l’objet d’une opération, l’origine ou la destination des fonds ou toute autre information utile à l’analyse de conformité.",
+        "FONDEKA peut également procéder, directement ou par l’intermédiaire de prestataires spécialisés, à des contrôles portant notamment sur l’identification et la vérification d’identité, les personnes politiquement exposées, les listes de sanctions, les alertes de fraude et les obligations relatives à la lutte contre le blanchiment de capitaux, le financement du terrorisme et toute autre infraction financière.",
+        "En cas d’informations insuffisantes, incohérentes, suspectes ou non conformes, FONDEKA pourra refuser, suspendre, différer ou annuler l’accès à tout ou partie des services, sans préjudice des obligations de déclaration ou de coopération prévues par la réglementation."
+      ]
+    },
+    {
+      "title": "Article 8 - Description générale des opérations",
+      "paragraphs": [
+        "Les opérations initiées via la plateforme sont traitées selon les étapes générales suivantes : saisie ou sélection de l’opération par l’utilisateur ; vérifications de sécurité, de conformité et d’éligibilité ; transmission ou routage de l’instruction vers le partenaire concerné ; traitement de l’opération par les entités compétentes ; retour d’information sur le statut de l’opération ; mise à disposition des justificatifs ou informations utiles, lorsque cela est applicable.",
+        "L’utilisateur reconnaît que certaines opérations peuvent dépendre de la disponibilité des systèmes, des délais propres aux partenaires, des contrôles réglementaires ou sécuritaires, ainsi que de contraintes techniques, de réseau ou de traitement externe. FONDEKA ne garantit donc pas qu’une opération sera exécutée instantanément dans tous les cas."
+      ]
+    },
+    {
+      "title": "Article 9 - Consentement et irrévocabilité des instructions",
+      "paragraphs": [
+        "Toute validation d’une opération, selon les mécanismes de sécurité mis en place sur la plateforme, vaut consentement exprès de l’utilisateur à l’instruction concernée. Une instruction régulièrement validée peut devenir irrévocable dès lors qu’elle a été transmise, acceptée ou prise en charge par le partenaire ou le système concerné.",
+        "L’utilisateur est tenu de vérifier avec attention toutes les informations relatives à l’opération avant validation, notamment l’identité du bénéficiaire, le montant, le service sélectionné, les frais applicables et toute autre donnée utile à la bonne exécution de l’opération. Toute erreur imputable à l’utilisateur pourra entraîner un échec, un retard, une exécution incorrecte ou l’impossibilité de récupération de l’opération."
+      ]
+    },
+    {
+      "title": "Article 10 - Frais, commissions et tarification",
+      "paragraphs": [
+        "L’utilisation de certains services peut donner lieu à la perception de frais, commissions ou coûts additionnels. Avant confirmation d’une opération, l’utilisateur est informé, dans la mesure du possible, des éléments tarifaires applicables, notamment le montant principal de l’opération, les frais imputables à FONDEKA ou au partenaire, le total à payer ou à supporter et tout élément de tarification variable selon le service ou le canal.",
+        "L’utilisateur accepte que certains frais puissent être déterminés ou prélevés par les partenaires impliqués dans l’exécution du service. La grille tarifaire peut être modifiée à tout moment, sous réserve d’une information appropriée des utilisateurs lorsque cela est requis."
+      ]
+    },
+    {
+      "title": "Article 11 - Obligations de l’utilisateur",
+      "paragraphs": [
+        "L’utilisateur s’engage à utiliser la plateforme de manière loyale, licite et conforme aux présentes CGU. Il s’interdit notamment d’utiliser la plateforme à des fins frauduleuses, illicites ou contraires à l’ordre public, de fournir des informations fausses, trompeuses ou incomplètes, d’usurper l’identité d’un tiers, d’effectuer ou de tenter d’effectuer des opérations liées au blanchiment de capitaux, au financement du terrorisme, à la fraude, à l’escroquerie ou à toute autre activité prohibée, de perturber le fonctionnement de la plateforme, ou de porter atteinte aux droits de FONDEKA, de ses partenaires ou de tiers.",
+        "L’utilisateur répond de tout dommage résultant d’un usage abusif, irrégulier ou illicite de la plateforme."
+      ]
+    },
+    {
+      "title": "Article 12 - Obligations de FONDEKA",
+      "paragraphs": [
+        "FONDEKA s’engage à mettre en œuvre les moyens raisonnables nécessaires pour assurer l’accessibilité et le bon fonctionnement général de la plateforme, la sécurité logique et organisationnelle de ses systèmes, la traçabilité des opérations, le traitement des demandes d’assistance et réclamations, ainsi que le respect de ses obligations légales et réglementaires.",
+        "FONDEKA demeure toutefois tenue à une obligation de moyens et non de résultat, notamment lorsque l’exécution finale d’une opération dépend d’un partenaire, d’un réseau tiers, d’une infrastructure externe ou d’une exigence réglementaire."
+      ]
+    },
+    {
+      "title": "Article 13 - Suspension, restriction et clôture de l’accès",
+      "paragraphs": [
+        "FONDEKA peut, sans préavis ou avec préavis selon les circonstances, suspendre, restreindre ou clôturer l’accès d’un utilisateur à la plateforme ou à certains services, notamment en cas de non-respect des présentes CGU, de soupçon de fraude ou d’activité illicite, de risque pour la sécurité du système ou des utilisateurs, de défaut de mise à jour des informations requises, d’exigence réglementaire, judiciaire ou administrative, d’incident technique majeur ou d’usage anormal ou abusif de la plateforme.",
+        "Sauf interdiction légale ou nécessité opérationnelle, l’utilisateur est informé de la mesure prise dans un délai raisonnable."
+      ]
+    },
+    {
+      "title": "Article 14 - Disponibilité des services",
+      "paragraphs": [
+        "FONDEKA s’efforce d’assurer une disponibilité continue de la plateforme. Toutefois, l’accès peut être temporairement interrompu ou limité en raison notamment de travaux de maintenance, d’opérations de mise à jour, d’incidents techniques, de défaillances de communication ou d’alimentation, d’événements affectant les partenaires ou prestataires tiers, ou de cas de force majeure.",
+        "Ces interruptions ne sauraient, sauf faute prouvée de FONDEKA, engager sa responsabilité."
+      ]
+    },
+    {
+      "title": "Article 15 - Réclamations et support",
+      "paragraphs": [
+        "Toute demande d’assistance, contestation ou réclamation doit être adressée au service support de FONDEKA par les canaux officiels communiqués sur la plateforme. La réclamation doit comporter toutes les informations utiles à son traitement, notamment l’identité de l’utilisateur, la référence de l’opération concernée, la date et l’heure approximative, l’objet précis de la contestation et tout justificatif utile.",
+        "FONDEKA s’engage à traiter les réclamations dans un délai raisonnable et, lorsque cela s’avère nécessaire, à coordonner le traitement avec les partenaires concernés."
+      ]
+    },
+    {
+      "title": "Article 16 - Protection des données à caractère personnel",
+      "paragraphs": [
+        "FONDEKA collecte et traite les données personnelles des utilisateurs dans le cadre de l’utilisation de la plateforme, de la fourniture des services, du respect des obligations légales et réglementaires, de la sécurité des opérations et de la gestion de la relation utilisateur.",
+        "Les données peuvent être collectées notamment aux fins d’identification et de vérification de l’utilisateur, de gestion du compte et des opérations, de prévention de la fraude, de conformité réglementaire, d’assistance et de traitement des réclamations, ainsi que d’amélioration des services. FONDEKA met en œuvre des mesures techniques et organisationnelles appropriées afin d’assurer la confidentialité, l’intégrité et la sécurité des données traitées.",
+        "Les données peuvent être communiquées aux autorités compétentes, aux partenaires ou aux prestataires autorisés lorsque cette communication est nécessaire à l’exécution du service, à la conformité réglementaire ou à la protection des intérêts légitimes de FONDEKA et des utilisateurs. Une politique distincte de confidentialité peut préciser les modalités applicables au traitement des données personnelles."
+      ]
+    },
+    {
+      "title": "Article 17 - Propriété intellectuelle",
+      "paragraphs": [
+        "La plateforme, ses logiciels, interfaces, contenus, éléments graphiques, signes distinctifs, dénominations, bases de données et tout élément la composant sont protégés par les règles relatives à la propriété intellectuelle. Sauf autorisation écrite préalable de FONDEKA, toute reproduction, représentation, adaptation, extraction, diffusion ou exploitation, totale ou partielle, de l’un quelconque de ces éléments est interdite."
+      ]
+    },
+    {
+      "title": "Article 18 - Responsabilité",
+      "paragraphs": [
+        "FONDEKA ne pourra être tenue responsable des dommages résultant notamment d’une faute, négligence ou erreur imputable à l’utilisateur, de données inexactes ou incomplètes fournies par l’utilisateur, de l’indisponibilité ou de la défaillance d’un partenaire ou d’un réseau tiers, d’un événement de force majeure, d’une mesure légale, réglementaire ou administrative imposée, ou d’un retard ou refus lié à une exigence de conformité ou de sécurité.",
+        "En tout état de cause, la responsabilité de FONDEKA ne pourra être engagée au-delà des limites prévues par les lois applicables et sous réserve de la nature de son rôle de plateforme technique."
+      ]
+    },
+    {
+      "title": "Article 19 - Lutte contre la fraude, le blanchiment et le financement du terrorisme",
+      "paragraphs": [
+        "FONDEKA applique des mesures de prévention, de détection, d’analyse et de gestion des opérations inhabituelles ou suspectes. À ce titre, FONDEKA peut demander toute information ou document complémentaire, différer ou bloquer une opération, refuser l’accès à certains services, signaler les faits aux autorités compétentes lorsque la loi l’exige et conserver les informations et éléments de preuve nécessaires au respect de ses obligations.",
+        "L’utilisateur s’engage à coopérer pleinement avec FONDEKA dans ce cadre."
+      ]
+    },
+    {
+      "title": "Article 20 - Preuve",
+      "paragraphs": [
+        "Les enregistrements électroniques, journaux informatiques, traces techniques, confirmations numériques, historiques de connexion et données conservées dans les systèmes de FONDEKA ou de ses prestataires constituent, sauf preuve contraire, des éléments recevables et opposables pour établir les opérations, instructions, échanges et événements intervenus dans le cadre de l’utilisation de la plateforme."
+      ]
+    },
+    {
+      "title": "Article 21 - Modification des CGU",
+      "paragraphs": [
+        "FONDEKA se réserve le droit de modifier à tout moment les présentes CGU afin de tenir compte notamment des évolutions légales ou réglementaires, des adaptations techniques ou fonctionnelles de la plateforme, de l’évolution des services proposés et des exigences des partenaires ou autorités compétentes.",
+        "La version applicable est celle en vigueur à la date d’utilisation du service, sous réserve des dispositions impératives contraires. En cas de modification substantielle, l’utilisateur en est informé par tout moyen approprié."
+      ]
+    },
+    {
+      "title": "Article 22 - Droit applicable et règlement des différends",
+      "paragraphs": [
+        "Les présentes CGU sont régies par le droit applicable en République Démocratique du Congo. Tout différend relatif à leur interprétation, leur validité, leur exécution ou leur résiliation fera, dans la mesure du possible, l’objet d’une tentative de règlement amiable.",
+        "À défaut de règlement amiable, le différend sera porté devant les juridictions compétentes de la République Démocratique du Congo, sous réserve de toute règle impérative contraire."
+      ]
+    },
+    {
+      "title": "Article 23 - Entrée en vigueur",
+      "paragraphs": [
+        "Les présentes Conditions Générales d’Utilisation entrent en vigueur à compter de leur date de publication ou de leur mise à disposition sur la plateforme."
+      ]
+    }
+  ]
+}

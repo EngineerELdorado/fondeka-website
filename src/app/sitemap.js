@@ -13,8 +13,18 @@ export default function sitemap() {
         { path: '/support', priority: 0.6 },
         { path: '/commerce', priority: 0.95 },
         { path: '/privacy', priority: 0.35 },
-        { path: '/end-user-agreement', priority: 0.35 },
     ];
+    const termsRoutes = ['fr', 'en'].map(lang => ({
+        path: `/end-user-agreement?lang=${lang}`,
+        priority: 0.35,
+        alternates: {
+            languages: {
+                fr: `${siteUrl}/end-user-agreement?lang=fr`,
+                en: `${siteUrl}/end-user-agreement?lang=en`,
+                'x-default': `${siteUrl}/end-user-agreement?lang=fr`,
+            },
+        },
+    }));
     const productRoutes = Object.entries(serviceSeo).flatMap(([slug, page]) => {
         const priority = page.path === '/savings' || page.path === '/loans' ? 0.95 : 0.9;
         if (!page.locales) return [{ path: page.path, priority }];
@@ -39,7 +49,7 @@ export default function sitemap() {
         priority: 0.85,
     }));
 
-    return [...routes, ...productRoutes, ...commerceRoutes, ...billPaymentProviderRoutes, ...cardGuideRoutes].map(({ path, priority, alternates, lastModified: updated }) => ({
+    return [...routes, ...termsRoutes, ...productRoutes, ...commerceRoutes, ...billPaymentProviderRoutes, ...cardGuideRoutes].map(({ path, priority, alternates, lastModified: updated }) => ({
         url: `${siteUrl}${path}`,
         lastModified: updated ? new Date(updated) : lastModified,
         changeFrequency: path === '/' ? 'weekly' : 'monthly',
