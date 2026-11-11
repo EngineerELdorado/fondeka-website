@@ -6,7 +6,7 @@ import ProductStatusBadge from '@/components/ProductStatusBadge';
 import { businessAppUrl } from '@/lib/business';
 
 export default function ProductsRedirect() {
-    const { lang } = useI18n();
+    const { t, lang } = useI18n();
     const router = useRouter();
 
     // Send users to the products section on Home
@@ -27,7 +27,7 @@ export default function ProductsRedirect() {
                         <ProductStatusBadge status="Available" />
                         <span>
                             eSIM, Bill payments, Virtual cards, Gift cards, Airtimes, Savings, Payments, Loans, Crypto, Collect, Payout,{' '}
-                            <a href={businessAppUrl} className="text-fondeka-green underline">Business API</a>
+                            <a href={businessAppUrl} className="text-fondeka-green underline">{t('nav.business')}</a>
                         </span>
                     </div>
                 </div>

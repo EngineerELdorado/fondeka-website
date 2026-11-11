@@ -28,7 +28,7 @@ export default function Footer(){
             <li><a href={`/commerce?lang=${lang}`} className="hover:text-fondeka-green">Commerce</a></li>
             <li><a href={`/business?lang=${lang}`} className="hover:text-fondeka-green">{t('section.businessTitle')}</a></li>
             <li><a href={`/docs/faq?lang=${lang}`} className="hover:text-fondeka-green">{lang === 'fr' ? 'FAQ API de paiement' : 'Payment API FAQ'}</a></li>
-            <li><a href={businessAppUrl} className="hover:text-fondeka-green">Business (API)</a></li>
+            <li><a href={businessAppUrl} className="hover:text-fondeka-green">{t('nav.business')}</a></li>
           </ul>
         </div>
 
