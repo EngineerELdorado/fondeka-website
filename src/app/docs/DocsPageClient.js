@@ -1,108 +1,74 @@
 'use client';
-import Image from 'next/image';
+
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { useI18n } from '../../lib/i18n';
+import { useSearchParams } from 'next/navigation';
+import { useI18n } from '@/lib/i18n';
 import { businessAppUrl } from '@/lib/business';
 
-function ArrowRight() {
-  return (
-    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" className="h-5 w-5 shrink-0">
-      <path d="M5 12h14m-6-6 6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
+const guideOrigin = new URL(process.env.NEXT_PUBLIC_FONDEKA_GUIDES_ORIGIN || businessAppUrl).origin;
+const isGuideId = (value) => typeof value === 'string' && /^[a-z][a-z0-9-]{0,79}$/.test(value);
+
+function guideUrl(lang, doc, lesson) {
+  const url = new URL('/api-guides', guideOrigin);
+  url.searchParams.set('lang', lang);
+  if (isGuideId(doc)) url.searchParams.set('doc', doc);
+  if (isGuideId(lesson)) url.searchParams.set('lesson', lesson);
+  return url;
 }
 
-function FeatureIcon({ type }) {
-  const paths = {
-    connect: <path d="m8 6-6 6 6 6m8-12 6 6-6 6m-3-15-2 18" />,
-    collect: <><rect x="3" y="5" width="18" height="14" rx="3" /><path d="M3 10h18m-13 5h4" /></>,
-    payout: <><path d="M14 4h6v6m0-6-9 9" /><path d="M10 5H7a3 3 0 0 0-3 3v9a3 3 0 0 0 3 3h9a3 3 0 0 0 3-3v-3" /></>,
-  };
+export default function DocsPageClient({ doc, lesson }) {
+  const { lang } = useI18n();
+  const french = lang === 'fr';
+  const frame = useRef(null);
+  const [height, setHeight] = useState(760);
+  const search = useSearchParams();
+  const standaloneUrl = guideUrl(lang, search.get('doc'), search.get('lesson')).href;
+  const embeddedUrl = guideUrl(lang, doc, lesson);
+  embeddedUrl.searchParams.set('embed', '1');
+  const frameUrl = embeddedUrl.href;
+
+  useEffect(() => {
+    const receive = (event) => {
+      if (event.origin !== guideOrigin || event.source !== frame.current?.contentWindow) return;
+      const data = event.data;
+      if (data?.type !== 'fondeka:public-api-guides') return;
+      if (Number.isFinite(data.height) && data.height > 0) setHeight(Math.ceil(data.height));
+      const url = new URL(window.location.href);
+      for (const key of ['doc', 'lesson']) {
+        if (isGuideId(data[key])) url.searchParams.set(key, data[key]);
+        else if (data[key] === null) url.searchParams.delete(key);
+      }
+      if (url.href !== window.location.href) window.history.replaceState(null, '', url.href);
+    };
+    window.addEventListener('message', receive);
+    frame.current?.contentWindow?.postMessage('fondeka:public-api-guides:measure', guideOrigin);
+    return () => window.removeEventListener('message', receive);
+  }, [frameUrl]);
 
   return (
-    <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="h-7 w-7 text-fondeka-green">
-      {paths[type]}
-    </svg>
-  );
-}
-
-export default function Docs({ audience }){
-  const { t, lang } = useI18n();
-  return (
-    <main>
-      <section className="gradient-hero py-14 md:py-20">
-        <div className="container-pad grid items-center gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-14">
-          <div className="min-w-0">
-            <p className="kicker font-semibold">{t('docs.title')}</p>
-            <h1 className="mt-4 max-w-xl text-4xl font-extrabold leading-[1.12] tracking-tight text-fondeka-dark sm:text-5xl">
-              {t('docs.hero.title')}
-            </h1>
-            <p className="mt-5 max-w-lg text-base leading-relaxed text-gray-600 md:text-lg">{t('docs.subtitle')}</p>
-            <p className="mt-4 max-w-lg text-sm leading-relaxed text-gray-600">{audience}</p>
-            <a href={businessAppUrl} className="btn btn-primary mt-7 gap-3 px-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-fondeka-green">
-              {t('common.cta.useApi')}
-              <ArrowRight />
-            </a>
-            <p className="mt-4 text-sm">
-              <Link href={`/business?lang=${lang}`} className="text-fondeka-green underline">{t('docs.businessLink')}</Link>
-              <span className="mx-3 text-gray-400" aria-hidden="true">·</span>
-              <Link href={`/docs/faq?lang=${lang}`} className="text-fondeka-green underline">{lang === 'fr' ? 'FAQ API : frais, accès et Sandbox' : 'API FAQ: fees, eligibility and Sandbox'}</Link>
-            </p>
-          </div>
-          <div className="min-w-0 rounded-[28px] border border-fondeka-mint/25 bg-white p-2 shadow-[0_20px_60px_rgba(13,31,20,0.08)]">
-            <Image
-              src="/illustrations/docs-developers.jpg"
-              alt={t('docs.hero.alt')}
-              width={1536}
-              height={1024}
-              sizes="(min-width: 1024px) 580px, (min-width: 768px) 720px, 100vw"
-              priority
-              className="h-auto w-full rounded-[22px]"
-            />
-          </div>
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container-pad">
-          <h2 className="max-w-2xl text-2xl font-bold tracking-tight md:text-3xl">{t('docs.features.title')}</h2>
-          <div className="mt-8 grid gap-8 md:grid-cols-3">
-            {['connect', 'collect', 'payout'].map((feature) => (
-              <article key={feature} className="border-t border-fondeka-mint/30 pt-6">
-                <FeatureIcon type={feature} />
-                <h3 className="mt-4 text-lg font-semibold">{t(`docs.${feature}.title`)}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-gray-600">{t(`docs.${feature}.body`)}</p>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="pb-16 md:pb-24">
-        <div className="container-pad">
-          <div className="grid overflow-hidden rounded-[28px] bg-fondeka-dark md:grid-cols-2">
-            <div className="flex items-center bg-fondeka-light">
-              <Image
-                src="/illustrations/docs-integration.jpg"
-                alt={t('docs.integration.alt')}
-                width={1536}
-                height={1024}
-                sizes="(min-width: 768px) 560px, 100vw"
-                className="h-auto w-full"
-              />
-            </div>
-            <div className="flex flex-col items-start justify-center p-7 text-white sm:p-10">
-              <p className="text-xs font-semibold uppercase tracking-widest text-fondeka-mint">{t('docs.cta.kicker')}</p>
-              <h2 className="mt-3 text-2xl font-bold tracking-tight md:text-3xl">{t('docs.cta.title')}</h2>
-              <p className="mt-4 text-sm leading-relaxed text-white/75">{t('docs.cta.body')}</p>
-              <a href={businessAppUrl} className="btn mt-6 gap-3 bg-white px-6 text-fondeka-dark hover:bg-fondeka-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">
-                {t('common.cta.useApi')}
-                <ArrowRight />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+    <main className="mx-auto max-w-[1328px] px-4 py-8 md:px-6 md:py-12">
+      <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
+        <h1 className="text-3xl font-extrabold tracking-tight text-fondeka-dark">
+          {french ? 'Guides API' : 'API guides'}
+        </h1>
+        <Link href={`/docs/faq?lang=${lang}`} className="btn btn-secondary">
+          {french ? 'FAQ de l’API' : 'API FAQ'}
+        </Link>
+      </div>
+      <iframe
+        ref={frame}
+        src={frameUrl}
+        title={french ? 'Guides de l’API Business Fondeka' : 'Fondeka Business API guides'}
+        className="block w-full rounded-2xl border-0 bg-fondeka-light"
+        style={{ height }}
+        referrerPolicy="origin"
+        allow="clipboard-write"
+        sandbox="allow-scripts allow-same-origin allow-downloads allow-popups allow-popups-to-escape-sandbox"
+      />
+      <a href={standaloneUrl} target="_blank" rel="noopener" className="mt-4 inline-block text-sm text-fondeka-green underline">
+        {french ? 'Ouvrir les guides dans un nouvel onglet' : 'Open the guides in a new tab'}
+      </a>
     </main>
   );
 }
