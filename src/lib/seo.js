@@ -320,11 +320,6 @@ export const serviceSeo = {
     ...paymentApiContent.en.metadata,
     locales: { fr: paymentApiContent.fr.metadata },
   },
-  docs: {
-    path: '/docs',
-    ...paymentApiContent.en.docsMetadata,
-    locales: { fr: paymentApiContent.fr.docsMetadata },
-  },
   apiFaq: {
     path: '/docs/faq',
     explicitLanguageQuery: true,

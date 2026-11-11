@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import JsonLd from '@/components/JsonLd';
-import { businessAppUrl, businessApiDocsUrl } from '@/lib/business';
+import { businessAppUrl, businessApiGuidesUrl, businessApiDocsUrl } from '@/lib/business';
 import { paymentApiContent, paymentApiLanguage } from '@/lib/paymentApiContent';
 import { createMetadata, createServiceSchema, siteUrl } from '@/lib/seo';
 
@@ -31,7 +31,7 @@ export default function BusinessPage({ searchParams }) {
           <p className="mt-4 leading-relaxed text-gray-600">{copy.intro}</p>
           <div className="mt-7 flex flex-wrap gap-3">
             <a href={businessAppUrl} className="btn btn-primary">{copy.primary}</a>
-            <Link href={`/docs?lang=${lang}`} className="btn btn-ghost">{copy.secondary}</Link>
+            <a href={`${businessApiGuidesUrl}?lang=${lang}`} className="btn btn-ghost">{copy.secondary}</a>
           </div>
         </div>
       </section>
@@ -97,7 +97,7 @@ export default function BusinessPage({ searchParams }) {
           <h2 className="h">{copy.resourcesTitle}</h2>
           <p className="mt-4 leading-relaxed text-gray-700">{copy.resourcesBody}</p>
           <ul className="mt-6 space-y-3 text-fondeka-green underline">
-            <li><Link href={`/docs?lang=${lang}`}>{copy.secondary}</Link></li>
+            <li><a href={`${businessApiGuidesUrl}?lang=${lang}`}>{copy.secondary}</a></li>
             <li><a href={`${businessApiDocsUrl}/quickstart.md`}>{copy.quickstart}</a></li>
             <li><a href={`${businessApiDocsUrl}/go-live.md`}>{copy.goLive}</a></li>
             <li><Link href={`/support?lang=${lang}`}>{copy.support}</Link></li>

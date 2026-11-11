@@ -1,7 +1,7 @@
 'use client';
 import Logo from './Logo';
 import { useI18n } from '@/lib/i18n';
-import { businessAppUrl } from '@/lib/business';
+import { businessAppUrl, businessApiGuidesUrl } from '@/lib/business';
 import DownloadAppButton from "@/components/DownloadAppButton";
 import { usePathname } from 'next/navigation';
 
@@ -38,7 +38,7 @@ export default function Footer(){
           <ul className="space-y-2 text-sm">
             <li><a href={`/about?lang=${lang}`} className="hover:text-fondeka-green">{t('nav.about')}</a></li>
             <li><a href={`/compliance?lang=${lang}`} className="hover:text-fondeka-green">{t('nav.compliance')}</a></li>
-            <li><a href={`/docs?lang=${lang}`} className="hover:text-fondeka-green">{t('nav.docs')}</a></li>
+            <li><a href={`${businessApiGuidesUrl}?lang=${lang}`} className="hover:text-fondeka-green">{t('nav.docs')}</a></li>
             <li><a href={`/support?lang=${lang}`} className="hover:text-fondeka-green">{t('nav.support')}</a></li>
             <li><a href={`/privacy?lang=${lang}`} className="hover:text-fondeka-green">{t('nav.privacy')}</a></li>
             <li><a href={`/end-user-agreement?lang=${lang}`} className="hover:text-fondeka-green">{t('nav.eua')}</a></li>

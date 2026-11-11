@@ -1,5 +1,7 @@
 import { NextResponse, userAgent } from 'next/server';
 import { appStoreUrl } from './lib/appStores';
+import { businessApiGuidesUrl } from './lib/business';
+import { paymentApiLanguage } from './lib/paymentApiContent';
 import { languagePreferenceCookie, preferredLanguage } from './lib/language';
 
 // Keep app links, API Q&A, and essential legal/support pages directly accessible.
@@ -13,9 +15,20 @@ const directAccessRoutes = new Set([
 
 export function middleware(request) {
     const isRead = ['GET', 'HEAD'].includes(request.method);
-    const isApiFaq = request.nextUrl.pathname.replace(/\/+$/, '') === '/docs/faq';
+    const path = request.nextUrl.pathname.replace(/\/+$/, '');
 
-    if (isRead && isApiFaq) {
+    if (isRead && path === '/docs') {
+        const destination = new URL(businessApiGuidesUrl);
+        const { searchParams } = request.nextUrl;
+        if (searchParams.has('lang')) destination.searchParams.set('lang', paymentApiLanguage(searchParams.get('lang')));
+        for (const key of ['doc', 'lesson']) {
+            const value = searchParams.get(key);
+            if (value) destination.searchParams.set(key, value);
+        }
+        return NextResponse.redirect(destination, 308);
+    }
+
+    if (isRead && path === '/docs/faq') {
         // Explicit links and the language switch always override browser detection.
         if (request.nextUrl.searchParams.has('lang')) return NextResponse.next();
         const { isBot } = userAgent(request);

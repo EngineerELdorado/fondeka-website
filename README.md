@@ -54,18 +54,16 @@ effective date by publication or availability; no calendar date is added.
 
 ## Payment API search pages
 
-`/business` and `/docs` have English and French versions with canonical URLs,
-metadata, language alternates and sitemap entries. The Business page describes access for
+`/business` has English and French versions with canonical URLs, metadata,
+language alternates and sitemap entries. The Business page describes access for
 small businesses, students, independent developers, freelancers and startups
 whose company documents are still in preparation, together with account
 verification, sandbox and live-payment requirements.
 
-The homepage and footer link to the public Payment API page; existing portal
-sign-in CTAs still point to `https://web.fondeka.com`. The API Docs menu opens `/docs`, which embeds the public guide from
-`https://web.fondeka.com/api-guides` and links to `/docs/faq`. The portal owns the
-guide components, styles, and downloads, so edits there update the public guide
-when the portal is deployed. For local testing, set
-`NEXT_PUBLIC_FONDEKA_GUIDES_ORIGIN` to the local portal origin when starting the website.
+The API Docs menu opens `https://web.fondeka.com/api-guides` in the selected
+language. Legacy `/docs` URLs redirect there with their language and lesson
+selection. The portal owns the guides and downloads, and the website hosts
+the FAQ at `/docs/faq`.
 
 After deployment, inspect both languages in Search Console and request indexing
 of the updated canonical URLs. Track impressions, clicks and qualified API

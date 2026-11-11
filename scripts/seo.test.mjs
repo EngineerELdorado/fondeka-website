@@ -38,10 +38,8 @@ test('FAQ review metadata records the content review rather than deployment time
   assert.equal(serviceSeo.apiFaq.lastModified, '2026-11-03');
 });
 
-test('existing Business and developer-introduction URL conventions stay compatible', () => {
+test('existing Business page URL conventions stay compatible', () => {
   assert.equal(servicePath('business', 'en'), '/business');
   assert.equal(servicePath('business', 'fr'), '/business?lang=fr');
-  assert.equal(servicePath('docs', 'en'), '/docs');
-  assert.equal(servicePath('docs', 'fr'), '/docs?lang=fr');
   assert.equal(servicePath('cards', 'fr'), '/cards');
 });
