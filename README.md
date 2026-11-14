@@ -101,21 +101,21 @@ commercial explanation changes. The lightweight server parser supports their
 paragraphs, lists and tables, and checks the complete question sequence.
 Publication notes are not part of these public documents.
 
-The reader includes search, expandable answers, stable question links, a
-four-question starter trail and optional reading milestones. Read markers are
-stored only in the visitor's browser, shared across languages, and never affect
-API access or Live eligibility. The FAQ remains accessible on phones during the
-mobile campaign; the sticky app-install bar is hidden on this reading page.
-Below 1024px, the starter trail, progress panel and mark-as-read buttons are
-hidden so visitors can get straight to the questions.
+The reader leads directly into search, topic navigation and expandable answers
+with stable question links. It does not track reading progress. The FAQ remains
+accessible on phones during the mobile campaign; the sticky app-install bar is
+hidden on this reading page.
 
 The reader adopts the Business portal's neutral surfaces, semantic color tokens,
 topic icon tiles, framed chevrons and comfortable controls through the scoped
 `src/app/docs/faq/faq.css` stylesheet. It uses existing fonts and dependencies.
 Dark token overrides follow `data-theme="dark"` when supplied by a theme host;
-the page does not introduce a theme selector. The introduction has no action row
-or conversion CTA. The main API CTA follows the guide and glossary; it and the
-footer action open `https://web.fondeka.com`.
+the page does not introduce a theme selector. The header contains the title and
+breadcrumbs. Two content cards after the first topic link to the localized public
+API docs at `https://web.fondeka.com/api-guides?lang=en` (or `?lang=fr`) and the
+Business Portal at `https://web.fondeka.com`. API Docs is the primary action.
+The cards are hidden during search so the results stay focused. There is no
+floating action bar, starter trail, progress panel or introductory summary.
 Reading controls, documentation links and support links retain their purposes.
 
 Keep the FAQ country tables aligned with `src/lib/supportedCountries.js`, which
@@ -124,7 +124,7 @@ also supplies homepage coverage and the country counter. Current coverage is
 
 Run `npm run test:faq`, `npm run test:language`, `npm run test:seo` and
 `npm run build` after changes.
-Verify both languages, mobile access, tables, search, question links and progress persistence
+Verify both languages, mobile access, tables, search, question links and resource cards
 in the browser. The review date describes the supplied content; it is not an
 announcement that new Live payments are enabled.
 
