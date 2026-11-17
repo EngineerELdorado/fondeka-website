@@ -60,10 +60,11 @@ small businesses, students, independent developers, freelancers and startups
 whose company documents are still in preparation, together with account
 verification, sandbox and live-payment requirements.
 
-The API Docs menu opens `https://web.fondeka.com/api-guides` in the selected
-language. Legacy `/docs` URLs redirect there with their language and lesson
-selection. The portal owns the guides and downloads, and the website hosts
-the FAQ at `/docs/faq`.
+The website does not publish API documentation links, download links or redirects
+to the documentation. Staff share the appropriate documentation URL directly
+with users when needed. Documentation requests on the website lead to support.
+Legacy `/docs` URLs use the site's existing catch-all redirect to the homepage;
+the website continues to host the public FAQ at `/docs/faq`.
 
 After deployment, inspect both languages in Search Console and request indexing
 of the updated canonical URLs. Track impressions, clicks and qualified API
@@ -111,12 +112,12 @@ topic icon tiles, framed chevrons and comfortable controls through the scoped
 `src/app/docs/faq/faq.css` stylesheet. It uses existing fonts and dependencies.
 Dark token overrides follow `data-theme="dark"` when supplied by a theme host;
 the page does not introduce a theme selector. The header contains the title and
-breadcrumbs. Two content cards after the first topic link to the localized public
-API docs at `https://web.fondeka.com/api-guides?lang=en` (or `?lang=fr`) and the
-Business Portal at `https://web.fondeka.com`. API Docs is the primary action.
-The cards are hidden during search so the results stay focused. There is no
+breadcrumbs. A content card after the first topic links to the Business Portal
+at `https://web.fondeka.com`. It is hidden during search so the results stay
+focused. Integration documentation is shared directly by the Fondeka team;
+the FAQ answers point documentation requests to support. There is no
 floating action bar, starter trail, progress panel or introductory summary.
-Reading controls, documentation links and support links retain their purposes.
+Reading controls, Business Portal links and support links retain their purposes.
 
 Keep the FAQ country tables aligned with `src/lib/supportedCountries.js`, which
 also supplies homepage coverage and the country counter. Current coverage is

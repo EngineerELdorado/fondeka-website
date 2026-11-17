@@ -232,9 +232,9 @@ Enregistrez la clé API et le secret webhook lorsqu’ils s’affichent. Les sec
 
 ### 27. Puis-je lire la documentation avant d’acheter ?
 
-Oui. L’introduction publique et les guides techniques publiés permettent de comprendre le service et de préparer votre projet. La gestion propre au compte et les frais détaillés des moyens disponibles nécessitent l’accès authentifié correspondant.
+L’introduction publique permet de comprendre le service et de préparer votre projet. [Contactez l’assistance Fondeka](/support?lang=fr) pour demander la documentation d’intégration ; notre équipe communique directement le lien adapté. La gestion propre au compte et les frais détaillés des moyens disponibles nécessitent l’accès authentifié correspondant.
 
-Lisez les guides et posez vos questions avant d’acheter si votre projet dépend d’un pays, d’un opérateur, d’une fonction ou d’une date de lancement Live. Achetez en comprenant le service dont vous avez besoin.
+Posez vos questions avant d’acheter si votre projet dépend d’un pays, d’un opérateur, d’une fonction ou d’une date de lancement Live. Achetez en comprenant le service dont vous avez besoin.
 
 ### 28. Le paiement de l’accès fournit-il des fonds pour les paiements sortants ?
 
@@ -314,7 +314,7 @@ Appliquer systématiquement 5 % dans votre code serait donc trompeur. La moyenne
 
 ### 39. Où consulter les frais API par opérateur et route de paiement ?
 
-Après activation de l’accès, ouvrez **Guides API → Moyens de paiement disponibles** dans le portail Business. Consultez l’opérateur ou le moyen crypto, pour l’opération et la devise voulues.
+Après activation de l’accès, consultez les moyens de paiement disponibles et leurs frais actuels dans votre espace API, pour l’opérateur ou le moyen crypto, l’opération et la devise voulus. Contactez l’assistance Fondeka si vous avez besoin d’aide pour trouver les frais applicables.
 
 Un catalogue ou une fourchette aide à comprendre le prix. Le montant et la destination réels peuvent modifier le routage et le calcul final. Utilisez les montants actuels calculés par le serveur plutôt qu’une estimation issue de la FAQ ou d’une ancienne capture.
 
@@ -359,7 +359,7 @@ Pour un paiement sortant, le brut correspond à la somme réservée ou débitée
 
 Les requêtes utilisent les unités monétaires normales : `10` avec `currency: "USD"` signifie 10 USD, pas 10 cents. Les montants acceptent au maximum deux décimales. Utilisez une arithmétique décimale et ne multipliez pas systématiquement les montants par 100.
 
-[Lire le guide des montants et modes de frais en anglais](https://web.fondeka.com/docs/business-api/concepts.md).
+[Demander le guide des montants et modes de frais à l’assistance Fondeka](/support?lang=fr).
 
 ### 44. Les conversions de devises ou taux crypto influencent-ils le résultat ?
 
@@ -393,7 +393,7 @@ Un statut d’échec ne prouve pas que les fonds ou frais ont été restitués. 
 
 Vous pouvez tester les soumissions, statuts, webhooks signés, échecs et effets sur les portefeuilles virtuels. La Sandbox ne contacte pas les fournisseurs réels et ne déplace pas d’argent réel. Commencez ici avant d’utiliser les fonds de vos clients.
 
-[Lire le guide de test Sandbox en anglais](https://web.fondeka.com/docs/business-api/testing.md).
+[Demander le guide de test Sandbox à l’assistance Fondeka](/support?lang=fr).
 
 ### 49. Qu’est-ce que le Live ?
 
@@ -479,7 +479,7 @@ Avant de changer d’environnement :
 
 Séparez les identifiants et données Sandbox pour éviter qu’un développement ne déclenche un paiement de production.
 
-[Lire la liste de préparation au Live en anglais](https://web.fondeka.com/docs/business-api/go-live.md).
+[Demander la liste de préparation au Live à l’assistance Fondeka](/support?lang=fr).
 
 ## Démarrage : clés API, Business ID et identifiants
 
@@ -496,7 +496,7 @@ Prévoyez aussi une destination webhook HTTPS publique avant de compter sur les 
 3. Ouvrez l’espace API et consultez l’offre si une activation est nécessaire.
 4. Après activation, vérifiez votre Business ID, les moyens et frais actuels.
 5. Générez les identifiants Sandbox et enregistrez les deux secrets en sécurité.
-6. Consultez les guides API du portail pour tester les parcours utiles et vérifier les webhooks.
+6. Demandez la documentation d’intégration à l’assistance Fondeka, puis testez les parcours utiles et vérifiez les webhooks.
 7. Terminez les étapes de préparation Live avant d’utiliser l’argent de vos clients.
 
 ### 63. Qu’est-ce que mon Business ID ?
@@ -561,7 +561,7 @@ Votre serveur transmet le montant, la devise fiat, le moyen compatible, le numé
 
 Selon l’opérateur, le client doit approuver sur son téléphone. Votre application suit le paiement jusqu’à sa réussite ou son échec. Ne livrez qu’après une fin vérifiée et les contrôles de montant nécessaires.
 
-[Lire le guide d’encaissement Mobile Money en anglais](https://web.fondeka.com/docs/business-api/guides/mobile-money-collection.md).
+[Demander le guide d’encaissement Mobile Money à l’assistance Fondeka](/support?lang=fr).
 
 ### 73. Mon client doit-il avoir un compte Fondeka pour payer ?
 
@@ -587,7 +587,7 @@ Vous demandez un prix en devise fiat, par exemple 25 USD, puis choisissez un moy
 
 Lorsqu’elles sont disponibles, affichez l’actif, le réseau, l’adresse, la quantité de jetons, l’expiration ou le lien de facture renvoyés. N’inventez pas d’adresse, ne substituez pas de réseau et ne calculez pas les jetons à partir d’un taux supposé.
 
-[Lire le guide d’encaissement crypto en anglais](https://web.fondeka.com/docs/business-api/guides/crypto-collection.md).
+[Demander le guide d’encaissement crypto à l’assistance Fondeka](/support?lang=fr).
 
 ### 77. « 25 USD payés en USDT » signifie-t-il exactement 25 USDT ?
 
@@ -615,7 +615,7 @@ Votre serveur demande un paiement vers le numéro international compatible du b�
 
 Le portefeuille doit couvrir le débit brut, frais compris. À l’acceptation, le montant concerné est réservé ou débité, puis traité. Confirmez le statut final avant d’annoncer au bénéficiaire que le paiement est terminé.
 
-[Lire le guide des paiements sortants Mobile Money en anglais](https://web.fondeka.com/docs/business-api/guides/mobile-money-payout.md).
+[Demander le guide des paiements sortants Mobile Money à l’assistance Fondeka](/support?lang=fr).
 
 ### 81. Comment envoyer un paiement crypto depuis un portefeuille fiat Fondeka ?
 
@@ -623,7 +623,7 @@ Vous précisez le montant fiat à utiliser, le moyen et réseau crypto compatibl
 
 Le bénéficiaire reçoit la quantité de jetons cotée sur le réseau choisi. Vérifiez soigneusement l’adresse et le réseau : une erreur peut être irrécupérable. Des adresses d’apparence similaire ne prouvent pas leur compatibilité.
 
-[Lire le guide des paiements sortants crypto en anglais](https://web.fondeka.com/docs/business-api/guides/crypto-payout.md).
+[Demander le guide des paiements sortants crypto à l’assistance Fondeka](/support?lang=fr).
 
 ### 82. Dois-je approvisionner le portefeuille avant un paiement sortant ?
 
@@ -712,7 +712,7 @@ L’API de paiement Fondeka utilise quatre statuts pour les opérations Mobile M
 
 « En attente » est une description utile pour les clients, mais `PENDING` n’est pas un statut supplémentaire de ce contrat marchand.
 
-[Lire la référence des statuts de paiement en anglais](https://web.fondeka.com/docs/business-api/concepts.md).
+[Demander la référence des statuts de paiement à l’assistance Fondeka](/support?lang=fr).
 
 ### 94. HTTP 202 signifie-t-il que mon client a payé ?
 
@@ -738,7 +738,7 @@ N’agissez sur une notification qu’après vérification de sa signature, de s
 
 La livraison peut se répéter, notamment si un accusé de réception est perdu. Stockez les identifiants d’événements vérifiés et rendez la livraison de commande idempotente pour une même référence. Deux réceptions ne doivent ni livrer deux fois un produit numérique ni déclencher un autre paiement sortant.
 
-[Lire le guide des signatures webhook et des doublons en anglais](https://web.fondeka.com/docs/business-api/webhooks.md).
+[Demander le guide webhook à l’assistance Fondeka](/support?lang=fr).
 
 ### 98. Que se passe-t-il si mon récepteur webhook est indisponible ?
 
@@ -752,7 +752,7 @@ C’est un identifiant unique pour une opération voulue. En cas de nouvelle ten
 
 Utilisez une autre clé pour un paiement réellement nouveau. Stockez durablement la clé et la requête originales côté serveur. Réutiliser une clé avec des informations différentes provoque un conflit plutôt qu’une modification sûre de l’opération.
 
-[Lire le guide de l’idempotence et des reprises sûres en anglais](https://web.fondeka.com/docs/business-api/concepts.md).
+[Demander le guide de l’idempotence et des reprises sûres à l’assistance Fondeka](/support?lang=fr).
 
 ### 100. Que faire après un délai dépassé, une réponse perdue ou un traitement bloqué ?
 
@@ -894,7 +894,7 @@ Fondeka aide les étudiants, freelances, petites entreprises et startups à int�
 
 Vous payez l’accès API ou le pack, puis les frais applicables aux opérations utilisées. Le modèle moyen regroupe **environ 3 % de frais agrégateur et 2 % de frais Fondeka en un seul frais d’environ 5 % par opération** ; les tarifs réels sont visibles après activation. Testez avec de l’argent virtuel en Sandbox, confirmez séparément le Live et intégrez la sécurité et les confirmations. Avec votre croissance, Fondeka peut vous guider et vous recommander pour une intégration directe avec un agrégateur.
 
-## Glossaire API de paiement et documentation développeur
+## Glossaire API de paiement et ressources
 
 | Terme | Explication simple |
 | --- | --- |
@@ -921,14 +921,7 @@ Vous payez l’accès API ou le pack, puis les frais applicables aux opérations
 Pour commencer :
 
 - [Ouvrir le portail Business Fondeka](https://web.fondeka.com).
-- [Découvrir l’introduction publique à l’API](https://www.fondeka.com/docs?lang=fr).
-- [Ouvrir les guides API du portail](https://web.fondeka.com/developers/guides).
-- [Lire les concepts de paiement et portefeuilles en anglais](https://web.fondeka.com/docs/business-api/concepts.md).
-- [Lire le guide de test en anglais](https://web.fondeka.com/docs/business-api/testing.md).
-- [Lire le guide webhook en anglais](https://web.fondeka.com/docs/business-api/webhooks.md).
-- [Lire le guide de passage en Live en anglais](https://web.fondeka.com/docs/business-api/go-live.md).
-- [Télécharger la référence OpenAPI](https://web.fondeka.com/docs/business-api/openapi.v1.json).
-- [Télécharger la collection Postman Sandbox](https://web.fondeka.com/docs/business-api/postman.v1.json).
+- [Découvrir l’introduction publique à l’API](https://www.fondeka.com/business?lang=fr).
 - [Contacter l’assistance](https://www.fondeka.com/support?lang=fr).
 - [Lire le contrat utilisateur](https://www.fondeka.com/end-user-agreement?lang=fr).
 - [Lire la politique de confidentialité](https://www.fondeka.com/privacy?lang=fr).

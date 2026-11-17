@@ -4,7 +4,7 @@ import { Fragment, useEffect, useRef, useState } from 'react';
 import FaqBlocks from '@/components/FaqBlocks';
 import { apiFaqUi } from '@/lib/apiFaqUi';
 import FaqIcon, { FaqIconTile, faqTopicVisuals } from '@/components/FaqIcon';
-import { businessAppUrl, businessApiGuidesUrl } from '@/lib/business';
+import { businessAppUrl } from '@/lib/business';
 
 const normalize = value => value.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
 const blockText = block => block.text || block.items?.join(' ') || [block.headers, ...block.rows].flat().join(' ');
@@ -147,17 +147,11 @@ export default function FaqExplorer({ sections, lang }) {
                 </details>)}</div>
               </section>
                 {index === 0 && !query.trim() && <aside className="faq-content-resources" aria-label={ui.resourceLinks}>
-                  <a href={`${businessApiGuidesUrl}?lang=${lang}`} className="faq-resource-card faq-resource-card-primary" data-api-docs-cta="content">
-                    <FaqIconTile icon="book" />
-                    <h3>{ui.docsTitle}</h3>
-                    <p>{ui.docsBody}</p>
-                    <span className="faq-button faq-button-primary">{ui.docs}<FaqIcon name="arrow" /></span>
-                  </a>
-                  <a href={businessAppUrl} className="faq-resource-card" data-api-portal-cta="content">
+                  <a href={businessAppUrl} className="faq-resource-card faq-resource-card-primary" data-api-portal-cta="content">
                     <FaqIconTile icon="wallet" tone="blue" />
                     <h3>{ui.portalTitle}</h3>
                     <p>{ui.portalBody}</p>
-                    <span className="faq-button">{ui.portal}<FaqIcon name="arrow" /></span>
+                    <span className="faq-button faq-button-primary">{ui.portal}<FaqIcon name="arrow" /></span>
                   </a>
                 </aside>}
               </Fragment>;

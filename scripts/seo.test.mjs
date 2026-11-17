@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import test from 'node:test';
 
 const moduleUrl = source => `data:text/javascript;base64,${Buffer.from(source).toString('base64')}`;
@@ -42,4 +42,20 @@ test('existing Business page URL conventions stay compatible', () => {
   assert.equal(servicePath('business', 'en'), '/business');
   assert.equal(servicePath('business', 'fr'), '/business?lang=fr');
   assert.equal(servicePath('cards', 'fr'), '/cards');
+});
+
+test('public website source and assets do not publish API documentation destinations', () => {
+  function* textFiles(directory) {
+    for (const entry of readdirSync(directory, { withFileTypes: true })) {
+      const url = new URL(entry.name + (entry.isDirectory() ? '/' : ''), directory);
+      if (entry.isDirectory()) yield* textFiles(url);
+      else if (/\.(?:js|json|md|html|xml|txt)$/.test(entry.name)) yield url;
+    }
+  }
+  const docsDestination = /\/api-guides\b|\/developers\/guides\b|\/docs\/business-api\b|\/docs(?=[?#"'`\s]|$)/i;
+  for (const root of ['../src/', '../public/']) {
+    for (const file of textFiles(new URL(root, import.meta.url))) {
+      assert.doesNotMatch(readFileSync(file, 'utf8'), docsDestination, file.pathname);
+    }
+  }
 });

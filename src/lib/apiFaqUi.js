@@ -1,8 +1,7 @@
 export const apiFaqUi = {
   en: {
     home: 'Home', api: 'Payment API', label: 'API Q&A',
-    portal: 'Open the Business Portal', docs: 'Open API Docs',
-    docsTitle: 'API Docs', docsBody: 'Integration guides, code examples and the API reference.',
+    portal: 'Open the Business Portal',
     portalTitle: 'Business Portal', portalBody: 'Manage your business, API access and credentials.',
     resourceLinks: 'Integration resources', answers: 'answers',
     topics: 'Explore by topic', jump: 'Jump to a topic',
@@ -19,8 +18,7 @@ export const apiFaqUi = {
   },
   fr: {
     home: 'Accueil', api: 'API de paiement', label: 'Questions API',
-    portal: 'Ouvrir le portail Business', docs: 'Consulter la documentation API',
-    docsTitle: 'Documentation API', docsBody: 'Guides d’intégration, exemples de code et référence API.',
+    portal: 'Ouvrir le portail Business',
     portalTitle: 'Portail Business', portalBody: 'Gérez votre activité, votre accès API et vos identifiants.',
     resourceLinks: 'Ressources d’intégration', answers: 'réponses',
     topics: 'Explorer par thème', jump: 'Aller à un thème',

@@ -4,7 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useI18n } from '../lib/i18n';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import DownloadAppButton from "@/components/DownloadAppButton";
-import { businessAppUrl, businessApiGuidesUrl } from '@/lib/business';
+import { businessAppUrl } from '@/lib/business';
 import { trackAppDownloadClick } from '@/lib/metaPixel';
 import { languagePreferenceCookie } from '@/lib/language';
 
@@ -44,7 +44,6 @@ export default function Header(){
     { href: '/commerce', label: 'Commerce' },
     // { href: '/pricing', label: t('nav.pricing') },
     { href: '/compliance', label: t('nav.compliance') },
-    { href: `${businessApiGuidesUrl}?lang=${lang}`, label: t('nav.docs'), external: true },
     { href: businessAppUrl, label: t('nav.business'), external: true },
     { href: '/about', label: t('nav.about') },
   ];
